@@ -1,6 +1,15 @@
 name: Build authorised QEI mirror
 
 on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "scripts/**"
+      - "mirror.config.json"
+      - "requirements.txt"
+      - ".github/workflows/build-mirror.yml"
   workflow_dispatch:
     inputs:
       commit_snapshot:
@@ -70,7 +79,7 @@ jobs:
           retention-days: 30
 
       - name: Commit generated snapshot
-        if: github.event_name == 'schedule' || inputs.commit_snapshot == true
+        if: github.event_name == 'schedule' || github.event_name == 'push' || inputs.commit_snapshot == true
         run: |
           git config user.name "qei-mirror-bot"
           git config user.email "qei-mirror-bot@users.noreply.github.com"

@@ -25,7 +25,7 @@ The preview also removes common analytics/tracking references and adds `noindex,
 
 ## Generate the clone in GitHub
 
-Open **Actions → Build authorised QEI mirror → Run workflow**. Leave **Commit the generated static site** enabled to save the snapshot into `site/` and `reports/`.
+The first push to `main` or `master` automatically runs the authorised mirror when the crawler code or configuration changes. You can also open **Actions → Build authorised QEI mirror → Run workflow**. Leave **Commit the generated static site** enabled to save the snapshot into `site/` and `reports/`.
 
 The job also produces a downloadable Actions artifact containing the complete generated site and reports. The first run may create a large commit because it captures media and downloadable documents.
 
