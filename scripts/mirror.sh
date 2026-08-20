@@ -22,6 +22,8 @@ TIMEOUT=$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["reques
 DELAY=$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["crawl_delay_seconds"])' "$CONFIG")
 USER_AGENT=$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["user_agent"])' "$CONFIG")
 CANONICAL=$(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["canonical_host"])' "$CONFIG")
+MAX_FILE_MB=$(python -c 'import json,sys; print(json.load(open(sys.argv[1])).get("max_single_file_megabytes", 90))' "$CONFIG")
+MAX_TOTAL_MB=$(python -c 'import json,sys; print(json.load(open(sys.argv[1])).get("max_total_download_megabytes", 1800))' "$CONFIG")
 
 rm -rf "$RAW" "$SITE"
 mkdir -p "$RAW" "$SITE" "$REPORTS"
@@ -35,6 +37,9 @@ wget \
   --page-requisites \
   --convert-links \
   --adjust-extension \
+  --restrict-file-names=windows \
+  --max-filesize="${MAX_FILE_MB}m" \
+  --quota="${MAX_TOTAL_MB}m" \
   --span-hosts \
   --domains="$DOMAINS" \
   --execute=robots=on \

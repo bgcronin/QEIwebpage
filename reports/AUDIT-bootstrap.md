@@ -1,6 +1,6 @@
 # Static mirror audit
 
-Generated: 2026-08-20T08:15:51.170807+00:00
+Generated: 2026-08-20T08:18:37.471419+00:00
 
 - Files: 1
 - HTML pages: 1
@@ -10,6 +10,7 @@ Generated: 2026-08-20T08:15:51.170807+00:00
 - Tracking references remaining: 0
 - Transaction links not disabled: 0
 - Broken internal references detected: 0
+- Files at or above GitHub's practical 95 MiB guardrail: 0
 
 ## Safety result
 

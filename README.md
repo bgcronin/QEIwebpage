@@ -11,7 +11,7 @@ The project was commissioned as an authorised QEI reproduction. See `AUTHORIZATI
 3. Excludes common mail, login, administration, API, staging, test, VPN, and internal hosts.
 4. Verifies that candidates resolve and return public HTML.
 5. Reads `robots.txt` and common WordPress sitemap locations.
-6. Mirrors public pages, stylesheets, scripts, images, documents, and other page requisites with `wget` while respecting `robots.txt`.
+6. Mirrors public pages, stylesheets, scripts, images, documents, and other page requisites with `wget` while respecting `robots.txt`, a 90 MiB per-file ceiling, and a total crawl quota. Oversized media remains linked to its source rather than breaking GitHub uploads.
 7. Promotes the canonical site to `site/` and stores other public host snapshots under `site/_subdomains/<hostname>/`.
 8. Disables all form submissions, non-GET browser requests, sensitive transaction links, analytics, and tracking pixels.
 9. Adds `noindex`, audits the result, and saves a reviewable GitHub Actions artifact.
@@ -57,7 +57,7 @@ The internet-facing discovery and mirror steps need normal outbound HTTPS and DN
 - `reports/url-discovery.json` — sitemap results
 - `reports/wget.log` — mirror log
 - `reports/postprocess.json` — sanitisation totals
-- `reports/AUDIT.md` and `reports/audit.json` — safety and link audit
+- `reports/AUDIT.md` and `reports/audit.json` — safety, file-size, and link audit
 
 ## Scope notes
 

@@ -58,5 +58,7 @@
   ],
   "disable_forms": true,
   "disable_tracking": true,
-  "add_noindex": true
+  "add_noindex": true,
+  "max_single_file_megabytes": 90,
+  "max_total_download_megabytes": 1800
 }

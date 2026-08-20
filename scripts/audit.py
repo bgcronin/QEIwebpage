@@ -38,6 +38,11 @@ def main() -> int:
     extension_counts = Counter((path.suffix.lower() or "[no extension]") for path in files)
     html_files = [path for path in files if path.suffix.lower() in {".html", ".htm"}]
     total_bytes = sum(path.stat().st_size for path in files)
+    oversized_files = [
+        {"file": path.relative_to(site).as_posix(), "bytes": path.stat().st_size}
+        for path in files
+        if path.stat().st_size >= 95 * 1024 * 1024
+    ]
 
     active_forms: list[str] = []
     missing_noindex: list[str] = []
@@ -85,6 +90,7 @@ def main() -> int:
         "html_file_count": len(html_files),
         "total_bytes": total_bytes,
         "extensions": dict(sorted(extension_counts.items())),
+        "oversized_files": oversized_files,
         "safety": {
             "active_forms": active_forms,
             "missing_noindex": missing_noindex,
@@ -108,11 +114,12 @@ def main() -> int:
         f"- Tracking references remaining: {len(tracking_refs)}",
         f"- Transaction links not disabled: {len(transaction_links_not_disabled)}",
         f"- Broken internal references detected: {len(broken_links)}",
+        f"- Files at or above GitHub's practical 95 MiB guardrail: {len(oversized_files)}",
         "",
         "## Safety result",
         "",
     ]
-    safety_errors = active_forms + missing_noindex + tracking_refs + transaction_links_not_disabled
+    safety_errors = active_forms + missing_noindex + tracking_refs + transaction_links_not_disabled + oversized_files
     markdown.append("PASS" if not safety_errors else "FAIL")
     if broken_links:
         markdown.extend(["", "## First broken references", ""])
