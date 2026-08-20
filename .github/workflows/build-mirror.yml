@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - master
+      - qei-static-clone
+      - "feature/**"
     paths:
       - "scripts/**"
       - "mirror.config.json"
@@ -50,8 +52,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install --yes wget
 
-      - name: Run unit tests
-        run: python -m unittest discover -s tests -v
+      - name: Validate scripts and run unit tests
+        run: |
+          python -m compileall -q scripts tests
+          bash -n scripts/mirror.sh
+          python -m unittest discover -s tests -v
 
       - name: Discover public QEI hosts
         run: python scripts/discover_hosts.py

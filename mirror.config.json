@@ -60,5 +60,34 @@
   "disable_tracking": true,
   "add_noindex": true,
   "max_single_file_megabytes": 90,
-  "max_total_download_megabytes": 1800
+  "max_total_download_megabytes": 1800,
+  "disable_external_transactions": true,
+  "transaction_words": [
+    "donate",
+    "donation",
+    "payment",
+    "checkout",
+    "register",
+    "registration",
+    "refer-a-patient",
+    "refer a patient",
+    "send-enquiry",
+    "send enquiry",
+    "medical-record",
+    "medical record",
+    "book appointment",
+    "book laser",
+    "appointment booking"
+  ],
+  "transaction_host_fragments": [
+    "stripe.com",
+    "paypal.com",
+    "donorbox.org",
+    "raisely.com",
+    "giveeasy.org",
+    "mycause.com.au",
+    "humanitix.com",
+    "eventbrite.com",
+    "myhealth1st.com.au"
+  ]
 }

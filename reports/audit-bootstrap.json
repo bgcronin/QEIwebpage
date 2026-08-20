@@ -1,17 +1,20 @@
 {
   "broken_internal_references": [],
   "extensions": {
-    ".html": 1
+    ".html": 1,
+    ".txt": 1
   },
-  "file_count": 1,
-  "generated_at": "2026-08-20T08:18:37.471419+00:00",
+  "file_count": 2,
+  "generated_at": "2026-08-20T08:46:07.308661+00:00",
   "html_file_count": 1,
   "oversized_files": [],
   "safety": {
-    "active_forms": [],
+    "active_or_incompletely_disabled_forms": [],
+    "external_transaction_links_not_disabled": [],
     "missing_noindex": [],
-    "tracking_references": [],
-    "transaction_links_not_disabled": []
+    "missing_robots_txt_block": [],
+    "missing_safety_guard": [],
+    "tracking_references": []
   },
-  "total_bytes": 2481
+  "total_bytes": 3554
 }

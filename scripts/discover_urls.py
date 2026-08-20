@@ -26,10 +26,23 @@ def fetch_bytes(url: str, user_agent: str, timeout: int, limit: int = 20_000_000
         return data, response.geturl()
 
 
-def robots_sitemaps(host: str, user_agent: str, timeout: int) -> tuple[list[str], str | None]:
+def ensure_final_url_in_scope(final_url: str, hosts: set[str], config: dict) -> None:
+    if not url_is_in_scope(final_url, hosts, config):
+        final_host = normalise_host(urlparse(final_url).hostname or "")
+        raise ValueError(f"redirect destination is outside active public hosts: {final_host or final_url}")
+
+
+def robots_sitemaps(
+    host: str,
+    hosts: set[str],
+    config: dict,
+    user_agent: str,
+    timeout: int,
+) -> tuple[list[str], str | None]:
     url = f"https://{host}/robots.txt"
     try:
         payload, final_url = fetch_bytes(url, user_agent, timeout, limit=1_000_000)
+        ensure_final_url_in_scope(final_url, hosts, config)
     except Exception as exc:
         return [], str(exc)
     sitemaps: list[str] = []
@@ -37,7 +50,9 @@ def robots_sitemaps(host: str, user_agent: str, timeout: int) -> tuple[list[str]
         if raw_line.lower().startswith("sitemap:"):
             candidate = raw_line.split(":", 1)[1].strip()
             if candidate:
-                sitemaps.append(urljoin(final_url, candidate))
+                resolved = urljoin(final_url, candidate)
+                if url_is_in_scope(resolved, hosts, config):
+                    sitemaps.append(resolved)
     return sitemaps, None
 
 
@@ -73,14 +88,14 @@ def main() -> int:
     report_hosts: dict[str, object] = {}
 
     for host in sorted(hosts):
-        discovered, robots_error = robots_sitemaps(host, user_agent, timeout)
+        discovered, robots_error = robots_sitemaps(host, hosts, config, user_agent, timeout)
         candidates = discovered + [
             f"https://{host}/wp-sitemap.xml",
             f"https://{host}/sitemap_index.xml",
             f"https://{host}/sitemap.xml",
         ]
         for candidate in candidates:
-            if candidate not in attempted:
+            if url_is_in_scope(candidate, hosts, config) and candidate not in attempted:
                 sitemap_queue.append(candidate)
         report_hosts[host] = {"robots_error": robots_error, "candidate_sitemaps": candidates}
 
@@ -96,6 +111,7 @@ def main() -> int:
         result: dict[str, object] = {"url": sitemap_url}
         try:
             payload, final_url = fetch_bytes(sitemap_url, user_agent, timeout)
+            ensure_final_url_in_scope(final_url, hosts, config)
             kind, locations = parse_sitemap(payload)
             result.update(status="ok", final_url=final_url, type=kind, locations=len(locations))
             if kind == "sitemapindex":

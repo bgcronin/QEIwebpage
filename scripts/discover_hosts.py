@@ -3,15 +3,24 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import socket
 import ssl
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
+from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
-from common import host_is_excluded, load_config, normalise_host, write_json
+from common import (
+    addresses_are_public,
+    host_is_excluded,
+    is_in_domain,
+    load_config,
+    normalise_host,
+    write_json,
+)
 
 
 def fetch_json(url: str, user_agent: str, timeout: int) -> object:
@@ -24,7 +33,7 @@ def certificate_hosts(root_domain: str, user_agent: str, timeout: int) -> tuple[
     url = f"https://crt.sh/?q=%25.{root_domain}&output=json"
     try:
         payload = fetch_json(url, user_agent, timeout)
-    except Exception as exc:  # Network failure must not block explicit hosts.
+    except Exception as exc:  # Network failure must not block explicit production hosts.
         return set(), f"Certificate Transparency lookup failed: {exc}"
 
     hosts: set[str] = set()
@@ -42,25 +51,50 @@ def certificate_hosts(root_domain: str, user_agent: str, timeout: int) -> tuple[
 def resolve_host(host: str) -> list[str]:
     addresses: set[str] = set()
     for item in socket.getaddrinfo(host, 443, proto=socket.IPPROTO_TCP):
-        addresses.add(item[4][0])
+        addresses.add(item[4][0].split("%", 1)[0])
     return sorted(addresses)
 
 
-def probe_host(host: str, user_agent: str, timeout: int) -> dict[str, object]:
-    result: dict[str, object] = {"host": host, "active": False, "attempts": []}
+def public_addresses_or_reason(host: str) -> tuple[list[str], str | None]:
     try:
-        result["addresses"] = resolve_host(host)
+        addresses = resolve_host(host)
     except OSError as exc:
-        result["reason"] = f"DNS resolution failed: {exc}"
-        return result
+        return [], f"DNS resolution failed: {exc}"
+    if not addresses:
+        return [], "DNS returned no addresses"
+    if not addresses_are_public(addresses):
+        return addresses, "DNS includes a non-public, reserved, loopback, or link-local address"
+    return addresses, None
 
+
+def page_looks_like_login(body: str) -> bool:
     login_markers = (
         "webmail login",
         "cpanel login",
-        "sign in to your account",
         "roundcube webmail",
         "wordpress login",
+        "sign in to your account",
+        "log in to your account",
+        "two-factor authentication",
     )
+    if any(marker in body for marker in login_markers):
+        return True
+    return bool(re.search(r"<input[^>]+type\s*=\s*['\"]?password\b", body, flags=re.I))
+
+
+def probe_host(host: str, config: dict[str, object]) -> dict[str, object]:
+    user_agent = str(config["user_agent"])
+    timeout = int(config["request_timeout_seconds"])
+    root_domain = normalise_host(str(config["root_domain"]))
+    result: dict[str, object] = {"host": host, "active": False, "attempts": [], "security_blocked": False}
+
+    addresses, address_error = public_addresses_or_reason(host)
+    result["addresses"] = addresses
+    if address_error:
+        result["reason"] = address_error
+        if addresses:
+            result["security_blocked"] = True
+        return result
 
     for scheme in ("https", "http"):
         url = f"{scheme}://{host}/"
@@ -78,12 +112,31 @@ def probe_host(host: str, user_agent: str, timeout: int) -> dict[str, object]:
                 status = int(getattr(response, "status", 200))
                 content_type = response.headers.get_content_type()
                 final_url = response.geturl()
+                final_host = normalise_host(urlparse(final_url).hostname or "")
+                attempt.update(status=status, content_type=content_type, final_url=final_url, final_host=final_host)
+
+                if not is_in_domain(final_host, root_domain):
+                    attempt["error"] = "redirected outside authorised qei.org.au scope"
+                    result["attempts"].append(attempt)
+                    result["reason"] = "redirected outside authorised qei.org.au scope"
+                    result["security_blocked"] = True
+                    return result
+
+                final_addresses, final_address_error = public_addresses_or_reason(final_host)
+                attempt["final_addresses"] = final_addresses
+                if final_address_error:
+                    attempt["error"] = final_address_error
+                    result["attempts"].append(attempt)
+                    result["reason"] = f"redirect destination rejected: {final_address_error}"
+                    result["security_blocked"] = True
+                    return result
+
                 body = response.read(65536).decode("utf-8", errors="ignore").lower()
-                attempt.update(status=status, content_type=content_type, final_url=final_url)
                 result["attempts"].append(attempt)
                 if status < 400 and content_type in {"text/html", "application/xhtml+xml"}:
-                    if any(marker in body for marker in login_markers):
-                        result["reason"] = "page appears to be an access or webmail login"
+                    if page_looks_like_login(body):
+                        result["reason"] = "page appears to be an access, account, or webmail login"
+                        result["security_blocked"] = True
                         return result
                     result.update(active=True, preferred_url=final_url, reason="public HTML response")
                     return result
@@ -92,6 +145,7 @@ def probe_host(host: str, user_agent: str, timeout: int) -> dict[str, object]:
             result["attempts"].append(attempt)
             if exc.code in {401, 403}:
                 result["reason"] = f"access-controlled HTTP response ({exc.code})"
+                result["security_blocked"] = True
                 return result
         except (URLError, TimeoutError, OSError) as exc:
             attempt["error"] = str(exc)
@@ -128,17 +182,20 @@ def main() -> int:
     included: list[dict[str, object]] = []
     excluded: list[dict[str, object]] = []
     for host in sorted(candidates):
+        source = "explicit" if host in explicit else "certificate transparency"
         blocked, reason = host_is_excluded(host, config)
         if blocked:
-            excluded.append({"host": host, "reason": reason, "source": "certificate transparency"})
+            excluded.append({"host": host, "reason": reason, "source": source, "security_blocked": True})
             continue
 
-        probe = probe_host(host, str(config["user_agent"]), int(config["request_timeout_seconds"]))
+        probe = probe_host(host, config)
         probe["explicit"] = host in explicit
+        probe["source"] = source
         if probe.get("active"):
             included.append(probe)
-        elif host in explicit:
-            # Explicit production hosts remain crawl seeds even if a transient probe fails.
+        elif host in explicit and not probe.get("security_blocked"):
+            # Explicit production hosts remain crawl seeds after transient DNS/HTTP failures,
+            # but never after a private-IP, out-of-scope redirect, login, or access-control block.
             probe["active"] = True
             probe["reason"] = f"explicit production host retained; probe result: {probe.get('reason', 'unknown')}"
             probe["preferred_url"] = f"https://{host}/"
@@ -158,6 +215,7 @@ def main() -> int:
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "root_domain": root_domain,
             "method": "explicit hosts plus passive Certificate Transparency; no brute force",
+            "network_guard": "only globally routable addresses and in-scope redirects are accepted",
             "warnings": warnings,
             "included": included,
             "excluded": excluded,

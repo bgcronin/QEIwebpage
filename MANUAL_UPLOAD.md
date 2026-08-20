@@ -1,8 +1,8 @@
-# Manual upload fallback
+# Upload the prepared repository to GitHub
 
-The preferred route is to grant the connected ChatGPT GitHub app access to `bgcronin/QEIwebpage`, allowing the prepared repository to be pushed directly.
+The prepared Git bundle is a complete Git repository, including history, workflow files, tests, and the safe placeholder site.
 
-If that connection is unavailable, download `qei-site-clone.bundle` and run:
+For an empty `bgcronin/QEIwebpage` repository, download `qei-site-clone.bundle` and run:
 
 ```bash
 git clone ~/Downloads/qei-site-clone.bundle QEIwebpage
@@ -17,4 +17,6 @@ If the GitHub repository already contains an unrelated initial README commit, pu
 git push -u origin main:qei-static-clone
 ```
 
-The initial push automatically starts the **Build authorised QEI mirror** GitHub Actions workflow. It crawls the public QEI site from GitHub's runner, sanitises forms and transactions, audits the snapshot, saves an artifact, and—where branch permissions allow—commits the generated `site/` and `reports/` directories.
+Then open a pull request from `qei-static-clone` into the repository's default branch.
+
+The initial push starts **Build authorised QEI mirror**. The workflow discovers public QEI hosts, crawls public pages from a GitHub runner, disables forms and sensitive transaction endpoints, removes configured tracking references, audits the result, uploads a review artifact, and—where branch permissions allow—commits the generated `site/` and `reports/` directories.

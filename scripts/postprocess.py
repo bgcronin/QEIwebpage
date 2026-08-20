@@ -7,59 +7,129 @@ import re
 from pathlib import Path
 from urllib.parse import urlparse
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
-from common import is_in_domain, load_config, normalise_host
+from common import is_in_domain, load_config, normalise_host, write_json
 
 GUARD_SCRIPT_ID = "qei-static-mirror-safety"
-GUARD_SCRIPT = r"""
-(function () {
+GUARD_STYLE_ID = "qei-static-mirror-safety-style"
+GUARD_MESSAGE = (
+    "This is a static QEI website preview. Online forms and transactions are disabled. "
+    "Please use the approved live QEI service or phone 07 3239 5000."
+)
+GUARD_SCRIPT = rf"""
+(function () {{
   'use strict';
-  const message = 'This is a static QEI website preview. Online forms and transactions are disabled. Please use the approved live QEI service or phone 07 3239 5000.';
-  document.addEventListener('submit', function (event) {
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    window.alert(message);
-  }, true);
-  document.addEventListener('click', function (event) {
-    const target = event.target && event.target.closest ? event.target.closest('[data-qei-disabled-transaction]') : null;
-    if (target) {
+  const message = {GUARD_MESSAGE!r};
+  const safeMethods = ['GET', 'HEAD', 'OPTIONS'];
+  const block = function (event) {{
+    if (event) {{
       event.preventDefault();
       event.stopImmediatePropagation();
-      window.alert(message);
-    }
-  }, true);
+    }}
+    window.alert(message);
+    return false;
+  }};
+
+  document.addEventListener('submit', block, true);
+  document.addEventListener('click', function (event) {{
+    const target = event.target && event.target.closest
+      ? event.target.closest('[data-qei-disabled-transaction]')
+      : null;
+    if (target) block(event);
+  }}, true);
+
+  if (window.HTMLFormElement) {{
+    HTMLFormElement.prototype.submit = function () {{ return block(); }};
+    if (HTMLFormElement.prototype.requestSubmit) {{
+      HTMLFormElement.prototype.requestSubmit = function () {{ return block(); }};
+    }}
+  }}
+
   const nativeFetch = window.fetch;
-  if (nativeFetch) {
-    window.fetch = function (input, init) {
-      const method = String((init && init.method) || 'GET').toUpperCase();
-      if (!['GET', 'HEAD', 'OPTIONS'].includes(method)) {
+  if (nativeFetch) {{
+    window.fetch = function (input, init) {{
+      const requestMethod = input && typeof input === 'object' && input.method ? input.method : 'GET';
+      const method = String((init && init.method) || requestMethod || 'GET').toUpperCase();
+      if (!safeMethods.includes(method)) {{
         return Promise.reject(new Error(message));
-      }
+      }}
       return nativeFetch.apply(this, arguments);
-    };
-  }
-  const nativeOpen = XMLHttpRequest.prototype.open;
-  XMLHttpRequest.prototype.open = function (method) {
-    this.__qeiBlockedMethod = !['GET', 'HEAD', 'OPTIONS'].includes(String(method || 'GET').toUpperCase());
-    return nativeOpen.apply(this, arguments);
-  };
-  const nativeSend = XMLHttpRequest.prototype.send;
-  XMLHttpRequest.prototype.send = function () {
-    if (this.__qeiBlockedMethod) {
-      this.abort();
-      throw new Error(message);
-    }
-    return nativeSend.apply(this, arguments);
-  };
-  if (navigator.sendBeacon) {
-    navigator.sendBeacon = function () { return false; };
-  }
-})();
+    }};
+  }}
+
+  if (window.XMLHttpRequest) {{
+    const nativeOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function (method) {{
+      this.__qeiBlockedMethod = !safeMethods.includes(String(method || 'GET').toUpperCase());
+      return nativeOpen.apply(this, arguments);
+    }};
+    const nativeSend = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.send = function () {{
+      if (this.__qeiBlockedMethod) {{
+        this.abort();
+        throw new Error(message);
+      }}
+      return nativeSend.apply(this, arguments);
+    }};
+  }}
+
+  if (navigator.sendBeacon) {{
+    navigator.sendBeacon = function () {{ return false; }};
+  }}
+}})();
+""".strip()
+
+GUARD_STYLE = """
+.qei-static-form-notice {
+  box-sizing: border-box;
+  margin: 0 0 1rem;
+  padding: .8rem 1rem;
+  border: 1px solid #8a99a8;
+  border-radius: 4px;
+  background: #f2f5f7;
+  color: #18222d;
+  font: 600 14px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+form[data-qei-static-form="disabled"] :disabled {
+  opacity: 1;
+}
+form[data-qei-static-form="disabled"] button,
+form[data-qei-static-form="disabled"] input,
+form[data-qei-static-form="disabled"] select,
+form[data-qei-static-form="disabled"] textarea {
+  cursor: not-allowed;
+}
 """.strip()
 
 LINK_ATTRIBUTES = ("href", "src", "poster", "data-src", "data-lazy-src", "data-background-image")
-TRANSACTION_WORDS = ("donate", "payment", "checkout", "register", "refer-a-patient", "send-enquiry", "medical-record")
+DEFAULT_TRANSACTION_WORDS = (
+    "donate",
+    "donation",
+    "payment",
+    "checkout",
+    "register",
+    "registration",
+    "refer-a-patient",
+    "refer a patient",
+    "send-enquiry",
+    "send enquiry",
+    "medical-record",
+    "medical record",
+    "book appointment",
+    "book laser",
+    "appointment booking",
+)
+INLINE_TRACKING_PATTERNS = (
+    "googletagmanager",
+    "google-analytics",
+    "gtag(",
+    "fbq(",
+    "connect.facebook.net",
+    "hotjar(",
+    "clarity(",
+    "doubleclick.net",
+)
 
 
 def tracking_reference(value: str, fragments: list[str]) -> bool:
@@ -102,7 +172,12 @@ def target_for_internal_url(value: str, current_file: Path, site_root: Path, cur
         suffix = fragment
     else:
         # Repair paths produced by wget after host-directory promotion.
-        match = re.match(r"^(?P<prefix>(?:\.\./)+)(?P<host>(?:[a-z0-9-]+\.)*qei\.org\.au)/(?P<path>.*)$", value, re.I)
+        escaped_root = re.escape(root_domain)
+        match = re.match(
+            rf"^(?P<prefix>(?:\.\./)+)(?P<host>(?:[a-z0-9-]+\.)*{escaped_root})/(?P<path>.*)$",
+            value,
+            re.I,
+        )
         if match:
             target_host = normalise_host(match.group("host"))
             target_path = match.group("path")
@@ -122,6 +197,8 @@ def target_for_internal_url(value: str, current_file: Path, site_root: Path, cur
 
 
 def rewrite_srcset(value: str, current_file: Path, site_root: Path, current_host: str, config: dict) -> str:
+    if value.strip().lower().startswith("data:"):
+        return value
     parts: list[str] = []
     for item in value.split(","):
         tokens = item.strip().split()
@@ -132,17 +209,87 @@ def rewrite_srcset(value: str, current_file: Path, site_root: Path, current_host
     return ", ".join(parts)
 
 
+def link_is_external_transaction(href: str, text: str, config: dict) -> bool:
+    if not config.get("disable_external_transactions", True):
+        return False
+    value = href.strip()
+    if not value or value.startswith(("#", "mailto:", "tel:", "javascript:", "data:")):
+        return False
+
+    parsed = urlparse("https:" + value if value.startswith("//") else value)
+    if parsed.scheme not in {"http", "https"} or not parsed.hostname:
+        return False
+    root_domain = normalise_host(config["root_domain"])
+    if is_in_domain(parsed.hostname, root_domain):
+        return False
+
+    lowered = (value + " " + text).lower()
+    words = [str(x).lower() for x in config.get("transaction_words", DEFAULT_TRANSACTION_WORDS)]
+    host_fragments = [str(x).lower() for x in config.get("transaction_host_fragments", [])]
+    return any(word in lowered for word in words) or any(fragment in parsed.hostname.lower() for fragment in host_fragments)
+
+
+def disable_form(form: Tag, soup: BeautifulSoup) -> None:
+    original_action = str(form.get("action", ""))
+    original_method = str(form.get("method", "get"))
+    if original_action and not form.has_attr("data-original-action"):
+        form["data-original-action"] = original_action
+    if not form.has_attr("data-original-method"):
+        form["data-original-method"] = original_method
+    form["action"] = "#"
+    form["method"] = "get"
+    form["onsubmit"] = "return false"
+    form["novalidate"] = "novalidate"
+    form["autocomplete"] = "off"
+    form["data-qei-static-form"] = "disabled"
+    form["aria-disabled"] = "true"
+
+    for control in form.find_all(["input", "textarea", "select", "button"]):
+        if control.has_attr("name"):
+            control["data-original-name"] = str(control.get("name"))
+            del control["name"]
+        if control.has_attr("formaction"):
+            control["data-original-formaction"] = str(control.get("formaction"))
+            del control["formaction"]
+        if control.name == "button" or (control.name == "input" and str(control.get("type", "")).lower() in {"submit", "image"}):
+            control["type"] = "button"
+        if control.name == "input" and str(control.get("type", "")).lower() in {"hidden", "password", "file"}:
+            control["value"] = ""
+        control["disabled"] = "disabled"
+        control["aria-disabled"] = "true"
+        control["tabindex"] = "-1"
+
+    previous = form.previous_sibling
+    while previous is not None and not isinstance(previous, Tag):
+        previous = previous.previous_sibling
+    if not (isinstance(previous, Tag) and "qei-static-form-notice" in (previous.get("class") or [])):
+        notice = soup.new_tag("div")
+        notice["class"] = ["qei-static-form-notice"]
+        notice["role"] = "note"
+        notice.string = GUARD_MESSAGE
+        form.insert_before(notice)
+
+
 def process_html(path: Path, site_root: Path, config: dict) -> dict[str, int]:
     original = path.read_text(encoding="utf-8", errors="replace")
     soup = BeautifulSoup(original, "lxml")
-    stats = {"forms_disabled": 0, "tracking_nodes_removed": 0, "links_rewritten": 0, "transactions_disabled": 0}
+    stats = {
+        "forms_disabled": 0,
+        "form_controls_disabled": 0,
+        "tracking_nodes_removed": 0,
+        "links_rewritten": 0,
+        "transactions_disabled": 0,
+    }
     current_host = current_host_for_file(path, site_root, str(config["canonical_host"]))
 
     if config.get("disable_tracking"):
         fragments = [str(x) for x in config.get("tracking_host_fragments", [])]
-        for tag in list(soup.find_all(["script", "iframe", "img", "link"])):
+        for tag in list(soup.find_all(["script", "iframe", "img", "link", "noscript"])):
             reference = str(tag.get("src") or tag.get("href") or "")
-            if reference and tracking_reference(reference, fragments):
+            inline = tag.get_text(" ", strip=False) if tag.name in {"script", "noscript"} else ""
+            if (reference and tracking_reference(reference, fragments)) or (
+                inline and any(pattern in inline.lower() for pattern in INLINE_TRACKING_PATTERNS)
+            ):
                 tag.decompose()
                 stats["tracking_nodes_removed"] += 1
 
@@ -162,24 +309,35 @@ def process_html(path: Path, site_root: Path, config: dict) -> dict[str, int]:
             head.append(robots)
         robots["content"] = "noindex,nofollow,noarchive,nosnippet"
 
+    # Disable direct links to external payment, donation, appointment, referral,
+    # or registration processors while preserving navigation to mirrored QEI pages.
+    for anchor in soup.find_all("a", href=True):
+        href = str(anchor.get("href", ""))
+        text = anchor.get_text(" ", strip=True)
+        if link_is_external_transaction(href, text, config):
+            anchor["data-qei-disabled-transaction"] = "true"
+            anchor["data-original-href"] = href
+            anchor["href"] = "#"
+            stats["transactions_disabled"] += 1
+
     if config.get("disable_forms"):
         for form in soup.find_all("form"):
-            original_action = str(form.get("action", ""))
-            if original_action:
-                form["data-original-action"] = original_action
-            form["action"] = "#"
-            form["method"] = "get"
-            form["data-qei-static-form"] = "disabled"
-            form.attrs.pop("onsubmit", None)
-            for control in form.find_all(attrs={"formaction": True}):
-                control["data-original-formaction"] = control.get("formaction")
-                del control["formaction"]
+            controls = len(form.find_all(["input", "textarea", "select", "button"]))
+            disable_form(form, soup)
             stats["forms_disabled"] += 1
+            stats["form_controls_disabled"] += controls
 
-        if soup.find("script", id=GUARD_SCRIPT_ID) is None:
+        style = soup.find("style", id=GUARD_STYLE_ID)
+        if style is None:
+            style = soup.new_tag("style", id=GUARD_STYLE_ID)
+            head.insert(0, style)
+        style.string = GUARD_STYLE
+
+        guard = soup.find("script", id=GUARD_SCRIPT_ID)
+        if guard is None:
             guard = soup.new_tag("script", id=GUARD_SCRIPT_ID)
-            guard.string = GUARD_SCRIPT
             head.insert(0, guard)
+        guard.string = GUARD_SCRIPT
 
     for tag in soup.find_all(True):
         for attribute in LINK_ATTRIBUTES:
@@ -198,17 +356,6 @@ def process_html(path: Path, site_root: Path, config: dict) -> dict[str, int]:
             if new != old:
                 tag["srcset"] = new
                 stats["links_rewritten"] += 1
-
-    # Mark links that could initiate a transaction or transmit sensitive information.
-    for anchor in soup.find_all("a", href=True):
-        href = str(anchor.get("href", ""))
-        text = anchor.get_text(" ", strip=True).lower()
-        lowered = href.lower() + " " + text
-        if any(word in lowered for word in TRANSACTION_WORDS):
-            anchor["data-qei-disabled-transaction"] = "true"
-            anchor["data-original-href"] = href
-            anchor["href"] = "#"
-            stats["transactions_disabled"] += 1
 
     path.write_text(str(soup), encoding="utf-8")
     return stats
@@ -252,10 +399,12 @@ def main() -> int:
         "html_files": 0,
         "css_files": 0,
         "forms_disabled": 0,
+        "form_controls_disabled": 0,
         "tracking_nodes_removed": 0,
         "links_rewritten": 0,
         "transactions_disabled": 0,
         "css_urls_rewritten": 0,
+        "robots_txt_written": 0,
     }
 
     for path in sorted(site_root.rglob("*")):
@@ -270,7 +419,9 @@ def main() -> int:
             totals["css_files"] += 1
             totals["css_urls_rewritten"] += process_css(path, site_root, config)
 
-    from common import write_json
+    if config.get("add_noindex"):
+        (site_root / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
+        totals["robots_txt_written"] = 1
 
     write_json(args.report, totals)
     print(totals)

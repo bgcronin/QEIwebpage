@@ -1,9 +1,10 @@
 from __future__ import annotations
 
+import ipaddress
 import json
 import re
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 from urllib.parse import urlparse
 
 
@@ -26,6 +27,26 @@ def is_in_domain(host: str, root_domain: str) -> bool:
     return host == root_domain or host.endswith("." + root_domain)
 
 
+def address_is_public(value: str) -> bool:
+    """Return True only for globally routable IPv4/IPv6 addresses.
+
+    This deliberately rejects loopback, RFC1918/ULA, link-local, reserved,
+    multicast, documentation, and unspecified ranges. It is used before the
+    crawler opens a discovered host so passive subdomain discovery cannot turn
+    into an SSRF route to a runner's private network.
+    """
+
+    try:
+        return ipaddress.ip_address(value.split("%", 1)[0]).is_global
+    except ValueError:
+        return False
+
+
+def addresses_are_public(values: Iterable[str]) -> bool:
+    addresses = list(values)
+    return bool(addresses) and all(address_is_public(value) for value in addresses)
+
+
 def host_is_excluded(host: str, config: dict[str, Any]) -> tuple[bool, str]:
     root_domain = normalise_host(config["root_domain"])
     host = normalise_host(host)
@@ -33,6 +54,8 @@ def host_is_excluded(host: str, config: dict[str, Any]) -> tuple[bool, str]:
         return True, "outside root domain"
     if not re.fullmatch(r"[a-z0-9.-]+", host):
         return True, "invalid hostname characters"
+    if ".." in host or host.startswith("-") or host.endswith("-"):
+        return True, "invalid hostname structure"
     labels = host[: -(len(root_domain) + 1)].split(".") if host != root_domain else []
     excluded = {str(x).lower() for x in config.get("excluded_host_labels", [])}
     for label in labels:

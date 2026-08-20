@@ -1,9 +1,11 @@
 {
   "css_files": 0,
   "css_urls_rewritten": 0,
+  "form_controls_disabled": 0,
   "forms_disabled": 0,
   "html_files": 1,
   "links_rewritten": 0,
+  "robots_txt_written": 1,
   "tracking_nodes_removed": 0,
   "transactions_disabled": 0
 }
