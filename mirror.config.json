@@ -1,0 +1,62 @@
+{
+  "root_domain": "qei.org.au",
+  "canonical_host": "qei.org.au",
+  "explicit_hosts": [
+    "qei.org.au",
+    "www.qei.org.au"
+  ],
+  "include_public_subdomains": true,
+  "passive_certificate_discovery": true,
+  "user_agent": "QEI-Authorised-Static-Mirror/1.0 (+https://qei.org.au/contact/)",
+  "request_timeout_seconds": 25,
+  "crawl_delay_seconds": 0.35,
+  "max_sitemap_urls": 25000,
+  "excluded_host_labels": [
+    "admin",
+    "api",
+    "auth",
+    "autoconfig",
+    "autodiscover",
+    "beta",
+    "cpanel",
+    "dev",
+    "development",
+    "ftp",
+    "imap",
+    "internal",
+    "intranet",
+    "mail",
+    "mx",
+    "pop",
+    "remote",
+    "secure",
+    "smtp",
+    "sso",
+    "stage",
+    "staging",
+    "test",
+    "vpn",
+    "webmail",
+    "whm"
+  ],
+  "excluded_path_patterns": [
+    "/wp-admin",
+    "/wp-login.php",
+    "/xmlrpc.php",
+    "/wp-json/",
+    "/feed/",
+    "/comments/feed/",
+    "/trackback/"
+  ],
+  "tracking_host_fragments": [
+    "doubleclick.net",
+    "facebook.net",
+    "google-analytics.com",
+    "googletagmanager.com",
+    "hotjar.com",
+    "clarity.ms"
+  ],
+  "disable_forms": true,
+  "disable_tracking": true,
+  "add_noindex": true
+}

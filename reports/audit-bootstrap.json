@@ -1,0 +1,16 @@
+{
+  "broken_internal_references": [],
+  "extensions": {
+    ".html": 1
+  },
+  "file_count": 1,
+  "generated_at": "2026-08-20T08:15:51.170807+00:00",
+  "html_file_count": 1,
+  "safety": {
+    "active_forms": [],
+    "missing_noindex": [],
+    "tracking_references": [],
+    "transaction_links_not_disabled": []
+  },
+  "total_bytes": 2481
+}
