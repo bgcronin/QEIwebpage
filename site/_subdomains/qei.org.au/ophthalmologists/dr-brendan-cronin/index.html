@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head><script id="qei-static-mirror-safety">(function () {
+  'use strict';
+  const message = 'This is a static QEI website preview. Online forms and transactions are disabled. Please use the approved live QEI service or phone 07 3239 5000.';
+  const safeMethods = ['GET', 'HEAD', 'OPTIONS'];
+  const block = function (event) {
+    if (event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+    window.alert(message);
+    return false;
+  };
+
+  document.addEventListener('submit', block, true);
+  document.addEventListener('click', function (event) {
+    const target = event.target && event.target.closest
+      ? event.target.closest('[data-qei-disabled-transaction]')
+      : null;
+    if (target) block(event);
+  }, true);
+
+  if (window.HTMLFormElement) {
+    HTMLFormElement.prototype.submit = function () { return block(); };
+    if (HTMLFormElement.prototype.requestSubmit) {
+      HTMLFormElement.prototype.requestSubmit = function () { return block(); };
+    }
+  }
+
+  const nativeFetch = window.fetch;
+  if (nativeFetch) {
+    window.fetch = function (input, init) {
+      const requestMethod = input && typeof input === 'object' && input.method ? input.method : 'GET';
+      const method = String((init && init.method) || requestMethod || 'GET').toUpperCase();
+      if (!safeMethods.includes(method)) {
+        return Promise.reject(new Error(message));
+      }
+      return nativeFetch.apply(this, arguments);
+    };
+  }
+
+  if (window.XMLHttpRequest) {
+    const nativeOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function (method) {
+      this.__qeiBlockedMethod = !safeMethods.includes(String(method || 'GET').toUpperCase());
+      return nativeOpen.apply(this, arguments);
+    };
+    const nativeSend = XMLHttpRequest.prototype.send;
+    XMLHttpRequest.prototype.send = function () {
+      if (this.__qeiBlockedMethod) {
+        this.abort();
+        throw new Error(message);
+      }
+      return nativeSend.apply(this, arguments);
+    };
+  }
+
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon = function () { return false; };
+  }
+})();</script><style id="qei-static-mirror-safety-style">.qei-static-form-notice {
+  box-sizing: border-box;
+  margin: 0 0 1rem;
+  padding: .8rem 1rem;
+  border: 1px solid #8a99a8;
+  border-radius: 4px;
+  background: #f2f5f7;
+  color: #18222d;
+  font: 600 14px/1.45 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+form[data-qei-static-form="disabled"] :disabled {
+  opacity: 1;
+}
+form[data-qei-static-form="disabled"] button,
+form[data-qei-static-form="disabled"] input,
+form[data-qei-static-form="disabled"] select,
+form[data-qei-static-form="disabled"] textarea {
+  cursor: not-allowed;
+}</style>
+<meta charset="utf-8"/>
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="https://gmpg.org/xfn/11" rel="profile"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+<meta content="HEYnBFtUL7H8OjBbFwIednHkjafjTWZvrZ8-I7SFtMQ" name="google-site-verification"/>
+<meta content="noindex,nofollow,noarchive,nosnippet" name="robots"/>
+<!-- This site is optimized with the Yoast SEO plugin v28.3 - https://yoast.com/product/yoast-seo-wordpress/ -->
+<title>Dr Brendan Cronin | Corneal &amp; Anterior Segment Surgeon | QEI</title>
+
+
+<link as="image" data-rocket-preload="" fetchpriority="high" href="../../wp-content/themes/qei/images/swirl.svg" rel="preload"/>
+<meta content="Dr Brendan Cronin is a Corneal and Anterior Segment Surgeon and the Director of Education at the Queensland Eye Institute." name="description"/>
+<link href="index.html" rel="canonical"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="article" property="og:type"/>
+<meta content="Dr Brendan Cronin | Corneal &amp; Anterior Segment Surgeon | QEI" property="og:title"/>
+<meta content="Dr Brendan Cronin is a Corneal and Anterior Segment Surgeon and the Director of Education at the Queensland Eye Institute." property="og:description"/>
+<meta content="https://qei.org.au/ophthalmologists/dr-brendan-cronin/" property="og:url"/>
+<meta content="Queensland Eye Institute" property="og:site_name"/>
+<meta content="2026-03-18T23:29:18+00:00" property="article:modified_time"/>
+<meta content="https://qei.org.au/wp-content/uploads/2026/03/Dr-Brendan-Cronin-3-1.png" property="og:image"/>
+<meta content="1000" property="og:image:width"/>
+<meta content="1000" property="og:image:height"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Est. reading time" name="twitter:label1"/>
+<meta content="2 minutes" name="twitter:data1"/>
+<script class="yoast-schema-graph" type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/qei.org.au\/ophthalmologists\/dr-brendan-cronin\/","url":"https:\/\/qei.org.au\/ophthalmologists\/dr-brendan-cronin\/","name":"Dr Brendan Cronin | Corneal & Anterior Segment Surgeon | QEI","isPartOf":{"@id":"https:\/\/qei.org.au\/#website"},"primaryImageOfPage":{"@id":"https:\/\/qei.org.au\/ophthalmologists\/dr-brendan-cronin\/#primaryimage"},"image":{"@id":"https:\/\/qei.org.au\/ophthalmologists\/dr-brendan-cronin\/#primaryimage"},"thumbnailUrl":"https:\/\/qei.org.au\/wp-content\/uploads\/2026\/03\/Dr-Brendan-Cronin-3-1.png","datePublished":"2019-02-04T12:30:00+00:00","dateModified":"2026-03-18T23:29:18+00:00","description":"Dr Brendan Cronin is a Corneal and Anterior Segment Surgeon and the Director of Education at the Queensland Eye Institute.","breadcrumb":{"@id":"https:\/\/qei.org.au\/ophthalmologists\/dr-brendan-cronin\/#breadcrumb"},"inLanguage":"en-AU","potentialAction":[{"@type":"ReadAction","target":["https:\/\/qei.org.au\/ophthalmologists\/dr-brendan-cronin\/"]}]},{"@type":"ImageObject","inLanguage":"en-AU","@id":"https:\/\/qei.org.au\/ophthalmologists\/dr-brendan-cronin\/#primaryimage","url":"https:\/\/qei.org.au\/wp-content\/uploads\/2026\/03\/Dr-Brendan-Cronin-3-1.png","contentUrl":"https:\/\/qei.org.au\/wp-content\/uploads\/2026\/03\/Dr-Brendan-Cronin-3-1.png","width":1000,"height":1000},{"@type":"BreadcrumbList","@id":"https:\/\/qei.org.au\/ophthalmologists\/dr-brendan-cronin\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/qei.org.au\/"},{"@type":"ListItem","position":2,"name":"Our Ophthalmologists","item":"https:\/\/qei.org.au\/ophthalmologists\/"},{"@type":"ListItem","position":3,"name":"Dr Brendan Cronin"}]},{"@type":"WebSite","@id":"https:\/\/qei.org.au\/#website","url":"https:\/\/qei.org.au\/","name":"Queensland Eye Institute","description":"Queensland Eye Institute","publisher":{"@id":"https:\/\/qei.org.au\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/qei.org.au\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-AU"},{"@type":"Organization","@id":"https:\/\/qei.org.au\/#organization","name":"Queensland Eye Institute","url":"https:\/\/qei.org.au\/","logo":{"@type":"ImageObject","inLanguage":"en-AU","@id":"https:\/\/qei.org.au\/#\/schema\/logo\/image\/","url":"https:\/\/qei.org.au\/wp-content\/uploads\/2019\/05\/Queensland-Eye-Institute.png","contentUrl":"https:\/\/qei.org.au\/wp-content\/uploads\/2019\/05\/Queensland-Eye-Institute.png","width":60,"height":60,"caption":"Queensland Eye Institute"},"image":{"@id":"https:\/\/qei.org.au\/#\/schema\/logo\/image\/"}}]}</script>
+<!-- / Yoast SEO plugin. -->
+<link href="../../../../feed" rel="alternate" title="Queensland Eye Institute » Feed" type="application/rss+xml"/>
+<link href="../../../../comments/feed" rel="alternate" title="Queensland Eye Institute » Comments Feed" type="application/rss+xml"/>
+<link href="../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fophthalmologists%2Fdr-brendan-cronin%2F" rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"/>
+<link href="../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fophthalmologists%2Fdr-brendan-cronin%2F&amp;format=xml" rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"/>
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link href="../../wp-content/plugins/wp-accessibility/toolbar/fonts/css/a11y-toolbar.css@ver=2.3.5.css" id="ui-font-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/plugins/wp-accessibility/toolbar/css/a11y.css@ver=2.3.5.css" id="wpa-toolbar-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/plugins/wp-accessibility/toolbar/css/a11y-fontsize.css@ver=2.3.5.css" id="ui-fontsize.css-css" media="all" rel="stylesheet"/>
+<style id="ui-fontsize.css-inline-css">
+html { --wpa-font-size: clamp( 24px, 1.5rem, 36px ); --wpa-h1-size : clamp( 48px, 3rem, 72px ); --wpa-h2-size : clamp( 40px, 2.5rem, 60px ); --wpa-h3-size : clamp( 32px, 2rem, 48px ); --wpa-h4-size : clamp( 28px, 1.75rem, 42px ); --wpa-sub-list-size: 1.1em; --wpa-sub-sub-list-size: 1em; } 
+/*# sourceURL=ui-fontsize.css-inline-css */
+</style>
+<link href="../../wp-content/plugins/wp-accessibility/css/wpa-style.css@ver=2.3.5.css" id="wpa-style-css" media="all" rel="stylesheet"/>
+<style id="wpa-style-inline-css">
+:root { --admin-bar-top : 7px; }
+/*# sourceURL=wpa-style-inline-css */
+</style>
+<link href="../../wp-content/themes/qei/style.css@ver=7.1.css" id="qei-style-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/themes/qei/css/owl.carousel.min.css@ver=7.1.css" id="qei-owl-style-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/themes/qei/css/font-awesome.min.css@ver=7.1.css" id="qei-font-awesome-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/themes/qei/css/carousel.css@ver=7.1.css" id="qei-carousel-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/themes/qei/css/slick.css@ver=7.1.css" id="qei-slick-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/themes/qei/css/custom-styles.css@ver=1787292321.css" id="qei-custom-style-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/themes/qei/css/menu-styles.css@ver=7.1.css" id="qei-menustyle-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/themes/qei/css/overrides.css@ver=7.1.css" id="qei-override-css-2-css" media="all" rel="stylesheet"/>
+<link href="../../wp-includes/css/dashicons.min.css@ver=7.1.css" id="dashicons-css" media="all" rel="stylesheet"/>
+<script id="qei-script-js" src="../../wp-content/themes/qei/js/jquery-1.11.1.min.js@ver=7.1"></script>
+<script id="qei-owl-script-js" src="../../wp-content/themes/qei/js/owl.carousel.min.js@ver=7.1"></script>
+<script id="qei-isotope-script-js" src="../../wp-content/themes/qei/js/isotope.pkgd.min.js@ver=7.1"></script>
+<script id="qei-slick-script-js" src="../../wp-content/themes/qei/js/slick.js@ver=7.1"></script>
+<script id="qei-modal-script-js" src="../../wp-content/themes/qei/js/modal.min.js@ver=7.1"></script>
+<script id="qei-customjs-script-js" src="../../wp-content/themes/qei/js/scripts2.js@ver=7.1"></script>
+<link href="../../../../wp-json" rel="https://api.w.org/"/><link href="../../../../wp-json/wp/v2/pages/71" rel="alternate" title="JSON" type="application/json"/><link href="../../../../xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+<meta content="WordPress 7.1" name="generator"/>
+<link href="../../../../index.html?p=71" rel="shortlink"/>
+<!-- This site is optimized with the Schema plugin v1.7.9.6 - https://schema.press -->
+<script type="application/ld+json">{"@context":"https:\/\/schema.org\/","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/qei.org.au\/ophthalmologists\/dr-brendan-cronin\/"},"url":"https:\/\/qei.org.au\/ophthalmologists\/dr-brendan-cronin\/","headline":"Dr Brendan Cronin","datePublished":"2019-02-04T12:30:00+10:00","dateModified":"2026-03-19T09:29:18+10:00","publisher":{"@type":"Organization","@id":"https:\/\/qei.org.au\/#organization","name":"Queensland Eye Institute","logo":{"@type":"ImageObject","url":"https:\/\/qei.org.au\/wp-content\/uploads\/2019\/05\/Queensland-Eye-Institute.png","width":600,"height":60}},"image":{"@type":"ImageObject","url":"https:\/\/qei.org.au\/wp-content\/uploads\/2026\/03\/Dr-Brendan-Cronin-3-1.png","width":1000,"height":1000},"description":"Cornea, Cataract and Anterior Segment","author":{"@type":"Person","name":"qeiadmin","url":"https:\/\/qei.org.au\/author\/qeiadmin\/","image":{"@type":"ImageObject","url":"https:\/\/secure.gravatar.com\/avatar\/d899e702d2790a59126ef3b9747bfbcefea411cb9db19850b5eca20edd283a45?s=96&d=mm&r=g","height":96,"width":96}}}</script>
+<!-- Meta Pixel Code -->
+
+<!-- End Meta Pixel Code -->
+
+
+<!-- Meta Pixel Code -->
+<noscript>
+<img alt="fbpx" height="1" src="https://www.facebook.com/tr?id=1876286742667638&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<!-- This site is optimized with the Schema plugin v1.7.9.6 - https://schema.press -->
+<script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://qei.org.au",
+                "name": "Home"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "https://qei.org.au/ophthalmologists/",
+                "name": "Our Ophthalmologists"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@id": "https://qei.org.au/ophthalmologists/dr-brendan-cronin/",
+                "name": "Dr Brendan Cronin",
+                "image": "https://qei.org.au/wp-content/uploads/2026/03/Dr-Brendan-Cronin-3-1.png"
+            }
+        }
+    ]
+}</script>
+<link href="../../wp-content/uploads/2019/02/favicon.png" rel="icon" sizes="32x32"/>
+<link href="../../wp-content/uploads/2019/02/favicon.png" rel="icon" sizes="192x192"/>
+<link href="../../wp-content/uploads/2019/02/favicon.png" rel="apple-touch-icon"/>
+<meta content="https://qei.org.au/wp-content/uploads/2019/02/favicon.png" name="msapplication-TileImage"/>
+<link href="../../wp-content/plugins/gravityforms/legacy/css/formreset.min.css@ver=2.10.5.css" id="gforms_reset_css-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/plugins/gravityforms/legacy/css/formsmain.min.css@ver=2.10.5.css" id="gforms_formsmain_css-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/plugins/gravityforms/legacy/css/readyclass.min.css@ver=2.10.5.css" id="gforms_ready_class_css-css" media="all" rel="stylesheet"/>
+<link href="../../wp-content/plugins/gravityforms/legacy/css/browsers.min.css@ver=2.10.5.css" id="gforms_browsers_css-css" media="all" rel="stylesheet"/>
+<style id="rocket-lazyrender-inline-css">[data-wpr-lazyrender] {content-visibility: auto;}</style><meta content="WP Rocket 3.19.2.1" data-wpr-features="wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_preload_links wpr_desktop" name="generator"/></head>
+<body class="wp-singular page-template page-template-page-templates page-template-ophthalmologists-inner page-template-page-templatesophthalmologists-inner-php page page-id-71 page-child parent-pageid-67 wp-custom-logo wp-theme-qei">
+<!-- Google Tag Manager (noscript) -->
+<noscript></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="header-section">
+<div class="top-section">
+<div class="top-inner">
+<ul class="topmenu">
+<li class="menu-item-has-children qei-foundation hoverclass"><span>QEI Foundation</span>
+<ul class="sub-menu">
+<li class="active menu-item menu-item-type-post_type menu-item-object-page menu-item-1495" id="menu-item-1495"><a href="../../qei-foundation/index.html">QEI Foundation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134" id="menu-item-134"><a href="../../qei-foundation/about-qei-foundation/index.html">About Queensland Eye Institute Foundation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144" id="menu-item-144"><a href="../../qei-foundation/our-people/index.html">Our People</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136" id="menu-item-136"><a href="../../qei-foundation/annual-reports/index.html">Annual Reports</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3339" id="menu-item-3339"><a href="../../qei-foundation/eyecure/index.html">Eyecure Newsletters</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3196" id="menu-item-3196"><a href="../../qei-foundation/news/last-seen-exhibition/index.html">Last Seen</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138" id="menu-item-138"><a href="../../qei-foundation/donate/index.html">Donate</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5564" id="menu-item-5564"><a href="../../qei-foundation/wills-and-bequests/index.html">Wills and bequests</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142" id="menu-item-142"><a href="../../qei-foundation/patient-stories/index.html">Patient Stories</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141" id="menu-item-141"><a href="../../qei-foundation/news/index.html">News</a></li>
+</ul>
+</li>
+<li class="menu-item-has-children research hoverclass"><span>Research</span>
+<ul class="sub-menu">
+<li class="active menu-item menu-item-type-post_type menu-item-object-page menu-item-1498" id="menu-item-1498"><a href="../../research/index.html">Research</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1500" id="menu-item-1500"><a href="../../research/researchers/index.html">Researchers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3160" id="menu-item-3160"><a href="../../research/research-themes-purpose/index.html">Research Purpose &amp; Themes</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1501" id="menu-item-1501"><a href="../../research/groups-publications/index.html">Research Groups &amp; Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1502" id="menu-item-1502"><a href="../../research/affiliates/index.html">Affiliates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4889" id="menu-item-4889"><a href="../../clinical-trials/index.html">Clinical Trials</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5579" id="menu-item-5579"><a href="../../clinical-trials/feedback-on-clinical-trials/index.html">Feedback on clinical trials</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item-has-children education hoverclass"><span>Education</span>
+<ul class="sub-menu">
+<li class="active menu-item menu-item-type-post_type menu-item-object-page menu-item-1505" id="menu-item-1505"><a href="../../education/index.html">Education</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-784" id="menu-item-784"><a href="../../education/optometry-education-series/index.html">Optometry Education</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6568" id="menu-item-6568"><a href="../../education/student-placement/index.html">Student Placement</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6352" id="menu-item-6352"><a href="../../education/introduction-to-ophthalmology-for-medical-receptionists/index.html">Introduction to Ophthalmology</a></li>
+</ul>
+</li>
+<li class="qei-trials"><a href="../../clinical-trials/index.html"><span>Clinical Trials</span></a></li>
+<li class="search-inner">
+<div class="search-form">
+<section class="search"><div class="qei-static-form-notice" role="note">This is a static QEI website preview. Online forms and transactions are disabled. Please use the approved live QEI service or phone 07 3239 5000.</div><form action="#" aria-disabled="true" autocomplete="off" data-original-action="../../../www.qei.org.au/index.html" data-original-method="get" data-qei-static-form="disabled" method="get" novalidate="novalidate" onsubmit="return false" role="search">
+<label class="screen-reader-text searchform" for="searchsite">search</label>
+<input aria-disabled="true" aria-label="Search" class="search-field" data-original-name="s" disabled="disabled" id="searchsite" placeholder="Search" tabindex="-1" type="search" value=""/>
+<label class="screen-reader-text searchform" for="searchsubmit">Submit</label>
+<input aria-disabled="true" aria-label="Submit" disabled="disabled" id="searchsubmit" tabindex="-1" type="button" value="Go"/>
+</form></section> </div>
+</li>
+<li class="callus"><a href="tel:07 3239 5000"><div aria-hidden="true" class="fa fa-phone"></div> 07 3239 5000</a></li></ul>
+</div>
+</div>
+<div class="container">
+<div class="header-inner">
+<div class="header-amins">
+<div class="header_logo">
+<a class="custom-logo-link" href="../../../../index.html" rel="home"><img alt="Queensland Eye Institute" class="custom-logo" decoding="async" src="../../wp-content/uploads/2019/02/logo.svg"/></a> </div>
+</div>
+<div class="menu-sect desktop-menu">
+<ul class="nav">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1489" id="menu-item-1489"><a href="../../qei-clinics/index.html">QEI Clinics</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1337" id="menu-item-1337"><a href="../../qei-clinics/woolloongabba-qei-clinic/index.html">Woolloongabba QEI Clinic</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1336" id="menu-item-1336"><a href="../../qei-clinics/clayfield-qei-clinic/index.html">Clayfield QEI Clinic</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1513" id="menu-item-1513"><a href="../../patient-info/index.html">Patient Information</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6107" id="menu-item-6107"><a href="../../patient-info/book-cataract-or-pterygium-assessment/index.html">Book a New Patient Appointment</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111" id="menu-item-111"><a href="../../patient-info/send-enquiry/index.html">Send Enquiry</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5823" id="menu-item-5823"><a href="../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf">Patient Registration Form</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114" id="menu-item-114"><a href="../../patient-info/preparing-for-your-visit/index.html">Preparing For Your Visit</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1528" id="menu-item-1528"><a href="../../contact/index.html">How To Find Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5461" id="menu-item-5461"><a href="../../patient-info/request-medical-record/index.html">Request medical record</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6576" id="menu-item-6576"><a href="../../comment-on-your-care/index.html">Comment on your care</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-104" id="menu-item-104"><a href="../index.html">Our Ophthalmologists</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-71 current_page_item menu-item-117" id="menu-item-117"><a aria-current="page" href="index.html">Dr Brendan Cronin</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118" id="menu-item-118"><a href="../dr-david-gunn/index.html">Dr David Gunn</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4851" id="menu-item-4851"><a href="../dr-lee-holland/index.html">Dr Lee Holland</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115" id="menu-item-115"><a href="../associate-professor-anthony-kwan/index.html">Associate Professor Anthony Kwan</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4953" id="menu-item-4953"><a href="../dr-jonathan-lai/index.html">Dr Jonathan Lai</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6267" id="menu-item-6267"><a href="../dr-alexandra-manta/index.html">Dr Alexandra Manta</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6342" id="menu-item-6342"><a href="../dr-alexander-newman/index.html">Dr Alexander Newman</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150" id="menu-item-150"><a href="../dr-anthony-pane/index.html">Dr Anthony Pane</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4650" id="menu-item-4650"><a href="../dr-angela-richards/index.html">Dr Angela Richards</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2784" id="menu-item-2784"><a href="../dr-geoffrey-ryan/index.html">Dr Geoffrey Ryan</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116" id="menu-item-116"><a href="../dr-abhishek-sharma/index.html">Associate Professor Abhishek Sharma</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123" id="menu-item-123"><a href="../refer-a-patient-form/index.html">Refer A Patient Form</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-103" id="menu-item-103"><a href="../../eye-conditions/index.html">Eye Conditions</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124" id="menu-item-124"><a href="../../eye-conditions/age-related-macular-degeneration/index.html">Age-Related Macular Degeneration</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125" id="menu-item-125"><a href="../../eye-conditions/cataracts/index.html">Cataracts</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1784" id="menu-item-1784"><a href="../../eye-conditions/corneal-scarring/index.html">Corneal Scarring</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126" id="menu-item-126"><a href="../../eye-conditions/diabetic-ratinopathy/index.html">Diabetic Retinopathy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127" id="menu-item-127"><a href="../../eye-conditions/dry-eye/index.html">Dry Eye</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1782" id="menu-item-1782"><a href="../../eye-conditions/fuchs-endothelial-dystrophy/index.html">Fuchs’ Endothelial Dystrophy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128" id="menu-item-128"><a href="../../eye-conditions/glaucoma/index.html">Glaucoma</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129" id="menu-item-129"><a href="../../eye-conditions/keratoconus/index.html">Keratoconus</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130" id="menu-item-130"><a href="../../eye-conditions/pterygium/index.html">Pterygium</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1783" id="menu-item-1783"><a href="../../eye-conditions/retinal-tear-and-detachment/index.html">Retinal Tear and Detachment</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4496" id="menu-item-4496"><a href="../../eye-conditions/stargardt-disease/index.html">Stargardt Disease</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4505" id="menu-item-4505"><a href="../../eye-conditions/thyroid-eye-disease/index.html">Thyroid eye disease (TED)</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1516" id="menu-item-1516"><a href="../../services/index.html">Services</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1519" id="menu-item-1519"><a href="../../services/southbank-day-hospital/index.html">South Brisbane Day Hospital</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1517" id="menu-item-1517"><a href="../../services/qei-electro-diagnostic-and-imaging-centre/index.html">Queensland Electro-Diagnostic &amp; Imaging Centre</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2529" id="menu-item-2529"><a href="https://www.qeilaser.com.au/">QEI Laser</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108" id="menu-item-108"><a href="../../contact/index.html">Contact</a></li>
+</ul>
+</div>
+<div class="menu-section responsive-menu">
+<div class="menu-toggle">
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div>
+</div>
+<ul class="nav hidden">
+<li><a href="../../../../index.html">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1489"><a href="../../qei-clinics/index.html">QEI Clinics</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1337"><a href="../../qei-clinics/woolloongabba-qei-clinic/index.html">Woolloongabba QEI Clinic</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1336"><a href="../../qei-clinics/clayfield-qei-clinic/index.html">Clayfield QEI Clinic</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1513"><a href="../../patient-info/index.html">Patient Information</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6107"><a href="../../patient-info/book-cataract-or-pterygium-assessment/index.html">Book a New Patient Appointment</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="../../patient-info/send-enquiry/index.html">Send Enquiry</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5823"><a href="../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf">Patient Registration Form</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-114"><a href="../../patient-info/preparing-for-your-visit/index.html">Preparing For Your Visit</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1528"><a href="../../contact/index.html">How To Find Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5461"><a href="../../patient-info/request-medical-record/index.html">Request medical record</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6576"><a href="../../comment-on-your-care/index.html">Comment on your care</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-104"><a href="../index.html">Our Ophthalmologists</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-71 current_page_item menu-item-117"><a aria-current="page" href="index.html">Dr Brendan Cronin</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118"><a href="../dr-david-gunn/index.html">Dr David Gunn</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4851"><a href="../dr-lee-holland/index.html">Dr Lee Holland</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a href="../associate-professor-anthony-kwan/index.html">Associate Professor Anthony Kwan</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4953"><a href="../dr-jonathan-lai/index.html">Dr Jonathan Lai</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6267"><a href="../dr-alexandra-manta/index.html">Dr Alexandra Manta</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6342"><a href="../dr-alexander-newman/index.html">Dr Alexander Newman</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="../dr-anthony-pane/index.html">Dr Anthony Pane</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4650"><a href="../dr-angela-richards/index.html">Dr Angela Richards</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2784"><a href="../dr-geoffrey-ryan/index.html">Dr Geoffrey Ryan</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a href="../dr-abhishek-sharma/index.html">Associate Professor Abhishek Sharma</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123"><a href="../refer-a-patient-form/index.html">Refer A Patient Form</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-103"><a href="../../eye-conditions/index.html">Eye Conditions</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-124"><a href="../../eye-conditions/age-related-macular-degeneration/index.html">Age-Related Macular Degeneration</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-125"><a href="../../eye-conditions/cataracts/index.html">Cataracts</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1784"><a href="../../eye-conditions/corneal-scarring/index.html">Corneal Scarring</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126"><a href="../../eye-conditions/diabetic-ratinopathy/index.html">Diabetic Retinopathy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-127"><a href="../../eye-conditions/dry-eye/index.html">Dry Eye</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1782"><a href="../../eye-conditions/fuchs-endothelial-dystrophy/index.html">Fuchs’ Endothelial Dystrophy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="../../eye-conditions/glaucoma/index.html">Glaucoma</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="../../eye-conditions/keratoconus/index.html">Keratoconus</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="../../eye-conditions/pterygium/index.html">Pterygium</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1783"><a href="../../eye-conditions/retinal-tear-and-detachment/index.html">Retinal Tear and Detachment</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4496"><a href="../../eye-conditions/stargardt-disease/index.html">Stargardt Disease</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4505"><a href="../../eye-conditions/thyroid-eye-disease/index.html">Thyroid eye disease (TED)</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1516"><a href="../../services/index.html">Services</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1519"><a href="../../services/southbank-day-hospital/index.html">South Brisbane Day Hospital</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1517"><a href="../../services/qei-electro-diagnostic-and-imaging-centre/index.html">Queensland Electro-Diagnostic &amp; Imaging Centre</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2529"><a href="https://www.qeilaser.com.au/">QEI Laser</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="../../contact/index.html">Contact</a></li>
+<li class="menu-item-has-children"><a href="index.html#">QEI Foundation</a>
+<ul class="sub-menu" id="menu-qei-foundation-menu-1"><li class="active menu-item menu-item-type-post_type menu-item-object-page menu-item-1495"><a href="../../qei-foundation/index.html">QEI Foundation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="../../qei-foundation/about-qei-foundation/index.html">About Queensland Eye Institute Foundation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="../../qei-foundation/our-people/index.html">Our People</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="../../qei-foundation/annual-reports/index.html">Annual Reports</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3339"><a href="../../qei-foundation/eyecure/index.html">Eyecure Newsletters</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3196"><a href="../../qei-foundation/news/last-seen-exhibition/index.html">Last Seen</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="../../qei-foundation/donate/index.html">Donate</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5564"><a href="../../qei-foundation/wills-and-bequests/index.html">Wills and bequests</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="../../qei-foundation/patient-stories/index.html">Patient Stories</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="../../qei-foundation/news/index.html">News</a></li>
+</ul> </li>
+<li class="menu-item-has-children"><a href="index.html#">Research</a>
+<ul class="sub-menu" id="menu-research-menu-1"><li class="active menu-item menu-item-type-post_type menu-item-object-page menu-item-1498"><a href="../../research/index.html">Research</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1500"><a href="../../research/researchers/index.html">Researchers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3160"><a href="../../research/research-themes-purpose/index.html">Research Purpose &amp; Themes</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1501"><a href="../../research/groups-publications/index.html">Research Groups &amp; Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1502"><a href="../../research/affiliates/index.html">Affiliates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4889"><a href="../../clinical-trials/index.html">Clinical Trials</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5579"><a href="../../clinical-trials/feedback-on-clinical-trials/index.html">Feedback on clinical trials</a></li>
+</ul>
+</li>
+</ul> </li>
+<li class="menu-item-has-children"><a href="index.html#">Education</a>
+<ul class="sub-menu" id="menu-education-menu-1"><li class="active menu-item menu-item-type-post_type menu-item-object-page menu-item-1505"><a href="../../education/index.html">Education</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-784"><a href="../../education/optometry-education-series/index.html">Optometry Education</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6568"><a href="../../education/student-placement/index.html">Student Placement</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6352"><a href="../../education/introduction-to-ophthalmology-for-medical-receptionists/index.html">Introduction to Ophthalmology</a></li>
+</ul> </li>
+<li><a href="../../clinical-trials/index.html">Clinical Trials</a></li>
+<li class="callus blue"><a href="../../qei-foundation/donate/index.html">Donate</a></li>
+<li class="search-inner">
+<div class="search-form">
+<section class="search"><div class="qei-static-form-notice" role="note">This is a static QEI website preview. Online forms and transactions are disabled. Please use the approved live QEI service or phone 07 3239 5000.</div><form action="#" aria-disabled="true" autocomplete="off" data-original-action="../../../www.qei.org.au/index.html" data-original-method="get" data-qei-static-form="disabled" method="get" novalidate="novalidate" onsubmit="return false" role="search">
+<label class="screen-reader-text searchform" for="searchsite_m">search</label>
+<input aria-disabled="true" aria-label="Search" class="search-field" data-original-name="s" disabled="disabled" id="searchsite_m" placeholder="Search" tabindex="-1" type="search" value=""/>
+<label class="screen-reader-text searchform" for="searchsubmit_m">Submit</label>
+<input aria-disabled="true" aria-label="Submit" disabled="disabled" id="searchsubmit_m" tabindex="-1" type="button" value="Go"/>
+</form></section> </div>
+</li>
+<li class="callus"><a href="tel:07 3239 5000"><div aria-hidden="true" class="fa fa-phone"></div> 07 3239 5000</a></li></ul>
+</div>
+</div>
+</div>
+</nav>
+<header class="inline-block header-cover-section inner-header">
+<div class="about-table blue-bg" style="">
+<div class="header-inner-left">
+<div class="container">
+<div class="container-inner">
+<h1>Dr Brendan Cronin</h1>
+<div class="inner-header-details team-sct-dt">
+<h4>
+Cornea, Cataract and Anterior Segment
+</h4>
+<p>MBBS (hons) GradDipOphthSc, B.Com, LLB FRANZCO</p>
+</div>
+<div class="arrow-img" style="background-image: url('../../wp-content/themes/qei/images/arrow.svg');"></div>
+</div>
+</div>
+</div>
+<div class="header-inner-right" style="background-image: url('../../wp-content/uploads/2026/03/Dr-Brendan-Cronin-3-1.png');">
+</div>
+</div>
+</header>
+<section class="team-information-sect inline-block paddingtop">
+<div class="container">
+<div class="container-inner">
+<div class="about-table">
+<div class="team-info-left">
+<h3>Bio</h3>
+</div>
+<div class="team-info-right">
+<p><a href="https://drbrendancronin.com.au/">Dr Brendan Cronin</a> is a Corneal and Refractive Surgeon at the Queensland Eye Institute.</p>
+<p>Dr Cronin grew up on the Gold Coast and completed his medical training at the <a href="https://www.uq.edu.au/">University of Queensland</a> Medical School in Brisbane. He has international experience have trained in his subspecialty of Corneal, Refractive and Anterior Segment Surgery at the prestigious Manchester Royal Eye Hospital in the United Kingdom. He performs all types of corneal transplant surgery, pterygium surgery, cataract surgery and refractive surgery.  Dr Cronin has a special interest in keratoconus especially LASER “Athen’s Protocol” corneal regularisation combined with collagen cross-linking and Corneal Allogenic Intrastromal Ring Segments or “CAIRS”.  Together with Dr David Gunn, he developed <a href="http://www.cairsplan.com">www.cairsplan.com</a>.  This pioneering website is used by surgeons globally to both learn the CAIRS procedure and to plan their surgical procedures.</p>
+<p>Dr Cronin is regularly invited to speak at conferences internationally, has published articles in numerous international ophthalmology journals, has written two textbooks, holds international patents in corneal cross lining technology and is a member of <a href="http://www.escrs.org.au/">The European Society of Cataract and Refractive Surgery</a>, The Cornea Society, <a href="https://www.refractivealliance.com/">The Refractive Surgery Alliance</a>, is a founding fellow of the <a href="https://wcrsvs.org/">World college of Refractive Surgery and Visual Sciences</a> and is a fellow of the <a href="http://www.ranzco.edu/">Royal Australian and New Zealand College of Ophthalmology</a>.</p>
+<p>Dr Cronin performs all of his refractive surgery work through <a href="http://www.focusvision.com.au/">Focus Vision Clinic</a> which is co-located with QEI in Woolloongabba.</p>
+<p>When he isn’t at work Dr Cronin enjoys spending time with his wife and 2 daughters.</p>
+</div>
+</div>
+<div class="about-table">
+<div class="team-info-left">
+<h3></h3>
+</div>
+<div class="team-info-right">
+</div>
+</div>
+<div class="about-table">
+<div class="team-info-left">
+<h3>Disorders Treated</h3>
+</div>
+<div class="team-info-right">
+<ul>
+<li>Cataract surgery and lens replacement surgery</li>
+<li>Corneal transplant surgery</li>
+<li>Sutureless Pterygium surgery</li>
+<li>Keratoconus surgery</li>
+<li>Laser eye surgery</li>
+</ul>
+<ul>
+<li>LASER “Athen’s Protocol” corneal resurfacing combined with collagen cross-linking for keratoconus</li>
+<li>CAIRS surgery for keratoconus</li>
+<li>Collagen Cross-linking</li>
+<li>Multifocal lens surgery</li>
+<li>Implantable Collamer Lens/Implantable Contact lens surgery</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="team-info-mdl-sect inline-block paddingtop" style="background-image: url('https://qei.org.au/wp-content/themes/qei/images/mask-bg.png');">
+<div class="container">
+<div class="container-inner">
+<div class="about-table">
+<div class="team-mdl-left">
+<h3>Make an appointment with Dr Brendan Cronin</h3>
+<p>Please click the button and fill out the form online</p>
+</div>
+<div class="team-mdl-right">
+<a class="bg-btn btn-lg btn-success" href="../../patient-info/send-enquiry/index.html">Send Enquiry</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="latest-news inline-block paddingtop">
+<div class="container">
+<div class="container-inner">
+<h2>Related News</h2>
+<div class="latest-news-listing">
+<div class="latest-news-inner">
+<a href="../../news/new-technology-to-improve-cairs-treatment-for-keratoconus/index.html">
+<div class="news-bg" style="background-image: url('https://qei.org.au/wp-content/uploads/2026/03/20260317_QEI_FemtoZ8Cronin1.jpg">
+<div class="bg-overlay"></div>
+</div>
+</a>
+<div class="news-details">
+<ul>
+<li class="newsdate">18 Mar, 2026</li>
+</ul>
+<a href="../../news/new-technology-to-improve-cairs-treatment-for-keratoconus/index.html"><h3>New technology to improve CAIRS treatment for keratoconus</h3></a>
+<a href="../../news/new-technology-to-improve-cairs-treatment-for-keratoconus/index.html"><p>By adopting cutting-edge technology and providing data-driven, personalised care, QEI ophthalmologists are setting the s...</p></a>
+<a class="read-more" href="../../news/new-technology-to-improve-cairs-treatment-for-keratoconus/index.html">Read more</a>
+</div>
+</div>
+<div class="latest-news-inner">
+<a href="../../news/revolutionizing-treatment-for-keratoconus/index.html">
+<div class="news-bg" style="background-image: url('https://qei.org.au/wp-content/uploads/2025/08/shutterstock_220581238.jpg">
+<div class="bg-overlay"></div>
+</div>
+</a>
+<div class="news-details">
+<ul>
+<li class="newsdate">08 Aug, 2025</li>
+<li class="newscate">
+<a href="../../newscategories/qei-clinic/index.html">QEI Clinic</a>
+</li>
+</ul>
+<a href="../../news/revolutionizing-treatment-for-keratoconus/index.html"><h3>Revolutionizing Treatment for Keratoconus</h3></a>
+<a href="../../news/revolutionizing-treatment-for-keratoconus/index.html"><p>What is Keratoconus
+Keratoconus is a progressive eye condition where the cornea, the clear front surface of the eye, th...</p></a>
+<a class="read-more" href="../../news/revolutionizing-treatment-for-keratoconus/index.html">Read more</a>
+</div>
+</div>
+<div class="latest-news-inner">
+<a href="../../news/qei-clinic-reveals-cutting-edge-cross-linking-technology/index.html">
+<div class="news-bg" style="background-image: url('https://qei.org.au/wp-content/uploads/2020/01/Doctors-with-new-machine.jpg">
+<div class="bg-overlay"></div>
+</div>
+</a>
+<div class="news-details">
+<ul>
+<li class="newsdate">30 Jan, 2020</li>
+<li class="newscate">
+<a href="../../newscategories/qei-clinic/index.html">QEI Clinic</a>
+</li>
+</ul>
+<a href="../../news/qei-clinic-reveals-cutting-edge-cross-linking-technology/index.html"><h3>QEI Clinic reveals cutting edge cross-linking technology</h3></a>
+<a href="../../news/qei-clinic-reveals-cutting-edge-cross-linking-technology/index.html"><p>We are excited to now offer topography guided corneal collagen cross-linking to patients with keratoconus, using the new...</p></a>
+<a class="read-more" href="../../news/qei-clinic-reveals-cutting-edge-cross-linking-technology/index.html">Read more</a>
+</div>
+</div>
+</div>
+<div class="blog-posts">
+<a class="bg-btn" href="../../qei-foundation/news/index.html">All blog posts</a>
+</div>
+</div>
+</div>
+</section>
+<section class="newsletter-section inline-block paddingtop">
+<div class="container">
+<div class="container-inner">
+<div class="about-table">
+<div class="newsletter-left">
+<h3>Subscribe to our newsletter</h3>
+</div>
+<div class="newsletter-right newsletter-sct">
+<div class="gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework" data-form-index="0" data-form-theme="legacy" id="gform_wrapper_17"><div class="gform_anchor" id="gf_17" tabindex="-1"></div><div class="qei-static-form-notice" role="note">This is a static QEI website preview. Online forms and transactions are disabled. Please use the approved live QEI service or phone 07 3239 5000.</div><form action="#" aria-disabled="true" autocomplete="off" data-formid="17" data-original-action="index.html#gf_17" data-original-method="post" data-qei-static-form="disabled" enctype="multipart/form-data" id="gform_17" method="get" novalidate="novalidate" onsubmit="return false" target="gform_ajax_frame_17">
+<div class="gform-body gform_body"><ul class="gform_fields top_label form_sublabel_below description_below validation_below" id="gform_fields_17"><li class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible" id="field_17_2"><label class="gfield_label gform-field-label" for="input_17_2">Your Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class="ginput_container ginput_container_email">
+<input aria-disabled="true" aria-invalid="false" aria-required="true" class="large" data-original-name="input_2" disabled="disabled" id="input_17_2" placeholder="Your Email" tabindex="-1" type="email" value=""/>
+</div></li></ul></div>
+<div class="gform-footer gform_footer top_label"> <input aria-disabled="true" class="gform_button button" data-submission-type="submit" disabled="disabled" id="gform_submit_button_17" onclick="gform.submission.handleButtonClick(this);" tabindex="-1" type="button" value="Subscribe"/> <input aria-disabled="true" data-original-name="gform_ajax" disabled="disabled" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" class="gform_hidden" data-js="gform_submission_method_17" data-original-name="gform_submission_method" disabled="disabled" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" class="gform_hidden" data-js="gform_theme_17" data-original-name="gform_theme" disabled="disabled" id="gform_theme_17" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" class="gform_hidden" data-js="gform_style_settings_17" data-original-name="gform_style_settings" disabled="disabled" id="gform_style_settings_17" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" class="gform_hidden" data-original-name="is_submit_17" disabled="disabled" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" class="gform_hidden" data-original-name="gform_submit" disabled="disabled" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" class="gform_hidden" data-currency="AUD" data-original-name="gform_currency" disabled="disabled" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" class="gform_hidden" data-original-name="gform_unique_id" disabled="disabled" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" class="gform_hidden" data-original-name="state_17" disabled="disabled" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" autocomplete="off" class="gform_hidden" data-original-name="gform_target_page_number_17" disabled="disabled" id="gform_target_page_number_17" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" autocomplete="off" class="gform_hidden" data-original-name="gform_source_page_number_17" disabled="disabled" id="gform_source_page_number_17" tabindex="-1" type="hidden" value=""/>
+<input aria-disabled="true" data-original-name="gform_field_values" disabled="disabled" tabindex="-1" type="hidden" value=""/>
+</div>
+<p class="akismet-fields-container" data-prefix="ak_" style="display: none !important;"><label>Δ<textarea aria-disabled="true" cols="45" data-original-name="ak_hp_textarea" disabled="disabled" maxlength="100" rows="8" tabindex="-1"></textarea></label><input aria-disabled="true" data-original-name="ak_js" disabled="disabled" id="ak_js_1" tabindex="-1" type="hidden" value=""/><script>
+document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );
+</script>
+</p></form>
+</div>
+<iframe id="gform_ajax_frame_17" name="gform_ajax_frame_17" src="about:blank" style="display:none;width:0px;height:0px;" title="This iframe contains the logic required to handle Ajax powered Gravity Forms."></iframe>
+<script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 17, 'https://qei.org.au/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_17').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_17');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_17').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_17').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_17').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_17').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_17').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_17').val();gformInitSpinner( 17, 'https://qei.org.au/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [17, current_page]);window['gf_submitting_17'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_17').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_17').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [17]);window['gf_submitting_17'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_17').text());}else{jQuery('#gform_17').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "17", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_17" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_17";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_17" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 17, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer-section" data-wpr-lazyrender="1">
+<div class="container">
+<div class="footer-center">
+<div class="social-media">
+<a href="https://www.facebook.com/QueenslandEyeInstitute" target="_blank" title="Facebook">
+<svg viewbox="0 0 320 512" xmlns="http://www.w3.org/2000/svg">
+<title>Facebook</title>
+<path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+</svg> </a>
+<a href="https://www.linkedin.com/company/queensland-eye-institute-qei-/" target="_blank" title="Linkedin">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+<title>Linkedin</title>
+<path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+</svg> </a>
+<a href="https://www.instagram.com/queenslandeyeinstitute" target="_blank" title="Instagram">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+<title>Instagram</title>
+<path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+</svg> </a>
+<a href="https://twitter.com/qldeyeinstitute" target="_blank" title="Twitter">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<title>Twitter</title>
+<path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+</svg> </a>
+<a href="https://www.youtube.com/user/QLDEyeInstitute" target="_blank" title="Youtube">
+<svg viewbox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+<title>Youtube</title>
+<path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+</svg> </a>
+</div>
+</div>
+<div class="footer-iner">
+<div class="footer-main">
+<h3>QEI Clinics</h3>
+<ul class="menu" id="menu-qei-clinic"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1486" id="menu-item-1486"><a href="../../qei-clinics/index.html">QEI Clinics</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1488" id="menu-item-1488"><a href="../../qei-clinics/woolloongabba-qei-clinic/index.html">Brisbane QEI Clinic</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1487" id="menu-item-1487"><a href="../../qei-clinics/clayfield-qei-clinic/index.html">Clayfield QEI Clinic</a></li>
+</ul>
+</li>
+</ul> <h3>Patient Info</h3>
+<ul class="menu" id="menu-patient-info-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-163" id="menu-item-163"><a href="../../patient-info/send-enquiry/index.html">Send Enquiry</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166" id="menu-item-166"><a href="../../patient-info/preparing-for-your-visit/index.html">Preparing For Your Visit</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1529" id="menu-item-1529"><a href="../../contact/index.html">How To Find Us</a></li>
+</ul> <h3>Services</h3>
+<ul class="menu" id="menu-services-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169" id="menu-item-169"><a href="../../services/southbank-day-hospital/index.html">South Brisbane Day Hospital</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167" id="menu-item-167"><a href="../../services/qei-electro-diagnostic-and-imaging-centre/index.html">Queensland Electro-Diagnostic &amp; Imaging Centre</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2527" id="menu-item-2527"><a href="https://www.qeilaser.com.au/">QEI Laser</a></li>
+</ul> </div>
+<div class="footer-main">
+<h3>Ophthalmologists</h3>
+<ul class="menu" id="menu-opthalmologists-footer-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-71 current_page_item menu-item-173" id="menu-item-173"><a aria-current="page" href="index.html">Dr Brendan Cronin</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174" id="menu-item-174"><a href="../dr-david-gunn/index.html">Dr David Gunn</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4849" id="menu-item-4849"><a href="../dr-lee-holland/index.html">Dr Lee Holland</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170" id="menu-item-170"><a href="../associate-professor-anthony-kwan/index.html">Associate Professor Anthony Kwan</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4949" id="menu-item-4949"><a href="../dr-jonathan-lai/index.html">Dr Jonathan Lai</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6254" id="menu-item-6254"><a href="../dr-alexandra-manta/index.html">Dr Alexandra Manta</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6343" id="menu-item-6343"><a href="../dr-alexander-newman/index.html">Dr Alexander Newman</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172" id="menu-item-172"><a href="../dr-anthony-pane/index.html">Dr Anthony Pane</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4755" id="menu-item-4755"><a href="../dr-angela-richards/index.html">Dr Angela Richards</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2984" id="menu-item-2984"><a href="../dr-geoffrey-ryan/index.html">Dr Geoffrey Ryan</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-171" id="menu-item-171"><a href="../dr-abhishek-sharma/index.html">Associate Professor Abhishek Sharma</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179" id="menu-item-179"><a href="../refer-a-patient-form/index.html">Refer A Patient Form</a></li>
+</ul> </div>
+<div class="footer-main">
+<h3>Eye Conditions</h3>
+<ul class="menu" id="menu-eye-conditions-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186" id="menu-item-186"><a href="../../eye-conditions/age-related-macular-degeneration/index.html">Age-Related Macular Degeneration</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-185" id="menu-item-185"><a href="../../eye-conditions/cataracts/index.html">Cataracts</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1737" id="menu-item-1737"><a href="../../eye-conditions/corneal-scarring/index.html">Corneal Scarring</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184" id="menu-item-184"><a href="../../eye-conditions/diabetic-ratinopathy/index.html">Diabetic Retinopathy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183" id="menu-item-183"><a href="../../eye-conditions/dry-eye/index.html">Dry Eye</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1745" id="menu-item-1745"><a href="../../eye-conditions/fuchs-endothelial-dystrophy/index.html">Fuchs’ Endothelial Dystrophy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182" id="menu-item-182"><a href="../../eye-conditions/glaucoma/index.html">Glaucoma</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181" id="menu-item-181"><a href="../../eye-conditions/keratoconus/index.html">Keratoconus</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180" id="menu-item-180"><a href="../../eye-conditions/pterygium/index.html">Pterygium</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1741" id="menu-item-1741"><a href="../../eye-conditions/retinal-tear-and-detachment/index.html">Retinal Tear and Detachment</a></li>
+</ul> </div>
+<div class="footer-main">
+<h3>QEI Foundation</h3>
+<ul class="menu" id="menu-qei-foundation-menu-2"><li class="active menu-item menu-item-type-post_type menu-item-object-page menu-item-1495"><a href="../../qei-foundation/index.html">QEI Foundation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="../../qei-foundation/about-qei-foundation/index.html">About Queensland Eye Institute Foundation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="../../qei-foundation/our-people/index.html">Our People</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="../../qei-foundation/annual-reports/index.html">Annual Reports</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3339"><a href="../../qei-foundation/eyecure/index.html">Eyecure Newsletters</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3196"><a href="../../qei-foundation/news/last-seen-exhibition/index.html">Last Seen</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-138"><a href="../../qei-foundation/donate/index.html">Donate</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5564"><a href="../../qei-foundation/wills-and-bequests/index.html">Wills and bequests</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="../../qei-foundation/patient-stories/index.html">Patient Stories</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="../../qei-foundation/news/index.html">News</a></li>
+</ul> </div>
+<div class="footer-main">
+<h3>Research</h3>
+<ul class="menu" id="menu-research-menu-2"><li class="active menu-item menu-item-type-post_type menu-item-object-page menu-item-1498"><a href="../../research/index.html">Research</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1500"><a href="../../research/researchers/index.html">Researchers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3160"><a href="../../research/research-themes-purpose/index.html">Research Purpose &amp; Themes</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1501"><a href="../../research/groups-publications/index.html">Research Groups &amp; Publications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1502"><a href="../../research/affiliates/index.html">Affiliates</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4889"><a href="../../clinical-trials/index.html">Clinical Trials</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5579"><a href="../../clinical-trials/feedback-on-clinical-trials/index.html">Feedback on clinical trials</a></li>
+</ul>
+</li>
+</ul> <h3>Education</h3>
+<ul class="menu" id="menu-education-menu-2"><li class="active menu-item menu-item-type-post_type menu-item-object-page menu-item-1505"><a href="../../education/index.html">Education</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-784"><a href="../../education/optometry-education-series/index.html">Optometry Education</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6568"><a href="../../education/student-placement/index.html">Student Placement</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6352"><a href="../../education/introduction-to-ophthalmology-for-medical-receptionists/index.html">Introduction to Ophthalmology</a></li>
+</ul> <h3>Contact Us</h3>
+<ul>
+<li><a href="tel:07 3239 5000">07 3239 5000</a></li>
+<li><a href="mailto:reception@qei.org.au">reception@qei.org.au</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom-sct">
+<div class="footer-btm-left">
+<p>© 2018 Queensland Eye Institute</p>
+<p><img alt="An image of the ACNC charity tick" class="alignnone wp-image-2824" decoding="async" height="58" loading="lazy" sizes="auto, (max-width: 58px) 100vw, 58px" src="../../wp-content/uploads/2019/10/ACNC-Registered-Charity-Logo_RGB-300x300.png" srcset="../../wp-content/uploads/2019/10/ACNC-Registered-Charity-Logo_RGB-300x300.png 300w, ../../wp-content/uploads/2019/10/ACNC-Registered-Charity-Logo_RGB-150x150.png 150w, ../../wp-content/uploads/2019/10/ACNC-Registered-Charity-Logo_RGB-768x768.png 768w, ../../wp-content/uploads/2019/10/ACNC-Registered-Charity-Logo_RGB-800x800.png 800w, ../../wp-content/uploads/2019/10/ACNC-Registered-Charity-Logo_RGB.png 960w" width="58"/></p>
+</div>
+<div class="footer-btm-right">
+<ul>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191" id="menu-item-191"><a href="../../privacy-policy/index.html">Privacy Policy &amp; Whistleblowing and Protection Policy</a></li>
+<li>Built by <a href="https://thriveweb.com.au/non-profit-organisation-website-design/" target="_blank">Non profit Web Design - Thrive</a></li>
+</ul>
+</div>
+</div>
+<p style="clear: both; text-align: center; max-width: 550px; width: 96%; margin: 15px auto; font-size: 11px; line-height: 1.4; color: #464646;">We acknowledge the Turrbal and Yugara, as the traditional owners of the lands where QEI now stands. We pay respect to their Elders, past, current and emerging. We recognise that these lands have always been places of teaching, research, learning and healing.</p>
+</div>
+</footer>
+<div aria-hidden="true" aria-labelledby="basicModal1" class="modal fade" id="basicModal1" role="dialog" tabindex="-1">
+<div class="vertical-alignment-helper">
+<div class="modal-dialog vertical-align-center">
+<div class="modal-content">
+<div class="modal-body">
+<button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
+<div class="modal-inner-content">
+<h2>Send Enquiry</h2>
+<h3>To send an enquiry, please complete one of the online forms below. Our Receptionist will be in touch.</h3>
+<h4>For Patients</h4>
+<p><a class="bg-btn" href="../../patient-info/send-enquiry/index.html" rel="noopener">Send Enquiry</a></p>
+<h4 class="modal-tlt">For Doctors &amp; Optometrists</h4>
+<p><a class="bg-btn" href="../refer-a-patient-form/index.html" rel="noopener">Refer a patient</a></p>
+<p>If you are concerned about your vision and require an urgent appointment please contact the QEI Clinic during office hours Monday to Friday 8.00am – 4.30pm on <a href="tel:0732395050">(07) 3239 5000</a> or contact your nearest Emergency Department.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/qei/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!-- Meta Pixel Event Code -->
+<script type="text/javascript">
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if( "fb_pxl_code" in event.detail.apiResponse){
+          eval(event.detail.apiResponse.fb_pxl_code);
+        }
+      }, false );
+    </script>
+<!-- End Meta Pixel Event Code -->
+<div id="fb-pxl-ajax-code"></div><script id="wpa-toolbar-js-extra">
+var wpatb = {"location":"body","is_rtl":"ltr","is_right":"reversed","responsive":"a11y-responsive","contrast":"Toggle High Contrast","grayscale":"Toggle Grayscale","fontsize":"Toggle Font size","custom_location":"standard-location","enable_grayscale":"false","enable_fontsize":"true","enable_contrast":"true"};
+var wpa11y = {"path":"https://qei.org.au/wp-content/plugins/wp-accessibility/toolbar/css/a11y-contrast.css?version=2.3.5"};
+//# sourceURL=wpa-toolbar-js-extra
+</script>
+<script data-wp-strategy="defer" defer="" id="wpa-toolbar-js" src="../../wp-content/plugins/wp-accessibility/js/wpa-toolbar.min.js@ver=2.3.5"></script>
+<script id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://qei.org.au","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script id="qei-navigation-js" src="../../wp-content/themes/qei/js/navigation.js@ver=20151215"></script>
+<script id="qei-skip-link-focus-fix-js" src="../../wp-content/themes/qei/js/skip-link-focus-fix.js@ver=20151215"></script>
+<script id="wp-accessibility-js-extra">
+var wpa = {"skiplinks":{"enabled":false,"output":""},"target":"","tabindex":"1","underline":{"enabled":true,"target":"a"},"videos":"","dir":"ltr","viewport":"1","lang":"en-AU","titles":"1","labels":"1","wpalabels":{"s":"Search","author":"Name","email":"Email","url":"Website","comment":"Comment"},"alt":"","altSelector":".hentry img[alt]:not([alt=\"\"]), .comment-content img[alt]:not([alt=\"\"]), #content img[alt]:not([alt=\"\"]),.entry-content img[alt]:not([alt=\"\"])","current":"","errors":"","tracking":"","ajaxurl":"https://qei.org.au/wp-admin/admin-ajax.php","security":"fe4a582979","action":"wpa_stats_action","url":"https://qei.org.au/ophthalmologists/dr-brendan-cronin/","post_id":"71","continue":"","pause":"Pause video","play":"Play video","restUrl":"https://qei.org.au/wp-json/wp/v2/media","ldType":"button","ldHome":"https://qei.org.au","ldText":"\u003Cspan class=\"dashicons dashicons-media-text\" aria-hidden=\"true\"\u003E\u003C/span\u003E\u003Cspan class=\"screen-reader\"\u003ELong Description\u003C/span\u003E"};
+//# sourceURL=wp-accessibility-js-extra
+</script>
+<script data-wp-strategy="defer" defer="" id="wp-accessibility-js" src="../../wp-content/plugins/wp-accessibility/js/wp-accessibility.min.js@ver=2.3.5"></script>
+<script id="wp-dom-ready-js" src="../../wp-includes/js/dist/dom-ready.min.js@ver=3fe927cab37bf38d6a23"></script>
+<script id="wp-hooks-js" src="../../wp-includes/js/dist/hooks.min.js@ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="../../wp-includes/js/dist/i18n.min.js@ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="wp-a11y-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2026-05-22 08:10:45+0000","generator":"GlotPress\/4.1.0","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"en_AU"},"Notifications":["Notifications"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+//# sourceURL=wp-a11y-js-translations
+</script>
+<script id="wp-a11y-js" src="../../wp-includes/js/dist/a11y.min.js@ver=31c6cec5a4ff7aff483d"></script>
+<script id="jquery-core-js" src="../../wp-includes/js/jquery/jquery.min.js@ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="../../wp-includes/js/jquery/jquery-migrate.min.js@ver=3.4.1"></script>
+<script defer="defer" id="gform_json-js" src="../../wp-content/plugins/gravityforms/js/jquery.json.min.js@ver=2.10.5"></script>
+<script id="gform_gravityforms-js-extra">
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","file_uploaded":"File uploaded","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://qei.org.au/wp-content/plugins/gravityforms/images"}};
+var gf_global = {"gf_currency_config":{"name":"Australian Dollar","symbol_left":"$","symbol_right":"","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"AUD"},"base_url":"https://qei.org.au/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://qei.org.au/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"41adeb7854ad1adffe03be25e384f710","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+//# sourceURL=gform_gravityforms-js-extra
+</script>
+<script defer="defer" id="gform_gravityforms-js" src="../../wp-content/plugins/gravityforms/js/gravityforms.min.js@ver=2.10.5"></script>
+<script defer="defer" id="gform_placeholder-js" src="../../wp-content/plugins/gravityforms/js/placeholders.jquery.min.js@ver=2.10.5"></script>
+<script defer="defer" id="gform_gravityforms_utils-js" src="../../wp-content/plugins/gravityforms/assets/js/dist/utils.min.js@ver=3f278756f0a3032bed328ff6a9f6c01d"></script>
+<script defer="defer" id="gform_gravityforms_theme_vendors-js" src="../../wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js@ver=7c651d0ba638ce98b9c65141edddd567"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"41adeb7854ad1adffe03be25e384f710"},"ajax":{"ajaxurl":"https://qei.org.au/wp-admin/admin-ajax.php","ajax_submission_nonce":"faf6560228","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again.","error_403":"The request was blocked (403 error) for unknown security reasons. Remove any code-like text (scripts or DB queries) and try again."}}}},"hmr_dev":"","public_path":"https://qei.org.au/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"7eb179c137"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+</script>
+<script defer="defer" id="gform_gravityforms_theme-js" src="../../wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js@ver=301fdc9aa6144168f3b854c4c2c8f6d3"></script>
+<script defer="" id="akismet-frontend-js" src="../../wp-content/plugins/akismet/_inc/akismet-frontend.js@ver=1787231434"></script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 17) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "17", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_17" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_17";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_17" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 17, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    var home = "71";
+    if(home == '194') {
+      var videoPlayButton
+
+      var videoPlayButton1
+
+      var videoWrapper1 = document.getElementsByClassName('brisbane-wrapper')[0]
+      var video1 = document.getElementsByTagName('video')[0]
+
+      var videoWrapper = document.getElementsByClassName('custom-wrapper')[0]
+      var video = document.getElementsByTagName('video')[1]
+
+
+      if(video) {
+        videoMethods = {
+          renderVideoPlayButton: function() {
+            if (videoWrapper.contains(video)) {
+                this.formatVideoPlayButton()
+                video.classList.add('has-media-controls-hidden')
+                videoPlayButton = document.getElementsByClassName('video-overlay-play-button')[0]
+                videoPlayButton.addEventListener('click', this.hideVideoPlayButton)
+            }
+          },
+          formatVideoPlayButton: function() {
+              videoWrapper.insertAdjacentHTML('beforeend', '\
+                  <div class="video-overlay-play-button"><div class="tbl"><div class="tbl-cell"><div class="play-icon"></div></div></div>\
+              ')
+          },
+          hideVideoPlayButton: function() {
+              video.play()
+              videoPlayButton.classList.add('is-hidden')
+              video.classList.remove('has-media-controls-hidden')
+              video.setAttribute('controls', 'controls')
+          }
+        }
+        videoMethods.renderVideoPlayButton()
+
+
+      }
+
+      if(video1) {
+        videoMethods = {
+          renderVideoPlayButton: function() {
+            if (videoWrapper1.contains(video1)) {
+                this.formatVideoPlayButton()
+                video1.classList.add('has-media-controls-hidden')
+                videoPlayButton1 = document.getElementsByClassName('video-overlay-play-button')[0]
+                videoPlayButton1.addEventListener('click', this.hideVideoPlayButton)
+            }
+          },
+          formatVideoPlayButton: function() {
+              videoWrapper1.insertAdjacentHTML('beforeend', '\
+                  <div class="video-overlay-play-button"><div class="tbl"><div class="tbl-cell"><div class="play-icon"></div></div></div>\
+              ')
+          },
+          hideVideoPlayButton: function() {
+              video1.play()
+              videoPlayButton1.classList.add('is-hidden')
+              video1.classList.remove('has-media-controls-hidden')
+              video1.setAttribute('controls', 'controls')
+          }
+        }
+        videoMethods.renderVideoPlayButton()
+
+
+      }
+
+      $('.custom-wrapper .video-overlay-play-button .play-icon').click(function(){
+          $(this).parents('.custom-wrapper').find('.video-content').addClass('hide-content');
+      });
+
+      $('.brisbane-wrapper .video-overlay-play-button .play-icon').click(function(){
+          $(this).parents('.brisbane-wrapper').find('.video-content').addClass('hide-content');
+      });
+    }
+    else {
+      var videoPlayButton
+      var videoWrapper = document.getElementsByClassName('custom-wrapper')[0]
+      var video = document.getElementsByTagName('video')[0]
+      if(video) {
+        videoMethods = {
+          renderVideoPlayButton: function() {
+            if (videoWrapper.contains(video)) {
+                this.formatVideoPlayButton()
+                video.classList.add('has-media-controls-hidden')
+                videoPlayButton = document.getElementsByClassName('video-overlay-play-button')[0]
+                videoPlayButton.addEventListener('click', this.hideVideoPlayButton)
+            }
+          },
+          formatVideoPlayButton: function() {
+              videoWrapper.insertAdjacentHTML('beforeend', '\
+                  <div class="video-overlay-play-button"><div class="tbl"><div class="tbl-cell"><div class="play-icon"></div></div></div>\
+              ')
+          },
+          hideVideoPlayButton: function() {
+              video.play()
+              videoPlayButton.classList.add('is-hidden')
+              video.classList.remove('has-media-controls-hidden')
+              video.setAttribute('controls', 'controls')
+          }
+        }
+        videoMethods.renderVideoPlayButton()
+      }
+
+      $('.video-overlay-play-button').click(function(){
+        $('.video-content').addClass('hide-content');
+      });
+    }
+  });
+</script>
+</body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1787292321 -->

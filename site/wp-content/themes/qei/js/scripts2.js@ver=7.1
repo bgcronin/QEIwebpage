@@ -1,0 +1,226 @@
+jQuery(document).ready(function ($) {
+  function nsdDonation() {
+    var donation_form = $(".sunnies-donate-form");
+    var donation_choice = $(".sunnies-donate-form .donation-amount input");
+    var donation_amount = $(".sunnies-donate-form .amount-class input");
+    var other_amount = $(".sunnies-donate-form .option-other input");
+
+    $(donation_choice).change(function () {
+      if ($(this).is(":checked") && $(this).val() != "Other") {
+        console.log("not other");
+        $(donation_amount).val($(this).val().replace(/\$/g, ""));
+      } else if ($(this).val() == "Other") {
+        $(donation_amount).val("");
+        $(other_amount).on("keyup", function () {
+          $(donation_amount).val($(this).val().replace(/\$/g, ""));
+        });
+      }
+    });
+
+    $(".sunnies-donate-form .gfield.message:not(.option-other)").append(
+      '<a href="https://qei.org.au/qei-foundation/donate/nationalsunniesday/how-can-you-help/" class="bg-btn btn-lg" target="_blank">Find Out More</a>'
+    );
+
+    setTimeout(function () {
+      $('.sunnies-donate-form .donation-amount input[value="$5"]').click();
+    }, 1000);
+  }
+  nsdDonation();
+
+  $("#history-slider").owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: true,
+    nav: true,
+    navText: [
+      '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+      '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+    ],
+    dots: false,
+    smartSpeed: 1500,
+    responsiveClass: true,
+  });
+  $(".header_new").hide();
+  $(".menu-toggle").on("click", function () {
+    $(this).toggleClass("on");
+    $(".menu-section").toggleClass("on");
+    $(".header-section").toggleClass("on");
+    $(".nav").toggleClass("hidden");
+    $(".responsive-bootom-sect").toggleClass("hidden");
+  });
+  $(".on").removeClass("header-bg");
+  $(".faq-list .faq-item .faq_sec").click(function () {
+    $(".faq_sec").removeClass("active_acc");
+    $(this).addClass("active_acc");
+    $(".faq-item .faq_sec").removeClass("open");
+    $(".faq-item .faq_sec").next().slideUp(300);
+    $(this).toggleClass("open");
+    $(this).next().slideToggle(300);
+    // setTimeout(function () {
+    //   smooth_scroll_to(".active_acc");
+    // }, 800);
+  });
+
+  function smooth_scroll_to(elem) {
+    var offset = 0;
+    console.log(elem);
+    offset = $(elem).offset().top - 150;
+
+    $("html, body").animate(
+      {
+        scrollTop: offset,
+      },
+      800
+    );
+  }
+
+  $(".nav > li").mouseover(function () {
+    var the_width = $(this).find("a").width();
+    var child_width = $(this).find("ul").width();
+    var width = parseInt((child_width - the_width) / 2);
+    $(this).find("ul").css("left", -width);
+  });
+  $(".topmenu > li").mouseover(function () {
+    var the_width = $(this).find("a").width();
+    var child_width = $(this).find("ul").width();
+    var width = parseInt((child_width - the_width) / 2);
+    $(this).find("ul").css("left", -width);
+  });
+  $(".multi-item-carousel .item").each(function () {
+    var next = $(this).next();
+    if (!next.length) next = $(this).siblings(":first");
+    next.children(":first-child").clone().appendTo($(this));
+  });
+  $(".multi-item-carousel .item").each(function () {
+    var prev = $(this).prev();
+    if (!prev.length) prev = $(this).siblings(":last");
+    prev.children(":nth-last-child(2)").clone().prependTo($(this));
+  });
+
+  if (
+    $(".topmenu li.qei-foundation .sub-menu li.active").hasClass(
+      "current-menu-item"
+    )
+  ) {
+    $(".topmenu li.qei-foundation").toggleClass("current-menu-items");
+  }
+  if (
+    $(".topmenu li.research .sub-menu li.active").hasClass("current-menu-item")
+  ) {
+    $(".topmenu li.research").toggleClass("current-menu-items");
+  }
+  if (
+    $(".topmenu li.education .sub-menu li.active").hasClass("current-menu-item")
+  ) {
+    $(".topmenu li.education").toggleClass("current-menu-items");
+  }
+  $(".donation-amount ul li label").click(function () {
+    var vals = $(this).parent().find("input[type='radio']").val();
+    var amount = vals.replace(/[^\d]+/, "");
+    $(".donations-price input").val(amount);
+  });
+
+  $("#challenges-slider").owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: false,
+    nav: true,
+    dots: true,
+    smartSpeed: 1500,
+    responsiveClass: true,
+    navText: [
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>",
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      639: {
+        items: 2,
+      },
+    },
+  });
+
+  $(".main-slider").owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: false,
+    nav: true,
+    dots: true,
+    smartSpeed: 1500,
+    responsiveClass: true,
+    navText: [
+      "<i class='fa fa-angle-left'></i>",
+      "<i class='fa fa-angle-right'></i>",
+    ],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      639: {
+        items: 2,
+      },
+    },
+  });
+
+  $(".newsletter-sct .gform_body,.newsletter-sct .gform_footer").wrapAll(
+    '<div class="formsinners"></div>'
+  );
+});
+$(window).scroll(function () {
+  if ($(this).scrollTop() < 10) {
+    $(".header-section").removeClass("header-bg");
+    $(".header-desks").show();
+    $(".header_new").hide();
+  } else {
+    $(".header-section").addClass("header-bg");
+    $(".header_new").show();
+    $(".header-desks").hide();
+  }
+});
+$(window).on("load", function () {
+  checkPosition();
+});
+function checkPosition() {
+  if (window.matchMedia("(max-width: 1230px)").matches) {
+    $(".nav > li > a").bind("click touchend", function (e) {
+      var el = $(this);
+      var link = el.attr("href");
+      window.location = link;
+    });
+
+    $(".menu-item-has-children").append('<span class="carets"></span>');
+    $(".menu-item-has-children .carets").bind("click touchstart", function (e) {
+      /*e.preventDefault();
+		    var $this = $(this);
+
+		    if ($this.parent().next().hasClass('show')) {
+		    	$this.parent().next().removeClass('show');
+		    	$this.parent().removeClass('open');
+		        $this.parent().next().slideUp(350);
+		    } else {
+		        $this.parents().find('li .sub-menu').removeClass('show');
+		        $this.parents().find('li a').removeClass('open');
+		        $this.parents().find('li .sub-menu').slideUp(350);
+		        $this.parent().next().toggleClass('show');
+		        $this.parent().toggleClass('open');
+		        $this.parent().next().slideToggle(350);
+		    }*/
+
+      /*$('.faq-item .faq_sec').removeClass('open');
+			$('.faq-item .faq_sec').next().slideUp(300);
+			$(this).toggleClass('open');
+			$(this).next().slideToggle(300);*/
+
+      e.preventDefault();
+      var $this = $(this);
+      /*$this.parents().find('li a').removeClass('open');
+			$this.parents().find('li .sub-menu').slideUp(350);*/
+      $(".menu-item-has-children").removeClass("open");
+      $this.parent().toggleClass("open");
+
+      //$this.parents().next().slideToggle(300);
+    });
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "excluded": [],
+  "generated_at": "2026-08-21T09:21:34.449224+00:00",
+  "included": [
+    {
+      "active": true,
+      "addresses": [
+        "149.28.173.106"
+      ],
+      "attempts": [
+        {
+          "content_type": "text/html",
+          "final_addresses": [
+            "149.28.173.106"
+          ],
+          "final_host": "qei.org.au",
+          "final_url": "https://qei.org.au/",
+          "status": 200,
+          "url": "https://qei.org.au/"
+        }
+      ],
+      "explicit": true,
+      "host": "qei.org.au",
+      "preferred_url": "https://qei.org.au/",
+      "reason": "public HTML response",
+      "security_blocked": false,
+      "source": "explicit"
+    },
+    {
+      "active": true,
+      "addresses": [
+        "149.28.173.106"
+      ],
+      "attempts": [
+        {
+          "content_type": "text/html",
+          "final_addresses": [
+            "149.28.173.106"
+          ],
+          "final_host": "qei.org.au",
+          "final_url": "https://qei.org.au/",
+          "status": 200,
+          "url": "https://www.qei.org.au/"
+        }
+      ],
+      "explicit": true,
+      "host": "www.qei.org.au",
+      "preferred_url": "https://qei.org.au/",
+      "reason": "public HTML response",
+      "security_blocked": false,
+      "source": "explicit"
+    }
+  ],
+  "method": "explicit hosts plus passive Certificate Transparency; no brute force",
+  "network_guard": "only globally routable addresses and in-scope redirects are accepted",
+  "root_domain": "qei.org.au",
+  "warnings": [
+    "Certificate Transparency lookup failed: HTTP Error 502: Bad Gateway"
+  ]
+}

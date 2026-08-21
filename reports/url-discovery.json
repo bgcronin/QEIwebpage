@@ -1,0 +1,116 @@
+{
+  "generated_at": "2026-08-21T09:21:59.925057+00:00",
+  "hosts": {
+    "qei.org.au": {
+      "candidate_sitemaps": [
+        "https://qei.org.au/sitemap_index.xml",
+        "https://qei.org.au/wp-sitemap.xml",
+        "https://qei.org.au/sitemap_index.xml",
+        "https://qei.org.au/sitemap.xml"
+      ],
+      "robots_error": null
+    },
+    "www.qei.org.au": {
+      "candidate_sitemaps": [
+        "https://qei.org.au/sitemap_index.xml",
+        "https://www.qei.org.au/wp-sitemap.xml",
+        "https://www.qei.org.au/sitemap_index.xml",
+        "https://www.qei.org.au/sitemap.xml"
+      ],
+      "robots_error": null
+    }
+  },
+  "maximum": 25000,
+  "seed_url_count": 635,
+  "sitemaps": [
+    {
+      "final_url": "https://qei.org.au/sitemap_index.xml",
+      "locations": 7,
+      "status": "ok",
+      "type": "sitemapindex",
+      "url": "https://qei.org.au/sitemap_index.xml"
+    },
+    {
+      "final_url": "https://qei.org.au/sitemap_index.xml",
+      "locations": 7,
+      "status": "ok",
+      "type": "sitemapindex",
+      "url": "https://qei.org.au/wp-sitemap.xml"
+    },
+    {
+      "final_url": "https://qei.org.au/sitemap_index.xml",
+      "locations": 7,
+      "status": "ok",
+      "type": "sitemapindex",
+      "url": "https://qei.org.au/sitemap.xml"
+    },
+    {
+      "final_url": "https://qei.org.au/sitemap_index.xml",
+      "locations": 7,
+      "status": "ok",
+      "type": "sitemapindex",
+      "url": "https://www.qei.org.au/wp-sitemap.xml"
+    },
+    {
+      "final_url": "https://www.qei.org.au/sitemap_index.xml",
+      "locations": 7,
+      "status": "ok",
+      "type": "sitemapindex",
+      "url": "https://www.qei.org.au/sitemap_index.xml"
+    },
+    {
+      "error": "HTTP Error 404: Not Found",
+      "status": "error",
+      "url": "https://www.qei.org.au/sitemap.xml"
+    },
+    {
+      "final_url": "https://qei.org.au/page-sitemap.xml",
+      "locations": 210,
+      "status": "ok",
+      "type": "urlset",
+      "url": "https://qei.org.au/page-sitemap.xml"
+    },
+    {
+      "final_url": "https://qei.org.au/news-sitemap.xml",
+      "locations": 404,
+      "status": "ok",
+      "type": "urlset",
+      "url": "https://qei.org.au/news-sitemap.xml"
+    },
+    {
+      "final_url": "https://qei.org.au/events-sitemap.xml",
+      "locations": 27,
+      "status": "ok",
+      "type": "urlset",
+      "url": "https://qei.org.au/events-sitemap.xml"
+    },
+    {
+      "final_url": "https://qei.org.au/patientstory-sitemap.xml",
+      "locations": 40,
+      "status": "ok",
+      "type": "urlset",
+      "url": "https://qei.org.au/patientstory-sitemap.xml"
+    },
+    {
+      "final_url": "https://qei.org.au/wpa-stats-type-sitemap.xml",
+      "locations": 14,
+      "status": "ok",
+      "type": "urlset",
+      "url": "https://qei.org.au/wpa-stats-type-sitemap.xml"
+    },
+    {
+      "final_url": "https://qei.org.au/newscategories-sitemap.xml",
+      "locations": 6,
+      "status": "ok",
+      "type": "urlset",
+      "url": "https://qei.org.au/newscategories-sitemap.xml"
+    },
+    {
+      "final_url": "https://qei.org.au/eventscategories-sitemap.xml",
+      "locations": 2,
+      "status": "ok",
+      "type": "urlset",
+      "url": "https://qei.org.au/eventscategories-sitemap.xml"
+    }
+  ]
+}
