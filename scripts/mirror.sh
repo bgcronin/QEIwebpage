@@ -32,8 +32,6 @@ set +e
 wget \
   --input-file="$REPORTS/seed-urls.txt" \
   --directory-prefix="$RAW" \
-  --recursive \
-  --level=inf \
   --page-requisites \
   --convert-links \
   --adjust-extension \
