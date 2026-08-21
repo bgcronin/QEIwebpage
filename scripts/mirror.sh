@@ -38,7 +38,6 @@ wget \
   --convert-links \
   --adjust-extension \
   --restrict-file-names=windows \
-  --max-filesize="${MAX_FILE_MB}m" \
   --quota="${MAX_TOTAL_MB}m" \
   --span-hosts \
   --domains="$DOMAINS" \
