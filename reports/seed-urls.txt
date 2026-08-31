@@ -251,6 +251,7 @@ https://qei.org.au/qei-foundation/our-people/our-board/mark-sheridan/
 https://qei.org.au/qei-foundation/our-people/our-board/professor-mark-radford/
 https://qei.org.au/qei-foundation/patient-stories/
 https://qei.org.au/qei-foundation/wills-and-bequests/
+https://qei.org.au/qei-foundation/workplace-giving/
 https://qei.org.au/research/
 https://qei.org.au/research/affiliates/
 https://qei.org.au/research/groups-publications/
@@ -384,6 +385,7 @@ https://qei.org.au/wp-content/uploads/2019/12/audra.jpg
 https://qei.org.au/wp-content/uploads/2019/12/photo-1483519173755-be893fab1f46.jpg
 https://qei.org.au/wp-content/uploads/2019/12/qpac.jpg
 https://qei.org.au/wp-content/uploads/2020/01/Doctors-with-new-machine.jpg
+https://qei.org.au/wp-content/uploads/2020/01/QEI_0698_A1.jpg
 https://qei.org.au/wp-content/uploads/2020/01/shutterstock_381015883.jpg
 https://qei.org.au/wp-content/uploads/2020/02/Dr-Onur-New-Researcher.jpg
 https://qei.org.au/wp-content/uploads/2020/03/2.jpg
@@ -611,6 +613,7 @@ https://qei.org.au/wp-content/uploads/2026/03/shutterstock_122789023-web.jpg
 https://qei.org.au/wp-content/uploads/2026/05/Board.jpg
 https://qei.org.au/wp-content/uploads/2026/05/shutterstock_130372394.jpg
 https://qei.org.au/wp-content/uploads/2026/07/20240405_QEI-Director_Kimberley_Forman_1X1-1_Web.jpg
+https://qei.org.au/wp-content/uploads/2026/07/3Ti.jpg
 https://qei.org.au/wp-content/uploads/2026/07/4Ti.jpg
 https://qei.org.au/wp-content/uploads/2026/07/Eye-solved-it.jpg
 https://qei.org.au/wp-content/uploads/2026/07/Otto-restaurant-inside-1.jpg
