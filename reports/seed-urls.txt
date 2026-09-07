@@ -86,7 +86,6 @@ https://qei.org.au/news/getting-to-know-dr-rebecca-cox/
 https://qei.org.au/news/glaucoma-a-silent-disease-that-can-still-cause-irreversible-blindness/
 https://qei.org.au/news/glaucoma-day-success/
 https://qei.org.au/news/glaucoma-qa-with-dr-mark-chiang/
-https://qei.org.au/news/heads-up-surgery-first-in-australia-pacific/
 https://qei.org.au/news/healthy-eating-for-healthy-eyes-with-some-recipes-made-by-our-staff/
 https://qei.org.au/news/help-us-help-max/
 https://qei.org.au/news/helping-make-eye-health-care-accessible-for-all/
@@ -121,6 +120,7 @@ https://qei.org.au/news/new-hope-for-patients-with-macular-degeneration/
 https://qei.org.au/news/new-publication-for-ophthalmology-receptionists/
 https://qei.org.au/news/new-qei-clinic-opens-in-clayfield/
 https://qei.org.au/news/new-research-on-stem-cell-preservation-for-future-therapies/
+https://qei.org.au/news/new-technologies-a-leap-forward-for-eye-surgery/
 https://qei.org.au/news/new-technology-to-improve-cairs-treatment-for-keratoconus/
 https://qei.org.au/news/noels-legacy/
 https://qei.org.au/news/not-just-a-queensland-institute-a-queensland-institution/
@@ -169,6 +169,7 @@ https://qei.org.au/news/the-queensland-eye-institute-settles-in-for-the-next-50-
 https://qei.org.au/news/ukrainian-refugee-finds-safe-haven-and-restored-sight-in-queensland/
 https://qei.org.au/news/umphst-visit/
 https://qei.org.au/news/vale-professor-ravi-thomas/
+https://qei.org.au/news/welcome-to-research-thien/
 https://qei.org.au/news/were-two-people-with-one-pair-of-eyes/
 https://qei.org.au/news/why-viertels-vision/
 https://qei.org.au/news/world-first-global-research-registry-for-eye-lymphoma/
@@ -619,8 +620,11 @@ https://qei.org.au/wp-content/uploads/2026/07/Eye-solved-it.jpg
 https://qei.org.au/wp-content/uploads/2026/07/Otto-restaurant-inside-1.jpg
 https://qei.org.au/wp-content/uploads/2026/08/20260629-Geoff-Ryan.jpg
 https://qei.org.au/wp-content/uploads/2026/08/20260710_David-Gunn-heads-up-surgery.jpg
+https://qei.org.au/wp-content/uploads/2026/08/20260824_DavidGunn_AppleTech-eye-surgery.jpg
 https://qei.org.au/wp-content/uploads/2026/08/Dr-Geoff-Ryan.jpg
 https://qei.org.au/wp-content/uploads/2026/08/eyePlate200s-03-2-1.png
+https://qei.org.au/wp-content/uploads/2026/09/20260810_QEI-Research-student-Thien-Nguyen-2_Web-e1788416146886.jpg
+https://qei.org.au/wp-content/uploads/2026/09/20260810_QEI-Research-student-Thien-Nguyen-5_Web.jpg
 https://qei.org.au/wpa-stats-type/android/
 https://qei.org.au/wpa-stats-type/chrome/
 https://qei.org.au/wpa-stats-type/event/
