@@ -28692,17 +28692,17 @@
     }
   ],
   "extensions": {
-    ".0": 14,
+    ".0": 10,
     ".1": 18,
     ".14": 2,
     ".2": 4,
     ".3": 2,
     ".5": 20,
-    ".css": 638,
+    ".css": 632,
     ".eot": 20,
     ".eot@": 4,
     ".eot@99ac726223c749443b642ce33df8b800": 2,
-    ".html": 597,
+    ".html": 595,
     ".jpeg": 126,
     ".jpg": 2428,
     ".js": 4,
@@ -28728,9 +28728,9 @@
     ".woff2@o6rzdt": 2,
     ".woff@o6rzdt": 2
   },
-  "file_count": 4661,
-  "generated_at": "2026-09-07T09:20:26.820324+00:00",
-  "html_file_count": 597,
+  "file_count": 4649,
+  "generated_at": "2026-09-14T09:55:04.937136+00:00",
+  "html_file_count": 595,
   "oversized_files": [],
   "safety": {
     "active_or_incompletely_disabled_forms": [],
@@ -28740,5 +28740,5 @@
     "missing_safety_guard": [],
     "tracking_references": []
   },
-  "total_bytes": 1526247059
+  "total_bytes": 1525505937
 }

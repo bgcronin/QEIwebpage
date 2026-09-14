@@ -1,6 +1,6 @@
 {
   "excluded": [],
-  "generated_at": "2026-09-07T08:19:13.707025+00:00",
+  "generated_at": "2026-09-14T08:55:36.651969+00:00",
   "included": [
     {
       "active": true,
@@ -55,6 +55,6 @@
   "network_guard": "only globally routable addresses and in-scope redirects are accepted",
   "root_domain": "qei.org.au",
   "warnings": [
-    "Certificate Transparency lookup failed: The read operation timed out"
+    "Certificate Transparency lookup failed: HTTP Error 502: Bad Gateway"
   ]
 }
