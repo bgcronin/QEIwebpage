@@ -1,6 +1,111 @@
 {
-  "excluded": [],
-  "generated_at": "2026-09-14T08:55:36.651969+00:00",
+  "excluded": [
+    {
+      "host": "autodiscover.qei.org.au",
+      "reason": "excluded host label: autodiscover",
+      "security_blocked": true,
+      "source": "certificate transparency"
+    },
+    {
+      "active": false,
+      "addresses": [],
+      "attempts": [],
+      "explicit": false,
+      "host": "cloud.qei.org.au",
+      "reason": "DNS resolution failed: [Errno -2] Name or service not known",
+      "security_blocked": false,
+      "source": "certificate transparency"
+    },
+    {
+      "active": false,
+      "addresses": [],
+      "attempts": [],
+      "explicit": false,
+      "host": "dr.qei.org.au",
+      "reason": "DNS resolution failed: [Errno -2] Name or service not known",
+      "security_blocked": false,
+      "source": "certificate transparency"
+    },
+    {
+      "host": "intranet.qei.org.au",
+      "reason": "excluded host label: intranet",
+      "security_blocked": true,
+      "source": "certificate transparency"
+    },
+    {
+      "host": "mail.qei.org.au",
+      "reason": "excluded host label: mail",
+      "security_blocked": true,
+      "source": "certificate transparency"
+    },
+    {
+      "active": false,
+      "addresses": [],
+      "attempts": [],
+      "explicit": false,
+      "host": "owa.qei.org.au",
+      "reason": "DNS resolution failed: [Errno -2] Name or service not known",
+      "security_blocked": false,
+      "source": "certificate transparency"
+    },
+    {
+      "host": "remote.qei.org.au",
+      "reason": "excluded host label: remote",
+      "security_blocked": true,
+      "source": "certificate transparency"
+    },
+    {
+      "active": false,
+      "addresses": [],
+      "attempts": [],
+      "explicit": false,
+      "host": "servicedesk.qei.org.au",
+      "reason": "DNS resolution failed: [Errno -2] Name or service not known",
+      "security_blocked": false,
+      "source": "certificate transparency"
+    },
+    {
+      "host": "vpn.qei.org.au",
+      "reason": "excluded host label: vpn",
+      "security_blocked": true,
+      "source": "certificate transparency"
+    },
+    {
+      "host": "webmail.qei.org.au",
+      "reason": "excluded host label: webmail",
+      "security_blocked": true,
+      "source": "certificate transparency"
+    },
+    {
+      "host": "www.intranet.qei.org.au",
+      "reason": "excluded host label: intranet",
+      "security_blocked": true,
+      "source": "certificate transparency"
+    },
+    {
+      "host": "www.mail.qei.org.au",
+      "reason": "excluded host label: mail",
+      "security_blocked": true,
+      "source": "certificate transparency"
+    },
+    {
+      "active": false,
+      "addresses": [],
+      "attempts": [],
+      "explicit": false,
+      "host": "www.owa.qei.org.au",
+      "reason": "DNS resolution failed: [Errno -2] Name or service not known",
+      "security_blocked": false,
+      "source": "certificate transparency"
+    },
+    {
+      "host": "www.remote.qei.org.au",
+      "reason": "excluded host label: remote",
+      "security_blocked": true,
+      "source": "certificate transparency"
+    }
+  ],
+  "generated_at": "2026-09-21T08:57:39.532074+00:00",
   "included": [
     {
       "active": true,
@@ -54,7 +159,5 @@
   "method": "explicit hosts plus passive Certificate Transparency; no brute force",
   "network_guard": "only globally routable addresses and in-scope redirects are accepted",
   "root_domain": "qei.org.au",
-  "warnings": [
-    "Certificate Transparency lookup failed: HTTP Error 502: Bad Gateway"
-  ]
+  "warnings": []
 }

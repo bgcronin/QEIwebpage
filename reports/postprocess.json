@@ -1,11 +1,11 @@
 {
-  "css_files": 632,
+  "css_files": 636,
   "css_urls_rewritten": 12,
   "form_controls_disabled": 12990,
   "forms_disabled": 1825,
   "html_files": 595,
-  "links_rewritten": 7214,
+  "links_rewritten": 7217,
   "robots_txt_written": 1,
-  "tracking_nodes_removed": 6068,
+  "tracking_nodes_removed": 6001,
   "transactions_disabled": 12
 }

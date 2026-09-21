@@ -3622,51 +3622,6 @@
     },
     {
       "attribute": "href",
-      "file": "news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../feed"
-    },
-    {
-      "attribute": "href",
-      "file": "news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../comments/feed"
-    },
-    {
-      "attribute": "href",
-      "file": "news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fnew-technologies-a-leap-forward-for-eye-surgery%2F"
-    },
-    {
-      "attribute": "href",
-      "file": "news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fnew-technologies-a-leap-forward-for-eye-surgery%2F&format=xml"
-    },
-    {
-      "attribute": "href",
-      "file": "news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../wp-json"
-    },
-    {
-      "attribute": "href",
-      "file": "news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../xmlrpc.php?rsd"
-    },
-    {
-      "attribute": "href",
-      "file": "news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
-    },
-    {
-      "attribute": "href",
-      "file": "news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
-    },
-    {
-      "attribute": "src",
-      "file": "news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "about:blank"
-    },
-    {
-      "attribute": "href",
       "file": "news/introducing-jemma/index.html",
       "target": "../../feed"
     },
@@ -6688,6 +6643,51 @@
     {
       "attribute": "src",
       "file": "news/bette-forgan-smith-postdoctoral-fellowship-awarded-to-dr-audra-shadforth/index.html",
+      "target": "about:blank"
+    },
+    {
+      "attribute": "href",
+      "file": "news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../feed"
+    },
+    {
+      "attribute": "href",
+      "file": "news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../comments/feed"
+    },
+    {
+      "attribute": "href",
+      "file": "news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fnew-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery%2F"
+    },
+    {
+      "attribute": "href",
+      "file": "news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fnew-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery%2F&format=xml"
+    },
+    {
+      "attribute": "href",
+      "file": "news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../wp-json"
+    },
+    {
+      "attribute": "href",
+      "file": "news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../xmlrpc.php?rsd"
+    },
+    {
+      "attribute": "href",
+      "file": "news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "href",
+      "file": "news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "src",
+      "file": "news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
       "target": "about:blank"
     },
     {
@@ -11027,51 +11027,6 @@
     },
     {
       "attribute": "href",
-      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../../../feed"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../../../comments/feed"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fnew-technologies-a-leap-forward-for-eye-surgery%2F"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fnew-technologies-a-leap-forward-for-eye-surgery%2F&format=xml"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../../../wp-json"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../../../xmlrpc.php?rsd"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
-    },
-    {
-      "attribute": "src",
-      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-for-eye-surgery/index.html",
-      "target": "about:blank"
-    },
-    {
-      "attribute": "href",
       "file": "_subdomains/qei.org.au/news/introducing-jemma/index.html",
       "target": "../../../../feed"
     },
@@ -14097,6 +14052,51 @@
     },
     {
       "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../../../feed"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../../../comments/feed"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fnew-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery%2F"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fnew-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery%2F&format=xml"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../../../wp-json"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../../../xmlrpc.php?rsd"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "src",
+      "file": "_subdomains/qei.org.au/news/new-technologies-a-leap-forward-dr-gunns-vision-for-smarter-safer-eye-surgery/index.html",
+      "target": "about:blank"
+    },
+    {
+      "attribute": "href",
       "file": "_subdomains/qei.org.au/news/spring-issue-out-now/index.html",
       "target": "../../../../feed"
     },
@@ -15972,51 +15972,6 @@
     },
     {
       "attribute": "href",
-      "file": "_subdomains/qei.org.au/events/retina-by-th-rive/index.html",
-      "target": "../../../../feed"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/events/retina-by-th-rive/index.html",
-      "target": "../../../../comments/feed"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/events/retina-by-th-rive/index.html",
-      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fevents%2Fretina-by-th-rive%2F"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/events/retina-by-th-rive/index.html",
-      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fevents%2Fretina-by-th-rive%2F&format=xml"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/events/retina-by-th-rive/index.html",
-      "target": "../../../../wp-json"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/events/retina-by-th-rive/index.html",
-      "target": "../../../../xmlrpc.php?rsd"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/events/retina-by-th-rive/index.html",
-      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
-    },
-    {
-      "attribute": "href",
-      "file": "_subdomains/qei.org.au/events/retina-by-th-rive/index.html",
-      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
-    },
-    {
-      "attribute": "src",
-      "file": "_subdomains/qei.org.au/events/retina-by-th-rive/index.html",
-      "target": "about:blank"
-    },
-    {
-      "attribute": "href",
       "file": "_subdomains/qei.org.au/events/optometry-student-workshop/index.html",
       "target": "../../../../feed"
     },
@@ -16148,6 +16103,51 @@
     {
       "attribute": "src",
       "file": "_subdomains/qei.org.au/events/optometry-workshop/index.html",
+      "target": "about:blank"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/events/retina-by-the-river/index.html",
+      "target": "../../../../feed"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/events/retina-by-the-river/index.html",
+      "target": "../../../../comments/feed"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/events/retina-by-the-river/index.html",
+      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fevents%2Fretina-by-the-river%2F"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/events/retina-by-the-river/index.html",
+      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fevents%2Fretina-by-the-river%2F&format=xml"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/events/retina-by-the-river/index.html",
+      "target": "../../../../wp-json"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/events/retina-by-the-river/index.html",
+      "target": "../../../../xmlrpc.php?rsd"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/events/retina-by-the-river/index.html",
+      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/events/retina-by-the-river/index.html",
+      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "src",
+      "file": "_subdomains/qei.org.au/events/retina-by-the-river/index.html",
       "target": "about:blank"
     },
     {
@@ -20383,6 +20383,11 @@
     {
       "attribute": "href",
       "file": "_subdomains/qei.org.au/qei-foundation/eyecure/index.html",
+      "target": "../../../../wp-content/uploads/2026/09/QEI097-Eyecure-SEP-2026-A4-Singles-Web.pdf"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/qei-foundation/eyecure/index.html",
       "target": "../../../../wp-content/uploads/2026/03/QEI093-Eyecure-MAR-2026-A4-Spreads-WEB.pdf"
     },
     {
@@ -22937,51 +22942,6 @@
     },
     {
       "attribute": "href",
-      "file": "events/retina-by-th-rive/index.html",
-      "target": "../../feed"
-    },
-    {
-      "attribute": "href",
-      "file": "events/retina-by-th-rive/index.html",
-      "target": "../../comments/feed"
-    },
-    {
-      "attribute": "href",
-      "file": "events/retina-by-th-rive/index.html",
-      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fevents%2Fretina-by-th-rive%2F"
-    },
-    {
-      "attribute": "href",
-      "file": "events/retina-by-th-rive/index.html",
-      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fevents%2Fretina-by-th-rive%2F&format=xml"
-    },
-    {
-      "attribute": "href",
-      "file": "events/retina-by-th-rive/index.html",
-      "target": "../../wp-json"
-    },
-    {
-      "attribute": "href",
-      "file": "events/retina-by-th-rive/index.html",
-      "target": "../../xmlrpc.php?rsd"
-    },
-    {
-      "attribute": "href",
-      "file": "events/retina-by-th-rive/index.html",
-      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
-    },
-    {
-      "attribute": "href",
-      "file": "events/retina-by-th-rive/index.html",
-      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
-    },
-    {
-      "attribute": "src",
-      "file": "events/retina-by-th-rive/index.html",
-      "target": "about:blank"
-    },
-    {
-      "attribute": "href",
       "file": "events/optometry-student-workshop/index.html",
       "target": "../../feed"
     },
@@ -23113,6 +23073,51 @@
     {
       "attribute": "src",
       "file": "events/optometry-workshop/index.html",
+      "target": "about:blank"
+    },
+    {
+      "attribute": "href",
+      "file": "events/retina-by-the-river/index.html",
+      "target": "../../feed"
+    },
+    {
+      "attribute": "href",
+      "file": "events/retina-by-the-river/index.html",
+      "target": "../../comments/feed"
+    },
+    {
+      "attribute": "href",
+      "file": "events/retina-by-the-river/index.html",
+      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fevents%2Fretina-by-the-river%2F"
+    },
+    {
+      "attribute": "href",
+      "file": "events/retina-by-the-river/index.html",
+      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fevents%2Fretina-by-the-river%2F&format=xml"
+    },
+    {
+      "attribute": "href",
+      "file": "events/retina-by-the-river/index.html",
+      "target": "../../wp-json"
+    },
+    {
+      "attribute": "href",
+      "file": "events/retina-by-the-river/index.html",
+      "target": "../../xmlrpc.php?rsd"
+    },
+    {
+      "attribute": "href",
+      "file": "events/retina-by-the-river/index.html",
+      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "href",
+      "file": "events/retina-by-the-river/index.html",
+      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "src",
+      "file": "events/retina-by-the-river/index.html",
       "target": "about:blank"
     },
     {
@@ -27348,6 +27353,11 @@
     {
       "attribute": "href",
       "file": "qei-foundation/eyecure/index.html",
+      "target": "../../wp-content/uploads/2026/09/QEI097-Eyecure-SEP-2026-A4-Singles-Web.pdf"
+    },
+    {
+      "attribute": "href",
+      "file": "qei-foundation/eyecure/index.html",
       "target": "../../wp-content/uploads/2026/03/QEI093-Eyecure-MAR-2026-A4-Spreads-WEB.pdf"
     },
     {
@@ -28698,13 +28708,13 @@
     ".2": 4,
     ".3": 2,
     ".5": 20,
-    ".css": 632,
+    ".css": 636,
     ".eot": 20,
     ".eot@": 4,
     ".eot@99ac726223c749443b642ce33df8b800": 2,
     ".html": 595,
     ".jpeg": 126,
-    ".jpg": 2428,
+    ".jpg": 2430,
     ".js": 4,
     ".js@ver=1787231434": 2,
     ".js@ver=1dfe7db3940c23ea9216": 2,
@@ -28728,8 +28738,8 @@
     ".woff2@o6rzdt": 2,
     ".woff@o6rzdt": 2
   },
-  "file_count": 4649,
-  "generated_at": "2026-09-14T09:55:04.937136+00:00",
+  "file_count": 4655,
+  "generated_at": "2026-09-21T09:59:29.870076+00:00",
   "html_file_count": 595,
   "oversized_files": [],
   "safety": {
@@ -28740,5 +28750,5 @@
     "missing_safety_guard": [],
     "tracking_references": []
   },
-  "total_bytes": 1525505937
+  "total_bytes": 1527176988
 }
