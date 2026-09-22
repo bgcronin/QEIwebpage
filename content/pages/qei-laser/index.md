@@ -5,8 +5,10 @@ url: /qei-laser/
 template: hub
 section: "QEI Laser"
 parent: /qei-laser/
-eyebrow: "Laser eye surgery at the Queensland Eye Institute"
-summary: "Advanced excimer laser surgery for diseases of the cornea and the front of the eye, performed by QEI's corneal specialists inside a fully accredited private hospital. Therapeutic laser procedures attract automatic health fund cover."
+eyebrow: "Laser eye surgery for diseases of the cornea"
+summary: "Advanced excimer laser surgery for diseases of the cornea and the front of the eye, performed by subspecialist corneal surgeons inside a fully accredited private hospital. We are not aiming to be the highest-volume laser clinic in Brisbane: we are striving to be the safest."
+hero_image: content/media/qei-laser/dr-brendan-cronin-laser.jpg
+hero_alt: "Dr Brendan Cronin at the excimer laser, Queensland Eye Institute"
 priority: 0.9
 changefreq: monthly
 keywords: [QEI Laser, laser eye surgery Brisbane, excimer laser, PTK, phototherapeutic keratectomy, topography guided PTK, corneal laser, keratoconus laser, CAIRS, PRK, ASA]
@@ -15,17 +17,17 @@ actions:
   - {label: "Send an enquiry", url: "https://qei.org.au/patient-info/send-enquiry/", style: btn--secondary}
 cards:
   - {title: "Overview of laser treatments", url: /qei-laser/treatments/, text: "Therapeutic and refractive excimer laser procedures, and which conditions they treat.", cta: "All treatments"}
-  - {title: "Keratoconus: topography-guided laser and cross-linking", url: /qei-laser/treatments/keratoconus-athens-protocol/, text: "Corneal regularisation combined with collagen cross-linking, the Athens protocol.", badge: "Keratoconus", cta: "How it works"}
-  - {title: "CAIRS eye surgery", url: /qei-laser/treatments/cairs-eye-surgery/, text: "Donor-tissue ring segments for keratoconus, pioneered in Australia by QEI surgeons.", badge: "Keratoconus", cta: "About CAIRS"}
-  - {title: "Irregular astigmatism", url: /qei-laser/treatments/irregular-astigmatism/, text: "Topography-guided PTK for astigmatism that glasses and standard contact lenses cannot correct.", cta: "How it works"}
-  - {title: "Corneal scarring", url: /qei-laser/treatments/corneal-scarring/, text: "Laser removal of superficial scars to restore clarity and reduce glare.", cta: "How it works"}
-  - {title: "Post corneal transplant", url: /qei-laser/treatments/post-corneal-transplant/, text: "Laser regularisation of the corneal surface after a graft.", cta: "How it works"}
-  - {title: "Recurrent erosion syndrome", url: /qei-laser/treatments/recurrent-erosion-syndrome/, text: "Highly effective laser treatment for painful recurring corneal erosions.", cta: "How it works"}
-  - {title: "Corneal dystrophies", url: /qei-laser/treatments/corneal-dystrophies/, text: "Laser removal of inherited opacities in the front layers of the cornea.", cta: "How it works"}
+  - {title: "Keratoconus and corneal cross-linking", url: /qei-laser/treatments/keratoconus-athens-protocol/, text: "Corneal collagen cross-linking strengthens corneas weakened by keratoconus, and corneal regularisation restores a smoother shape.", badge: "Keratoconus", cta: "How it works", icon: content/media/qei-laser/icon-keratoconus-cross-linking.png}
+  - {title: "CAIRS eye surgery", url: /qei-laser/treatments/cairs-eye-surgery/, text: "Donor-tissue ring segments act as internal braces to reinforce the thinning, bulging cornea. Australia's first CAIRS was performed at QEI.", badge: "Keratoconus", cta: "About CAIRS", icon: content/media/qei-laser/icon-corneal-ring-segments.png}
+  - {title: "Irregular astigmatism", url: /qei-laser/treatments/irregular-astigmatism/, text: "Astigmatism of the cornea that cannot be corrected by glasses or normal contact lenses, treated with topography-guided PTK.", cta: "How it works", icon: content/media/qei-laser/icon-irregular-astigmatism.png}
+  - {title: "Corneal scarring", url: /qei-laser/treatments/corneal-scarring/, text: "Scars from infection, pterygium surgery, trauma, chemical injury or Salzmann's nodular degeneration, removed with the laser.", cta: "How it works", icon: content/media/qei-laser/icon-corneal-scarring.png}
+  - {title: "Post corneal transplant", url: /qei-laser/treatments/post-corneal-transplant/, text: "Reduced vision or complex contact lens dependence after a graft can often be corrected with excimer laser.", cta: "How it works", icon: content/media/qei-laser/icon-post-corneal-transplant.png}
+  - {title: "Recurrent erosion syndrome", url: /qei-laser/treatments/recurrent-erosion-syndrome/, text: "Extremely painful erosions of the corneal surface, stopped with a laser treatment to the foundation layer of the epithelium.", cta: "How it works", icon: content/media/qei-laser/icon-corneal-erosion.png}
+  - {title: "Corneal dystrophies", url: /qei-laser/treatments/corneal-dystrophies/, text: "Inherited disorders that cloud the cornea; laser removes the diseased tissue in mild to moderate cases.", cta: "How it works", icon: content/media/qei-laser/icon-corneal-dystrophy.png}
   - {title: "PRK and ASA laser vision correction", url: /qei-laser/treatments/prk-asa-laser-vision-correction/, text: "Surface laser to reduce dependence on glasses and contact lenses.", badge: "Refractive", cta: "How it works"}
   - {title: "Automatic health fund rebates", url: /qei-laser/health-fund-rebates/, text: "How therapeutic laser procedures are covered by private health insurance.", badge: "Costs", cta: "Health fund cover"}
   - {title: "Information for patients", url: /qei-laser/for-patients/, text: "Preparing for laser surgery, the day of your procedure and recovery.", cta: "What to expect"}
-  - {title: "Our laser surgeons", url: "/ophthalmologists/#refractive", text: "Dr Brendan Cronin and Dr David Gunn, fellowship-trained corneal and refractive surgeons.", cta: "Meet the surgeons"}
+  - {title: "Our laser surgeons", url: "/ophthalmologists/#refractive", text: "Dr David Gunn, Dr Brendan Cronin, Dr Lee Holland and Dr Geoffrey Ryan: fellowship-trained corneal, cataract and refractive surgeons.", cta: "Meet the surgeons"}
 sidebar: [laser-book, laser-treatments, referrer]
 faq:
   - q: "Is QEI Laser the same as laser vision correction?"
@@ -33,28 +35,49 @@ faq:
       QEI Laser is primarily a therapeutic laser service: it uses the excimer laser to treat diseases of the cornea such as keratoconus, scarring, dystrophies and recurrent erosions, restoring vision that glasses or contact lenses cannot. The same laser is also used for PRK and ASA laser vision correction for suitable patients. Your surgeon will explain which applies to you.
   - q: "Do I need a referral?"
     a: |
-      To claim the Medicare rebate for your consultation you need a current referral from your optometrist, GP or ophthalmologist to Dr Cronin or Dr Gunn. Many patients are referred after keratoconus, scarring or a corneal transplant has been identified. If you are unsure, call 07 3239 5000 and our team will advise.
+      Yes, most of the time. It helps you and it helps us. If you are coming for an opinion on laser for a disease such as corneal scarring, you need a valid referral from an optometrist or GP to receive a Medicare rebate. If you are unsure, call 07 3239 5000 and our team will advise.
   - q: "Will my health fund pay for the laser?"
     a: |
-      If your treatment is therapeutic, to restore vision affected by conditions such as corneal scarring, keratoconus, recurrent erosions or astigmatism after a transplant, your health fund covers the procedure automatically when your policy covers the relevant Medicare item. Solely refractive procedures such as PRK and ASA are not covered. See automatic health fund rebates.
+      Health funds only pay for procedures with a Medicare item number when they are performed in a fully accredited and licensed hospital, which is where our laser is. If your treatment is therapeutic, to restore vision affected by conditions such as corneal scarring, keratoconus, recurrent erosions or astigmatism after a transplant, your fund will contribute to the cost when your policy covers Medicare item 42810. Solely refractive procedures such as PRK and ASA are not automatically covered. See automatic health fund rebates.
+  - q: "Do you offer free assessments?"
+    a: |
+      No. For therapeutic assessments the usual consultation and investigation fees charged by our surgeons apply, with Medicare rebates where you have a valid referral. Please ask our receptionists for further information.
   - q: "Where is the laser?"
     a: |
       The excimer laser is located inside South Brisbane Day Hospital, a fully accredited private hospital co-located with the Queensland Eye Institute at 87 Ipswich Road, Woolloongabba. Consultations take place in the QEI Clinic at Woolloongabba or Clayfield.
 ---
 ## About QEI Laser
 
-QEI Laser is a proud partner of the Queensland Eye Institute, providing advanced excimer laser eye surgery for the treatment of diseases of the cornea and anterior segment of the eye. It is the only excimer laser in Queensland with guaranteed private health insurance approval for therapeutic laser procedures, and the laser is located inside a fully accredited private hospital.
+QEI Laser is a proud partner of the Queensland Eye Institute, providing advanced excimer laser eye surgery for the treatment of diseases of the cornea and anterior segment of the eye. At QEI Laser we are not aiming to be the highest-volume laser clinic in Brisbane; we are striving to be the safest. During our rigorous screening process you will be seen by the surgeon who will be performing your treatment, and we use every technology available to ensure you are a safe candidate for laser eye surgery.
 
-Ophthalmologists [Dr Brendan Cronin](/ophthalmologists/dr-brendan-cronin/) and [Dr David Gunn](/ophthalmologists/dr-david-gunn/) perform laser eye surgery for diseases of the cornea and anterior segment, including corneal dystrophies and scarring, irregular astigmatism, post corneal transplant astigmatism, recurrent erosion syndrome and keratoconus, as well as PRK and ASA laser vision correction. Both are Fellows of the Royal Australian and New Zealand College of Ophthalmologists with subspecialty fellowship training in corneal and refractive surgery in the United Kingdom, and both are international leaders in the treatment of keratoconus, including the CAIRS procedure.
+Our doctors are the only surgeons in Queensland able to offer all of the following, performed by subspecialist ophthalmologists trained in laser surgery and diseases of the cornea and anterior segment:
+
+- Inpatient laser eye surgery for both refractive and therapeutic laser, with the laser located inside a fully accredited private hospital.
+- Intravenous sedation for your procedure with our on-site anaesthetist.
+- Customised topography-guided collagen cross-linking.
+- Guaranteed health fund rebates for phototherapeutic keratectomy when patients have appropriate private health cover for item number 42810.
+- Collagen cross-linking in a dedicated outpatient procedure room for patients without private health insurance, to maximise Medicare rebates and the Medicare safety net.
+- All types of intraocular lens surgery, including multifocal lenses, IC-8 pinhole lenses and implantable contact lenses (implantable collamer lenses).
+- Custom-made artificial iris implantation for iris defects and aniridia.
+- All types of corneal transplantation surgery.
+
+We are based at the Queensland Eye Institute, Australia's largest non-government funded eye research institute: a not-for-profit charity dedicated to providing education, research and clinical care to help eradicate blindness.
+
+## Our surgeons
+
+- **[Dr David Gunn](/ophthalmologists/dr-david-gunn/)**, a Queensland and UK trained ophthalmologist specialising in diseases of the cornea, complex cataract surgery and laser and refractive eye surgery. He performed Australia's first CAIRS procedure at QEI in 2021.
+- **[Dr Brendan Cronin](/ophthalmologists/dr-brendan-cronin/)**, corneal and anterior segment surgeon and Director of Education at the Queensland Eye Institute, who holds international patents in corneal cross-linking technology.
+- **[Dr Lee Holland](/ophthalmologists/dr-lee-holland/)**, a cornea, cataract, refractive and glaucoma surgeon holding the Royal College of Ophthalmologists' Certificate in Laser and Refractive Surgery.
+- **[Dr Geoffrey Ryan](/ophthalmologists/dr-geoffrey-ryan/)**, a cornea, cataract and laser eye surgeon offering the full range of modern laser vision correction and lens-based procedures.
 
 ## Laser that treats disease, not just glasses
 
-Most people associate laser eye surgery with reducing the need for glasses. At QEI Laser, the excimer laser is most often used **therapeutically**: to remove scar tissue and abnormal deposits, to smooth an irregular corneal surface so that vision and contact lens comfort improve, and to strengthen and regularise the cornea in keratoconus in combination with collagen cross-linking. Because these procedures treat a medical condition, they attract Medicare and automatic private health fund cover.
+Most people associate laser eye surgery with reducing the need for glasses. At QEI Laser, the excimer laser is most often used **therapeutically**: to remove scar tissue and abnormal deposits, to smooth an irregular corneal surface so that vision and contact lens comfort improve, and to strengthen and regularise the cornea in keratoconus in combination with collagen cross-linking. Because these procedures treat a medical condition, they attract Medicare and health fund contributions. Refractive laser vision correction (LASIK, PRK, ASA and lenticule extraction) is performed by the same surgeons through Focus Vision Clinic, co-located with QEI at 87 Ipswich Road.
 
 ## How to access QEI Laser
 
-1. Ask your optometrist, GP or ophthalmologist for a referral to Dr Cronin or Dr Gunn, or [send an enquiry](https://qei.org.au/patient-info/send-enquiry/).
-2. Attend a consultation at the QEI Clinic, where your cornea is mapped and measured and your surgeon discusses the options, expected results and costs.
+1. Ask your optometrist, GP or ophthalmologist for a referral to one of our laser surgeons, or [send an enquiry](https://qei.org.au/patient-info/send-enquiry/).
+2. Attend a consultation at the QEI Clinic, where your cornea is mapped and measured and your surgeon discusses the options, expected results and costs. Please allow one to two hours for this rigorous assessment.
 3. Laser treatment is performed as a short day procedure at South Brisbane Day Hospital, with follow-up in the clinic.
 
-Referrers: see [how to refer](/referrers/) and the [subspecialty guide](/referrers/subspecialty-guide/).
+Please note that our doctors do not offer medical advice over email; it is best to make an appointment to discuss any medical concerns directly. Referrers: see [how to refer](/referrers/) and the [subspecialty guide](/referrers/subspecialty-guide/).

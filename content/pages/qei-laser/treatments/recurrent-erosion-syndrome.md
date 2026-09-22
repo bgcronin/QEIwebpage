@@ -8,6 +8,8 @@ section: "QEI Laser"
 parent: /qei-laser/treatments/
 order: 6
 badge: "Therapeutic laser"
+hero_image: content/media/qei-laser/recurrent-erosion.jpg
+hero_alt: "Photograph of a patient's eye showing recurrent corneal erosion syndrome"
 summary: "Recurrent corneal erosions are sudden, extremely painful episodes, often on waking, in which the surface layer of the cornea tears away. QEI Laser uses excimer laser treatment on the foundation layer of the corneal epithelium, a procedure that is extremely effective at stopping the erosions from recurring."
 keywords: [recurrent corneal erosion, recurrent erosion syndrome treatment, PTK erosion, eye pain on waking, map dot fingerprint dystrophy]
 facts:
@@ -29,13 +31,17 @@ faq:
 ---
 ## What is recurrent erosion syndrome?
 
-The corneal epithelium, the surface skin of the cornea, is anchored to the layer beneath by a fine basement membrane. After an injury, or in people with an inherited basement membrane dystrophy, the new epithelium may not anchor properly. The loose surface can tear away suddenly, causing severe pain, watering, light sensitivity and blurred vision that lasts hours to days, then heals until the next episode. Attacks often occur on waking, when the eyelid drags across the poorly attached surface.
+Recurrent erosion syndrome is a common but very painful condition of the cornea, the clear window at the front of your eye. Recurrent erosions occur when the superficial layer of the cornea, the epithelium, breaks down. The breakdown leads to an erosion on the surface of the eye that is extremely painful, with watering, light sensitivity and blurred vision that lasts hours to days, then heals until the next episode.
+
+## What causes recurrent erosion syndrome?
+
+Recurrent erosions are generally caused by trauma (fingernails and plant matter are often at fault) or by an inherent predisposition in your eye called epithelial basement membrane dystrophy. In traumatic cases the erosions occur months to years after the initial incident. Patients often find the erosions happen during deep, rapid eye movement sleep, as their eyes move under their eyelids. Depending on the size of the erosion, people can be in significant pain for days.
 
 ## Treatment options
 
 Conservative treatment aims to help the surface heal firmly: preservative-free lubricants during the day, ointment at night, sometimes hypertonic saline, a bandage contact lens, or a course of oral doxycycline and a mild steroid drop to reduce the enzymes that weaken adhesion. Many people settle with these measures.
 
-When erosions keep recurring, **phototherapeutic keratectomy** offers a definitive treatment. The excimer laser removes the loose, abnormal epithelium and polishes the basement layer so that the new epithelium grows back with a firm attachment. The procedure takes minutes, and published studies and QEI's experience show it is extremely effective at stopping these extremely painful erosions from recurring.
+When erosions keep recurring, **phototherapeutic keratectomy** offers a definitive treatment. An excimer laser treatment to the foundation layer of the corneal epithelium removes the loose, abnormal cells and polishes the basement layer so that the new epithelium grows back with a firm attachment. The procedure takes minutes and is extremely effective at stopping these extremely painful and recurrent erosions from recurring. The laser is often combined with other treatments to ensure the condition does not return.
 
 ## What to expect
 

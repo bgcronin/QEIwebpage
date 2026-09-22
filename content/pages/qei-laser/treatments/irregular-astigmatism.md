@@ -8,7 +8,9 @@ section: "QEI Laser"
 parent: /qei-laser/treatments/
 order: 1
 badge: "Therapeutic laser"
-summary: "Irregular astigmatism is an astigmatism of the cornea that cannot be corrected by glasses or normal contact lenses. At QEI Laser it is treated with topography-guided phototherapeutic keratectomy (T-PTK), a customised laser treatment that smooths the corneal surface."
+hero_image: content/media/qei-laser/topography-irregular-astigmatism.jpg
+hero_alt: "Corneal topography showing irregular astigmatism in a patient's eye"
+summary: "Irregular astigmatism is an astigmatism of the cornea that cannot be corrected by glasses or normal contact lenses. At QEI Laser it is treated with a topography-guided phototherapeutic keratectomy (T-PTK), sometimes called a corneal regularisation, in which an extremely high-resolution map of your cornea guides the laser to reshape it to a more regular form."
 keywords: [irregular astigmatism, topography guided PTK, T-PTK, corneal regularisation, laser Brisbane]
 facts:
   "Best for": "Irregular astigmatism from keratoconus, scarring, previous surgery, trauma or corneal transplant that limits vision in glasses or standard contact lenses"
@@ -33,15 +35,18 @@ Regular astigmatism, the common kind, means the cornea is shaped like a rugby ba
 
 ## Causes
 
-- Keratoconus and other corneal ectasias.
-- Corneal scarring after infection, injury or previous surgery.
-- Irregularity after a corneal transplant.
-- Complications of earlier refractive surgery.
-- Pterygium and surface disorders such as Salzmann's nodular degeneration.
+It is perfectly normal to have regular astigmatism, which can be corrected with glasses, contact lenses or laser eye surgery. Irregular astigmatism generally occurs:
+
+- after pterygium surgery;
+- in corneal diseases such as keratoconus or pellucid marginal degeneration;
+- after corneal transplants such as penetrating keratoplasty or deep anterior lamellar keratoplasty;
+- with corneal scarring after infection, injury or earlier surgery, and surface disorders such as Salzmann's nodular degeneration.
 
 ## How topography-guided PTK helps
 
-Topography-guided PTK, sometimes called corneal regularisation, uses a detailed map of your cornea to plan a customised excimer laser treatment. The laser removes a thin layer of tissue from the elevated areas of the surface, reducing the irregularity. When the underlying cornea is weak, as in keratoconus, the laser is combined with [corneal collagen cross-linking](/qei-laser/treatments/keratoconus-athens-protocol/) in the same session to strengthen it.
+In a topography-guided PTK the irregular shape of your cornea is mapped with an extremely high-resolution mapping system. The laser then analyses the map and reshapes your cornea to a more regular shape to minimise your irregular astigmatism. Sometimes there may be a refractive component to the laser to minimise or remove your need for glasses; generally, however, the treatment is designed to give you good vision in glasses, so that you no longer need hard or rigid contact lenses.
+
+When a topography-guided PTK is performed on patients with keratoconus or pellucid marginal degeneration it is often called an "Athens protocol" procedure. In these conditions the laser corneal regularisation is combined with [corneal collagen cross-linking](/qei-laser/treatments/keratoconus-athens-protocol/) to strengthen the cornea.
 
 ## What to expect
 

@@ -15,7 +15,8 @@ The redesigned site in `web/` is a review build. Complete these steps before it 
 
 ## qeilaser.com.au
 
-- [ ] Reconcile the QEI Laser pages (`content/pages/qei-laser/`) with the text and photos of the current Squarespace site; add testimonials or images from the Squarespace export if wanted.
+- [ ] The QEI Laser pages (`content/pages/qei-laser/`) were reconciled with the Squarespace export on 22 September 2026. Photos could not be downloaded from this environment: run the **Fetch QEI Laser images** workflow from the Actions tab (or `python src/fetch_qeilaser_images.py` locally) to download them from the Squarespace CDN into `content/media/qei-laser/`; the pages pick them up automatically on the next build.
+- [ ] The Squarespace privacy policy, terms and medical disclaimer were not migrated; the main site's own policies and the new `/medical-disclaimer/` page apply.
 - [ ] Confirm the surgeons, procedures and health fund statements (including the Medicare item number quoted on the rebates page) with Dr Cronin and Dr Gunn.
 - [ ] At launch, redirect every qeilaser.com.au page to its new home. The mapping is in `domain_redirects` in `content/site.json`. Options: keep the Squarespace subscription temporarily and add 301 URL mappings to the new URLs, or point the domain at the new host and configure the redirects there. Update Google Business Profile, Search Console (change of address) and any printed material that lists qeilaser.com.au.
 - [ ] Note that the Squarespace site lists the former South Brisbane address; the new pages use 87 Ipswich Road, Woolloongabba.

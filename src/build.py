@@ -48,6 +48,8 @@ _warnings: list[str] = []
 
 
 def warn(msg: str) -> None:
+    if msg in _warnings:
+        return
     _warnings.append(msg)
     print(f"  warning: {msg}", file=sys.stderr)
 

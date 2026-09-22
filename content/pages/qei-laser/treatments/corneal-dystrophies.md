@@ -8,6 +8,8 @@ section: "QEI Laser"
 parent: /qei-laser/treatments/
 order: 7
 badge: "Therapeutic laser"
+hero_image: content/media/qei-laser/corneal-dystrophy.jpg
+hero_alt: "Photograph of a patient's eye showing an example of granular corneal dystrophy"
 summary: "Corneal dystrophies are a group of inherited genetic disorders that cause the cornea to become opaque over time. In mild to moderate cases, excimer laser treatment at QEI Laser safely and effectively removes the diseased tissue, restoring clarity without a transplant."
 keywords: [corneal dystrophy laser, epithelial basement membrane dystrophy, Reis-Bucklers, granular dystrophy, lattice dystrophy, PTK dystrophy]
 facts:
@@ -29,11 +31,13 @@ faq:
 ---
 ## What are corneal dystrophies?
 
-Corneal dystrophies are inherited conditions in which abnormal material accumulates in one or more layers of the cornea, gradually reducing its transparency. They usually affect both eyes and progress slowly. Depending on the layer involved, they cause blurred vision, glare, light sensitivity and, in some types, painful recurrent erosions of the surface. Common examples affecting the front of the cornea include epithelial basement membrane (map-dot-fingerprint) dystrophy, Reis-Bücklers dystrophy, granular dystrophy and lattice dystrophy.
+Corneal dystrophies are a group of inherited genetic disorders that cause the cornea to become opaque over time. There are numerous different dystrophies, but the more common ones include epithelial basement membrane dystrophy, granular dystrophy and Reis-Bücklers dystrophy. In the early stages many of these conditions cause painful recurrent erosions; in the later stages they can cause significantly reduced vision.
 
 ## Laser treatment
 
-In mild to moderate cases the excimer laser can remove the opaque deposits and smooth the corneal surface, restoring clarity and, where erosions have been a problem, allowing the surface to heal firmly. Treatment depth is planned from OCT measurements so that as much healthy tissue as possible is preserved, and mitomycin C may be used to limit haze. Because the deposits may slowly return, the treatment can be repeated in the future.
+Traditionally the only treatment for corneal dystrophy was a corneal transplant. While this may still be needed for very late or severe cases, excimer laser can safely and effectively remove the diseased tissue in mild to moderate cases, restoring clarity and, where erosions have been a problem, allowing the surface to heal firmly. Treatment depth is planned from OCT measurements so that as much healthy tissue as possible is preserved, and mitomycin C may be used to limit haze. Because the deposits may slowly return, the treatment can be repeated in the future.
+
+As with all therapeutic laser procedures with our doctors, if your health insurance covers the item number for a phototherapeutic keratectomy (42810) you will qualify for automatic health fund rebates and intravenous sedation with our anaesthetic team, and your laser will be performed on the only excimer laser in Queensland based in an accredited private hospital.
 
 For dystrophies that extend deep into the stroma, or when the cornea has become too thin, a deep anterior lamellar keratoplasty (DALK) is recommended instead. Fuchs' endothelial dystrophy, which affects the inner layer, is treated with [DMEK](/eye-conditions/fuchs-endothelial-dystrophy/).
 

@@ -6,11 +6,25 @@ template: page
 section: "QEI Laser"
 parent: /qei-laser/
 eyebrow: "QEI Laser"
-summary: "What to expect before, during and after excimer laser treatment at QEI Laser, and how to look after your eyes while they heal."
+summary: "Our rigorous assessment process is vital to ensure your safety, and it can take time. Here is what to expect before, during and after excimer laser treatment at QEI Laser, and how to look after your eyes while they heal."
+hero_image: content/media/qei-laser/dr-david-gunn-consult.jpg
+hero_alt: "Dr David Gunn examining a patient at the Queensland Eye Institute"
 priority: 0.7
 keywords: [laser eye surgery recovery, PTK aftercare, bandage contact lens, laser surgery preparation]
 sidebar: [laser-book, laser-treatments, urgent]
 faq:
+  - q: "Do I need a referral?"
+    a: |
+      Yes, most of the time. It helps you and it helps us. If you are coming for an opinion on laser for a disease such as corneal scarring, you need a valid referral from an optometrist or GP to receive a Medicare rebate.
+  - q: "Do I need to take my contact lenses out before my appointment?"
+    a: |
+      Yes. If you wear soft contact lenses, please remove them one week before your assessment. Hard contact lenses vary in how long you need them out for, if at all. If you wear hard lenses because you cannot wear soft ones, just keep wearing them until your appointment.
+  - q: "Is there an age limit?"
+    a: |
+      For therapeutic laser procedures there is no age limit.
+  - q: "Do you offer free assessments?"
+    a: |
+      No. For therapeutic assessments the usual consultation fee and investigation fees charged by our surgeons apply. Please ask our receptionists for further information.
   - q: "Can I drive after the procedure?"
     a: |
       No. Your vision will be blurred and you will have had anaesthetic drops. Please arrange for someone to take you home. Most people can drive again once the bandage lens is removed and vision is adequate, usually one to two weeks after treatment; your surgeon will advise.
@@ -21,16 +35,27 @@ faq:
     a: |
       Not until your surgeon confirms the surface has healed and your cornea has stabilised, typically after your three-month review. You may need a new lens fitting, because the shape of the cornea will have changed.
 ---
+## Your assessment
+
+Our rigorous assessment process is vital to ensure your safety, and it can take time. Please plan to be at the clinic for between one and two hours for your initial appointment so that we have time to fully assess your individual needs. You will be seen by the surgeon who will perform your treatment, and your cornea will be mapped with topography and tomography, measured with OCT and examined under the microscope.
+
+What to bring to your appointment:
+
+- Your current glasses and any older pairs you may have.
+- Your referral.
+- Sunglasses: it will be very glary when you leave with your pupils dilated.
+- A driver: your pupils may be dilated, so your vision will be blurred for a few hours and you will not be able to drive.
+
 ## Before your treatment
 
-- **Assessment.** Your corneal specialist maps your cornea with topography and tomography, measures its thickness with OCT and examines the surface of your eye. Please leave contact lenses out before this visit for as long as your surgeon advises, because lenses change the shape of the cornea.
+- **Contact lenses.** If you wear soft contact lenses, remove them one week before your assessment. If you wear hard lenses because you cannot wear soft ones, keep wearing them until your appointment and your surgeon will advise.
 - **Consent and costs.** You will receive written information about your procedure, its risks and benefits, and a written estimate of costs. Therapeutic procedures attract automatic health fund cover; see [health fund rebates](/qei-laser/health-fund-rebates/).
 - **Medicines.** Continue your usual medicines unless told otherwise. Tell your surgeon about any autoimmune condition, pregnancy or medicines that affect healing.
 - **On the day.** Do not wear eye make-up or perfume. Bring your drops, sunglasses and a driver. You can eat normally unless sedation is planned.
 
 ## During the procedure
 
-Laser treatment is performed at South Brisbane Day Hospital, in the same building as the Woolloongabba clinic. After admission, anaesthetic drops numb the eye and a small speculum keeps the eyelids open. For surface treatments the surface layer of the cornea is removed, the laser treatment takes about a minute, any additional steps such as cross-linking are completed, and a soft bandage contact lens is placed. You will hear the laser and see lights but feel little more than pressure. You go home the same day.
+Laser treatment is performed at South Brisbane Day Hospital, in the same building as the Woolloongabba clinic. Intravenous sedation with our on-site anaesthetist is available. After admission, anaesthetic drops numb the eye and a small speculum keeps the eyelids open. For surface treatments the surface layer of the cornea is removed, the laser treatment takes about a minute, any additional steps such as cross-linking are completed, and a soft bandage contact lens is placed. You will hear the laser and see lights but feel little more than pressure. You go home the same day.
 
 ## After your treatment
 

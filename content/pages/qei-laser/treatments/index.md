@@ -10,13 +10,13 @@ summary: "The excimer laser removes corneal tissue with micrometre precision. At
 priority: 0.8
 keywords: [PTK, phototherapeutic keratectomy, topography guided, excimer laser treatments, corneal laser Brisbane]
 cards:
-  - {title: "Irregular astigmatism", url: /qei-laser/treatments/irregular-astigmatism/, text: "Topography-guided PTK (corneal regularisation).", badge: "Therapeutic", cta: "How it works"}
-  - {title: "Keratoconus: Athens protocol", url: /qei-laser/treatments/keratoconus-athens-protocol/, text: "Topography-guided PTK combined with corneal collagen cross-linking.", badge: "Therapeutic", cta: "How it works"}
-  - {title: "CAIRS eye surgery", url: /qei-laser/treatments/cairs-eye-surgery/, text: "Corneal allogenic intrastromal ring segments for keratoconus.", badge: "Keratoconus", cta: "How it works"}
-  - {title: "Corneal scarring", url: /qei-laser/treatments/corneal-scarring/, text: "PTK removal of superficial scars.", badge: "Therapeutic", cta: "How it works"}
-  - {title: "Post corneal transplant", url: /qei-laser/treatments/post-corneal-transplant/, text: "Laser regularisation after a corneal graft.", badge: "Therapeutic", cta: "How it works"}
-  - {title: "Recurrent erosion syndrome", url: /qei-laser/treatments/recurrent-erosion-syndrome/, text: "PTK to stop painful recurring erosions.", badge: "Therapeutic", cta: "How it works"}
-  - {title: "Corneal dystrophies", url: /qei-laser/treatments/corneal-dystrophies/, text: "PTK removal of inherited corneal opacities.", badge: "Therapeutic", cta: "How it works"}
+  - {title: "Irregular astigmatism", url: /qei-laser/treatments/irregular-astigmatism/, text: "Topography-guided PTK (corneal regularisation).", badge: "Therapeutic", cta: "How it works", icon: content/media/qei-laser/icon-irregular-astigmatism.png}
+  - {title: "Keratoconus and corneal cross-linking", url: /qei-laser/treatments/keratoconus-athens-protocol/, text: "Corneal collagen cross-linking to stabilise keratoconus, and topography-guided PTK (the Athens protocol) to regularise the cornea.", badge: "Therapeutic", cta: "How it works", icon: content/media/qei-laser/icon-keratoconus-cross-linking.png}
+  - {title: "CAIRS eye surgery", url: /qei-laser/treatments/cairs-eye-surgery/, text: "Corneal allogenic intrastromal ring segments for keratoconus.", badge: "Keratoconus", cta: "How it works", icon: content/media/qei-laser/icon-corneal-ring-segments.png}
+  - {title: "Corneal scarring", url: /qei-laser/treatments/corneal-scarring/, text: "PTK removal of superficial scars.", badge: "Therapeutic", cta: "How it works", icon: content/media/qei-laser/icon-corneal-scarring.png}
+  - {title: "Post corneal transplant", url: /qei-laser/treatments/post-corneal-transplant/, text: "Laser regularisation after a corneal graft.", badge: "Therapeutic", cta: "How it works", icon: content/media/qei-laser/icon-post-corneal-transplant.png}
+  - {title: "Recurrent erosion syndrome", url: /qei-laser/treatments/recurrent-erosion-syndrome/, text: "PTK to stop painful recurring erosions.", badge: "Therapeutic", cta: "How it works", icon: content/media/qei-laser/icon-corneal-erosion.png}
+  - {title: "Corneal dystrophies", url: /qei-laser/treatments/corneal-dystrophies/, text: "PTK removal of inherited corneal opacities.", badge: "Therapeutic", cta: "How it works", icon: content/media/qei-laser/icon-corneal-dystrophy.png}
   - {title: "PRK and ASA laser vision correction", url: /qei-laser/treatments/prk-asa-laser-vision-correction/, text: "Surface laser to correct short-sightedness, long-sightedness and astigmatism.", badge: "Refractive", cta: "How it works"}
 sidebar: [laser-book, referrer]
 faq:

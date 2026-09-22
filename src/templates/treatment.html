@@ -25,6 +25,7 @@
         <dl class="def-list">{% for k, v in doc.facts.items() %}<dt>{{ k }}</dt><dd>{{ v }}</dd>{% endfor %}</dl>
       </div>
       {% endif %}
+      {% if doc.hero_image %}<figure class="article-hero" style="margin-bottom:1.5rem">{{ m.img(doc.hero_image, doc.hero_alt or '', 'hero', eager=True) }}{% if doc.hero_alt %}<figcaption class="small muted" style="padding:.5rem 0">{{ doc.hero_alt }}</figcaption>{% endif %}</figure>{% endif %}
       <div class="prose">{{ doc.body_md | md | safe }}</div>
       {{ m.faq(doc.faq, 'Questions about ' ~ (doc.short_title or doc.title)) }}
       {{ m.reviewed(doc) }}

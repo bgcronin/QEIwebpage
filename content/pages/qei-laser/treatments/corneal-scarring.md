@@ -8,7 +8,9 @@ section: "QEI Laser"
 parent: /qei-laser/treatments/
 order: 4
 badge: "Therapeutic laser"
-summary: "Scars in the front layers of the cornea blur and scatter light. Phototherapeutic keratectomy (PTK) uses the excimer laser to remove superficial scar tissue and smooth the surface, restoring clarity without the need for a corneal transplant."
+hero_image: content/media/qei-laser/corneal-scarring.jpg
+hero_alt: "Photograph of a patient's eye showing corneal scarring"
+summary: "Corneal scarring can be caused by infections, pterygium surgery, trauma, chemical injuries and Salzmann's nodular degeneration. The excimer laser can remove corneal scars in the same way it removes the superficial layers of the cornea to treat other corneal diseases, restoring vision and potentially avoiding more invasive interventions such as corneal transplants."
 keywords: [corneal scar laser, PTK corneal scarring, Salzmann nodular degeneration, band keratopathy, laser Brisbane]
 facts:
   "Best for": "Scars and opacities in the front layers of the cornea after infection, injury, surgery or surface disease such as Salzmann's nodular degeneration"
@@ -29,7 +31,7 @@ faq:
 ---
 ## How scars affect vision
 
-The cornea must be perfectly clear and regular in shape to focus light. Scars from infection (such as bacterial or viral keratitis), injury, chemical burns, previous surgery or surface disorders such as Salzmann's nodular degeneration scatter light, causing blur, glare and haloes, and can distort the surface, causing irregular astigmatism. Read our guide to [corneal scarring](/eye-conditions/corneal-scarring/).
+The cornea must be perfectly clear and regular in shape to focus light. Corneal scarring can be caused by infections (such as bacterial or viral keratitis), pterygium surgery, trauma, chemical injuries and Salzmann's nodular degeneration. Scars scatter light, causing blur, glare and haloes, and can distort the surface, causing irregular astigmatism. Read our guide to [corneal scarring](/eye-conditions/corneal-scarring/).
 
 ## PTK for corneal scars
 

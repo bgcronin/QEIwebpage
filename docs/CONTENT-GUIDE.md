@@ -36,6 +36,7 @@ Links inside Markdown should be site-absolute (`/patient-info/forms/`); the buil
 
 - Hub: `content/pages/qei-laser/index.md`; treatments hub `content/pages/qei-laser/treatments/index.md`; treatment pages in `content/pages/qei-laser/treatments/*.md` with `template: treatment` and `group: laser` (Dry Eye Clinic treatments use `group: dry-eye`). Patient information and health fund pages sit alongside the hub.
 - The old qeilaser.com.au URL mapping lives in `domain_redirects` in `content/site.json`.
+- Images for these pages are expected in `content/media/qei-laser/` (names listed in `src/fetch_qeilaser_images.py`). Until they are downloaded, the pages simply render without them.
 
 ### Dry Eye Clinic
 

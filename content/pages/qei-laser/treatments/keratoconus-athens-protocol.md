@@ -1,6 +1,6 @@
 ---
-title: "Keratoconus: topography-guided laser and corneal cross-linking"
-short_title: "Keratoconus (Athens protocol)"
+title: "Keratoconus and corneal cross-linking"
+short_title: "Keratoconus and cross-linking"
 url: /qei-laser/treatments/keratoconus-athens-protocol/
 template: treatment
 group: laser
@@ -8,7 +8,9 @@ section: "QEI Laser"
 parent: /qei-laser/treatments/
 order: 2
 badge: "Therapeutic laser"
-summary: "At QEI Laser, keratoconus is treated with a customised laser treatment called corneal regularisation (topography-guided PTK) combined with corneal collagen cross-linking, the approach known as the Athens protocol. Cross-linking halts progression; the laser improves the shape of the cornea and the quality of vision."
+hero_image: content/media/qei-laser/topography-keratoconus.jpg
+hero_alt: "Corneal topography showing keratoconus in a patient's eye"
+summary: "Corneal collagen cross-linking is a procedure used to strengthen corneas that are weak due to keratoconus or pellucid marginal degeneration. For patients who cannot tolerate specialist contact lenses, a customised laser treatment called corneal regularisation, topography-guided PTK or the Athens protocol removes the conical, irregular part of the cornea and is immediately followed by cross-linking to keep the new shape stable."
 keywords: [keratoconus treatment Brisbane, corneal cross-linking, Athens protocol, topography guided PTK, corneal regularisation]
 facts:
   "Best for": "Progressive keratoconus with adequate corneal thickness and reduced vision in glasses or soft lenses"
@@ -27,18 +29,25 @@ faq:
     a: |
       Suitability depends on the thickness and shape of your cornea, whether the disease is progressing, your age and your visual needs. A minimum corneal thickness must remain after treatment, so not everyone with keratoconus is suitable; CAIRS or cross-linking alone may be recommended instead.
 ---
-## Keratoconus and why treatment matters
+## What is keratoconus?
 
-In keratoconus the cornea thins and bulges into a cone, producing irregular astigmatism that glasses cannot fully correct. It typically starts in the teens and twenties and can progress for many years. Detecting it early is vital, because cross-linking can halt the progression of the disease and prevent the need for a corneal transplant. Read our [keratoconus guide](/eye-conditions/keratoconus/).
+The clear window at the front of your eye is called the cornea. It looks coloured, but the coloured part is actually inside the eye and is called the iris. Most people have a cornea shaped like a soccer ball; people with keratoconus and pellucid marginal degeneration have corneas with a more conical shape, like a rugby ball. This causes severe distortion of vision that cannot be corrected by glasses. Read our [keratoconus guide](/eye-conditions/keratoconus/).
 
-## The Athens protocol at QEI Laser
+## The three most important steps in treatment
 
-1. **Corneal mapping.** Topography and tomography map the cone and measure corneal thickness.
-2. **Topography-guided PTK.** A customised excimer laser treatment removes a small, carefully limited amount of tissue to reduce the irregularity of the surface. This is corneal regularisation, not a full refractive correction.
-3. **Cross-linking.** Riboflavin drops are applied and the cornea is exposed to ultraviolet light, strengthening the collagen so the cornea holds its improved shape and stops progressing.
-4. **Healing.** A bandage contact lens protects the surface while it heals over the following days.
+1. **Stop rubbing your eyes.** It is critical that patients with keratoconus control their ocular allergies and do not rub their eyes.
+2. **Stabilise the progression of the disease.** Typically keratoconus progresses until you are in your mid-30s (pellucid marginal degeneration progresses for much longer than this). Corneal collagen cross-linking is a procedure that stabilises the progression of keratoconus.
+3. **Get great vision again.** For most patients this will involve seeing an optometrist specialising in complex contact lenses. Specialist optometrists can now fit almost any keratoconic patient with comfortable lenses giving them great vision.
 
-Dr Brendan Cronin and Dr David Gunn have particular expertise in this technique and in newer keratoconus treatments such as [CAIRS](/qei-laser/treatments/cairs-eye-surgery/), and QEI's corneal research group studies ways to refine cross-linking, including artificial intelligence to create customised treatment profiles.
+Unfortunately, some people cannot tolerate these lenses or are allergic to the solutions used to clean them. In these cases a customised laser treatment called corneal regularisation, topography-guided PTK or the Athens protocol can be used. In this procedure the conical and irregular part of your cornea is removed with the laser. Immediately afterwards your eye has corneal collagen cross-linking to ensure the new, regular shape of the cornea is stable.
+
+## What is corneal collagen cross-linking?
+
+Corneal collagen cross-linking is a procedure used to strengthen corneas that are weak due to keratoconus or pellucid marginal degeneration, and it can also be used to treat infections in the cornea. The procedure involves soaking your cornea in riboflavin (vitamin B2) and then applying an ultraviolet light to the soaked cornea. This induces a chemical reaction, called cross-linking, that makes the cornea more rigid.
+
+QEI Laser offers customised topography-guided cross-linking on Australia's most advanced pupil-tracking topography-guided cross-linking machine. If you do not have private health insurance, our doctors have a dedicated outpatient major procedure room so that you can minimise your cost and maximise your Medicare safety net benefit.
+
+Dr Brendan Cronin and Dr David Gunn have particular expertise in these techniques and in newer keratoconus treatments such as [CAIRS](/qei-laser/treatments/cairs-eye-surgery/), and QEI's corneal research group studies ways to refine cross-linking, including artificial intelligence to create customised treatment profiles.
 
 ## Results
 

@@ -8,14 +8,16 @@ section: "QEI Laser"
 parent: /qei-laser/treatments/
 order: 3
 badge: "Keratoconus"
-summary: "Corneal allogenic intrastromal ring segments (CAIRS) are arcs of donor corneal tissue implanted into the cornea to flatten and regularise the cone of keratoconus. QEI's surgeons pioneered CAIRS in Australia and developed the planning tools now used by surgeons worldwide."
+hero_image: content/media/qei-laser/cairs.jpg
+hero_alt: "Corneal allogenic intrastromal ring segments in a patient's eye"
+summary: "Corneal allogenic intrastromal ring segments (CAIRS) have emerged as a groundbreaking technology for the management of keratoconus. They act to regularise the irregular corneal surface, essentially acting as internal braces to reinforce the thinning, bulging cornea. Australia's first CAIRS procedure was performed at QEI, whose surgeons developed the planning tools now used around the world."
 keywords: [CAIRS, corneal allogenic intrastromal ring segments, keratoconus surgery Brisbane, CAIRS Plan, Brisbane Nomogram]
 facts:
   "Best for": "Moderate to advanced keratoconus, particularly people who cannot tolerate rigid contact lenses, as an alternative to corneal transplant"
   "Procedure": "Femtosecond laser creates a channel in the cornea; donor tissue segments are placed in the channel; often combined with cross-linking"
   "Anaesthetic": "Eye drops, with light sedation if needed; day procedure at South Brisbane Day Hospital"
   "Recovery": "Mild discomfort for a few days; vision improves over weeks to months as the cornea settles"
-  "Health fund": "Surgical procedure in an accredited private hospital; informed financial consent provided before surgery"
+  "Medicare": "CAIRS keratoplasty is recognised by Medicare under item 42653; informed financial consent is provided before surgery"
 faq:
   - q: "How is CAIRS different from synthetic ring segments?"
     a: |
@@ -29,13 +31,17 @@ faq:
 ---
 ## What is CAIRS?
 
-Corneal allogenic intrastromal ring segment (CAIRS) surgery uses segments of donor corneal tissue, placed within a channel created in the patient's cornea by a femtosecond laser, to flatten and regularise the cone of keratoconus. The segments add support to the thin cornea, reduce irregular astigmatism and improve vision, and they can be customised in size, thickness and position to each eye.
+CAIRS act to regularise the irregular corneal surface, essentially acting as internal braces to reinforce the thinning, bulging cornea. They are allogenic, meaning they are procured from donor tissue, which provides biocompatibility and reduces the risk of adverse immune reactions. The segments are strategically implanted within the corneal stroma, in a channel created by a femtosecond laser, assisting in the reshaping and stabilisation of the cornea. This reshaping aims to reduce or eliminate the irregular astigmatism caused by keratoconus, allowing improved visual acuity and potentially avoiding more invasive interventions such as full-thickness corneal transplants.
+
+The procedure is minimally invasive, reversible and modifiable, allowing adjustment or removal of the segments if necessary. That does not mean it is simple. CAIRS is still a corneal transplant with donor tissue; however, when meticulously planned and performed with the extremely precise equipment we have available, it drastically reduces some of the complications that can occur with other types of transplant.
 
 ## Pioneered in Australia at QEI
 
-CAIRS was developed less than a decade ago and has since been the subject of a growing body of published research. In Australia the procedure was pioneered by QEI ophthalmologists [Dr David Gunn](/ophthalmologists/dr-david-gunn/) and [Dr Brendan Cronin](/ophthalmologists/dr-brendan-cronin/), who developed [CAIRS Plan](https://cairsplan.com/), the planning platform used by surgeons around the world to learn the procedure and plan their surgery. Their published Brisbane Nomogram, a standardised planning framework for femtosecond laser-created CAIRS, appeared in Clinical and Experimental Ophthalmology in 2026. Both surgeons regularly host visiting specialists in their theatres and teach the technique internationally.
+In May 2021 [Dr David Gunn](/ophthalmologists/dr-david-gunn/) performed Australia's first CAIRS keratoplasty at the Queensland Eye Institute, and [Dr Brendan Cronin](/ophthalmologists/dr-brendan-cronin/) performed the world's first combined Bowman's membrane and CAIRS procedure. Dr Cronin also led the successful campaign for Medicare Australia to recognise CAIRS keratoplasty under item number 42653, making the surgery accessible to eligible Australians.
 
-QEI continues to push the technique forward: in 2026 Dr Gunn performed what is believed to be the world's first CAIRS procedures using an augmented reality headset, keeping the patient's individual corneal map and surgical plan in view during surgery. Read [Sarah's story](/patientstory/sarahs-journey-with-keratoconus/) and the [news about CAIRS at QEI](/news/new-technology-to-improve-cairs-treatment-for-keratoconus/).
+Together with Dr Rebecca Cox, Drs Gunn and Cronin co-authored the Brisbane Nomogram, the world's first published standardised planning framework for CAIRS surgery, published as "Femtosecond laser created corneal allogenic intrastromal ring segments for keratoconus" in Clinical and Experimental Ophthalmology (2026). They also developed [CAIRSPlan.com](https://cairsplan.com/), the world's first free online surgical planning tool for CAIRS: surgeons upload corneal topography, plan arc placement and segment dimensions guided by the Brisbane Nomogram and generate a printable intraoperative guide, at no cost. Since its launch at the European Society of Cataract and Refractive Surgeons Congress in Vienna in 2023 it has been used by corneal surgeons across many countries.
+
+Dr Gunn delivered the 2025 Ridley Lecture at the German Ophthalmology Congress on CAIRS as a paradigm shift in the management of corneal ectasia, and both surgeons teach the technique to visiting surgeons from Asia-Pacific, Europe, Africa and North America. At QEI, customised femtosecond laser CAIRS is performed on the Ziemer Z8 platform, and in 2026 Dr Gunn performed what is believed to be the world's first CAIRS procedures using an augmented reality headset. Read [Sarah's story](/patientstory/sarahs-journey-with-keratoconus/) and the [news about CAIRS at QEI](/news/new-technology-to-improve-cairs-treatment-for-keratoconus/).
 
 ## Who is CAIRS for?
 

@@ -6,7 +6,7 @@ template: page
 section: "QEI Laser"
 parent: /qei-laser/
 eyebrow: "QEI Laser"
-summary: "Therapeutic laser eye surgery at QEI Laser is covered automatically by private health insurance for eligible policies, because the laser is located inside a fully accredited private hospital. Refractive procedures such as PRK and ASA are not covered."
+summary: "Health funds only pay for medical procedures with a Medicare item number when they are performed in a fully accredited and licensed hospital. Our laser is located inside a fully accredited private hospital, so therapeutic laser procedures attract automatic health fund contributions for eligible policies."
 priority: 0.7
 keywords: [laser eye surgery health fund, PTK Medicare item 42810, therapeutic laser rebate, laser eye surgery cost Brisbane]
 sidebar: [laser-book, laser-treatments]
@@ -23,13 +23,13 @@ faq:
 ---
 ## Therapeutic laser: automatic cover
 
-If your laser treatment is therapeutic, to restore vision affected by conditions such as corneal scarring, astigmatism after a corneal transplant, keratoconus or recurrent erosions, your health fund will automatically cover the cost of the procedure if your policy covers Medicare item number 42810. QEI Laser's excimer laser is the only one in Queensland with guaranteed private health insurance approval for therapeutic laser procedures, because it is located inside a fully accredited private hospital, South Brisbane Day Hospital.
+Health funds only pay for medical procedures with a Medicare item number when they are performed in a fully accredited and licensed hospital. Every other excimer laser in Queensland is located outside the safe and regulated environment of a private hospital. Our laser is located inside a fully accredited private hospital, South Brisbane Day Hospital. This means that if your laser is a therapeutic one, to restore vision from conditions such as [corneal scarring](/qei-laser/treatments/corneal-scarring/), [post corneal transplant astigmatism](/qei-laser/treatments/post-corneal-transplant/), [keratoconus](/qei-laser/treatments/keratoconus-athens-protocol/) or [recurrent erosions](/qei-laser/treatments/recurrent-erosion-syndrome/), your health fund will contribute to the cost of your surgery if you are covered for Medicare item number 42810. Eligible patients also receive intravenous sedation with our anaesthetic team.
 
-Your consultation with your surgeon attracts a Medicare rebate with a valid referral, and hospital costs are billed to your fund in the usual way.
+Your consultation with your surgeon attracts a Medicare rebate with a valid referral, and hospital costs are billed to your fund in the usual way. Patients without private health insurance can have collagen cross-linking in our dedicated outpatient procedure room to minimise cost and maximise the Medicare safety net benefit.
 
-## Refractive laser: not covered
+## Refractive laser: not automatically covered
 
-Health funds do not pay for solely refractive procedures such as [PRK and ASA](/qei-laser/treatments/prk-asa-laser-vision-correction/) performed to reduce dependence on glasses. These procedures are self-funded, and we provide a written quote before you decide.
+Health funds will not automatically pay for solely refractive procedures such as [PRK and ASA](/qei-laser/treatments/prk-asa-laser-vision-correction/) performed to reduce dependence on glasses. Some funds, such as BUPA Ultimate and Defence Health, may cover some of the fee, but this is not guaranteed or automatic. We provide a written quote before you decide.
 
 ## Informed financial consent
 

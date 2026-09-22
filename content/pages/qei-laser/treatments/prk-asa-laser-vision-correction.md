@@ -15,7 +15,7 @@ facts:
   "Procedure": "The surface layer is removed and the excimer laser reshapes the cornea; a bandage contact lens is placed"
   "Anaesthetic": "Eye drops; day procedure at South Brisbane Day Hospital"
   "Recovery": "Discomfort for 3 to 5 days; functional vision within about a week, stabilising over 1 to 3 months"
-  "Health fund": "Refractive procedure: not covered by health funds or Medicare. A written quote is provided"
+  "Health fund": "Refractive procedure: not automatically covered by health funds or Medicare. Some funds may contribute to part of the fee; a written quote is provided"
 faq:
   - q: "How is PRK different from LASIK and SMILE?"
     a: |
@@ -25,11 +25,15 @@ faq:
       Suitability depends on your age, the stability of your prescription, the thickness and shape of your cornea, the health of the surface of your eye and your general health. Keratoconus, significant dry eye, some autoimmune conditions and pregnancy are among the reasons laser may be delayed or not recommended. A detailed assessment including corneal topography and tomography decides this.
   - q: "Is it covered by my health fund?"
     a: |
-      No. Laser vision correction performed solely to reduce dependence on glasses is not covered by Medicare or private health insurance. Costs are explained in a written quote at your assessment.
+      Health funds will not automatically pay for solely refractive procedures such as PRK and ASA. Some funds, such as BUPA Ultimate and Defence Health, may cover some of the fee, but this is not guaranteed or automatic. Costs are explained in a written quote at your assessment.
 ---
 ## How surface laser works
 
 The cornea provides most of the eye's focusing power, so changing its shape by a few micrometres changes your prescription. In PRK and ASA the thin surface layer of cells (the epithelium) is gently removed, the excimer laser reshapes the cornea in seconds according to your prescription and corneal map, and a bandage contact lens is placed while the surface regrows over the next few days. Because no flap is cut, the structural strength of the cornea is preserved.
+
+## Where refractive surgery happens
+
+QEI's laser surgeons perform refractive procedures, including LASIK, TransPRK, PRK, ASA, lenticule extraction (CLEAR/KLEx), implantable collamer lenses and refractive lens exchange, through Focus Vision Clinic, which they co-founded and which is co-located with QEI at 87 Ipswich Road, Woolloongabba. All surgery is performed at South Brisbane Day Hospital.
 
 ## Who chooses surface laser?
 

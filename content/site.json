@@ -433,6 +433,10 @@
       "url": "/terms-and-conditions/"
     },
     {
+      "label": "Medical disclaimer",
+      "url": "/medical-disclaimer/"
+    },
+    {
       "label": "Accessibility",
       "url": "/accessibility/"
     },
@@ -536,7 +540,13 @@
       "/recurrent-erosion-syndrome": "/qei-laser/treatments/recurrent-erosion-syndrome/",
       "/irregular-astigmatism": "/qei-laser/treatments/irregular-astigmatism/",
       "/corneal-dystrophies": "/qei-laser/treatments/corneal-dystrophies/",
-      "/keratoconus-corneal-cross-linking": "/qei-laser/treatments/keratoconus-athens-protocol/"
+      "/keratoconus-corneal-cross-linking": "/qei-laser/treatments/keratoconus-athens-protocol/",
+      "/home": "/qei-laser/",
+      "/dr-geoffrey-ryan": "/ophthalmologists/dr-geoffrey-ryan/",
+      "/dr-lee-holland": "/ophthalmologists/dr-lee-holland/",
+      "/medical-disclaimer": "/medical-disclaimer/",
+      "/privacy-policy": "/privacy-policy/",
+      "/terms-and-conditions": "/terms-and-conditions/"
     }
   }
 }

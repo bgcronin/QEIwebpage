@@ -8,7 +8,9 @@ section: "QEI Laser"
 parent: /qei-laser/treatments/
 order: 5
 badge: "Therapeutic laser"
-summary: "A corneal transplant restores clarity, but the new cornea often has significant or irregular astigmatism. Topography-guided laser can regularise the surface of a stable graft so that vision in glasses or contact lenses improves."
+hero_image: content/media/qei-laser/post-corneal-transplant.jpg
+hero_alt: "Patient's eye with a corneal transplant and stitches still in place"
+summary: "Corneal transplants are an extremely successful procedure for restoring vision in a variety of diseases. However, patients can sometimes experience reduced vision or a need for complex contact lenses after a transplant. Many of the causes of this reduction in vision can be corrected with excimer laser treatment."
 keywords: [astigmatism after corneal transplant, laser after keratoplasty, post graft astigmatism, topography guided PTK graft]
 facts:
   "Best for": "Irregular or high astigmatism after penetrating keratoplasty or DALK once the graft is stable and sutures have been removed"
@@ -33,7 +35,11 @@ A corneal transplant is stitched into place with very fine sutures, and as the g
 
 ## Laser regularisation of a graft
 
-Once the graft is clear and stable, topography-guided PTK can smooth the irregular surface. A precise map of the graft guides the laser to remove a small amount of tissue from the high points, reducing the irregular astigmatism so that glasses give better vision and contact lenses fit more comfortably. Treatment is planned to preserve corneal thickness and is performed under a cover of anti-rejection drops.
+After a corneal graft the front of the eye may have an irregular shape called [irregular astigmatism](/qei-laser/treatments/irregular-astigmatism/). A specialised machine called a topographer measures this abnormal shape and uses the information to guide a customised laser treatment, a topography-guided phototherapeutic keratectomy (PTK). This treatment can help patients get out of contact lenses, improve their quality of vision and reduce visual symptoms such as starbursts, haloes and glare. Treatment is planned to preserve corneal thickness and is performed under a cover of anti-rejection drops.
+
+## Scarring after Fuchs' dystrophy
+
+Untreated Fuchs' endothelial dystrophy with long-term corneal oedema can lead to scarring on the very front surface of the cornea. The standard treatment for the disease is an endothelial corneal graft, which gets rid of the oedema, but the scarring may remain and limit the vision. This sub-epithelial scarring can be very safely and effectively removed with our laser. Read about [Fuchs' endothelial dystrophy](/eye-conditions/fuchs-endothelial-dystrophy/).
 
 ## What to expect
 
