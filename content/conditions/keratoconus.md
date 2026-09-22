@@ -53,8 +53,8 @@ QEI's corneal surgeons are international leaders in keratoconus care and offer t
 - **Stop eye rubbing and treat allergy.** This is the first step for everyone.
 - **Glasses and contact lenses.** Soft, rigid gas-permeable, hybrid or scleral lenses can give excellent vision by creating a smooth new surface over the cornea.
 - **Corneal collagen cross-linking** uses riboflavin drops and ultraviolet light to strengthen the cornea and halt progression. QEI offers topography-guided cross-linking that customises the treatment to your cornea.
-- **Topography-guided laser combined with cross-linking** (the "Athens protocol") regularises the corneal surface to improve vision while strengthening the cornea.
-- **CAIRS (corneal allogenic intrastromal ring segments)**, in which segments of donor corneal tissue are implanted to flatten and regularise the cone. QEI's Dr David Gunn and Dr Brendan Cronin pioneered CAIRS in Australia and developed the [CAIRS planning platform](https://cairsplan.com/) used by surgeons worldwide.
+- **Topography-guided laser combined with cross-linking** (the "Athens protocol") regularises the corneal surface to improve vision while strengthening the cornea. [How it works at QEI Laser](/qei-laser/treatments/keratoconus-athens-protocol/).
+- **[CAIRS (corneal allogenic intrastromal ring segments)](/qei-laser/treatments/cairs-eye-surgery/)**, in which segments of donor corneal tissue are implanted to flatten and regularise the cone. QEI's Dr David Gunn and Dr Brendan Cronin pioneered CAIRS in Australia and developed the [CAIRS planning platform](https://cairsplan.com/) used by surgeons worldwide.
 - **Corneal transplantation** (deep anterior lamellar keratoplasty or penetrating keratoplasty) for advanced disease where other treatments cannot restore vision.
 
 ## Living with keratoconus

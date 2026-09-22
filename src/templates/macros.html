@@ -203,7 +203,29 @@
   {% elif key == 'treatments' %}
   <div class="side-card">
     <h2>Dry Eye Clinic treatments</h2>
-    <ul>{% for t in treatments %}<li><a href="{{ rel(t.url) }}"{% if t.url == page.url %} aria-current="page"{% endif %}>{{ t.short_title or t.title }}</a></li>{% endfor %}</ul>
+    <ul>{% for t in treatments if (t.group or 'dry-eye') == 'dry-eye' %}<li><a href="{{ rel(t.url) }}"{% if t.url == page.url %} aria-current="page"{% endif %}>{{ t.short_title or t.title }}</a></li>{% endfor %}</ul>
+  </div>
+  {% elif key == 'laser-treatments' %}
+  <div class="side-card">
+    <h2>QEI Laser treatments</h2>
+    <ul>{% for t in treatments if t.group == 'laser' %}<li><a href="{{ rel(t.url) }}"{% if t.url == page.url %} aria-current="page"{% endif %}>{{ t.short_title or t.title }}</a></li>{% endfor %}
+      <li><a href="{{ rel('/qei-laser/for-patients/') }}">Information for patients</a></li>
+      <li><a href="{{ rel('/qei-laser/health-fund-rebates/') }}">Health fund rebates</a></li></ul>
+  </div>
+  {% elif key == 'laser-book' %}
+  <div class="side-card side-card--navy">
+    <h2>Laser treatment at QEI</h2>
+    <p>Ask your optometrist, GP or ophthalmologist for a referral to Dr Brendan Cronin or Dr David Gunn, or contact our team.</p>
+    <a class="btn btn--light" href="tel:{{ site.phone_intl }}">{{ icon('phone') }} {{ site.phone }}</a>
+    <a class="btn btn--ghost-light" href="{{ site.external_forms.send_enquiry }}" rel="noopener">Send an enquiry</a>
+    <p class="small" style="margin-top:.75rem">Therapeutic laser procedures attract automatic health fund cover. <a href="{{ rel('/qei-laser/health-fund-rebates/') }}">How rebates work</a></p>
+  </div>
+  {% elif key == 'laser' %}
+  <div class="side-card side-card--navy">
+    <span class="badge badge--green">Health fund covered</span>
+    <h2 style="margin-top:.6rem">QEI Laser</h2>
+    <p>Excimer laser treatment for keratoconus, corneal scarring, dystrophies, recurrent erosions and astigmatism after transplant, inside an accredited private hospital.</p>
+    <a class="btn btn--light" href="{{ rel('/qei-laser/') }}">About QEI Laser</a>
   </div>
   {% elif key == 'prepare' %}
   <div class="side-card">

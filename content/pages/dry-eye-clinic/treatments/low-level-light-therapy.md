@@ -3,6 +3,7 @@ title: "Low level light therapy with the Eye-light mask"
 short_title: "Low level light therapy"
 url: /dry-eye-clinic/treatments/low-level-light-therapy/
 template: treatment
+group: dry-eye
 section: "Dry Eye Clinic"
 parent: /dry-eye-clinic/treatments/
 order: 3

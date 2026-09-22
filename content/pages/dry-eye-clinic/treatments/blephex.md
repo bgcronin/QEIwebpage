@@ -3,6 +3,7 @@ title: "BlephEx eyelid exfoliation"
 short_title: "BlephEx"
 url: /dry-eye-clinic/treatments/blephex/
 template: treatment
+group: dry-eye
 section: "Dry Eye Clinic"
 parent: /dry-eye-clinic/treatments/
 order: 4

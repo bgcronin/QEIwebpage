@@ -68,7 +68,7 @@
       <p>Treatment is matched to the cause of your dry eye. Most people benefit from a combination of in-clinic procedures and a simple home routine.</p>
     </div>
     <div class="treatment-list">
-      {% for t in treatments %}
+      {% for t in treatments if (t.group or 'dry-eye') == 'dry-eye' %}
       <article class="card">
         <div class="card__body">
           {% if t.badge %}<span class="badge">{{ t.badge }}</span>{% endif %}

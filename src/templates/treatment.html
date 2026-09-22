@@ -1,10 +1,17 @@
 {% extends "base.html" %}
 {% import "macros.html" as m with context %}
+{% set group = doc.group or 'dry-eye' %}
+{% set G = {
+  'dry-eye': {'eyebrow': 'Dry Eye Clinic treatment', 'related': 'Other Dry Eye Clinic treatments', 'sidebar': ['dryeye', 'treatments'],
+              'cta_title': 'Book a dry eye assessment', 'cta_text': 'No referral needed. Call and ask for the Dry Eye Clinic.', 'cta_secondary': {'label': 'About the Dry Eye Clinic', 'url': '/dry-eye-clinic/'}},
+  'laser': {'eyebrow': 'QEI Laser treatment', 'related': 'Other QEI Laser treatments', 'sidebar': ['laser-book', 'laser-treatments'],
+            'cta_title': 'Ask about laser treatment', 'cta_text': 'Ask your optometrist, GP or ophthalmologist for a referral to Dr Cronin or Dr Gunn, or call our team to discuss an assessment.', 'cta_secondary': {'label': 'About QEI Laser', 'url': '/qei-laser/'}}
+}[group] %}
 {% block content %}
 <div class="page-header">
   <div class="container">
     {{ m.breadcrumbs(page.breadcrumbs) }}
-    <span class="eyebrow">Dry Eye Clinic treatment</span>
+    <span class="eyebrow">{{ doc.eyebrow or G.eyebrow }}</span>
     <h1>{{ doc.title }}</h1>
     <p class="lead">{{ doc.summary }}</p>
   </div>
@@ -21,13 +28,16 @@
       <div class="prose">{{ doc.body_md | md | safe }}</div>
       {{ m.faq(doc.faq, 'Questions about ' ~ (doc.short_title or doc.title)) }}
       {{ m.reviewed(doc) }}
-      <h2>Other Dry Eye Clinic treatments</h2>
+      {% set others = treatments | selectattr('group', 'equalto', group) | rejectattr('url', 'equalto', page.url) | list %}
+      {% if others %}
+      <h2>{{ G.related }}</h2>
       <div class="grid grid--3">
-        {% for t in treatments if t.url != page.url %}{{ m.card(t.short_title or t.title, t.url, t.summary | truncate(110), None, '', '', '', 'How it works') }}{% endfor %}
+        {% for t in others %}{{ m.card(t.short_title or t.title, t.url, t.summary | truncate(110), None, '', '', '', 'How it works') }}{% endfor %}
       </div>
-      <div style="margin-top:2.5rem">{{ m.cta_band('Book a dry eye assessment', 'No referral needed. Call and ask for the Dry Eye Clinic.', {'label': 'Call ' ~ site.phone, 'url': 'tel:' ~ site.phone_intl}, {'label': 'About the Dry Eye Clinic', 'url': '/dry-eye-clinic/'}) }}</div>
+      {% endif %}
+      <div style="margin-top:2.5rem">{{ m.cta_band(G.cta_title, G.cta_text, {'label': 'Call ' ~ site.phone, 'url': 'tel:' ~ site.phone_intl}, G.cta_secondary) }}</div>
     </div>
-    <aside aria-label="Related information">{{ m.sidebar(['dryeye', 'treatments']) }}</aside>
+    <aside aria-label="Related information">{{ m.sidebar(doc.sidebar or G.sidebar) }}</aside>
   </div>
 </div>
 {% endblock %}

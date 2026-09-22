@@ -13,6 +13,7 @@ cards:
   - {title: "Fees, Medicare and referrals", url: /patient-info/fees-medicare-and-referrals/, text: "How consultations are billed, referral validity and health fund cover.", cta: "Understand costs"}
   - {title: "Our clinics and how to find us", url: /qei-clinics/, text: "Woolloongabba and Clayfield locations, parking and public transport.", cta: "Directions"}
   - {title: "Dry Eye Clinic", url: /dry-eye-clinic/, text: "Optometrist-led clinic with no referral needed and fast access.", badge: "No referral needed", cta: "About the clinic"}
+  - {title: "QEI Laser eye surgery", url: /qei-laser/, text: "Therapeutic and refractive excimer laser surgery with our corneal specialists.", cta: "About QEI Laser"}
   - {title: "Emergency eye care", url: /patient-info/emergency-eye-care/, text: "Symptoms that need same-day care and what to do after hours.", cta: "Read the advice"}
   - {title: "Your rights, feedback and records", url: /patient-info/your-rights-and-feedback/, text: "The Australian Charter of Healthcare Rights, how to give feedback and request your record.", cta: "Your rights"}
   - {title: "Forms", url: /patient-info/forms/, text: "Patient registration form and other documents to complete before you arrive.", cta: "Download forms"}

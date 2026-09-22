@@ -41,16 +41,44 @@
     "last_seen": "https://lastseen.com.au/"
   },
   "social": [
-    {"name": "Facebook", "url": "https://www.facebook.com/QueenslandEyeInstitute", "icon": "facebook"},
-    {"name": "LinkedIn", "url": "https://www.linkedin.com/company/queensland-eye-institute-qei-/", "icon": "linkedin"},
-    {"name": "Instagram", "url": "https://www.instagram.com/queenslandeyeinstitute", "icon": "instagram"},
-    {"name": "X (Twitter)", "url": "https://twitter.com/qldeyeinstitute", "icon": "x"},
-    {"name": "YouTube", "url": "https://www.youtube.com/user/QLDEyeInstitute", "icon": "youtube"}
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/QueenslandEyeInstitute",
+      "icon": "facebook"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/company/queensland-eye-institute-qei-/",
+      "icon": "linkedin"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/queenslandeyeinstitute",
+      "icon": "instagram"
+    },
+    {
+      "name": "X (Twitter)",
+      "url": "https://twitter.com/qldeyeinstitute",
+      "icon": "x"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/user/QLDEyeInstitute",
+      "icon": "youtube"
+    }
   ],
   "emergency": {
     "ambulance": "000",
-    "health_advice": {"name": "13 HEALTH (Queensland)", "phone": "13 43 25 84", "tel": "134325"},
-    "interpreter": {"name": "Translating and Interpreting Service (TIS National)", "phone": "131 450", "tel": "131450"}
+    "health_advice": {
+      "name": "13 HEALTH (Queensland)",
+      "phone": "13 43 25 84",
+      "tel": "134325"
+    },
+    "interpreter": {
+      "name": "Translating and Interpreting Service (TIS National)",
+      "phone": "131 450",
+      "tel": "131450"
+    }
   },
   "acknowledgement": "We acknowledge the Turrbal and Yugara peoples as the traditional owners of the lands where QEI now stands. We pay respect to their Elders, past, current and emerging. We recognise that these lands have always been places of teaching, research, learning and healing.",
   "clinics": [
@@ -73,7 +101,13 @@
       "photo": "site/wp-content/uploads/2024/02/2024020187IpswichRd3.jpg",
       "photo_alt": "Exterior of the Queensland Eye Institute at 87 Ipswich Road, Woolloongabba",
       "is_primary": true,
-      "colocated": ["South Brisbane Day Hospital", "Queensland Electro-Diagnostic & Imaging Centre", "QEI research laboratories", "QEI Clinical Trials Unit", "QEI Foundation"]
+      "colocated": [
+        "South Brisbane Day Hospital",
+        "Queensland Electro-Diagnostic & Imaging Centre",
+        "QEI research laboratories",
+        "QEI Clinical Trials Unit",
+        "QEI Foundation"
+      ]
     },
     {
       "slug": "clayfield-qei-clinic",
@@ -98,103 +132,411 @@
     }
   ],
   "nav": [
-    {"label": "Dry Eye Clinic", "url": "/dry-eye-clinic/", "highlight": true, "children": [
-      {"label": "About the Dry Eye Clinic", "url": "/dry-eye-clinic/"},
-      {"label": "Treatments and technology", "url": "/dry-eye-clinic/treatments/"},
-      {"label": "Your first appointment", "url": "/dry-eye-clinic/your-appointment/"},
-      {"label": "Dry eye questions answered", "url": "/dry-eye-clinic/faq/"},
-      {"label": "About dry eye disease", "url": "/eye-conditions/dry-eye/"}
-    ]},
-    {"label": "Patients", "url": "/patient-info/", "children": [
-      {"label": "Book an appointment", "url": "/patient-info/book-an-appointment/"},
-      {"label": "Preparing for your visit", "url": "/patient-info/preparing-for-your-visit/"},
-      {"label": "Fees, Medicare and referrals", "url": "/patient-info/fees-medicare-and-referrals/"},
-      {"label": "Our clinics and how to find us", "url": "/qei-clinics/"},
-      {"label": "Emergency eye care", "url": "/patient-info/emergency-eye-care/"},
-      {"label": "Your rights, feedback and records", "url": "/patient-info/your-rights-and-feedback/"},
-      {"label": "Forms", "url": "/patient-info/forms/"}
-    ]},
-    {"label": "Ophthalmologists", "url": "/ophthalmologists/"},
-    {"label": "Eye conditions", "url": "/eye-conditions/"},
-    {"label": "Referrers", "url": "/referrers/", "children": [
-      {"label": "How to refer", "url": "/referrers/"},
-      {"label": "Urgent referrals", "url": "/referrers/urgent-referrals/"},
-      {"label": "Subspecialty guide", "url": "/referrers/subspecialty-guide/"},
-      {"label": "Optometry education and CPD", "url": "/education/optometry-education-series/"}
-    ]},
-    {"label": "Research & Education", "url": "/research/", "children": [
-      {"label": "Research", "url": "/research/"},
-      {"label": "Clinical trials", "url": "/clinical-trials/"},
-      {"label": "Researchers", "url": "/research/researchers/"},
-      {"label": "Research groups and publications", "url": "/research/groups-publications/"},
-      {"label": "Education", "url": "/education/"},
-      {"label": "Services and facilities", "url": "/services/"}
-    ]},
-    {"label": "Foundation", "url": "/qei-foundation/", "children": [
-      {"label": "About the Foundation", "url": "/qei-foundation/about-qei-foundation/"},
-      {"label": "Donate", "url": "/qei-foundation/donate/"},
-      {"label": "Wills and bequests", "url": "/qei-foundation/wills-and-bequests/"},
-      {"label": "Workplace giving", "url": "/qei-foundation/workplace-giving/"},
-      {"label": "Patient stories", "url": "/qei-foundation/patient-stories/"},
-      {"label": "Our people", "url": "/qei-foundation/our-people/"},
-      {"label": "Annual reports and newsletters", "url": "/qei-foundation/annual-reports/"}
-    ]},
-    {"label": "News", "url": "/news/"},
-    {"label": "About", "url": "/about/"}
+    {
+      "label": "Dry Eye Clinic",
+      "url": "/dry-eye-clinic/",
+      "highlight": true,
+      "children": [
+        {
+          "label": "About the Dry Eye Clinic",
+          "url": "/dry-eye-clinic/"
+        },
+        {
+          "label": "Treatments and technology",
+          "url": "/dry-eye-clinic/treatments/"
+        },
+        {
+          "label": "Your first appointment",
+          "url": "/dry-eye-clinic/your-appointment/"
+        },
+        {
+          "label": "Dry eye questions answered",
+          "url": "/dry-eye-clinic/faq/"
+        },
+        {
+          "label": "About dry eye disease",
+          "url": "/eye-conditions/dry-eye/"
+        }
+      ]
+    },
+    {
+      "label": "Patients",
+      "url": "/patient-info/",
+      "children": [
+        {
+          "label": "Book an appointment",
+          "url": "/patient-info/book-an-appointment/"
+        },
+        {
+          "label": "QEI Laser eye surgery",
+          "url": "/qei-laser/"
+        },
+        {
+          "label": "Preparing for your visit",
+          "url": "/patient-info/preparing-for-your-visit/"
+        },
+        {
+          "label": "Fees, Medicare and referrals",
+          "url": "/patient-info/fees-medicare-and-referrals/"
+        },
+        {
+          "label": "Our clinics and how to find us",
+          "url": "/qei-clinics/"
+        },
+        {
+          "label": "Emergency eye care",
+          "url": "/patient-info/emergency-eye-care/"
+        },
+        {
+          "label": "Your rights, feedback and records",
+          "url": "/patient-info/your-rights-and-feedback/"
+        },
+        {
+          "label": "Forms",
+          "url": "/patient-info/forms/"
+        }
+      ]
+    },
+    {
+      "label": "Ophthalmologists",
+      "url": "/ophthalmologists/",
+      "children": [
+        {
+          "label": "All ophthalmologists",
+          "url": "/ophthalmologists/"
+        },
+        {
+          "label": "Find a specialist by subspecialty",
+          "url": "/ophthalmologists/#cataract"
+        },
+        {
+          "label": "QEI Laser eye surgery",
+          "url": "/qei-laser/"
+        },
+        {
+          "label": "Dry Eye Clinic",
+          "url": "/dry-eye-clinic/"
+        }
+      ]
+    },
+    {
+      "label": "Eye conditions",
+      "url": "/eye-conditions/"
+    },
+    {
+      "label": "Referrers",
+      "url": "/referrers/",
+      "children": [
+        {
+          "label": "How to refer",
+          "url": "/referrers/"
+        },
+        {
+          "label": "Urgent referrals",
+          "url": "/referrers/urgent-referrals/"
+        },
+        {
+          "label": "Subspecialty guide",
+          "url": "/referrers/subspecialty-guide/"
+        },
+        {
+          "label": "Optometry education and CPD",
+          "url": "/education/optometry-education-series/"
+        }
+      ]
+    },
+    {
+      "label": "Research & Education",
+      "url": "/research/",
+      "children": [
+        {
+          "label": "Research",
+          "url": "/research/"
+        },
+        {
+          "label": "Clinical trials",
+          "url": "/clinical-trials/"
+        },
+        {
+          "label": "Researchers",
+          "url": "/research/researchers/"
+        },
+        {
+          "label": "Research groups and publications",
+          "url": "/research/groups-publications/"
+        },
+        {
+          "label": "Education",
+          "url": "/education/"
+        },
+        {
+          "label": "Services and facilities",
+          "url": "/services/"
+        }
+      ]
+    },
+    {
+      "label": "Foundation",
+      "url": "/qei-foundation/",
+      "children": [
+        {
+          "label": "About the Foundation",
+          "url": "/qei-foundation/about-qei-foundation/"
+        },
+        {
+          "label": "Donate",
+          "url": "/qei-foundation/donate/"
+        },
+        {
+          "label": "Wills and bequests",
+          "url": "/qei-foundation/wills-and-bequests/"
+        },
+        {
+          "label": "Workplace giving",
+          "url": "/qei-foundation/workplace-giving/"
+        },
+        {
+          "label": "Patient stories",
+          "url": "/qei-foundation/patient-stories/"
+        },
+        {
+          "label": "Our people",
+          "url": "/qei-foundation/our-people/"
+        },
+        {
+          "label": "Annual reports and newsletters",
+          "url": "/qei-foundation/annual-reports/"
+        }
+      ]
+    },
+    {
+      "label": "News",
+      "url": "/news/"
+    },
+    {
+      "label": "About",
+      "url": "/about/"
+    }
   ],
   "footer_columns": [
-    {"heading": "Patients", "links": [
-      {"label": "Book an appointment", "url": "/patient-info/book-an-appointment/"},
-      {"label": "Dry Eye Clinic", "url": "/dry-eye-clinic/"},
-      {"label": "Preparing for your visit", "url": "/patient-info/preparing-for-your-visit/"},
-      {"label": "Fees, Medicare and referrals", "url": "/patient-info/fees-medicare-and-referrals/"},
-      {"label": "Emergency eye care", "url": "/patient-info/emergency-eye-care/"},
-      {"label": "Request your medical record", "url": "/patient-info/request-medical-record/"},
-      {"label": "Feedback on your care", "url": "/patient-info/your-rights-and-feedback/"}
-    ]},
-    {"heading": "Clinical", "links": [
-      {"label": "Our ophthalmologists", "url": "/ophthalmologists/"},
-      {"label": "Eye conditions", "url": "/eye-conditions/"},
-      {"label": "Woolloongabba QEI Clinic", "url": "/qei-clinics/woolloongabba-qei-clinic/"},
-      {"label": "Clayfield QEI Clinic", "url": "/qei-clinics/clayfield-qei-clinic/"},
-      {"label": "South Brisbane Day Hospital", "url": "/services/southbank-day-hospital/"},
-      {"label": "Electro-Diagnostic & Imaging Centre", "url": "/services/qei-electro-diagnostic-and-imaging-centre/"},
-      {"label": "For GPs and optometrists", "url": "/referrers/"}
-    ]},
-    {"heading": "Institute", "links": [
-      {"label": "About QEI", "url": "/about/"},
-      {"label": "Research", "url": "/research/"},
-      {"label": "Clinical trials", "url": "/clinical-trials/"},
-      {"label": "Education", "url": "/education/"},
-      {"label": "QEI Foundation", "url": "/qei-foundation/"},
-      {"label": "Donate", "url": "/qei-foundation/donate/"},
-      {"label": "News and events", "url": "/news/"}
-    ]}
+    {
+      "heading": "Patients",
+      "links": [
+        {
+          "label": "Book an appointment",
+          "url": "/patient-info/book-an-appointment/"
+        },
+        {
+          "label": "Dry Eye Clinic",
+          "url": "/dry-eye-clinic/"
+        },
+        {
+          "label": "Preparing for your visit",
+          "url": "/patient-info/preparing-for-your-visit/"
+        },
+        {
+          "label": "Fees, Medicare and referrals",
+          "url": "/patient-info/fees-medicare-and-referrals/"
+        },
+        {
+          "label": "Emergency eye care",
+          "url": "/patient-info/emergency-eye-care/"
+        },
+        {
+          "label": "Request your medical record",
+          "url": "/patient-info/request-medical-record/"
+        },
+        {
+          "label": "Feedback on your care",
+          "url": "/patient-info/your-rights-and-feedback/"
+        }
+      ]
+    },
+    {
+      "heading": "Clinical",
+      "links": [
+        {
+          "label": "Our ophthalmologists",
+          "url": "/ophthalmologists/"
+        },
+        {
+          "label": "Eye conditions",
+          "url": "/eye-conditions/"
+        },
+        {
+          "label": "QEI Laser eye surgery",
+          "url": "/qei-laser/"
+        },
+        {
+          "label": "Woolloongabba QEI Clinic",
+          "url": "/qei-clinics/woolloongabba-qei-clinic/"
+        },
+        {
+          "label": "Clayfield QEI Clinic",
+          "url": "/qei-clinics/clayfield-qei-clinic/"
+        },
+        {
+          "label": "South Brisbane Day Hospital",
+          "url": "/services/southbank-day-hospital/"
+        },
+        {
+          "label": "Electro-Diagnostic & Imaging Centre",
+          "url": "/services/qei-electro-diagnostic-and-imaging-centre/"
+        },
+        {
+          "label": "For GPs and optometrists",
+          "url": "/referrers/"
+        }
+      ]
+    },
+    {
+      "heading": "Institute",
+      "links": [
+        {
+          "label": "About QEI",
+          "url": "/about/"
+        },
+        {
+          "label": "Research",
+          "url": "/research/"
+        },
+        {
+          "label": "Clinical trials",
+          "url": "/clinical-trials/"
+        },
+        {
+          "label": "Education",
+          "url": "/education/"
+        },
+        {
+          "label": "QEI Foundation",
+          "url": "/qei-foundation/"
+        },
+        {
+          "label": "Donate",
+          "url": "/qei-foundation/donate/"
+        },
+        {
+          "label": "News and events",
+          "url": "/news/"
+        }
+      ]
+    }
   ],
   "legal_links": [
-    {"label": "Privacy policy", "url": "/privacy-policy/"},
-    {"label": "Terms and conditions", "url": "/terms-and-conditions/"},
-    {"label": "Accessibility", "url": "/accessibility/"},
-    {"label": "Sitemap", "url": "/sitemap/"}
+    {
+      "label": "Privacy policy",
+      "url": "/privacy-policy/"
+    },
+    {
+      "label": "Terms and conditions",
+      "url": "/terms-and-conditions/"
+    },
+    {
+      "label": "Accessibility",
+      "url": "/accessibility/"
+    },
+    {
+      "label": "Sitemap",
+      "url": "/sitemap/"
+    }
   ],
   "redirects": [
-    {"from": "/our-vision/", "to": "/about/"},
-    {"from": "/contact/", "to": "/contact/"},
-    {"from": "/patient-info/book-cataract-or-pterygium-assessment/", "to": "/patient-info/book-an-appointment/"},
-    {"from": "/patient-info/how-to-find-us/", "to": "/qei-clinics/"},
-    {"from": "/patient-info/send-enquiry/", "to": "/patient-info/book-an-appointment/"},
-    {"from": "/comment-on-your-care/", "to": "/patient-info/your-rights-and-feedback/"},
-    {"from": "/eye-conditions/diabetic-ratinopathy/", "to": "/eye-conditions/diabetic-retinopathy/"},
-    {"from": "/ophthalmologists/refer-a-patient-form/", "to": "/referrers/"},
-    {"from": "/make-donation/", "to": "/qei-foundation/donate/"},
-    {"from": "/donate-monthly/", "to": "/qei-foundation/donate/"},
-    {"from": "/qei-foundation/eyecure/", "to": "/qei-foundation/annual-reports/"},
-    {"from": "/qei-foundation/news/", "to": "/news/"},
-    {"from": "/clinical-trials-old/", "to": "/clinical-trials/"},
-    {"from": "/clinical-trials-contact-registration/", "to": "/clinical-trials/"},
-    {"from": "/information-consent-form/", "to": "/clinical-trials/"},
-    {"from": "/share-your-story/", "to": "/qei-foundation/patient-stories/"},
-    {"from": "/eventscategories/all/", "to": "/events/"},
-    {"from": "/eventscategories/education-series/", "to": "/events/"}
-  ]
+    {
+      "from": "/our-vision/",
+      "to": "/about/"
+    },
+    {
+      "from": "/contact/",
+      "to": "/contact/"
+    },
+    {
+      "from": "/patient-info/book-cataract-or-pterygium-assessment/",
+      "to": "/patient-info/book-an-appointment/"
+    },
+    {
+      "from": "/patient-info/how-to-find-us/",
+      "to": "/qei-clinics/"
+    },
+    {
+      "from": "/patient-info/send-enquiry/",
+      "to": "/patient-info/book-an-appointment/"
+    },
+    {
+      "from": "/comment-on-your-care/",
+      "to": "/patient-info/your-rights-and-feedback/"
+    },
+    {
+      "from": "/eye-conditions/diabetic-ratinopathy/",
+      "to": "/eye-conditions/diabetic-retinopathy/"
+    },
+    {
+      "from": "/ophthalmologists/refer-a-patient-form/",
+      "to": "/referrers/"
+    },
+    {
+      "from": "/make-donation/",
+      "to": "/qei-foundation/donate/"
+    },
+    {
+      "from": "/donate-monthly/",
+      "to": "/qei-foundation/donate/"
+    },
+    {
+      "from": "/qei-foundation/eyecure/",
+      "to": "/qei-foundation/annual-reports/"
+    },
+    {
+      "from": "/qei-foundation/news/",
+      "to": "/news/"
+    },
+    {
+      "from": "/clinical-trials-old/",
+      "to": "/clinical-trials/"
+    },
+    {
+      "from": "/clinical-trials-contact-registration/",
+      "to": "/clinical-trials/"
+    },
+    {
+      "from": "/information-consent-form/",
+      "to": "/clinical-trials/"
+    },
+    {
+      "from": "/share-your-story/",
+      "to": "/qei-foundation/patient-stories/"
+    },
+    {
+      "from": "/eventscategories/all/",
+      "to": "/events/"
+    },
+    {
+      "from": "/eventscategories/education-series/",
+      "to": "/events/"
+    },
+    {
+      "from": "/services/qei-laser/",
+      "to": "/qei-laser/"
+    }
+  ],
+  "domain_redirects": {
+    "_comment": "qeilaser.com.au pages and where they now live on this site. Configure as 301 redirects (Squarespace URL mappings or DNS-level forwarding) at launch; see docs/LAUNCH-CHECKLIST.md.",
+    "qeilaser.com.au": {
+      "/": "/qei-laser/",
+      "/about-qei-laser": "/qei-laser/",
+      "/overview-of-treatments": "/qei-laser/treatments/",
+      "/for-patients": "/qei-laser/for-patients/",
+      "/automatic-health-fund-rebates": "/qei-laser/health-fund-rebates/",
+      "/contact-us": "/contact/",
+      "/dr-brendan-cronin-1": "/ophthalmologists/dr-brendan-cronin/",
+      "/dr-david-gunn": "/ophthalmologists/dr-david-gunn/",
+      "/cairs-eye-surgery": "/qei-laser/treatments/cairs-eye-surgery/",
+      "/corneal-scarring": "/qei-laser/treatments/corneal-scarring/",
+      "/post-corneal-transplant": "/qei-laser/treatments/post-corneal-transplant/",
+      "/recurrent-erosion-syndrome": "/qei-laser/treatments/recurrent-erosion-syndrome/",
+      "/irregular-astigmatism": "/qei-laser/treatments/irregular-astigmatism/",
+      "/corneal-dystrophies": "/qei-laser/treatments/corneal-dystrophies/",
+      "/keratoconus-corneal-cross-linking": "/qei-laser/treatments/keratoconus-athens-protocol/"
+    }
+  }
 }

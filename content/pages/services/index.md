@@ -12,7 +12,7 @@ cards:
   - {title: "South Brisbane Day Hospital", url: /services/southbank-day-hospital/, text: "Five operating theatres and a dedicated procedure room, co-located with the Woolloongabba clinic. All profits support the QEI Foundation.", cta: "About the hospital"}
   - {title: "Queensland Electro-Diagnostic & Imaging Centre", url: /services/qei-electro-diagnostic-and-imaging-centre/, text: "Objective electrodiagnostic tests of retinal and optic nerve function for patients of all ages.", cta: "About QEDIC"}
   - {title: "Dry Eye Clinic", url: /dry-eye-clinic/, text: "Optometrist-led clinic with advanced treatments and no referral needed.", badge: "No referral needed", cta: "About the clinic"}
-  - {title: "QEI Laser", url: "https://www.qeilaser.com.au/", text: "Laser vision correction with QEI's refractive surgeons.", cta: "Visit QEI Laser"}
+  - {title: "QEI Laser", url: /qei-laser/, text: "Therapeutic and refractive excimer laser surgery inside an accredited private hospital, with automatic health fund cover for therapeutic procedures.", badge: "Health fund covered", cta: "About QEI Laser"}
 sidebar: [book, contact]
 ---
 ## Integrated care in one place

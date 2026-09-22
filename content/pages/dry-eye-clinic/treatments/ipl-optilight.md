@@ -3,6 +3,7 @@ title: "Intense pulsed light therapy with Lumenis OptiLight"
 short_title: "IPL (OptiLight)"
 url: /dry-eye-clinic/treatments/ipl-optilight/
 template: treatment
+group: dry-eye
 section: "Dry Eye Clinic"
 parent: /dry-eye-clinic/treatments/
 order: 1

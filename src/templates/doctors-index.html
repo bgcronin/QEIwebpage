@@ -7,7 +7,7 @@
   ('glaucoma', 'Glaucoma', 'Medical, laser and surgical glaucoma care including minimally invasive glaucoma surgery.'),
   ('neuro-ophthalmology', 'Neuro-ophthalmology', 'Optic nerve and visual pathway disease, double vision and unexplained vision loss.'),
   ('oculoplastics', 'Oculoplastics, eyelids and orbit', 'Eyelid, tear duct and orbital surgery including thyroid eye disease.'),
-  ('refractive', 'Laser and refractive surgery', 'Laser vision correction and lens-based refractive procedures.'),
+  ('refractive', 'Laser and refractive surgery', 'Therapeutic excimer laser (QEI Laser), laser vision correction and lens-based refractive procedures.'),
   ('uveitis', 'Uveitis and inflammatory eye disease', 'Diagnosis and management of inflammatory eye conditions.'),
   ('genetic', 'Genetic and inherited eye disease', 'Assessment of inherited retinal and genetic eye conditions.')
 ] %}
@@ -37,7 +37,7 @@
       </section>
       {% endif %}
       {% endfor %}
-      <div class="alert alert--info">{{ m.icon('info') }}<div><strong>Not sure who to see?</strong> Call <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a> and our reception team will match you with the right specialist, or ask your GP or optometrist to use our <a href="{{ rel('/referrers/subspecialty-guide/') }}">subspecialty referral guide</a>. Dry eye is managed in our <a href="{{ rel('/dry-eye-clinic/') }}">optometrist-led Dry Eye Clinic</a>, which needs no referral.</div></div>
+      <div class="alert alert--info">{{ m.icon('info') }}<div><strong>Not sure who to see?</strong> Call <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a> and our reception team will match you with the right specialist, or ask your GP or optometrist to use our <a href="{{ rel('/referrers/subspecialty-guide/') }}">subspecialty referral guide</a>. Dry eye is managed in our <a href="{{ rel('/dry-eye-clinic/') }}">optometrist-led Dry Eye Clinic</a>, which needs no referral, and corneal laser treatment through <a href="{{ rel('/qei-laser/') }}">QEI Laser</a>.</div></div>
     </div>
     <aside aria-label="Appointments">{{ m.sidebar(['book', 'dryeye', 'referrer']) }}</aside>
   </div>

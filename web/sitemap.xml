@@ -181,6 +181,66 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://qei.org.au/qei-laser/for-patients/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/health-fund-rebates/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/treatments/cairs-eye-surgery/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/treatments/corneal-dystrophies/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/treatments/corneal-scarring/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/treatments/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/treatments/irregular-astigmatism/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/treatments/keratoconus-athens-protocol/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/treatments/post-corneal-transplant/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/treatments/prk-asa-laser-vision-correction/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/treatments/recurrent-erosion-syndrome/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://qei.org.au/referrers/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

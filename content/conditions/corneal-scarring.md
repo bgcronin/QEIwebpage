@@ -53,8 +53,8 @@ Your ophthalmologist examines the cornea with a slit lamp and maps its shape and
 Treatment is matched to the depth and position of the scar:
 
 - **Glasses and contact lenses.** Rigid gas-permeable or scleral contact lenses vault over the irregular surface and can dramatically improve vision for many people, with no surgery needed.
-- **Laser treatment.** Superficial scars can be polished away with phototherapeutic keratectomy (PTK), an excimer laser procedure.
-- **Corneal transplantation.** Deeper scars may need replacement of the affected corneal layers (DALK) or the full-thickness cornea (penetrating keratoplasty). QEI's corneal surgeons have fellowship training from leading international centres and perform all types of corneal transplant.
+- **Laser treatment.** Superficial scars can be polished away with phototherapeutic keratectomy (PTK), an excimer laser procedure performed through [QEI Laser](/qei-laser/treatments/corneal-scarring/), with automatic health fund cover for therapeutic treatment.
+- **Corneal transplantation.** Deeper scars may need replacement of the affected corneal layers (DALK) or the full-thickness cornea (penetrating keratoplasty). QEI's corneal surgeons have fellowship training from leading international centres and perform all types of corneal transplant. Astigmatism after a graft can later be treated with [laser regularisation](/qei-laser/treatments/post-corneal-transplant/).
 - **Treating the cause.** Managing active infection, dry eye or inflammation is essential to prevent further scarring, and our [Dry Eye Clinic](/dry-eye-clinic/) supports patients with ocular surface disease.
 
 ## Preventing corneal scars

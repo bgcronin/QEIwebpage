@@ -3,6 +3,7 @@ title: "Quantum molecular resonance therapy with Rexon-Eye"
 short_title: "QMR (Rexon-Eye)"
 url: /dry-eye-clinic/treatments/qmr-rexon-eye/
 template: treatment
+group: dry-eye
 section: "Dry Eye Clinic"
 parent: /dry-eye-clinic/treatments/
 order: 2

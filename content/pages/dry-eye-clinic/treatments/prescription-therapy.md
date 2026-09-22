@@ -3,6 +3,7 @@ title: "Prescription anti-inflammatory therapy"
 short_title: "Prescription therapy"
 url: /dry-eye-clinic/treatments/prescription-therapy/
 template: treatment
+group: dry-eye
 section: "Dry Eye Clinic"
 parent: /dry-eye-clinic/treatments/
 order: 8

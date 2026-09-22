@@ -32,6 +32,11 @@ Markdown files with YAML front matter. The folder path is the URL (`content/page
 
 Links inside Markdown should be site-absolute (`/patient-info/forms/`); the build converts them to relative links so the site works anywhere.
 
+### QEI Laser
+
+- Hub: `content/pages/qei-laser/index.md`; treatments hub `content/pages/qei-laser/treatments/index.md`; treatment pages in `content/pages/qei-laser/treatments/*.md` with `template: treatment` and `group: laser` (Dry Eye Clinic treatments use `group: dry-eye`). Patient information and health fund pages sit alongside the hub.
+- The old qeilaser.com.au URL mapping lives in `domain_redirects` in `content/site.json`.
+
 ### Dry Eye Clinic
 
 - Landing page: `content/pages/dry-eye-clinic/index.md` (hero, proof points, stats, symptom list, "why" points, steps and FAQ are all front matter).

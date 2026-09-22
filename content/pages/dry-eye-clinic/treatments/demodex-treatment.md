@@ -3,6 +3,7 @@ title: "Demodex treatment"
 short_title: "Demodex treatment"
 url: /dry-eye-clinic/treatments/demodex-treatment/
 template: treatment
+group: dry-eye
 section: "Dry Eye Clinic"
 parent: /dry-eye-clinic/treatments/
 order: 7

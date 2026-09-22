@@ -3,6 +3,7 @@ title: "Meibomian gland expression"
 short_title: "Meibomian gland expression"
 url: /dry-eye-clinic/treatments/meibomian-gland-expression/
 template: treatment
+group: dry-eye
 section: "Dry Eye Clinic"
 parent: /dry-eye-clinic/treatments/
 order: 5

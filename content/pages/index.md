@@ -39,7 +39,7 @@ subspecialties:
   - {label: "Glaucoma", url: "/ophthalmologists/#glaucoma", icon: shield, text: "Laser, medical and minimally invasive glaucoma surgery."}
   - {label: "Neuro-ophthalmology", url: "/ophthalmologists/#neuro-ophthalmology", icon: zap, text: "Optic nerve disease, double vision and unexplained vision loss."}
   - {label: "Oculoplastics", url: "/ophthalmologists/#oculoplastics", icon: smile, text: "Eyelid, tear duct and orbital surgery, thyroid eye disease."}
-  - {label: "Laser and refractive", url: "/ophthalmologists/#refractive", icon: sun, text: "Laser vision correction and lens-based procedures."}
+  - {label: "QEI Laser", url: "/qei-laser/", icon: sun, text: "Therapeutic and refractive laser for keratoconus, scarring and vision correction."}
   - {label: "Dry eye", url: "/dry-eye-clinic/", icon: droplet, text: "Optometrist-led clinic. No referral needed."}
 pillars:
   - {label: "Research", url: /research/, icon: microscope, text: "Inherited, age-related and restorative eye disease research translated into better treatments.", cta: "Explore our research"}

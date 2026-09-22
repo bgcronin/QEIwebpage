@@ -3,6 +3,7 @@ title: "Punctal plugs"
 short_title: "Punctal plugs"
 url: /dry-eye-clinic/treatments/punctal-plugs/
 template: treatment
+group: dry-eye
 section: "Dry Eye Clinic"
 parent: /dry-eye-clinic/treatments/
 order: 6

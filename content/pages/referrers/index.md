@@ -47,6 +47,10 @@ Our ophthalmologists cover cataract, cornea and anterior segment, retina and mac
 
 Patients with dry eye disease, meibomian gland dysfunction, blepharitis or Demodex can be referred directly to our [optometrist-led Dry Eye Clinic](/dry-eye-clinic/), or can self-refer. The clinic offers intense pulsed light (Lumenis OptiLight), quantum molecular resonance (Rexon-Eye), low level light therapy, BlephEx, meibomian gland expression, punctal plugs and anti-inflammatory prescribing, with fast access and no ophthalmology wait. Patients who need ophthalmology input are escalated internally and you are kept informed.
 
+## Corneal laser: QEI Laser
+
+Patients with keratoconus, corneal scarring, corneal dystrophies, recurrent erosion syndrome or irregular astigmatism (including after corneal transplant) can be referred to Dr Brendan Cronin or Dr David Gunn for assessment for excimer laser treatment through [QEI Laser](/qei-laser/). Therapeutic procedures attract automatic private health fund cover because the laser is inside an accredited private hospital. See the [overview of laser treatments](/qei-laser/treatments/).
+
 ## Electrodiagnostic testing
 
 The Queensland Electro-Diagnostic and Imaging Centre provides ERG, VEP and related tests on referral. Please note the service is currently being redesigned; see the [QEDIC page](/services/qei-electro-diagnostic-and-imaging-centre/) for current availability.

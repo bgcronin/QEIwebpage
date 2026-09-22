@@ -102,6 +102,16 @@ class SiteModelTests(unittest.TestCase):
         labels = [item["label"] for item in self.site.config["nav"]]
         self.assertEqual(labels[0], "Dry Eye Clinic")
 
+    def test_treatment_groups(self):
+        groups = {t.get("group") for t in self.site.treatments}
+        self.assertEqual(groups, {"dry-eye", "laser"})
+        self.assertGreaterEqual(len([t for t in self.site.treatments if t["group"] == "laser"]), 8)
+
+    def test_qeilaser_redirect_map_targets_exist(self):
+        mapping = self.site.config["domain_redirects"]["qeilaser.com.au"]
+        for old, new in mapping.items():
+            self.assertIn(new, self.site.known_urls, f"{old} -> {new}")
+
 
 class FullBuildTests(unittest.TestCase):
     @classmethod
@@ -118,6 +128,7 @@ class FullBuildTests(unittest.TestCase):
     def test_key_pages_exist(self):
         for url in ["/", "/dry-eye-clinic/", "/dry-eye-clinic/treatments/ipl-optilight/", "/ophthalmologists/dr-brendan-cronin/",
                     "/eye-conditions/dry-eye/", "/patient-info/book-an-appointment/", "/referrers/", "/news/", "/search/", "/sitemap/",
+                    "/qei-laser/", "/qei-laser/treatments/", "/qei-laser/treatments/cairs-eye-surgery/", "/qei-laser/health-fund-rebates/",
                     "/qei-clinics/woolloongabba-qei-clinic/", "/our-vision/"]:
             self.assertTrue((self.out / url.lstrip("/") / "index.html").exists(), url)
         self.assertTrue((self.out / "404.html").exists())
@@ -148,6 +159,14 @@ class FullBuildTests(unittest.TestCase):
         self.assertIn('"@type": "MedicalWebPage"', cond)
         home = (self.out / "index.html").read_text(encoding="utf-8")
         self.assertIn('"@type": "MedicalOrganization"', home)
+
+    def test_laser_treatment_pages_use_laser_sidebar_not_dry_eye(self):
+        html = (self.out / "qei-laser/treatments/cairs-eye-surgery/index.html").read_text(encoding="utf-8")
+        self.assertIn("Other QEI Laser treatments", html)
+        self.assertNotIn("Other Dry Eye Clinic treatments", html)
+        dry = (self.out / "dry-eye-clinic/treatments/blephex/index.html").read_text(encoding="utf-8")
+        self.assertIn("Other Dry Eye Clinic treatments", dry)
+        self.assertNotIn("CAIRS", dry)
 
     def test_search_index_is_valid_json(self):
         data = json.loads((self.out / "search-index.json").read_text(encoding="utf-8"))
