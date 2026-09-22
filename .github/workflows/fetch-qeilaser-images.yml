@@ -2,6 +2,12 @@ name: Fetch QEI Laser images
 
 on:
   workflow_dispatch:
+  # Also runs when this workflow or the fetch script changes on any branch, because
+  # "Run workflow" only appears once the file exists on the default branch.
+  push:
+    paths:
+      - ".github/workflows/fetch-qeilaser-images.yml"
+      - "src/fetch_qeilaser_images.py"
 
 permissions:
   contents: write
