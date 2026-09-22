@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>Events</h1>
+    <p class="lead">{{ page.description }} Most optometry events attract CPD points and are free for qualifying participants.</p>
+  </div>
+</div>
+<div class="container section">
+  <div class="grid grid--3">
+    {% for e in items %}{{ m.card(e.title, e.url, e.excerpt | truncate(130), e.hero, e.hero_alt, '', ('<time datetime="' ~ e.date ~ '">' ~ fmt_date(e.date) ~ '</time>') if e.date else '', 'Event details') }}{% endfor %}
+  </div>
+  <div style="margin-top:2.5rem">{{ m.cta_band('Optometry education at QEI', 'Join our mailing list to hear about workshops, CPD evenings and student events.', {'label': 'Optometry education', 'url': '/education/optometry-education-series/'}, {'label': 'Email education@qei.org.au', 'url': 'mailto:' ~ site.email_education}) }}</div>
+</div>
+{% endblock %}

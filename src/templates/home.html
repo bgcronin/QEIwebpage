@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<section class="hero hero--navy">
+  <div class="container hero__inner">
+    <div>
+      <span class="eyebrow">Queensland Eye Institute, Brisbane</span>
+      <h1>{{ doc.hero.title }}</h1>
+      <p class="lead">{{ doc.hero.text }}</p>
+      <div class="hero__actions">
+        <a class="btn btn--light btn--lg" href="{{ rel('/patient-info/book-an-appointment/') }}">{{ m.icon('calendar') }} Book an appointment</a>
+        <a class="btn btn--ghost-light btn--lg" href="{{ rel('/dry-eye-clinic/') }}">{{ m.icon('droplet') }} Dry Eye Clinic</a>
+      </div>
+      <ul class="hero__proof">
+        {% for p in doc.hero.proof %}<li>{{ m.icon('check-circle') }} {{ p }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="hero__media">{{ m.img(doc.hero.image, doc.hero.image_alt, 'hero', eager=True) }}</div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:2rem">
+  <div class="container">
+    <nav class="quick-links" aria-label="Popular links">
+      {% for q in doc.quick_links %}<a class="quick-link" href="{{ rel(q.url) }}">{{ m.icon(q.icon) }} {{ q.label }}</a>{% endfor %}
+    </nav>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container feature-block">
+    <div class="feature-block__media">{{ m.img(doc.dryeye.image, doc.dryeye.image_alt, 'card') }}</div>
+    <div>
+      <span class="badge badge--green">No referral needed</span>
+      <h2 style="margin-top:.75rem">{{ doc.dryeye.title }}</h2>
+      <p class="lead">{{ doc.dryeye.text }}</p>
+      <ul class="icon-list icon-list--green">
+        {% for p in doc.dryeye.points %}<li>{{ m.icon('check-circle') }}<span>{{ p }}</span></li>{% endfor %}
+      </ul>
+      <div class="cluster">
+        <a class="btn btn--primary" href="{{ rel('/dry-eye-clinic/') }}">About the Dry Eye Clinic</a>
+        <a class="btn btn--secondary" href="tel:{{ site.phone_intl }}">{{ m.icon('phone') }} {{ site.phone }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Specialist care</span>
+      <h2>Fellowship-trained ophthalmologists across every subspecialty</h2>
+      <p>Our surgeons are Fellows of the Royal Australian and New Zealand College of Ophthalmologists with advanced overseas fellowship training. Find the right specialist for your condition.</p>
+    </div>
+    <div class="grid grid--4">
+      {% for s in doc.subspecialties %}
+      <a class="card card--tint card--flat" href="{{ rel(s.url) }}" style="text-decoration:none">
+        <div class="card__body"><h3 style="display:flex;gap:.5rem;align-items:center">{{ m.icon(s.icon) }} {{ s.label }}</h3><p>{{ s.text }}</p></div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="profile-grid" style="margin-top:2rem">
+      {% for d in doctors[:4] %}{{ m.doctor_card(d) }}{% endfor %}
+    </div>
+    <p style="margin-top:1.5rem"><a class="btn btn--secondary" href="{{ rel('/ophthalmologists/') }}">Meet all {{ doctors|length }} ophthalmologists {{ m.icon('arrow-right') }}</a></p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Patient information</span>
+      <h2>Understand your eye condition</h2>
+      <p>Clear, reliable information written by the QEI team about the conditions we treat, what to expect and when to seek urgent care.</p>
+    </div>
+    <div class="grid grid--4">
+      {% for c in conditions %}
+      {{ m.card(c.title, c.url, '', None, '', '', '', '', icon_image=c.icon, tint=False) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Where to find us</span>
+      <h2>Two Brisbane clinics, one team</h2>
+    </div>
+    <div class="grid grid--2">
+      {% for c in clinics %}
+      <article class="card">
+        <div class="card__media">{{ m.img(c.photo, c.photo_alt, 'card') }}</div>
+        <div class="card__body">
+          <h3><a href="{{ rel('/qei-clinics/' ~ c.slug ~ '/') }}">{{ c.name }}</a></h3>
+          <p>{{ c.address_line1 }}, {{ c.suburb }} {{ c.state }} {{ c.postcode }}</p>
+          <p class="small muted">{{ c.hours }}</p>
+          <span class="card__cta">Directions, parking and transport {{ m.icon('arrow-right') }}</span>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--navy">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">More than a clinic</span>
+      <h2>Research, education and the Foundation</h2>
+      <p>Queensland's largest independent academic research institute devoted to eye health. Everything we learn goes back into patient care.</p>
+    </div>
+    <div class="grid grid--3">
+      {% for b in doc.pillars %}
+      <a class="card card--feature" href="{{ rel(b.url) }}" style="text-decoration:none;background:rgba(255,255,255,.08)">
+        <div class="card__body"><h3 style="display:flex;gap:.5rem;align-items:center">{{ m.icon(b.icon) }} {{ b.label }}</h3><p>{{ b.text }}</p><span class="card__cta">{{ b.cta }} {{ m.icon('arrow-right') }}</span></div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head" style="display:flex;justify-content:space-between;align-items:end;gap:1rem;max-width:none">
+      <div><span class="eyebrow">Latest</span><h2 style="margin-bottom:0">News from QEI</h2></div>
+      <a class="btn btn--secondary btn--sm" href="{{ rel('/news/') }}">All news</a>
+    </div>
+    <div class="grid grid--3">
+      {% for n in news[:3] %}{{ m.news_card(n) }}{% endfor %}
+    </div>
+    {% if events %}
+    <h3 style="margin-top:2.5rem">Upcoming and recent events</h3>
+    <div class="grid grid--3">
+      {% for e in events[:3] %}{{ m.card(e.title, e.url, e.excerpt | truncate(120), e.hero, e.hero_alt, 'Event', ('<time datetime="' ~ e.date ~ '">' ~ fmt_date(e.date) ~ '</time>') if e.date else '', 'Event details') }}{% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    {{ m.cta_band('Help us save sight', 'QEI receives no recurrent government funding. Your donation funds research, clinical trials and training the next generation of eye specialists. Donations over $2 are tax deductible.', {'label': 'Donate to the QEI Foundation', 'url': '/qei-foundation/donate/'}, {'label': 'Ways to give', 'url': '/qei-foundation/'}, coral=True) }}
+  </div>
+</section>
+{% endblock %}

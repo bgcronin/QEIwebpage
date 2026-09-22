@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header page-header--profile">
+  <div class="container">
+    <div class="page-header__portrait">{{ m.img(person.photo, person.photo_alt, 'portrait', eager=True) }}</div>
+    <div>
+      {{ m.breadcrumbs(page.breadcrumbs) }}
+      <h1>{{ person.name }}</h1>
+      {% if person.role %}<p class="page-header__role">{{ person.role }}</p>{% endif %}
+      {% if person.qualifications %}<p class="page-header__quals">{{ person.qualifications }}</p>{% endif %}
+    </div>
+  </div>
+</div>
+<div class="container section">
+  <div class="layout">
+    <div class="prose">
+      {{ clean_html(person.bio_html) | safe }}
+      <p><a href="{{ rel(back.url) }}">{{ m.icon('arrow-left') }} Back to {{ back.label | lower }}</a></p>
+    </div>
+    <aside>{{ m.sidebar(['donate', 'contact']) }}</aside>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,3 @@
+# Preview build: search engines are blocked until launch. Set "indexable": true in content/site.json to publish.
+User-agent: *
+Disallow: /

@@ -1,0 +1,29 @@
+{
+  "slug": "dr-jonathan-lai",
+  "name": "Dr Jonathan Lai",
+  "role": "General ophthalmologist, consultant neuro-ophthalmologist and glaucoma subspecialist",
+  "qualifications": "BMedSc/MBBS (Melbourne), Grad. Dip. Ophthalmic Sc. (Sydney), FRANZCO",
+  "photo": "wp-content/uploads/2026/03/Dr-Jonathon-Lai-1.png",
+  "photo_alt": "Portrait of Dr Jonathan Lai",
+  "summary": "Dr Jonathan Lai is a comprehensive general ophthalmologist and consultant neuro-ophthalmologist and glaucoma subspecialist. He is an Associate Lecturer with the University of Queensland and is actively involved in the training of both medical students and ophthalmology registrars. He is also a visiting consultant at the Mater Hospital Brisbane.",
+  "meta_description": "",
+  "bio_html": "<p>Dr Jonathan Lai is a comprehensive general ophthalmologist and consultant neuro-ophthalmologist and glaucoma subspecialist. He is an Associate Lecturer with the University of Queensland and is actively involved in the training of both medical students and ophthalmology registrars. He is also a visiting consultant at the Mater Hospital Brisbane.</p>\n<p>Dr Lai graduated dux from Brisbane’s Anglican Church Grammar School (Churchie) and completed undergraduate medical training at the University of Melbourne where he was awarded a Dean’s Honour List position. He completed a year of cell biology research at QEI during his undergraduate studies, cementing a passion for research and treatment of eye disease.</p>\n<p>Dr Lai undertook medical and surgical residencies in Brisbane at the Princess Alexandra Hospital, the Mater Hospital, and the Royal Brisbane and Women’s Hospital. He pursued further subspecialty and fellowship training in glaucoma and neuro-ophthalmology at the Royal Brisbane and Women’s Hospital, Royal Perth Hospital and at Moorfields Eye Hospital in London.</p>\n<p>Outside of Ophthalmology, Jonathan enjoys music, tennis, SCI-FI and dining out.</p>",
+  "treats": [
+    "age-related macular degeneration",
+    "diabetic eye disease injections and laser",
+    "complex cataract surgery",
+    "pterygium surgery",
+    "neuro-ophthalmology",
+    "glaucoma surgery (including both traditional and modern, minimally invasive techniques)."
+  ],
+  "subspecialties": [
+    "glaucoma",
+    "neuro-ophthalmology",
+    "cataract",
+    "retina"
+  ],
+  "notes_html": "",
+  "order": 5,
+  "surname": "Lai",
+  "old_url": "/ophthalmologists/dr-jonathan-lai/"
+}

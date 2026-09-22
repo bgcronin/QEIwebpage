@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>{{ page.title }}</h1>
+    <p class="lead">Two clinics on Brisbane's south and north sides. One phone number for both: <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a>.</p>
+  </div>
+</div>
+<div class="container section">
+  <div class="stack">
+    {% for c in clinics %}
+    <div class="clinic-card">
+      <div class="clinic-card__media">{{ m.img(c.photo, c.photo_alt, 'card', eager=loop.first) }}</div>
+      <div class="clinic-card__body">
+        <h2 style="margin-top:0;font-size:1.5rem"><a href="{{ rel('/qei-clinics/' ~ c.slug ~ '/') }}">{{ c.name }}</a></h2>
+        <address>{{ c.address_line1 }}<br>{{ c.suburb }} {{ c.state }} {{ c.postcode }}</address>
+        <p>{{ m.icon('clock') }} {{ c.hours }}</p>
+        <p class="small muted">{{ c.parking | truncate(160) }}</p>
+        <div class="cluster">
+          <a class="btn btn--primary btn--sm" href="{{ rel('/qei-clinics/' ~ c.slug ~ '/') }}">Directions, parking and transport</a>
+          <a class="btn btn--secondary btn--sm" href="{{ c.map_url }}" rel="noopener">{{ m.icon('map-pin') }} Google Maps</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="layout" style="margin-top:3rem">
+    <div class="prose">
+      <h2 class="mt-0">Which clinic should I attend?</h2>
+      <p>When you book, our reception team will confirm which clinic your ophthalmologist consults from and which is most convenient for you. Surgery is performed at <a href="{{ rel('/services/southbank-day-hospital/') }}">South Brisbane Day Hospital</a>, co-located with the Woolloongabba clinic.</p>
+      <h2>Arriving for your appointment</h2>
+      <p>Please arrive 10 minutes early with your referral, Medicare and health fund cards, current glasses, a list of medications and sunglasses, as your eyes may be dilated. Read <a href="{{ rel('/patient-info/preparing-for-your-visit/') }}">preparing for your visit</a> for the full checklist.</p>
+    </div>
+    <aside>{{ m.sidebar(['book', 'prepare']) }}</aside>
+  </div>
+</div>
+{% endblock %}

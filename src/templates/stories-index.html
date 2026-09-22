@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>Patient stories</h1>
+    <p class="lead">{{ page.description }}</p>
+  </div>
+</div>
+<div class="container section">
+  <div class="grid grid--3">
+    {% for s in items %}{{ m.card(s.title, s.url, s.excerpt | truncate(140), s.hero, s.hero_alt, '', '', 'Read the story') }}{% endfor %}
+  </div>
+  <div style="margin-top:2.5rem">{{ m.cta_band('Share your story', 'Have you or a loved one been treated at QEI? Your story can inspire others and support our research.', {'label': 'Share your story', 'url': site.external_forms.share_your_story}, {'label': 'Donate', 'url': '/qei-foundation/donate/'}) }}</div>
+</div>
+{% endblock %}

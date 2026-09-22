@@ -6,3 +6,4 @@ __pycache__/
 raw-site/
 site-build.zip
 reports/*.tmp
+.cache/

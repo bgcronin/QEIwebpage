@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>Eye conditions</h1>
+    <p class="lead">Plain-English guides to the conditions we diagnose and treat: what they are, the symptoms to watch for, how they are diagnosed and the treatments available at QEI.</p>
+  </div>
+</div>
+<div class="container section">
+  <div class="alert alert--urgent">{{ m.icon('alert') }}<div><strong>Sudden changes in vision are an emergency.</strong> Sudden loss or blurring of vision, a curtain or shadow over your vision, flashes with new floaters, severe eye pain or a chemical injury need same-day assessment. Call <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a> during clinic hours or go to an emergency department. <a href="{{ rel('/patient-info/emergency-eye-care/') }}">Emergency eye care advice</a></div></div>
+  <div class="grid grid--3">
+    {% for c in conditions %}
+    <article class="card">
+      <div class="card__media card__media--icon">{{ m.img(c.icon, '', 'icon') }}</div>
+      <div class="card__body">
+        <h3><a href="{{ rel(c.url) }}">{{ c.title }}</a></h3>
+        <p>{{ c.summary }}</p>
+        <span class="card__cta">Read the guide {{ m.icon('arrow-right') }}</span>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <div class="layout" style="margin-top:3rem">
+    <div class="prose">
+      <h2 class="mt-0">Dry eye? See our dedicated clinic</h2>
+      <p>Dry eye disease is one of the most common reasons people see an eye specialist. QEI runs an <a href="{{ rel('/dry-eye-clinic/') }}">optometrist-led Dry Eye Clinic</a> with advanced treatments such as intense pulsed light, quantum molecular resonance and low level light therapy. No referral is needed and appointments are readily available.</p>
+      <h2>Can't find your condition?</h2>
+      <p>Our ophthalmologists treat many more conditions than are listed here, including uveitis, eyelid and tear duct problems, inherited retinal disease and neuro-ophthalmic conditions. <a href="{{ rel('/ophthalmologists/') }}">Browse our specialists by subspecialty</a> or call <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a>.</p>
+    </div>
+    <aside>{{ m.sidebar(['book', 'dryeye']) }}</aside>
+  </div>
+</div>
+{% endblock %}

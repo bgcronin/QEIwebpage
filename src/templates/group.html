@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <span class="eyebrow">Research group</span>
+    <h1>{{ group.title }}</h1>
+    {% if group.summary %}<p class="lead">{{ group.summary }}</p>{% endif %}
+  </div>
+</div>
+<div class="container section">
+  <div class="layout">
+    <div class="prose">
+      {{ clean_html(group.body_html) | safe }}
+      <h2>Other research groups</h2>
+      <ul>{% for g in groups if g.slug != group.slug %}<li><a href="{{ rel(g.url) }}">{{ g.title }}</a></li>{% endfor %}</ul>
+      <p><a href="{{ rel('/research/groups-publications/') }}">{{ m.icon('arrow-left') }} Research groups and publications</a></p>
+    </div>
+    <aside>{{ m.sidebar(['donate']) }}<div class="side-card"><h2>Researchers</h2><p><a href="{{ rel('/research/researchers/') }}">Meet the QEI research team</a></p></div></aside>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>{{ doc.title }}</h1>
+    <p class="lead">{{ doc.summary }}</p>
+  </div>
+</div>
+<div class="container section">
+  <div class="grid grid--3">
+    <div class="panel panel--navy">
+      <h2>Patients and appointments</h2>
+      <p><a class="btn btn--light" href="tel:{{ site.phone_intl }}">{{ m.icon('phone') }} {{ site.phone }}</a></p>
+      <p>Monday to Friday during clinic hours. Email <a href="mailto:{{ site.email_reception }}">{{ site.email_reception }}</a> or <a href="{{ site.external_forms.send_enquiry }}" rel="noopener">send an enquiry online</a>.</p>
+      <p class="small">Dry Eye Clinic appointments: same number, no referral needed.</p>
+    </div>
+    <div class="panel">
+      <h2>Referrers</h2>
+      <p>GPs, optometrists and specialists can refer by email to <a href="mailto:{{ site.email_reception }}">{{ site.email_reception }}</a> or <a href="{{ site.external_forms.refer_a_patient }}" rel="noopener">online</a>. Urgent cases: phone <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a> and ask for the on-call team.</p>
+      <p><a href="{{ rel('/referrers/') }}">How to refer</a></p>
+    </div>
+    <div class="panel">
+      <h2>Other departments</h2>
+      <dl class="def-list">
+        <dt>Clinical trials</dt><dd><a href="tel:+61732395001">{{ site.phone_clinical_trials }}</a><br><a href="mailto:{{ site.email_trials }}">{{ site.email_trials }}</a></dd>
+        <dt>Foundation and research</dt><dd><a href="mailto:{{ site.email_info }}">{{ site.email_info }}</a></dd>
+        <dt>Bequests</dt><dd><a href="tel:+61732395050">{{ site.phone_bequests }}</a></dd>
+        <dt>Education</dt><dd><a href="mailto:{{ site.email_education }}">{{ site.email_education }}</a></dd>
+      </dl>
+    </div>
+  </div>
+  <h2 style="margin-top:3rem">Our clinics</h2>
+  <div class="stack">
+    {% for c in clinics %}
+    <div class="clinic-card">
+      <div class="clinic-card__media">{{ m.img(c.photo, c.photo_alt, 'card') }}</div>
+      <div class="clinic-card__body">
+        <h3><a href="{{ rel('/qei-clinics/' ~ c.slug ~ '/') }}">{{ c.name }}</a></h3>
+        <address>{{ c.address_line1 }}<br>{{ c.suburb }} {{ c.state }} {{ c.postcode }}{% if c.postal %}<br><span class="small muted">Postal: {{ c.postal }}</span>{% endif %}</address>
+        <p>{{ m.icon('clock') }} {{ c.hours }}</p>
+        <div class="cluster"><a class="btn btn--secondary btn--sm" href="{{ c.map_url }}" rel="noopener">{{ m.icon('map-pin') }} Open in Google Maps</a><a class="btn btn--secondary btn--sm" href="{{ rel('/qei-clinics/' ~ c.slug ~ '/') }}">Parking and transport</a></div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="layout" style="margin-top:3rem">
+    <div class="prose">{{ doc.body_md | md | safe }}{{ m.faq(doc.faq) }}</div>
+    <aside>{{ m.sidebar(['urgent','referrer','donate']) }}</aside>
+  </div>
+</div>
+{% endblock %}

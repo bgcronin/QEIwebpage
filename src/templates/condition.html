@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header page-header--profile">
+  <div class="container">
+    <div class="page-header__portrait" style="background:#fff;padding:1.5rem">{{ m.img(condition.icon, '', 'icon', eager=True) }}</div>
+    <div>
+      {{ m.breadcrumbs(page.breadcrumbs) }}
+      <h1>{{ condition.title }}</h1>
+      <p class="lead">{{ condition.summary }}</p>
+    </div>
+  </div>
+</div>
+<div class="container section">
+  <div class="layout">
+    <div>
+      {% if condition.at_a_glance %}
+      <div class="panel panel--tint panel--summary">
+        <h2>At a glance</h2>
+        <ul>{% for p in condition.at_a_glance %}<li>{{ p | md | safe | replace('<p>', '') | replace('</p>', '') }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+      {% if condition.urgent %}
+      <div class="alert alert--urgent">{{ m.icon('alert') }}<div><strong>Seek urgent care if you notice:</strong><ul style="margin:.4rem 0 0">{% for u in condition.urgent %}<li>{{ u }}</li>{% endfor %}</ul><p class="small" style="margin:.5rem 0 0">Call us on <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a> during clinic hours, or go to your nearest emergency department. See <a href="{{ rel('/patient-info/emergency-eye-care/') }}">emergency eye care</a>.</p></div></div>
+      {% endif %}
+      <div class="prose">{{ condition.body_md | md | safe }}</div>
+      {{ m.faq(condition.faq) }}
+      {% if condition.cta == 'dry-eye-clinic' %}
+      <div style="margin-top:2rem">{{ m.cta_band('Optometrist-led Dry Eye Clinic', 'Fast access to dedicated dry eye assessment and advanced treatments. No referral needed.', {'label': 'About the Dry Eye Clinic', 'url': '/dry-eye-clinic/'}, {'label': 'Call ' ~ site.phone, 'url': 'tel:' ~ site.phone_intl}) }}</div>
+      {% else %}
+      <div style="margin-top:2rem">{{ m.cta_band('Concerned about ' ~ condition.title | lower ~ '?', 'Ask your GP or optometrist for a referral to QEI, or call our team to discuss an appointment with a specialist.', {'label': 'Book an appointment', 'url': '/patient-info/book-an-appointment/'}, {'label': 'Call ' ~ site.phone, 'url': 'tel:' ~ site.phone_intl}) }}</div>
+      {% endif %}
+      {{ m.reviewed(condition) }}
+    </div>
+    <aside aria-label="Specialists and appointments">
+      {% if condition.doctor_items %}
+      <div class="side-card">
+        <h2>QEI specialists for {{ condition.title | lower }}</h2>
+        <ul>{% for d in condition.doctor_items %}<li><a href="{{ rel(d.url) }}">{{ d.name }}</a><br><span class="small muted">{{ d.role }}</span></li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+      {% if condition.cta == 'dry-eye-clinic' %}{{ m.sidebar(['dryeye']) }}{% else %}{{ m.sidebar(['book']) }}{% endif %}
+      {{ m.sidebar(['urgent', 'conditions']) }}
+    </aside>
+  </div>
+</div>
+{% endblock %}

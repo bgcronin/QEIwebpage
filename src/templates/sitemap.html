@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>Sitemap</h1>
+    <p class="lead">Every page on this website, grouped by section.</p>
+  </div>
+</div>
+<div class="container section">
+  {% set sections = {} %}
+  {% for p in all_pages if not p.noindex %}{% set _ = sections.setdefault(p.section or 'Other', []).append(p) %}{% endfor %}
+  <div class="grid grid--3">
+    {% for name, items in sections.items() | sort %}
+    <div>
+      <h2 style="font-size:1.15rem;margin-top:0">{{ name }}</h2>
+      <ul class="small">{% for p in items | sort(attribute='title') %}<li><a href="{{ rel(p.url) }}">{{ p.title }}</a></li>{% endfor %}</ul>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

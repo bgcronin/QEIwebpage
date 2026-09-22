@@ -1,4 +1,4 @@
-name: Deploy reviewed QEI preview to GitHub Pages
+name: Deploy reviewed QEI website preview to GitHub Pages
 
 on:
   workflow_dispatch:
@@ -22,10 +22,29 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
-      - name: Confirm generated site exists
-        run: test -f site/index.html
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build the website
+        # The 404 page needs the hosting path prefix. Project sites on GitHub Pages are served
+        # from /<repository-name>/; a custom domain serves from /.
+        run: |
+          BASE_PATH="/"
+          if [ ! -f web/CNAME ] && [ ! -f content/CNAME ]; then
+            BASE_PATH="/${GITHUB_REPOSITORY#*/}/"
+          fi
+          python src/build.py --base-path "$BASE_PATH"
+          python src/check_links.py --strict
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -33,7 +52,7 @@ jobs:
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: web
 
       - name: Deploy to GitHub Pages
         id: deployment

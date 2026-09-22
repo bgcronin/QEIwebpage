@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <span class="eyebrow">Patient story</span>
+    <h1>{{ item.title }}</h1>
+    {% if item.subtitle %}<p class="lead">{{ item.subtitle }}</p>{% endif %}
+  </div>
+</div>
+<div class="container section">
+  <div class="layout">
+    <article>
+      {% if item.hero %}<div class="article-hero">{{ m.img(item.hero, item.hero_alt or '', 'hero', eager=True) }}</div>{% endif %}
+      <div class="prose">{{ clean_html(item.body_html) | safe }}</div>
+      <div style="margin-top:2rem">{{ m.cta_band('Please support our sight-saving work', 'Your donation helps us recruit the best researchers, purchase the latest equipment, advance clinical trials and train tomorrow\'s eye specialists.', {'label': 'Make a donation', 'url': '/qei-foundation/donate/'}, {'label': 'More patient stories', 'url': '/qei-foundation/patient-stories/'}, coral=True) }}</div>
+      <nav class="pager" aria-label="More stories">
+        {% if newer %}<a href="{{ rel(newer.url) }}">{{ m.icon('arrow-left') }} {{ newer.title | truncate(50) }}</a>{% else %}<span></span>{% endif %}
+        {% if older %}<a href="{{ rel(older.url) }}">{{ older.title | truncate(50) }} {{ m.icon('arrow-right') }}</a>{% endif %}
+      </nav>
+    </article>
+    <aside>{{ m.sidebar(['donate', 'conditions']) }}</aside>
+  </div>
+</div>
+{% endblock %}

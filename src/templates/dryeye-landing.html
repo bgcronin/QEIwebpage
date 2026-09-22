@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<section class="hero hero--navy">
+  <div class="container hero__inner">
+    <div>
+      {{ m.breadcrumbs(page.breadcrumbs) }}
+      <span class="eyebrow">{{ doc.eyebrow }}</span>
+      <h1>{{ doc.title }}</h1>
+      <p class="lead">{{ doc.summary }}</p>
+      <div class="hero__actions">
+        <a class="btn btn--light btn--lg" href="tel:{{ site.phone_intl }}">{{ m.icon('phone') }} Call {{ site.phone }}</a>
+        <a class="btn btn--ghost-light btn--lg" href="{{ site.external_forms.send_enquiry }}" rel="noopener">Send an enquiry</a>
+      </div>
+      <ul class="hero__proof">{% for p in doc.proof %}<li>{{ m.icon('check-circle') }} {{ p }}</li>{% endfor %}</ul>
+    </div>
+    <div class="hero__media">{{ m.img(doc.hero_image, doc.hero_alt, 'hero', eager=True) }}</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="stats-wrap">
+      <ul class="stats">{% for s in doc.stats %}<li><strong>{{ s.value }}</strong><span>{{ s.label }}</span></li>{% endfor %}</ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" style="padding-top:2rem">
+  <div class="container split split--wide">
+    <div class="prose">{{ doc.body_md | md | safe }}</div>
+    <div>
+      <div class="panel panel--tint">
+        <h2>Is the Dry Eye Clinic right for you?</h2>
+        <p>Book an assessment if you regularly notice:</p>
+        <ul class="check-list">{% for s in doc.symptoms %}<li>{{ s }}</li>{% endfor %}</ul>
+        <p class="small muted">Sudden vision loss, severe pain or a red eye after injury or contact lens wear needs same-day care: see <a href="{{ rel('/patient-info/emergency-eye-care/') }}">emergency eye care</a>.</p>
+      </div>
+      <div class="panel panel--navy">
+        <h2>Book directly, no referral needed</h2>
+        <p>Call <a href="tel:{{ site.phone_intl }}"><strong>{{ site.phone }}</strong></a> and ask for the Dry Eye Clinic, or <a href="{{ site.external_forms.send_enquiry }}" rel="noopener">send an enquiry</a>. Appointments are readily available.</p>
+        <p class="small">Already under the care of one of our ophthalmologists? They can refer you internally at your next visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why optometrist-led</span>
+      <h2>{{ doc.why.title }}</h2>
+      <p>{{ doc.why.text }}</p>
+    </div>
+    <div class="grid grid--3">
+      {% for w in doc.why.points %}
+      <div class="card card--tint card--flat"><div class="card__body"><h3 style="display:flex;gap:.5rem;align-items:center">{{ m.icon(w.icon) }} {{ w.title }}</h3><p>{{ w.text }}</p></div></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Technology and treatments</span>
+      <h2>One of the best equipped dry eye clinics in Australia</h2>
+      <p>Treatment is matched to the cause of your dry eye. Most people benefit from a combination of in-clinic procedures and a simple home routine.</p>
+    </div>
+    <div class="treatment-list">
+      {% for t in treatments %}
+      <article class="card">
+        <div class="card__body">
+          {% if t.badge %}<span class="badge">{{ t.badge }}</span>{% endif %}
+          <h3><a href="{{ rel(t.url) }}">{{ t.short_title or t.title }}</a></h3>
+          <p>{{ t.summary }}</p>
+          <span class="card__cta">How it works {{ m.icon('arrow-right') }}</span>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <p style="margin-top:1.5rem"><a class="btn btn--secondary" href="{{ rel('/dry-eye-clinic/treatments/') }}">Compare all treatments {{ m.icon('arrow-right') }}</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">Your first visit</span>
+      <h2>What to expect</h2>
+      <ol class="steps">{% for s in doc.steps %}<li><h3>{{ s.title }}</h3><p>{{ s.text }}</p></li>{% endfor %}</ol>
+      <a class="btn btn--secondary" href="{{ rel('/dry-eye-clinic/your-appointment/') }}">More about your appointment</a>
+    </div>
+    <div>
+      {{ m.faq(doc.faq, 'Common questions') }}
+      <p><a href="{{ rel('/dry-eye-clinic/faq/') }}">More dry eye questions answered {{ m.icon('arrow-right') }}</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    {{ m.cta_band('Ready to feel comfortable again?', 'Call the Queensland Eye Institute and ask for the Dry Eye Clinic. No referral is needed and appointments are readily available.', {'label': 'Call ' ~ site.phone, 'url': 'tel:' ~ site.phone_intl}, {'label': 'Send an enquiry', 'url': site.external_forms.send_enquiry}) }}
+  </div>
+</section>
+{% endblock %}

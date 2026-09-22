@@ -1,0 +1,239 @@
+{# ---------- Icons (Feather-style, stroke) ---------- #}
+{% set ICONS = {
+  'phone': '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>',
+  'calendar': '<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>',
+  'check': '<polyline points="20 6 9 17 4 12"/>',
+  'check-circle': '<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>',
+  'arrow-right': '<line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>',
+  'arrow-left': '<line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>',
+  'alert': '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+  'search': '<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
+  'menu': '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>',
+  'chevron-down': '<polyline points="6 9 12 15 18 9"/>',
+  'map-pin': '<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>',
+  'clock': '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+  'info': '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>',
+  'eye': '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>',
+  'heart': '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>',
+  'external': '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>',
+  'mail': '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>',
+  'accessibility': '<circle cx="12" cy="4" r="2"/><path d="M5 8h14"/><path d="M12 8v6"/><path d="M8 22l4-8 4 8"/>',
+  'zap': '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+  'users': '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  'user': '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+  'shield': '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  'clipboard': '<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>',
+  'award': '<circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>',
+  'book': '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',
+  'activity': '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+  'sun': '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>',
+  'printer': '<polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>',
+  'x': '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>',
+  'home': '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+  'file-text': '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>',
+  'star': '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+  'droplet': '<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>',
+  'dollar': '<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
+  'car': '<path d="M5 17h14v-5l-2-5H7l-2 5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/>',
+  'message': '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+  'globe': '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+  'microscope': '<path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/>',
+  'layers': '<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>',
+  'thermometer': '<path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>',
+  'refresh': '<polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>',
+  'smile': '<circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>',
+  'gift': '<polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>'
+} %}
+{% macro icon(name, class='') -%}
+<svg class="icon{{ ' ' ~ class if class }}" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{{ ICONS.get(name, ICONS['info']) | safe }}</svg>
+{%- endmacro %}
+
+{% set SOCIAL = {
+  'facebook': ['0 0 320 512', 'M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z'],
+  'linkedin': ['0 0 448 512', 'M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'],
+  'instagram': ['0 0 448 512', 'M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z'],
+  'x': ['0 0 512 512', 'M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z'],
+  'youtube': ['0 0 576 512', 'M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z']
+} %}
+{% macro social_icon(name) -%}
+{% set s = SOCIAL.get(name) %}
+{% if s %}<svg viewBox="{{ s[0] }}" aria-hidden="true" focusable="false"><path d="{{ s[1] }}"/></svg>{% endif %}
+{%- endmacro %}
+
+{# ---------- Images ---------- #}
+{% macro img(ref, alt, kind='card', class='', eager=False, sizes='') -%}
+{% set info = media_info(ref, kind) if ref else None %}
+{% if info %}<img src="{{ rel(info.url) }}" alt="{{ alt }}"{% if info.width %} width="{{ info.width }}" height="{{ info.height }}"{% endif %}{% if class %} class="{{ class }}"{% endif %}{% if eager %} fetchpriority="high"{% else %} loading="lazy" decoding="async"{% endif %}>{% endif %}
+{%- endmacro %}
+
+{# ---------- Cards ---------- #}
+{% macro card(title, url, text='', image=None, image_alt='', badge='', meta='', cta='', kind='card', icon_image=None, tint=False) -%}
+<article class="card{% if tint %} card--tint{% endif %}">
+  {% if image %}<div class="card__media">{{ img(image, image_alt, kind) }}</div>
+  {% elif icon_image %}<div class="card__media card__media--icon">{{ img(icon_image, '', 'icon') }}</div>{% endif %}
+  <div class="card__body">
+    {% if badge %}<span class="badge">{{ badge }}</span>{% endif %}
+    <h3><a href="{{ rel(url) }}">{{ title }}</a></h3>
+    {% if meta %}<div class="card__meta">{{ meta | safe }}</div>{% endif %}
+    {% if text %}<p>{{ text }}</p>{% endif %}
+    {% if cta %}<span class="card__cta">{{ cta }} {{ icon('arrow-right') }}</span>{% endif %}
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro doctor_card(d) -%}
+<article class="card profile-card card--person">
+  <div class="card__media">{{ img(d.photo, d.photo_alt or ('Portrait of ' ~ d.name), 'portrait') }}</div>
+  <div class="card__body">
+    <h3><a href="{{ rel(d.url) }}">{{ d.name }}</a></h3>
+    <p class="profile-card__role">{{ d.role }}</p>
+    {% if d.qualifications %}<p class="profile-card__quals">{{ d.qualifications }}</p>{% endif %}
+    <span class="card__cta">View profile {{ icon('arrow-right') }}</span>
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro person_card(p) -%}
+<article class="card profile-card card--person">
+  <div class="card__media">{{ img(p.photo, p.photo_alt or ('Portrait of ' ~ p.name), 'portrait') }}</div>
+  <div class="card__body">
+    <h3><a href="{{ rel(p.url) }}">{{ p.name }}</a></h3>
+    {% if p.role %}<p class="profile-card__role">{{ p.role }}</p>{% endif %}
+    {% if p.summary %}<p>{{ p.summary | truncate(140) }}</p>{% endif %}
+    <span class="card__cta">Read more {{ icon('arrow-right') }}</span>
+  </div>
+</article>
+{%- endmacro %}
+
+{% macro news_card(n, show_cat=True, kind='card') -%}
+<article class="card">
+  {% if n.hero %}<div class="card__media">{{ img(n.hero, n.hero_alt or '', kind) }}</div>{% endif %}
+  <div class="card__body">
+    <div class="card__meta">{% if n.date %}<time datetime="{{ n.date }}">{{ fmt_date(n.date) }}</time>{% endif %}{% if show_cat and n.categories %}{% for c in n.categories %}<span class="badge badge--outline">{{ c }}</span>{% endfor %}{% endif %}</div>
+    <h3><a href="{{ rel(n.url) }}">{{ n.title }}</a></h3>
+    {% if n.excerpt %}<p>{{ n.excerpt | truncate(150) }}</p>{% endif %}
+  </div>
+</article>
+{%- endmacro %}
+
+{# ---------- FAQ ---------- #}
+{% macro faq(items, heading='Frequently asked questions', id='faq') -%}
+{% if items %}
+<section class="faq-section" aria-labelledby="{{ id }}-heading">
+  <h2 id="{{ id }}-heading">{{ heading }}</h2>
+  <div class="faq">
+    {% for q in items %}
+    <details{% if loop.first %} open{% endif %}>
+      <summary>{{ q.q }}</summary>
+      <div>{{ q.a | md | safe }}</div>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+{%- endmacro %}
+
+{# ---------- CTA band ---------- #}
+{% macro cta_band(title, text='', primary=None, secondary=None, coral=False) -%}
+<div class="cta-band{% if coral %} cta-band--coral{% endif %}">
+  <div>
+    <h2>{{ title }}</h2>
+    {% if text %}<p>{{ text }}</p>{% endif %}
+  </div>
+  <div class="cta-band__actions">
+    {% if primary %}<a class="btn {{ 'btn--navy' if coral else 'btn--light' }}" href="{{ rel(primary.url) }}"{% if primary.url.startswith('http') %} rel="noopener"{% endif %}>{{ primary.label }}</a>{% endif %}
+    {% if secondary %}<a class="btn {{ 'btn--secondary' if coral else 'btn--ghost-light' }}" href="{{ rel(secondary.url) }}"{% if secondary.url.startswith('http') %} rel="noopener"{% endif %}>{{ secondary.label }}</a>{% endif %}
+  </div>
+</div>
+{%- endmacro %}
+
+{# ---------- Sidebar cards ---------- #}
+{% macro sidebar(keys, doctor=None) -%}
+{% for key in keys %}
+  {% if key == 'book' %}
+  <div class="side-card side-card--navy">
+    <h2>{% if doctor %}Make an appointment with {{ doctor.name }}{% else %}Make an appointment{% endif %}</h2>
+    <p>Call our reception team, Monday to Friday, or send an enquiry online and we will be in touch.</p>
+    <a class="btn btn--light" href="tel:{{ site.phone_intl }}">{{ icon('phone') }} {{ site.phone }}</a>
+    <a class="btn btn--ghost-light" href="{{ site.external_forms.send_enquiry }}" rel="noopener">Send an enquiry</a>
+    <p class="small" style="margin-top:.75rem">Bring a referral from your GP or optometrist to claim your Medicare rebate. <a href="{{ rel('/patient-info/fees-medicare-and-referrals/') }}">About referrals and fees</a></p>
+  </div>
+  {% elif key == 'dryeye' %}
+  <div class="side-card side-card--navy">
+    <span class="badge badge--green">No referral needed</span>
+    <h2 style="margin-top:.6rem">Optometrist-led Dry Eye Clinic</h2>
+    <p>Fast access to a dedicated dry eye service with advanced treatments including IPL, QMR and low level light therapy.</p>
+    <a class="btn btn--light" href="{{ rel('/dry-eye-clinic/') }}">About the Dry Eye Clinic</a>
+    <a class="btn btn--ghost-light" href="tel:{{ site.phone_intl }}">{{ icon('phone') }} Call {{ site.phone }}</a>
+  </div>
+  {% elif key == 'contact' %}
+  <div class="side-card">
+    <h2>Contact QEI</h2>
+    <p><strong>Phone:</strong> <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a><br><strong>Email:</strong> <a href="mailto:{{ site.email_reception }}">{{ site.email_reception }}</a></p>
+    {% for c in site.clinics %}<p><strong>{{ c.name }}</strong><br>{{ c.address_line1 }}, {{ c.suburb }} {{ c.state }} {{ c.postcode }}<br><span class="small muted">{{ c.hours }}</span></p>{% endfor %}
+    <a class="btn btn--secondary btn--sm" href="{{ rel('/qei-clinics/') }}">Directions and parking</a>
+  </div>
+  {% elif key == 'referrer' %}
+  <div class="side-card">
+    <h2>For GPs and optometrists</h2>
+    <p>Refer online, by email or by fax, and see our guide to who treats what.</p>
+    <ul>
+      <li><a href="{{ rel('/referrers/') }}">How to refer a patient</a></li>
+      <li><a href="{{ rel('/referrers/urgent-referrals/') }}">Urgent referrals</a></li>
+      <li><a href="{{ rel('/referrers/subspecialty-guide/') }}">Subspecialty guide</a></li>
+    </ul>
+  </div>
+  {% elif key == 'donate' %}
+  <div class="side-card">
+    <h2>Support sight-saving research</h2>
+    <p>QEI receives no recurrent government funding. Donations over $2 are tax deductible.</p>
+    <a class="btn btn--donate btn--sm" href="{{ rel('/qei-foundation/donate/') }}">{{ icon('heart') }} Donate</a>
+  </div>
+  {% elif key == 'urgent' %}
+  <div class="side-card">
+    <h2>Is it urgent?</h2>
+    <p>Sudden loss of vision, severe eye pain, flashes with a shower of new floaters or a chemical splash need same-day care.</p>
+    <a href="{{ rel('/patient-info/emergency-eye-care/') }}">Emergency eye care advice</a>
+  </div>
+  {% elif key == 'conditions' %}
+  <div class="side-card">
+    <h2>Eye conditions</h2>
+    <ul>{% for c in conditions %}<li><a href="{{ rel(c.url) }}">{{ c.title }}</a></li>{% endfor %}</ul>
+  </div>
+  {% elif key == 'treatments' %}
+  <div class="side-card">
+    <h2>Dry Eye Clinic treatments</h2>
+    <ul>{% for t in treatments %}<li><a href="{{ rel(t.url) }}"{% if t.url == page.url %} aria-current="page"{% endif %}>{{ t.short_title or t.title }}</a></li>{% endfor %}</ul>
+  </div>
+  {% elif key == 'prepare' %}
+  <div class="side-card">
+    <h2>Before your visit</h2>
+    <ul>
+      <li><a href="{{ rel('/patient-info/preparing-for-your-visit/') }}">Preparing for your visit</a></li>
+      <li><a href="{{ rel('/patient-info/fees-medicare-and-referrals/') }}">Fees, Medicare and referrals</a></li>
+      <li><a href="{{ rel('/qei-clinics/') }}">Clinics, parking and transport</a></li>
+      <li><a href="{{ rel('/patient-info/forms/') }}">Patient forms</a></li>
+    </ul>
+  </div>
+  {% endif %}
+{% endfor %}
+{%- endmacro %}
+
+{% macro breadcrumbs(items) -%}
+{% if items and items|length > 1 %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    {% for b in items %}
+    <li>{% if loop.last %}<span aria-current="page">{{ b.label }}</span>{% else %}<a href="{{ rel(b.url) }}">{{ b.label }}</a>{% endif %}</li>
+    {% endfor %}
+  </ol>
+</nav>
+{% endif %}
+{%- endmacro %}
+
+{% macro reviewed(item) -%}
+<p class="small muted bordered-top">
+  {% if item.reviewed_by %}Clinically reviewed by {{ item.reviewed_by }}{% if item.reviewed_on %} on {{ fmt_date(item.reviewed_on) }}{% endif %}. {% endif %}
+  This information is general in nature and does not replace advice from your own doctor or optometrist. If you are worried about your eyes, please call us on <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a>.
+</p>
+{%- endmacro %}

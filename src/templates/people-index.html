@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>{{ page.title }}</h1>
+    <p class="lead">{{ page.description }}</p>
+  </div>
+</div>
+<div class="container section">
+  {% if show_all %}
+  <ul class="pill-list">{% for g in groups %}<li><a href="#{{ g.slug }}">{{ g.title }}</a></li>{% endfor %}<li><a href="{{ rel('/ophthalmologists/') }}">Ophthalmologists</a></li><li><a href="{{ rel('/research/researchers/') }}">Researchers</a></li></ul>
+  {% endif %}
+  {% for g in groups %}
+  <section id="{{ g.slug }}" style="margin-top:{{ '2rem' if not loop.first or show_all else '0' }}">
+    {% if show_all %}<h2>{{ g.title }}</h2><p class="lead">{{ g.intro }}</p>{% endif %}
+    <div class="profile-grid">{% for p in g.people %}{{ m.person_card(p) }}{% endfor %}</div>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

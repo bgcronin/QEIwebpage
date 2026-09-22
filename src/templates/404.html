@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    <h1>Page not found</h1>
+    <p class="lead">Sorry, we couldn't find that page. It may have moved when the website was redesigned.</p>
+  </div>
+</div>
+<div class="container section">
+  <div class="grid grid--3">
+    {{ m.card('Book an appointment', '/patient-info/book-an-appointment/', 'Phone, online enquiry and referral information.', None, '', '', '', 'Patients') }}
+    {{ m.card('Our ophthalmologists', '/ophthalmologists/', 'Find a specialist by subspecialty.', None, '', '', '', 'Browse') }}
+    {{ m.card('Eye conditions', '/eye-conditions/', 'Guides to the conditions we treat.', None, '', '', '', 'Browse') }}
+  </div>
+  <p style="margin-top:2rem"><a class="btn btn--primary" href="{{ rel('/search/') }}">{{ m.icon('search') }} Search the website</a> <a class="btn btn--secondary" href="{{ rel('/') }}">Go to the home page</a></p>
+</div>
+{% endblock %}

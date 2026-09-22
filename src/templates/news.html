@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <div class="meta">{% if item.date %}<time datetime="{{ item.date }}">{{ fmt_date(item.date) }}</time>{% endif %}{% for c in item.categories %}<a class="badge badge--outline" href="{{ rel('/news/category/' ~ category_slug(c) ~ '/') }}">{{ c }}</a>{% endfor %}</div>
+    <h1>{{ item.title }}</h1>
+    {% if item.excerpt %}<p class="lead">{{ item.excerpt }}</p>{% endif %}
+  </div>
+</div>
+<div class="container section">
+  <div class="layout">
+    <article>
+      {% if item.hero %}<div class="article-hero">{{ m.img(item.hero, item.hero_alt or '', 'hero', eager=True) }}</div>{% endif %}
+      <div class="prose">{{ clean_html(item.body_html) | safe }}</div>
+      <nav class="pager" aria-label="More news">
+        {% if newer %}<a href="{{ rel(newer.url) }}">{{ m.icon('arrow-left') }} {{ newer.title | truncate(50) }}</a>{% else %}<span></span>{% endif %}
+        {% if older %}<a href="{{ rel(older.url) }}">{{ older.title | truncate(50) }} {{ m.icon('arrow-right') }}</a>{% endif %}
+      </nav>
+    </article>
+    <aside aria-label="Related">
+      {% if related %}
+      <div class="side-card"><h2>Related news</h2><ul>{% for r in related %}<li><a href="{{ rel(r.url) }}">{{ r.title }}</a></li>{% endfor %}</ul></div>
+      {% endif %}
+      {{ m.sidebar(['book', 'donate']) }}
+    </aside>
+  </div>
+</div>
+{% endblock %}

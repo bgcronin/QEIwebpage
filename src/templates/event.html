@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <span class="eyebrow">Event</span>
+    <h1>{{ item.title }}</h1>
+    {% if item.date %}<p class="lead"><time datetime="{{ item.date }}">{{ fmt_date(item.date) }}</time>{% if item.venue %} · {{ item.venue }}{% endif %}</p>{% endif %}
+  </div>
+</div>
+<div class="container section">
+  <div class="layout">
+    <article>
+      {% if item.hero %}<div class="article-hero">{{ m.img(item.hero, item.hero_alt or '', 'hero', eager=True) }}</div>{% endif %}
+      <div class="prose">{{ clean_html(item.body_html) | safe }}</div>
+      {% if item.details_html %}
+      <div class="panel panel--tint"><h2>Event details</h2><div class="prose">{{ clean_html(item.details_html) | safe }}</div></div>
+      {% endif %}
+      <p><a href="{{ rel('/events/') }}">{{ m.icon('arrow-left') }} All events</a></p>
+    </article>
+    <aside>
+      <div class="side-card"><h2>Education enquiries</h2><p>Email <a href="mailto:{{ site.email_education }}">{{ site.email_education }}</a> or subscribe to our <a href="{{ site.external_forms.optometry_education_list }}" rel="noopener">optometry education mailing list</a>.</p></div>
+      {{ m.sidebar(['referrer']) }}
+    </aside>
+  </div>
+</div>
+{% endblock %}

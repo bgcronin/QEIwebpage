@@ -1,0 +1,68 @@
+name: Build and check QEI website
+
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "content/**"
+      - "src/**"
+      - "web/**"
+      - "tests/**"
+      - "requirements.txt"
+      - ".github/workflows/build-site.yml"
+  pull_request:
+    paths:
+      - "content/**"
+      - "src/**"
+      - "web/**"
+      - "tests/**"
+      - "requirements.txt"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Build the website
+        run: python src/build.py
+
+      - name: Check internal links, images and anchors
+        run: python src/check_links.py --strict
+
+      - name: Confirm the committed build is current
+        run: |
+          # Image encoding can differ slightly between platforms, so media files are excluded
+          # from this comparison; HTML, CSS, JS, JSON and XML must match the committed build.
+          if [ -n "$(git status --porcelain -- web ':!web/media')" ]; then
+            echo "web/ is out of date. Run: python src/build.py, then commit the result." >&2
+            git status --short -- web ':!web/media' | head -50
+            exit 1
+          fi
+
+      - name: Upload built site
+        uses: actions/upload-artifact@v4
+        with:
+          name: qei-website-${{ github.run_number }}
+          path: web
+          retention-days: 14

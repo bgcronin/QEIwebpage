@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <span class="eyebrow">Dry Eye Clinic treatment</span>
+    <h1>{{ doc.title }}</h1>
+    <p class="lead">{{ doc.summary }}</p>
+  </div>
+</div>
+<div class="container section">
+  <div class="layout">
+    <div>
+      {% if doc.facts %}
+      <div class="panel panel--tint panel--summary">
+        <h2>At a glance</h2>
+        <dl class="def-list">{% for k, v in doc.facts.items() %}<dt>{{ k }}</dt><dd>{{ v }}</dd>{% endfor %}</dl>
+      </div>
+      {% endif %}
+      <div class="prose">{{ doc.body_md | md | safe }}</div>
+      {{ m.faq(doc.faq, 'Questions about ' ~ (doc.short_title or doc.title)) }}
+      {{ m.reviewed(doc) }}
+      <h2>Other Dry Eye Clinic treatments</h2>
+      <div class="grid grid--3">
+        {% for t in treatments if t.url != page.url %}{{ m.card(t.short_title or t.title, t.url, t.summary | truncate(110), None, '', '', '', 'How it works') }}{% endfor %}
+      </div>
+      <div style="margin-top:2.5rem">{{ m.cta_band('Book a dry eye assessment', 'No referral needed. Call and ask for the Dry Eye Clinic.', {'label': 'Call ' ~ site.phone, 'url': 'tel:' ~ site.phone_intl}, {'label': 'About the Dry Eye Clinic', 'url': '/dry-eye-clinic/'}) }}</div>
+    </div>
+    <aside aria-label="Related information">{{ m.sidebar(['dryeye', 'treatments']) }}</aside>
+  </div>
+</div>
+{% endblock %}

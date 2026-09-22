@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    {% if doc.eyebrow %}<span class="eyebrow">{{ doc.eyebrow }}</span>{% endif %}
+    <h1>{{ doc.title }}</h1>
+    {% if doc.summary %}<p class="lead">{{ doc.summary }}</p>{% endif %}
+    {% if doc.actions %}<div class="hero__actions" style="margin-top:1rem">{% for a in doc.actions %}<a class="btn {{ a.style or 'btn--primary' }}" href="{{ rel(a.url) }}"{% if a.url.startswith('http') %} rel="noopener"{% endif %}>{{ a.label }}</a>{% endfor %}</div>{% endif %}
+  </div>
+</div>
+<div class="container section">
+  <div class="layout{% if not doc.sidebar %} layout--single{% endif %}">
+    <div>
+      {% if doc.urgent %}
+      <div class="alert alert--urgent">{{ m.icon('alert') }}<div><strong>Urgent?</strong> {{ doc.urgent | md | safe }}</div></div>
+      {% endif %}
+      {% if doc.hero_image %}<div class="article-hero">{{ m.img(doc.hero_image, doc.hero_alt or '', 'hero', eager=True) }}</div>{% endif %}
+      <div class="prose">{% if doc.raw_html %}{{ clean_html(doc.body_md) | safe }}{% else %}{{ doc.body_md | md | safe }}{% endif %}</div>
+      {% if doc.cards %}
+      <div class="grid grid--2" style="margin-top:2rem">
+        {% for c in doc.cards %}{{ m.card(c.title, c.url, c.text, c.image, c.image_alt or '', c.badge or '', '', c.cta or 'Read more', icon_image=c.icon) }}{% endfor %}
+      </div>
+      {% endif %}
+      {{ m.faq(doc.faq) }}
+      {% if doc.cta %}<div style="margin-top:2.5rem">{{ m.cta_band(doc.cta.title, doc.cta.text, doc.cta.primary, doc.cta.secondary, doc.cta.coral) }}</div>{% endif %}
+      {% if doc.reviewed_by is defined or doc.disclaimer %}{{ m.reviewed(doc) }}{% endif %}
+    </div>
+    {% if doc.sidebar %}<aside aria-label="Related information">{{ m.sidebar(doc.sidebar) }}</aside>{% endif %}
+  </div>
+</div>
+{% endblock %}

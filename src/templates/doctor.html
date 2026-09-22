@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header page-header--profile">
+  <div class="container">
+    <div class="page-header__portrait">{{ m.img(doctor.photo, doctor.photo_alt, 'portrait', eager=True) }}</div>
+    <div>
+      {{ m.breadcrumbs(page.breadcrumbs) }}
+      <h1>{{ doctor.name }}</h1>
+      <p class="page-header__role">{{ doctor.role }}</p>
+      {% if doctor.qualifications %}<p class="page-header__quals">{{ doctor.qualifications }}</p>{% endif %}
+      <ul class="pill-list" style="margin-top:.75rem">{% for s in doctor.subspecialties %}<li><a href="{{ rel('/ophthalmologists/') }}#{{ s }}">{{ s | replace('-', ' ') | capitalize }}</a></li>{% endfor %}</ul>
+    </div>
+  </div>
+</div>
+<div class="container section">
+  <div class="layout">
+    <div>
+      <div class="prose">
+        <h2>About {{ doctor.name }}</h2>
+        {{ clean_html(doctor.bio_html) | safe }}
+        {% if doctor.treats %}
+        <h2>Conditions and procedures</h2>
+        <ul class="check-list">{% for t in doctor.treats %}<li>{{ t }}</li>{% endfor %}</ul>
+        {% endif %}
+        {% if doctor.conditions %}
+        <h2>Related eye conditions</h2>
+        <ul class="pill-list">{% for c in doctor.conditions %}<li><a href="{{ rel(c.url) }}">{{ c.title }}</a></li>{% endfor %}</ul>
+        {% endif %}
+        {% if doctor.notes_html %}
+        <div class="alert alert--info">{{ m.icon('info') }}<div><strong>Referral information</strong>{{ clean_html(doctor.notes_html) | safe }}</div></div>
+        {% endif %}
+      </div>
+      {% if doctor.related_news %}
+      <h2>News featuring {{ doctor.name }}</h2>
+      <div class="grid grid--3">{% for n in doctor.related_news[:3] %}{{ m.news_card(n, False, 'thumb') }}{% endfor %}</div>
+      {% endif %}
+      <p class="small muted bordered-top" style="margin-top:2rem">All QEI ophthalmologists are Fellows of the Royal Australian and New Zealand College of Ophthalmologists (FRANZCO) and registered with the Australian Health Practitioner Regulation Agency (AHPRA).</p>
+    </div>
+    <aside aria-label="Appointments and referrals">{{ m.sidebar(['book', 'referrer', 'contact'], doctor) }}</aside>
+  </div>
+</div>
+{% endblock %}

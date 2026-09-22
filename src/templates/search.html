@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>Search</h1>
+    <p class="lead">Search doctors, eye conditions, treatments, patient information and news.</p>
+  </div>
+</div>
+<div class="container section" data-search-page data-search-index="{{ rel('/search-index.json') }}">
+  <form class="search-form" role="search" action="{{ rel('/search/') }}" method="get">
+    <label class="visually-hidden" for="site-search">Search terms</label>
+    <input id="site-search" type="search" name="q" placeholder="For example: cataract, IPL, Dr Cronin" autocomplete="off" autofocus>
+    <button class="btn btn--primary" type="submit">{{ m.icon('search') }} Search</button>
+  </form>
+  <p class="muted" data-search-status aria-live="polite" style="margin-top:1rem">Type a word or phrase to search.</p>
+  <ul class="search-results" data-search-results></ul>
+  <noscript><p>Search needs JavaScript. Please use the <a href="{{ rel('/sitemap/') }}">sitemap</a> or call {{ site.phone }}.</p></noscript>
+</div>
+{% endblock %}

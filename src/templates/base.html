@@ -1,0 +1,147 @@
+{% import "macros.html" as m with context %}
+{% set title_full = (page.title ~ ' | ' ~ site.name) if page.url != '/' else (site.name ~ ' | ' ~ site.tagline) %}
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){try{var p=JSON.parse(localStorage.getItem('qei-prefs')||'{}'),r=document.documentElement;if(p.textsize>1)r.setAttribute('data-textsize',p.textsize);if(p.contrast==='high')r.setAttribute('data-contrast','high');if(p.theme==='light'||p.theme==='dark')r.setAttribute('data-theme',p.theme);}catch(e){}})();</script>
+<title>{{ title_full }}</title>
+<meta name="description" content="{{ page.description or site.description }}">
+{% if page.noindex or not site.indexable %}<meta name="robots" content="noindex,nofollow">{% else %}<meta name="robots" content="index,follow,max-image-preview:large">{% endif %}
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:locale" content="{{ site.locale }}">
+<meta property="og:type" content="{{ 'article' if page.template in ('news.html','story.html') else 'website' }}">
+<meta property="og:title" content="{{ page.title if page.url != '/' else site.name }}">
+<meta property="og:description" content="{{ page.description or site.description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#00305d">
+<link rel="icon" href="{{ rel('/assets/img/favicon-32.png') }}" sizes="32x32" type="image/png">
+<link rel="icon" href="{{ rel('/assets/img/favicon-16.png') }}" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="{{ rel('/assets/img/apple-touch-icon.png') }}">
+<link rel="manifest" href="{{ rel('/manifest.webmanifest') }}">
+<link rel="preload" href="{{ rel('/assets/fonts/WorkSans-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ rel('/assets/fonts/WorkSans-SemiBold.woff2') }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ rel('/assets/css/site.css') }}">
+{% if not (page.noindex or not site.indexable) %}<link rel="sitemap" type="application/xml" href="{{ rel('/sitemap.xml') }}">{% endif %}
+{% for ld in jsonld %}<script type="application/ld+json">{{ ld | tojson }}</script>
+{% endfor %}
+{% block head_extra %}{% endblock %}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+{% if not site.indexable %}<div class="preview-notice" role="note">Preview of the redesigned QEI website. It is not yet the live site: for appointments and enquiries call <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a> or visit <a href="{{ site.live_site }}" rel="noopener">qei.org.au</a>.</div>{% endif %}
+<div class="utility">
+  <div class="container">
+    <div class="utility__left">
+      <a class="utility__phone" href="tel:{{ site.phone_intl }}">{{ m.icon('phone') }} {{ site.phone }}</a>
+      <span class="nowrap">Woolloongabba &amp; Clayfield, Brisbane</span>
+    </div>
+    <div class="utility__right">
+      <form class="search-mini" role="search" action="{{ rel('/search/') }}" method="get">
+        <label class="visually-hidden" for="site-search-mini">Search the website</label>
+        <input id="site-search-mini" type="search" name="q" placeholder="Search…" autocomplete="off">
+        <button type="submit" aria-label="Search">{{ m.icon('search') }}</button>
+      </form>
+      <div class="a11y">
+        <button class="a11y__toggle" type="button" aria-expanded="false" aria-controls="a11y-panel">{{ m.icon('accessibility') }} Accessibility</button>
+        <div class="a11y__panel" id="a11y-panel">
+          <h2>Display options</h2>
+          <div class="a11y__row"><span class="label" id="a11y-text-label">Text size</span>
+            <div class="a11y__group" role="group" aria-labelledby="a11y-text-label">
+              <button type="button" data-textsize="1" aria-pressed="true" aria-label="Default text size">A</button>
+              <button type="button" data-textsize="2" aria-pressed="false" aria-label="Larger text" style="font-size:1.1em">A</button>
+              <button type="button" data-textsize="3" aria-pressed="false" aria-label="Large text" style="font-size:1.25em">A</button>
+              <button type="button" data-textsize="4" aria-pressed="false" aria-label="Largest text" style="font-size:1.4em">A</button>
+            </div>
+          </div>
+          <div class="a11y__row"><span class="label">High contrast</span><button type="button" class="btn btn--secondary btn--sm" data-contrast-toggle aria-pressed="false">Toggle</button></div>
+          <div class="a11y__row"><label for="a11y-theme">Colour theme</label>
+            <select id="a11y-theme" data-theme-select><option value="system">Match device</option><option value="light">Light</option><option value="dark">Dark</option></select>
+          </div>
+          <div class="a11y__row"><a href="{{ rel('/accessibility/') }}">Accessibility statement</a><button type="button" class="btn btn--secondary btn--sm" data-reset-prefs>Reset</button></div>
+        </div>
+      </div>
+      <a href="{{ rel('/qei-foundation/donate/') }}" class="nowrap">{{ m.icon('heart') }} Donate</a>
+    </div>
+  </div>
+</div>
+<header class="header">
+  <div class="container header__top">
+    <a class="brand" href="{{ rel('/') }}" aria-label="{{ site.name }} home">
+      <img class="logo-mark" src="{{ rel('/assets/img/logo-64.png') }}" alt="" width="64" height="64">
+      <span class="brand__text">{{ site.name }}<small>{{ site.tagline }}</small></span>
+    </a>
+    <div class="cluster">
+      <a class="btn btn--primary btn--sm header__cta" href="{{ rel('/patient-info/book-an-appointment/') }}">{{ m.icon('calendar') }} Book</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">{{ m.icon('menu') }} <span class="nav-toggle__label">Menu</span></button>
+    </div>
+  </div>
+  <div class="container header__navrow">
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        {% for item in site.nav %}
+        {% set active = page.url == item.url or (item.url != '/' and page.url.startswith(item.url)) or (item.children and (item.children | selectattr('url', 'equalto', page.url) | list)) %}
+        <li class="nav__item{% if item.children %} nav__item--has-sub{% endif %}{% if item.highlight %} nav__item--highlight{% endif %}">
+          {% if item.children %}
+          <button type="button" aria-expanded="false"{% if active %} aria-current="true"{% endif %}>{{ item.label }} {{ m.icon('chevron-down') }}</button>
+          <ul class="nav__sub">
+            {% for child in item.children %}<li><a href="{{ rel(child.url) }}"{% if child.url == page.url %} aria-current="page"{% endif %}>{{ child.label }}</a></li>{% endfor %}
+          </ul>
+          {% else %}
+          <a href="{{ rel(item.url) }}"{% if active %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="nav__cta">
+        <a class="btn btn--primary" href="{{ rel('/patient-info/book-an-appointment/') }}">Book an appointment</a>
+        <a class="btn btn--secondary" href="{{ rel('/search/') }}">Search</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+{% block content %}{% endblock %}
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="brand" href="{{ rel('/') }}"><img class="logo-mark" src="{{ rel('/assets/img/logo-64.png') }}" alt="" width="64" height="64"><span class="brand__text">{{ site.name }}</span></a>
+        <p>Specialist eye care, research and education in Brisbane since 2005, built on a foundation established in 1965.</p>
+        <p class="footer__contact"><strong>Phone</strong> <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a><br><strong>Email</strong> <a href="mailto:{{ site.email_reception }}">{{ site.email_reception }}</a></p>
+        <div class="footer__social">{% for s in site.social %}<a href="{{ s.url }}" rel="noopener" aria-label="{{ site.short_name }} on {{ s.name }}">{{ m.social_icon(s.icon) }}</a>{% endfor %}</div>
+      </div>
+      {% for col in site.footer_columns %}
+      <div>
+        <h2>{{ col.heading }}</h2>
+        <ul>{% for l in col.links %}<li><a href="{{ rel(l.url) }}">{{ l.label }}</a></li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+      <div>
+        <h2>Our clinics</h2>
+        {% for c in site.clinics %}<p><strong>{{ c.short }}</strong><br>{{ c.address_line1 }}<br>{{ c.suburb }} {{ c.state }} {{ c.postcode }}<br><span class="small">{{ c.hours }}</span></p>{% endfor %}
+        <div class="footer__urgent small">In an emergency call <strong>000</strong>. For sudden vision loss or severe eye pain, see <a href="{{ rel('/patient-info/emergency-eye-care/') }}">emergency eye care</a>.</div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>
+        <div class="footer__legal"><ul>{% for l in site.legal_links %}<li><a href="{{ rel(l.url) }}">{{ l.label }}</a></li>{% endfor %}<li><a href="{{ rel('/search/') }}">Search</a></li></ul></div>
+        <p class="footer__ack">{{ site.acknowledgement }}</p>
+        <p>&copy; {{ now.year }} {{ site.legal_name }}. Queensland Eye Institute ophthalmologists are Fellows of the Royal Australian and New Zealand College of Ophthalmologists.</p>
+      </div>
+      <div class="footer__acnc"><img src="{{ rel('/assets/img/acnc-registered-charity.png') }}" alt="ACNC Registered Charity tick" width="58" height="58"><span class="small"><a href="{{ site.acnc_url }}" rel="noopener">Registered charity</a><br>Donations over $2 are tax deductible</span></div>
+    </div>
+  </div>
+</footer>
+<div class="mobile-cta" aria-label="Quick actions">
+  <a class="btn btn--navy btn--sm" href="tel:{{ site.phone_intl }}">{{ m.icon('phone') }} Call</a>
+  <a class="btn btn--primary btn--sm" href="{{ rel('/patient-info/book-an-appointment/') }}">{{ m.icon('calendar') }} Book</a>
+</div>
+<script src="{{ rel('/assets/js/site.js') }}" defer></script>
+</body>
+</html>

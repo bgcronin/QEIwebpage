@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>{{ 'News' if not active_category else active_category ~ ' news' }}</h1>
+    <p class="lead">Clinical advances, research discoveries, education and Foundation news from the Queensland Eye Institute.</p>
+  </div>
+</div>
+<div class="container section">
+  <ul class="pill-list" aria-label="News categories">
+    <li><a href="{{ rel('/news/') }}"{% if not active_category %} aria-current="page"{% endif %}>All news</a></li>
+    {% for c in categories %}<li><a href="{{ rel('/news/category/' ~ category_slug(c) ~ '/') }}"{% if c == active_category %} aria-current="page"{% endif %}>{{ c }}</a></li>{% endfor %}
+    <li><a href="{{ rel('/events/') }}">Events</a></li>
+  </ul>
+  {% if events %}
+  <h2>Events</h2>
+  <div class="grid grid--3" style="margin-bottom:2.5rem">
+    {% for e in events %}{{ m.card(e.title, e.url, e.excerpt | truncate(120), e.hero, e.hero_alt, 'Event', ('<time datetime="' ~ e.date ~ '">' ~ fmt_date(e.date) ~ '</time>') if e.date else '', 'Event details') }}{% endfor %}
+  </div>
+  <h2>Latest articles</h2>
+  {% endif %}
+  <div class="grid grid--3">
+    {% for n in items %}{{ m.news_card(n) }}{% endfor %}
+  </div>
+  {% if page_count > 1 %}
+  <nav class="pager" aria-label="Pagination">
+    {% if page_num > 1 %}<a href="{{ rel('/news/' if page_num == 2 else '/news/page/' ~ (page_num - 1) ~ '/') }}">{{ m.icon('arrow-left') }} Newer</a>{% else %}<span></span>{% endif %}
+    <span class="muted">Page {{ page_num }} of {{ page_count }}</span>
+    {% if page_num < page_count %}<a href="{{ rel('/news/page/' ~ (page_num + 1) ~ '/') }}">Older {{ m.icon('arrow-right') }}</a>{% else %}<span></span>{% endif %}
+  </nav>
+  {% endif %}
+</div>
+{% endblock %}

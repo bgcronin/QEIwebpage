@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% set groups = [
+  ('cataract', 'Cataract surgery', 'Modern small-incision cataract surgery with premium lens options.'),
+  ('cornea', 'Cornea and anterior segment', 'Corneal transplants, keratoconus, cross-linking, CAIRS and pterygium surgery.'),
+  ('retina', 'Retina and macula', 'Macular degeneration, diabetic eye disease, retinal detachment and vitreoretinal surgery.'),
+  ('glaucoma', 'Glaucoma', 'Medical, laser and surgical glaucoma care including minimally invasive glaucoma surgery.'),
+  ('neuro-ophthalmology', 'Neuro-ophthalmology', 'Optic nerve and visual pathway disease, double vision and unexplained vision loss.'),
+  ('oculoplastics', 'Oculoplastics, eyelids and orbit', 'Eyelid, tear duct and orbital surgery including thyroid eye disease.'),
+  ('refractive', 'Laser and refractive surgery', 'Laser vision correction and lens-based refractive procedures.'),
+  ('uveitis', 'Uveitis and inflammatory eye disease', 'Diagnosis and management of inflammatory eye conditions.'),
+  ('genetic', 'Genetic and inherited eye disease', 'Assessment of inherited retinal and genetic eye conditions.')
+] %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>Our ophthalmologists</h1>
+    <p class="lead">Every QEI ophthalmologist is a Fellow of the Royal Australian and New Zealand College of Ophthalmologists with additional subspecialty fellowship training in Australia or overseas. Together they cover the full breadth of medical and surgical eye care.</p>
+  </div>
+</div>
+<div class="container section">
+  <h2 class="mt-0">Find a specialist by subspecialty</h2>
+  <ul class="pill-list">{% for key, label, _ in groups %}<li><a href="#{{ key }}">{{ label }}</a></li>{% endfor %}</ul>
+  <div class="profile-grid" style="margin-top:2rem">
+    {% for d in doctors %}{{ m.doctor_card(d) }}{% endfor %}
+  </div>
+  <div class="layout" style="margin-top:3rem">
+    <div>
+      {% for key, label, text in groups %}
+      {% set members = doctors | selectattr('subspecialties', 'contains', key) | list %}
+      {% if members %}
+      <section id="{{ key }}" class="bordered-top" style="margin-bottom:2rem">
+        <h2 class="mt-0" style="font-size:1.4rem">{{ label }}</h2>
+        <p class="muted">{{ text }}</p>
+        <ul class="pill-list">{% for d in members %}<li><a href="{{ rel(d.url) }}">{{ d.name }}</a></li>{% endfor %}</ul>
+      </section>
+      {% endif %}
+      {% endfor %}
+      <div class="alert alert--info">{{ m.icon('info') }}<div><strong>Not sure who to see?</strong> Call <a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a> and our reception team will match you with the right specialist, or ask your GP or optometrist to use our <a href="{{ rel('/referrers/subspecialty-guide/') }}">subspecialty referral guide</a>. Dry eye is managed in our <a href="{{ rel('/dry-eye-clinic/') }}">optometrist-led Dry Eye Clinic</a>, which needs no referral.</div></div>
+    </div>
+    <aside aria-label="Appointments">{{ m.sidebar(['book', 'dryeye', 'referrer']) }}</aside>
+  </div>
+</div>
+{% endblock %}

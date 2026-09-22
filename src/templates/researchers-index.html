@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>Researchers</h1>
+    <p class="lead">We are passionate about improving our understanding of the nature of eye disease. Our scientists work alongside QEI ophthalmologists and partner universities so discoveries reach patients sooner.</p>
+  </div>
+</div>
+<div class="container section">
+  <div class="profile-grid">{% for r in items %}{{ m.person_card(r) }}{% endfor %}</div>
+  <div style="margin-top:2.5rem">{{ m.cta_band('Explore our research', 'Research themes, groups and publications from the Queensland Eye Institute.', {'label': 'Research groups and publications', 'url': '/research/groups-publications/'}, {'label': 'Clinical trials', 'url': '/clinical-trials/'}) }}</div>
+</div>
+{% endblock %}

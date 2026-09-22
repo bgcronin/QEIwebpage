@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    {% if doc.eyebrow %}<span class="eyebrow">{{ doc.eyebrow }}</span>{% endif %}
+    <h1>{{ doc.title }}</h1>
+    {% if doc.summary %}<p class="lead">{{ doc.summary }}</p>{% endif %}
+    {% if doc.actions %}<div class="hero__actions" style="margin-top:1rem">{% for a in doc.actions %}<a class="btn {{ a.style or 'btn--primary' }}" href="{{ rel(a.url) }}"{% if a.url.startswith('http') %} rel="noopener"{% endif %}>{{ a.label }}</a>{% endfor %}</div>{% endif %}
+  </div>
+</div>
+<div class="container section">
+  {% if doc.urgent %}<div class="alert alert--urgent">{{ m.icon('alert') }}<div>{{ doc.urgent | md | safe }}</div></div>{% endif %}
+  {% if doc.cards %}
+  <div class="grid grid--3">
+    {% for c in doc.cards %}{{ m.card(c.title, c.url, c.text, c.image, c.image_alt or '', c.badge or '', '', c.cta or 'Read more', icon_image=c.icon, tint=c.tint) }}{% endfor %}
+  </div>
+  {% endif %}
+  {% if doc.body_md.strip() %}
+  <div class="layout" style="margin-top:2.5rem">
+    <div class="prose">{{ doc.body_md | md | safe }}
+      {{ m.faq(doc.faq) }}
+    </div>
+    {% if doc.sidebar %}<aside aria-label="Related information">{{ m.sidebar(doc.sidebar) }}</aside>{% endif %}
+  </div>
+  {% elif doc.faq %}<div class="section-head" style="margin-top:2.5rem">{{ m.faq(doc.faq) }}</div>{% endif %}
+  {% if doc.cta %}<div style="margin-top:2.5rem">{{ m.cta_band(doc.cta.title, doc.cta.text, doc.cta.primary, doc.cta.secondary, doc.cta.coral) }}</div>{% endif %}
+</div>
+{% endblock %}

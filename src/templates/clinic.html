@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+{% block content %}
+<div class="page-header">
+  <div class="container">
+    {{ m.breadcrumbs(page.breadcrumbs) }}
+    <h1>{{ clinic.name }}</h1>
+    <p class="lead">{{ clinic.address_line1 }}, {{ clinic.suburb }} {{ clinic.state }} {{ clinic.postcode }}</p>
+  </div>
+</div>
+<div class="container section">
+  <div class="split split--wide">
+    <div class="hero__media" style="aspect-ratio:3/2">{{ m.img(clinic.photo, clinic.photo_alt, 'hero', eager=True) }}</div>
+    <div class="panel panel--contact">
+      <h2>Visit us</h2>
+      <dl>
+        <dt>Address</dt><dd>{{ clinic.address_line1 }}<br>{{ clinic.suburb }} {{ clinic.state }} {{ clinic.postcode }}</dd>
+        {% if clinic.postal %}<dt>Postal</dt><dd>{{ clinic.postal }}</dd>{% endif %}
+        <dt>Hours</dt><dd>{{ clinic.hours }}</dd>
+        <dt>Phone</dt><dd><a href="tel:{{ site.phone_intl }}">{{ site.phone }}</a></dd>
+        <dt>Email</dt><dd><a href="mailto:{{ site.email_reception }}">{{ site.email_reception }}</a></dd>
+      </dl>
+      <div class="cluster" style="margin-top:1rem">
+        <a class="btn btn--primary btn--sm" href="{{ clinic.map_url }}" rel="noopener">{{ m.icon('map-pin') }} Open in Google Maps</a>
+        <a class="btn btn--secondary btn--sm" href="{{ rel('/patient-info/book-an-appointment/') }}">Book an appointment</a>
+      </div>
+    </div>
+  </div>
+  <div class="layout" style="margin-top:3rem">
+    <div class="prose">
+      <h2 class="mt-0">Getting here</h2>
+      <h3>{{ m.icon('car') }} Parking</h3>
+      <p>{{ clinic.parking }}</p>
+      <h3>Public transport</h3>
+      <p>{{ clinic.transport }}</p>
+      <h3>Accessibility</h3>
+      <p>Both clinics are on Level 1 with lift access. If you use a wheelchair, have low vision or need an interpreter, please let us know when booking so we can assist you on arrival. The Translating and Interpreting Service (TIS National) is available on <a href="tel:131450">131 450</a>.</p>
+      {% if clinic.colocated %}
+      <h2>Also at this location</h2>
+      <ul>{% for s in clinic.colocated %}<li>{{ s }}</li>{% endfor %}</ul>
+      {% endif %}
+      <h2>What we do here</h2>
+      <p>Our ophthalmologists provide medical and surgical management of routine and complex eye conditions, including cataract, cornea and anterior segment, retina and macula, glaucoma, neuro-ophthalmology, oculoplastics and laser eye surgery. The <a href="{{ rel('/dry-eye-clinic/') }}">optometrist-led Dry Eye Clinic</a> offers fast, referral-free access to dry eye treatment.</p>
+    </div>
+    <aside aria-label="Before your visit">{{ m.sidebar(['prepare', 'book']) }}
+      <div class="side-card">
+        <h2>Our other clinic</h2>
+        {% for c in clinics if c.slug != clinic.slug %}<p><a href="{{ rel('/qei-clinics/' ~ c.slug ~ '/') }}">{{ c.name }}</a><br><span class="small muted">{{ c.address_line1 }}, {{ c.suburb }}</span></p>{% endfor %}
+      </div>
+    </aside>
+  </div>
+</div>
+{% endblock %}
