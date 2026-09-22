@@ -43,6 +43,25 @@ IMAGES = {
 }
 
 
+def trim_icon(path: Path) -> None:
+    """Crop the wide transparent margins of the Squarespace icons onto a square canvas."""
+    try:
+        from PIL import Image
+    except ImportError:  # pragma: no cover
+        return
+    im = Image.open(path).convert("RGBA")
+    bbox = im.getchannel("A").getbbox()
+    if not bbox:
+        return
+    pad = 8
+    box = (max(0, bbox[0] - pad), max(0, bbox[1] - pad), min(im.width, bbox[2] + pad), min(im.height, bbox[3] + pad))
+    cropped = im.crop(box)
+    side = max(cropped.size)
+    canvas = Image.new("RGBA", (side, side), (0, 0, 0, 0))
+    canvas.paste(cropped, ((side - cropped.width) // 2, (side - cropped.height) // 2), cropped)
+    canvas.save(path, optimize=True)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--force", action="store_true", help="re-download files that already exist")
@@ -62,6 +81,8 @@ def main() -> int:
             if len(data) < 1000:
                 raise ValueError(f"unexpectedly small response ({len(data)} bytes)")
             dest.write_bytes(data)
+            if name.startswith("icon-"):
+                trim_icon(dest)
             print(f"saved    {name} ({len(data) // 1024} KiB)")
         except Exception as exc:  # noqa: BLE001
             failures += 1

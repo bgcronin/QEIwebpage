@@ -2,12 +2,15 @@
 {% import "macros.html" as m with context %}
 {% block content %}
 <div class="page-header">
-  <div class="container">
+  <div class="container{% if doc.hero_image %} hero__inner{% endif %}"{% if doc.hero_image %} style="padding-block:0"{% endif %}>
+    <div>
     {{ m.breadcrumbs(page.breadcrumbs) }}
     {% if doc.eyebrow %}<span class="eyebrow">{{ doc.eyebrow }}</span>{% endif %}
     <h1>{{ doc.title }}</h1>
     {% if doc.summary %}<p class="lead">{{ doc.summary }}</p>{% endif %}
     {% if doc.actions %}<div class="hero__actions" style="margin-top:1rem">{% for a in doc.actions %}<a class="btn {{ a.style or 'btn--primary' }}" href="{{ rel(a.url) }}"{% if a.url.startswith('http') %} rel="noopener"{% endif %}>{{ a.label }}</a>{% endfor %}</div>{% endif %}
+    </div>
+    {% if doc.hero_image %}<div class="hero__media">{{ m.img(doc.hero_image, doc.hero_alt or '', 'hero', eager=True) }}</div>{% endif %}
   </div>
 </div>
 <div class="container section">
