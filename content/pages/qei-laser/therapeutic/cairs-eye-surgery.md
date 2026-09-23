@@ -1,11 +1,11 @@
 ---
 title: "CAIRS eye surgery"
 short_title: "CAIRS"
-url: /qei-laser/treatments/cairs-eye-surgery/
+url: /qei-laser/therapeutic/cairs-eye-surgery/
 template: treatment
-group: laser
-section: "QEI Laser"
-parent: /qei-laser/treatments/
+group: therapeutic
+section: "QEI Laser Therapeutic"
+parent: /qei-laser/therapeutic/
 order: 3
 badge: "Keratoconus"
 hero_image: content/media/qei-laser/cairs.jpg
@@ -45,7 +45,7 @@ Dr Gunn delivered the 2025 Ridley Lecture at the German Ophthalmology Congress o
 
 ## Who is CAIRS for?
 
-CAIRS is considered for people with moderate to severe keratoconus whose vision cannot be adequately corrected with glasses and who struggle with rigid or scleral contact lenses, and for those who would otherwise be heading towards a corneal transplant. Each patient is carefully evaluated by a corneal specialist with topography, tomography and OCT to decide whether CAIRS, cross-linking, [topography-guided laser](/qei-laser/treatments/keratoconus-athens-protocol/) or a combination is the best option.
+CAIRS is considered for people with moderate to severe keratoconus whose vision cannot be adequately corrected with glasses and who struggle with rigid or scleral contact lenses, and for those who would otherwise be heading towards a corneal transplant. Each patient is carefully evaluated by a corneal specialist with topography, tomography and OCT to decide whether CAIRS, cross-linking, [topography-guided laser](/qei-laser/therapeutic/keratoconus-corneal-cross-linking/) or a combination is the best option.
 
 ## What to expect
 

@@ -47,9 +47,11 @@ Our ophthalmologists cover cataract, cornea and anterior segment, retina and mac
 
 Patients with dry eye disease, meibomian gland dysfunction, blepharitis or Demodex can be referred directly to our [optometrist-led Dry Eye Clinic](/dry-eye-clinic/), or can self-refer. The clinic offers intense pulsed light (Lumenis OptiLight), quantum molecular resonance (Rexon-Eye), low level light therapy, BlephEx, meibomian gland expression, punctal plugs and anti-inflammatory prescribing, with fast access and no ophthalmology wait. Patients who need ophthalmology input are escalated internally and you are kept informed.
 
-## Corneal laser: QEI Laser
+## Laser: QEI Laser Therapeutic and QEI Laser Refractive
 
-Patients with keratoconus, corneal scarring, corneal dystrophies, recurrent erosion syndrome or irregular astigmatism (including after corneal transplant) can be referred to Dr Brendan Cronin or Dr David Gunn for assessment for excimer laser treatment through [QEI Laser](/qei-laser/). Therapeutic procedures attract automatic private health fund cover because the laser is inside an accredited private hospital. See the [overview of laser treatments](/qei-laser/treatments/).
+**Therapeutic.** Patients with keratoconus, corneal scarring, corneal dystrophies, recurrent erosion syndrome or irregular astigmatism (including after corneal transplant) can be referred to Dr Brendan Cronin or Dr David Gunn for assessment for excimer laser treatment, cross-linking or CAIRS through [QEI Laser Therapeutic](/qei-laser/therapeutic/). Therapeutic procedures attract automatic private health fund cover because the laser is inside an accredited private hospital.
+
+**Refractive.** Patients who want to reduce their dependence on glasses or contact lenses can be referred to any of our four laser surgeons for a laser vision assessment through [QEI Laser Refractive](/qei-laser/refractive/), which offers Ray Tracing LASIK, CLEAR lenticule extraction on the Ziemer Z8, TransPRK, PRK, the EVO ICL and refractive lens exchange. A referral is not required, but with one Medicare contributes to the consultation. Please ask patients to leave soft contact lenses out for a week (rigid lenses for four weeks) before the assessment. We co-manage post-operative care with referring optometrists on request and send a report after every review. See our [suitability guide](/qei-laser/refractive/am-i-suitable/) for the criteria we apply.
 
 ## Electrodiagnostic testing
 

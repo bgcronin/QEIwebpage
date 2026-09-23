@@ -488,6 +488,8 @@ class Site:
                 jsonld.append(self.ld_faq(meta["faq"]))
             if meta.get("jsonld"):
                 jsonld.append(meta["jsonld"])
+            if meta.get("procedure"):
+                jsonld.append(self.ld_procedure(meta))
             self.add(Page(meta["url"], meta["title"], template, description=meta.get("summary", ""), section=meta.get("section", ""),
                           noindex=bool(meta.get("noindex")), image=meta.get("hero_image"), breadcrumbs=crumbs, jsonld=jsonld,
                           changefreq=meta.get("changefreq", "monthly"), priority=float(meta.get("priority", 0.7)),
@@ -665,6 +667,27 @@ class Site:
             out["lastReviewed"] = str(c["reviewed_on"])
         if c.get("reviewed_by"):
             out["reviewedBy"] = {"@type": "Person", "name": c["reviewed_by"]}
+        return out
+
+    def ld_procedure(self, meta: dict) -> dict:
+        """MedicalWebPage about a MedicalProcedure, for treatment pages that declare a `procedure` block."""
+        p = meta["procedure"] or {}
+        proc = {"@type": "MedicalProcedure", "name": p.get("name") or meta["title"], "description": meta.get("summary", "")}
+        if p.get("alternate"):
+            proc["alternateName"] = list(p["alternate"])
+        if p.get("body"):
+            proc["bodyLocation"] = p["body"]
+        for key, prop in (("how", "howPerformed"), ("preparation", "preparation"), ("followup", "followup")):
+            if p.get(key):
+                proc[prop] = p[key]
+        proc["procedureType"] = {"@type": "MedicalProcedureType", "name": p.get("type", "Surgical")}
+        out = {"@context": "https://schema.org", "@type": "MedicalWebPage", "name": meta["title"], "url": self.abs_url(meta["url"]),
+               "description": meta.get("summary", ""), "about": proc,
+               "audience": {"@type": "MedicalAudience", "audienceType": "Patient"}, "publisher": {"@id": self.abs_url("/#organization")}}
+        if meta.get("reviewed_on"):
+            out["lastReviewed"] = str(meta["reviewed_on"])
+        if meta.get("reviewed_by"):
+            out["reviewedBy"] = {"@type": "Person", "name": meta["reviewed_by"]}
         return out
 
     def ld_faq(self, faq: list) -> dict:

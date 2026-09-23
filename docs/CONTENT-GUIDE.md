@@ -34,9 +34,12 @@ Links inside Markdown should be site-absolute (`/patient-info/forms/`); the buil
 
 ### QEI Laser
 
-- Hub: `content/pages/qei-laser/index.md`; treatments hub `content/pages/qei-laser/treatments/index.md`; treatment pages in `content/pages/qei-laser/treatments/*.md` with `template: treatment` and `group: laser` (Dry Eye Clinic treatments use `group: dry-eye`). Patient information and health fund pages sit alongside the hub.
-- The old qeilaser.com.au URL mapping lives in `domain_redirects` in `content/site.json`.
-- Images for these pages are expected in `content/media/qei-laser/` (names listed in `src/fetch_qeilaser_images.py`). Until they are downloaded, the pages simply render without them.
+- Overview: `content/pages/qei-laser/index.md` links the two services.
+- **QEI Laser Therapeutic**: hub `content/pages/qei-laser/therapeutic/index.md`; treatment pages `content/pages/qei-laser/therapeutic/*.md` with `template: treatment` and `group: therapeutic`; patient information and health fund pages sit alongside the hub. Images are expected in `content/media/qei-laser/` (names listed in `src/fetch_qeilaser_images.py`).
+- **QEI Laser Refractive**: hub `content/pages/qei-laser/refractive/index.md`; procedure pages (`lasik`, `trans-prk`, `prk`, `clear-lenticule-extraction`, `icl`, `refractive-lens-exchange`) use `template: treatment`, `group: refractive`, an `order`, a `badge`, a `facts` table and a `procedure` block (`name`, `alternate`, `body`, `how`, `preparation`, `followup`) that the build turns into MedicalProcedure structured data. Support pages (`am-i-suitable`, `compare-procedures`, `costs-and-payment`, `your-journey`, `faq`) use `template: page` with `sidebar: [refractive-book, refractive-treatments]`.
+- Guide prices appear on the procedure pages, the comparison table and `costs-and-payment.md`; update all of them together each year.
+- Dry Eye Clinic treatments use `group: dry-eye`. The treatment template (`src/templates/treatment.html`) holds the eyebrow, related-treatments heading, sidebar and call-to-action for each group.
+- The old qeilaser.com.au URL mapping lives in `domain_redirects` in `content/site.json`; old `/qei-laser/treatments/*` URLs are in `redirects`.
 
 ### Dry Eye Clinic
 

@@ -17,7 +17,7 @@
       <div class="alert alert--urgent">{{ m.icon('alert') }}<div><strong>Urgent?</strong> {{ doc.urgent | md | safe }}</div></div>
       {% endif %}
       {% if doc.hero_image %}<div class="article-hero">{{ m.img(doc.hero_image, doc.hero_alt or '', 'hero', eager=True) }}</div>{% endif %}
-      <div class="prose">{% if doc.raw_html %}{{ clean_html(doc.body_md) | safe }}{% else %}{{ doc.body_md | md | safe }}{% endif %}</div>
+      <div class="prose{% if doc.wide %} prose--wide{% endif %}">{% if doc.raw_html %}{{ clean_html(doc.body_md) | safe }}{% else %}{{ doc.body_md | md | safe }}{% endif %}</div>
       {% if doc.cards %}
       <div class="grid grid--2" style="margin-top:2rem">
         {% for c in doc.cards %}{{ m.card(c.title, c.url, c.text, c.image, c.image_alt or '', c.badge or '', '', c.cta or 'Read more', icon_image=c.icon) }}{% endfor %}

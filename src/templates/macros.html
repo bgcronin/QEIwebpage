@@ -207,10 +207,10 @@
   </div>
   {% elif key == 'laser-treatments' %}
   <div class="side-card">
-    <h2>QEI Laser treatments</h2>
-    <ul>{% for t in treatments if t.group == 'laser' %}<li><a href="{{ rel(t.url) }}"{% if t.url == page.url %} aria-current="page"{% endif %}>{{ t.short_title or t.title }}</a></li>{% endfor %}
-      <li><a href="{{ rel('/qei-laser/for-patients/') }}">Information for patients</a></li>
-      <li><a href="{{ rel('/qei-laser/health-fund-rebates/') }}">Health fund rebates</a></li></ul>
+    <h2>QEI Laser Therapeutic treatments</h2>
+    <ul>{% for t in treatments if t.group == 'therapeutic' %}<li><a href="{{ rel(t.url) }}"{% if t.url == page.url %} aria-current="page"{% endif %}>{{ t.short_title or t.title }}</a></li>{% endfor %}
+      <li><a href="{{ rel('/qei-laser/therapeutic/for-patients/') }}">Information for patients</a></li>
+      <li><a href="{{ rel('/qei-laser/therapeutic/health-fund-rebates/') }}">Health fund rebates</a></li></ul>
   </div>
   {% elif key == 'laser-book' %}
   <div class="side-card side-card--navy">
@@ -218,14 +218,38 @@
     <p>Ask your optometrist, GP or ophthalmologist for a referral to one of our laser surgeons, Dr David Gunn, Dr Brendan Cronin, Dr Lee Holland or Dr Geoffrey Ryan, or contact our team.</p>
     <a class="btn btn--light" href="tel:{{ site.phone_intl }}">{{ icon('phone') }} {{ site.phone }}</a>
     <a class="btn btn--ghost-light" href="{{ site.external_forms.send_enquiry }}" rel="noopener">Send an enquiry</a>
-    <p class="small" style="margin-top:.75rem">Therapeutic laser procedures attract automatic health fund cover. <a href="{{ rel('/qei-laser/health-fund-rebates/') }}">How rebates work</a></p>
+    <p class="small" style="margin-top:.75rem">Therapeutic laser procedures attract automatic health fund cover. <a href="{{ rel('/qei-laser/therapeutic/health-fund-rebates/') }}">How rebates work</a></p>
   </div>
   {% elif key == 'laser' %}
   <div class="side-card side-card--navy">
     <span class="badge badge--green">Health fund covered</span>
     <h2 style="margin-top:.6rem">QEI Laser</h2>
-    <p>Excimer laser treatment for keratoconus, corneal scarring, dystrophies, recurrent erosions and astigmatism after transplant, inside an accredited private hospital.</p>
-    <a class="btn btn--light" href="{{ rel('/qei-laser/') }}">About QEI Laser</a>
+    <p>Therapeutic excimer laser for keratoconus, corneal scarring, dystrophies, recurrent erosions and astigmatism after transplant, and the full range of laser vision correction, inside an accredited private hospital.</p>
+    <a class="btn btn--light" href="{{ rel('/qei-laser/therapeutic/') }}">QEI Laser Therapeutic</a>
+    <a class="btn btn--ghost-light" href="{{ rel('/qei-laser/refractive/') }}">QEI Laser Refractive</a>
+  </div>
+  {% elif key == 'refractive-book' %}
+  <div class="side-card side-card--navy">
+    <span class="badge badge--green">No referral needed</span>
+    <h2 style="margin-top:.6rem">Book a laser vision assessment</h2>
+    <p>A two-hour examination with the surgeon who would perform your treatment. The assessment fee is credited against your procedure.</p>
+    <a class="btn btn--light" href="tel:{{ site.phone_intl }}">{{ icon('phone') }} {{ site.phone }}</a>
+    <a class="btn btn--ghost-light" href="{{ site.external_forms.send_enquiry }}" rel="noopener">Send an enquiry</a>
+    <p class="small" style="margin-top:.75rem">Leave soft contact lenses out for at least a week beforehand. <a href="{{ rel('/qei-laser/refractive/your-journey/') }}">How the process works</a></p>
+  </div>
+  {% elif key == 'refractive-treatments' %}
+  <div class="side-card">
+    <h2>Vision correction options</h2>
+    <ul>{% for t in treatments if t.group == 'refractive' %}<li><a href="{{ rel(t.url) }}"{% if t.url == page.url %} aria-current="page"{% endif %}>{{ t.short_title or t.title }}</a></li>{% endfor %}</ul>
+    <h2 style="margin-top:1rem">Planning your treatment</h2>
+    <ul>
+      <li><a href="{{ rel('/qei-laser/refractive/am-i-suitable/') }}"{% if page.url == '/qei-laser/refractive/am-i-suitable/' %} aria-current="page"{% endif %}>Am I suitable?</a></li>
+      <li><a href="{{ rel('/qei-laser/refractive/compare-procedures/') }}"{% if page.url == '/qei-laser/refractive/compare-procedures/' %} aria-current="page"{% endif %}>Compare the procedures</a></li>
+      <li><a href="{{ rel('/qei-laser/refractive/costs-and-payment/') }}"{% if page.url == '/qei-laser/refractive/costs-and-payment/' %} aria-current="page"{% endif %}>Costs and payment</a></li>
+      <li><a href="{{ rel('/qei-laser/refractive/your-journey/') }}"{% if page.url == '/qei-laser/refractive/your-journey/' %} aria-current="page"{% endif %}>Your journey</a></li>
+      <li><a href="{{ rel('/qei-laser/refractive/faq/') }}"{% if page.url == '/qei-laser/refractive/faq/' %} aria-current="page"{% endif %}>Questions answered</a></li>
+      <li><a href="{{ rel('/qei-laser/therapeutic/') }}">Therapeutic laser for corneal disease</a></li>
+    </ul>
   </div>
   {% elif key == 'prepare' %}
   <div class="side-card">

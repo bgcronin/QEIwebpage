@@ -240,7 +240,8 @@ body.nav-open { overflow: hidden; }
   .nav__cta { display: none; }
   .header.is-open .nav { position: static; inset: auto; padding: 0; border: 0; overflow: visible; }
 }
-@media (min-width: 64rem) and (max-width: 74rem) { .nav__item > a, .nav__item > button { padding-inline: .45rem; font-size: .9rem; } }
+@media (min-width: 64rem) { .nav > ul { flex-wrap: wrap; gap: 0; } .nav__item > a, .nav__item > button { padding-inline: .4rem; font-size: .9rem; } }
+@media (min-width: 64rem) and (max-width: 74rem) { .nav__item > a, .nav__item > button { padding-inline: .3rem; font-size: .84rem; } .nav__item > button svg { display: none; } }
 
 /* ---------- Buttons ---------- */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .7rem 1.2rem; border-radius: 999px; font-weight: 600; font-size: 1rem; line-height: 1.2; text-decoration: none; border: 2px solid transparent; cursor: pointer; font-family: inherit; transition: background .15s, color .15s, border-color .15s; min-height: 2.75rem; }
@@ -348,6 +349,10 @@ body.nav-open { overflow: hidden; }
 
 /* ---------- Prose (long-form content) ---------- */
 .prose { max-width: var(--measure); }
+/* Single-column pages: no empty sidebar column; `wide: true` lets tables span the page while text keeps its measure */
+@media (min-width: 64rem) { .layout--single { grid-template-columns: minmax(0, 1fr); } }
+.prose--wide { max-width: none; }
+.prose--wide > :not(table) { max-width: var(--measure); }
 .prose > :first-child { margin-top: 0; }
 .prose h2 { padding-top: .25rem; }
 .prose img { border-radius: var(--radius-sm); margin-block: 1rem; }

@@ -186,62 +186,117 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://qei.org.au/qei-laser/for-patients/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://qei.org.au/qei-laser/health-fund-rebates/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://qei.org.au/qei-laser/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://qei.org.au/qei-laser/treatments/cairs-eye-surgery/</loc>
+    <loc>https://qei.org.au/qei-laser/refractive/am-i-suitable/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qei.org.au/qei-laser/treatments/corneal-dystrophies/</loc>
+    <loc>https://qei.org.au/qei-laser/refractive/clear-lenticule-extraction/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qei.org.au/qei-laser/treatments/corneal-scarring/</loc>
+    <loc>https://qei.org.au/qei-laser/refractive/compare-procedures/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qei.org.au/qei-laser/treatments/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://qei.org.au/qei-laser/treatments/irregular-astigmatism/</loc>
+    <loc>https://qei.org.au/qei-laser/refractive/costs-and-payment/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qei.org.au/qei-laser/treatments/keratoconus-athens-protocol/</loc>
+    <loc>https://qei.org.au/qei-laser/refractive/faq/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qei.org.au/qei-laser/treatments/post-corneal-transplant/</loc>
+    <loc>https://qei.org.au/qei-laser/refractive/icl/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qei.org.au/qei-laser/treatments/prk-asa-laser-vision-correction/</loc>
+    <loc>https://qei.org.au/qei-laser/refractive/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/refractive/lasik/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://qei.org.au/qei-laser/treatments/recurrent-erosion-syndrome/</loc>
+    <loc>https://qei.org.au/qei-laser/refractive/prk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/refractive/refractive-lens-exchange/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/refractive/trans-prk/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/refractive/your-journey/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/therapeutic/cairs-eye-surgery/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/therapeutic/corneal-dystrophies/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/therapeutic/corneal-scarring/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/therapeutic/for-patients/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/therapeutic/health-fund-rebates/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/therapeutic/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/therapeutic/irregular-astigmatism/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/therapeutic/keratoconus-corneal-cross-linking/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/therapeutic/post-corneal-transplant/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://qei.org.au/qei-laser/therapeutic/recurrent-erosion-syndrome/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

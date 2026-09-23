@@ -1,11 +1,11 @@
 ---
 title: "Irregular astigmatism"
 short_title: "Irregular astigmatism"
-url: /qei-laser/treatments/irregular-astigmatism/
+url: /qei-laser/therapeutic/irregular-astigmatism/
 template: treatment
-group: laser
-section: "QEI Laser"
-parent: /qei-laser/treatments/
+group: therapeutic
+section: "QEI Laser Therapeutic"
+parent: /qei-laser/therapeutic/
 order: 1
 badge: "Therapeutic laser"
 hero_image: content/media/qei-laser/topography-irregular-astigmatism.jpg
@@ -46,12 +46,12 @@ It is perfectly normal to have regular astigmatism, which can be corrected with 
 
 In a topography-guided PTK the irregular shape of your cornea is mapped with an extremely high-resolution mapping system. The laser then analyses the map and reshapes your cornea to a more regular shape to minimise your irregular astigmatism. Sometimes there may be a refractive component to the laser to minimise or remove your need for glasses; generally, however, the treatment is designed to give you good vision in glasses, so that you no longer need hard or rigid contact lenses.
 
-When a topography-guided PTK is performed on patients with keratoconus or pellucid marginal degeneration it is often called an "Athens protocol" procedure. In these conditions the laser corneal regularisation is combined with [corneal collagen cross-linking](/qei-laser/treatments/keratoconus-athens-protocol/) to strengthen the cornea.
+When a topography-guided PTK is performed on patients with keratoconus or pellucid marginal degeneration it is often called an "Athens protocol" procedure. In these conditions the laser corneal regularisation is combined with [corneal collagen cross-linking](/qei-laser/therapeutic/keratoconus-corneal-cross-linking/) to strengthen the cornea.
 
 ## What to expect
 
-The procedure is performed under anaesthetic eye drops as a day case. The surface layer of the cornea is removed, the laser treatment takes about a minute, and a bandage contact lens is placed. Expect discomfort and light sensitivity for the first few days, hazy vision for a week or two and gradual improvement over one to three months. See [information for patients](/qei-laser/for-patients/) for full details of preparation and recovery.
+The procedure is performed under anaesthetic eye drops as a day case. The surface layer of the cornea is removed, the laser treatment takes about a minute, and a bandage contact lens is placed. Expect discomfort and light sensitivity for the first few days, hazy vision for a week or two and gradual improvement over one to three months. See [information for patients](/qei-laser/therapeutic/for-patients/) for full details of preparation and recovery.
 
 ## Risks and limitations
 
-All laser treatments carry a small risk of infection, delayed healing and corneal haze, and irregular corneas may not become fully regular. Your surgeon will discuss what improvement is realistic for your eye and what alternatives, such as specialised contact lenses or [CAIRS](/qei-laser/treatments/cairs-eye-surgery/), might suit you better.
+All laser treatments carry a small risk of infection, delayed healing and corneal haze, and irregular corneas may not become fully regular. Your surgeon will discuss what improvement is realistic for your eye and what alternatives, such as specialised contact lenses or [CAIRS](/qei-laser/therapeutic/cairs-eye-surgery/), might suit you better.

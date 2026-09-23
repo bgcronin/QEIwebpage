@@ -32,6 +32,20 @@ dryeye:
     - "Meibomian gland expression, punctal plugs, Demodex treatment and prescription anti-inflammatory therapy"
   image: wp-content/uploads/2026/03/20260318_QEI-Clayfield-4_Web.jpg
   image_alt: "Clinical room at the Queensland Eye Institute"
+laser:
+  badge: "QEI Laser Refractive"
+  title: "Laser vision correction, done the safe way"
+  text: "Every modern procedure under one roof, performed by corneal subspecialists inside a fully accredited private hospital, so the recommendation you receive is the right one for your eyes."
+  points:
+    - "Ray Tracing LASIK, first in Queensland, and CLEAR lenticule extraction on the low-energy Ziemer Z8"
+    - "TransPRK, PRK, the EVO ICL for high prescriptions and refractive lens exchange for reading vision"
+    - "No referral needed, all-inclusive pricing and interest-free payment plans"
+  image: wp-content/uploads/2026/08/20260710_David-Gunn-heads-up-surgery.jpg
+  image_alt: "Dr David Gunn performing laser eye surgery using a heads-up 3D display"
+  url: /qei-laser/refractive/
+  cta: "Explore laser vision correction"
+  secondary_url: /qei-laser/refractive/am-i-suitable/
+  secondary_cta: "Am I suitable?"
 subspecialties:
   - {label: "Cataract", url: "/ophthalmologists/#cataract", icon: eye, text: "Small-incision surgery with premium lens options."}
   - {label: "Cornea and keratoconus", url: "/ophthalmologists/#cornea", icon: layers, text: "Transplants, cross-linking, CAIRS and pterygium surgery."}
@@ -39,7 +53,7 @@ subspecialties:
   - {label: "Glaucoma", url: "/ophthalmologists/#glaucoma", icon: shield, text: "Laser, medical and minimally invasive glaucoma surgery."}
   - {label: "Neuro-ophthalmology", url: "/ophthalmologists/#neuro-ophthalmology", icon: zap, text: "Optic nerve disease, double vision and unexplained vision loss."}
   - {label: "Oculoplastics", url: "/ophthalmologists/#oculoplastics", icon: smile, text: "Eyelid, tear duct and orbital surgery, thyroid eye disease."}
-  - {label: "QEI Laser", url: "/qei-laser/", icon: sun, text: "Therapeutic and refractive laser for keratoconus, scarring and vision correction."}
+  - {label: "Laser vision correction", url: "/qei-laser/refractive/", icon: sun, text: "Ray Tracing LASIK, CLEAR, TransPRK, EVO ICL and lens exchange. No referral needed."}
   - {label: "Dry eye", url: "/dry-eye-clinic/", icon: droplet, text: "Optometrist-led clinic. No referral needed."}
 pillars:
   - {label: "Research", url: /research/, icon: microscope, text: "Inherited, age-related and restorative eye disease research translated into better treatments.", cta: "Explore our research"}

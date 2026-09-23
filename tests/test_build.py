@@ -104,8 +104,15 @@ class SiteModelTests(unittest.TestCase):
 
     def test_treatment_groups(self):
         groups = {t.get("group") for t in self.site.treatments}
-        self.assertEqual(groups, {"dry-eye", "laser"})
-        self.assertGreaterEqual(len([t for t in self.site.treatments if t["group"] == "laser"]), 8)
+        self.assertEqual(groups, {"dry-eye", "therapeutic", "refractive"})
+        self.assertGreaterEqual(len([t for t in self.site.treatments if t["group"] == "therapeutic"]), 7)
+        refractive = [t for t in self.site.treatments if t["group"] == "refractive"]
+        self.assertEqual([t["short_title"] for t in refractive],
+                         ["LASIK", "TransPRK", "PRK", "CLEAR lenticule extraction", "EVO ICL", "Refractive lens exchange"])
+        for t in refractive:
+            self.assertTrue(t.get("procedure"), t["url"])
+            self.assertTrue(t.get("facts"), t["url"])
+            self.assertTrue(t.get("faq"), t["url"])
 
     def test_qeilaser_redirect_map_targets_exist(self):
         mapping = self.site.config["domain_redirects"]["qeilaser.com.au"]
@@ -128,7 +135,10 @@ class FullBuildTests(unittest.TestCase):
     def test_key_pages_exist(self):
         for url in ["/", "/dry-eye-clinic/", "/dry-eye-clinic/treatments/ipl-optilight/", "/ophthalmologists/dr-brendan-cronin/",
                     "/eye-conditions/dry-eye/", "/patient-info/book-an-appointment/", "/referrers/", "/news/", "/search/", "/sitemap/",
-                    "/qei-laser/", "/qei-laser/treatments/", "/qei-laser/treatments/cairs-eye-surgery/", "/qei-laser/health-fund-rebates/",
+                    "/qei-laser/", "/qei-laser/therapeutic/", "/qei-laser/therapeutic/cairs-eye-surgery/", "/qei-laser/therapeutic/health-fund-rebates/",
+                    "/qei-laser/refractive/", "/qei-laser/refractive/lasik/", "/qei-laser/refractive/clear-lenticule-extraction/", "/qei-laser/refractive/icl/",
+                    "/qei-laser/refractive/refractive-lens-exchange/", "/qei-laser/refractive/am-i-suitable/", "/qei-laser/refractive/compare-procedures/",
+                    "/qei-laser/refractive/costs-and-payment/", "/qei-laser/refractive/your-journey/", "/qei-laser/refractive/faq/",
                     "/qei-clinics/woolloongabba-qei-clinic/", "/our-vision/"]:
             self.assertTrue((self.out / url.lstrip("/") / "index.html").exists(), url)
         self.assertTrue((self.out / "404.html").exists())
@@ -161,9 +171,30 @@ class FullBuildTests(unittest.TestCase):
         self.assertIn('"@type": "MedicalOrganization"', home)
 
     def test_laser_treatment_pages_use_laser_sidebar_not_dry_eye(self):
-        html = (self.out / "qei-laser/treatments/cairs-eye-surgery/index.html").read_text(encoding="utf-8")
-        self.assertIn("Other QEI Laser treatments", html)
+        html = (self.out / "qei-laser/therapeutic/cairs-eye-surgery/index.html").read_text(encoding="utf-8")
+        self.assertIn("Other QEI Laser Therapeutic treatments", html)
         self.assertNotIn("Other Dry Eye Clinic treatments", html)
+        self.assertNotIn("Other vision correction options", html)
+        lasik = (self.out / "qei-laser/refractive/lasik/index.html").read_text(encoding="utf-8")
+        self.assertIn("Other vision correction options", lasik)
+        self.assertIn("Book a laser vision assessment", lasik)
+        self.assertNotIn("CAIRS eye surgery</a></h3>", lasik)
+        self.assertIn('"@type": "MedicalProcedure"', lasik)
+        self.assertIn('"howPerformed"', lasik)
+        self.assertIn('"@type": "FAQPage"', lasik)
+
+    def test_old_laser_urls_redirect_to_new_sections(self):
+        stub = (self.out / "qei-laser/treatments/cairs-eye-surgery/index.html").read_text(encoding="utf-8")
+        self.assertIn("qei-laser/therapeutic/cairs-eye-surgery/", stub)
+        stub = (self.out / "qei-laser/treatments/prk-asa-laser-vision-correction/index.html").read_text(encoding="utf-8")
+        self.assertIn("qei-laser/refractive/prk/", stub)
+
+    def test_laser_sections_are_in_navigation_and_footer(self):
+        home = (self.out / "index.html").read_text(encoding="utf-8")
+        self.assertIn("qei-laser/refractive/", home)
+        self.assertIn("qei-laser/therapeutic/", home)
+        labels = [item["label"] for item in self.site.config["nav"]]
+        self.assertIn("Laser eye surgery", labels)
         dry = (self.out / "dry-eye-clinic/treatments/blephex/index.html").read_text(encoding="utf-8")
         self.assertIn("Other Dry Eye Clinic treatments", dry)
         self.assertNotIn("CAIRS", dry)

@@ -1,11 +1,11 @@
 ---
 title: "Post corneal transplant"
 short_title: "Post corneal transplant"
-url: /qei-laser/treatments/post-corneal-transplant/
+url: /qei-laser/therapeutic/post-corneal-transplant/
 template: treatment
-group: laser
-section: "QEI Laser"
-parent: /qei-laser/treatments/
+group: therapeutic
+section: "QEI Laser Therapeutic"
+parent: /qei-laser/therapeutic/
 order: 5
 badge: "Therapeutic laser"
 hero_image: content/media/qei-laser/post-corneal-transplant.jpg
@@ -35,7 +35,7 @@ A corneal transplant is stitched into place with very fine sutures, and as the g
 
 ## Laser regularisation of a graft
 
-After a corneal graft the front of the eye may have an irregular shape called [irregular astigmatism](/qei-laser/treatments/irregular-astigmatism/). A specialised machine called a topographer measures this abnormal shape and uses the information to guide a customised laser treatment, a topography-guided phototherapeutic keratectomy (PTK). This treatment can help patients get out of contact lenses, improve their quality of vision and reduce visual symptoms such as starbursts, haloes and glare. Treatment is planned to preserve corneal thickness and is performed under a cover of anti-rejection drops.
+After a corneal graft the front of the eye may have an irregular shape called [irregular astigmatism](/qei-laser/therapeutic/irregular-astigmatism/). A specialised machine called a topographer measures this abnormal shape and uses the information to guide a customised laser treatment, a topography-guided phototherapeutic keratectomy (PTK). This treatment can help patients get out of contact lenses, improve their quality of vision and reduce visual symptoms such as starbursts, haloes and glare. Treatment is planned to preserve corneal thickness and is performed under a cover of anti-rejection drops.
 
 ## Scarring after Fuchs' dystrophy
 
@@ -43,4 +43,4 @@ Untreated Fuchs' endothelial dystrophy with long-term corneal oedema can lead to
 
 ## What to expect
 
-The procedure and recovery are similar to other surface laser treatments: anaesthetic drops, a few minutes of laser, a bandage contact lens for several days, and gradual improvement over weeks to months. Follow-up is closer than usual to monitor the graft. See [information for patients](/qei-laser/for-patients/) and our guides to [corneal scarring](/eye-conditions/corneal-scarring/) and [keratoconus](/eye-conditions/keratoconus/), the conditions that most often lead to a transplant.
+The procedure and recovery are similar to other surface laser treatments: anaesthetic drops, a few minutes of laser, a bandage contact lens for several days, and gradual improvement over weeks to months. Follow-up is closer than usual to monitor the graft. See [information for patients](/qei-laser/therapeutic/for-patients/) and our guides to [corneal scarring](/eye-conditions/corneal-scarring/) and [keratoconus](/eye-conditions/keratoconus/), the conditions that most often lead to a transplant.

@@ -160,6 +160,52 @@
       ]
     },
     {
+      "label": "Laser eye surgery",
+      "url": "/qei-laser/",
+      "children": [
+        {
+          "label": "QEI Laser overview",
+          "url": "/qei-laser/"
+        },
+        {
+          "label": "QEI Laser Refractive: laser vision correction",
+          "url": "/qei-laser/refractive/"
+        },
+        {
+          "label": "LASIK and Ray Tracing LASIK",
+          "url": "/qei-laser/refractive/lasik/"
+        },
+        {
+          "label": "CLEAR lenticule extraction (Z8)",
+          "url": "/qei-laser/refractive/clear-lenticule-extraction/"
+        },
+        {
+          "label": "TransPRK and PRK",
+          "url": "/qei-laser/refractive/trans-prk/"
+        },
+        {
+          "label": "EVO ICL",
+          "url": "/qei-laser/refractive/icl/"
+        },
+        {
+          "label": "Refractive lens exchange",
+          "url": "/qei-laser/refractive/refractive-lens-exchange/"
+        },
+        {
+          "label": "Am I suitable?",
+          "url": "/qei-laser/refractive/am-i-suitable/"
+        },
+        {
+          "label": "Costs and payment",
+          "url": "/qei-laser/refractive/costs-and-payment/"
+        },
+        {
+          "label": "QEI Laser Therapeutic: corneal disease",
+          "url": "/qei-laser/therapeutic/"
+        }
+      ]
+    },
+    {
       "label": "Patients",
       "url": "/patient-info/",
       "children": [
@@ -168,8 +214,12 @@
           "url": "/patient-info/book-an-appointment/"
         },
         {
-          "label": "QEI Laser eye surgery",
-          "url": "/qei-laser/"
+          "label": "Laser vision correction",
+          "url": "/qei-laser/refractive/"
+        },
+        {
+          "label": "Therapeutic corneal laser",
+          "url": "/qei-laser/therapeutic/"
         },
         {
           "label": "Preparing for your visit",
@@ -210,7 +260,7 @@
           "url": "/ophthalmologists/#cataract"
         },
         {
-          "label": "QEI Laser eye surgery",
+          "label": "QEI Laser: refractive and therapeutic",
           "url": "/qei-laser/"
         },
         {
@@ -364,8 +414,12 @@
           "url": "/eye-conditions/"
         },
         {
-          "label": "QEI Laser eye surgery",
-          "url": "/qei-laser/"
+          "label": "Laser vision correction (QEI Laser Refractive)",
+          "url": "/qei-laser/refractive/"
+        },
+        {
+          "label": "QEI Laser Therapeutic",
+          "url": "/qei-laser/therapeutic/"
         },
         {
           "label": "Woolloongabba QEI Clinic",
@@ -521,26 +575,70 @@
     {
       "from": "/services/qei-laser/",
       "to": "/qei-laser/"
+    },
+    {
+      "from": "/qei-laser/treatments/irregular-astigmatism/",
+      "to": "/qei-laser/therapeutic/irregular-astigmatism/"
+    },
+    {
+      "from": "/qei-laser/treatments/keratoconus-athens-protocol/",
+      "to": "/qei-laser/therapeutic/keratoconus-corneal-cross-linking/"
+    },
+    {
+      "from": "/qei-laser/treatments/cairs-eye-surgery/",
+      "to": "/qei-laser/therapeutic/cairs-eye-surgery/"
+    },
+    {
+      "from": "/qei-laser/treatments/corneal-scarring/",
+      "to": "/qei-laser/therapeutic/corneal-scarring/"
+    },
+    {
+      "from": "/qei-laser/treatments/post-corneal-transplant/",
+      "to": "/qei-laser/therapeutic/post-corneal-transplant/"
+    },
+    {
+      "from": "/qei-laser/treatments/recurrent-erosion-syndrome/",
+      "to": "/qei-laser/therapeutic/recurrent-erosion-syndrome/"
+    },
+    {
+      "from": "/qei-laser/treatments/corneal-dystrophies/",
+      "to": "/qei-laser/therapeutic/corneal-dystrophies/"
+    },
+    {
+      "from": "/qei-laser/treatments/prk-asa-laser-vision-correction/",
+      "to": "/qei-laser/refractive/prk/"
+    },
+    {
+      "from": "/qei-laser/treatments/",
+      "to": "/qei-laser/therapeutic/"
+    },
+    {
+      "from": "/qei-laser/for-patients/",
+      "to": "/qei-laser/therapeutic/for-patients/"
+    },
+    {
+      "from": "/qei-laser/health-fund-rebates/",
+      "to": "/qei-laser/therapeutic/health-fund-rebates/"
     }
   ],
   "domain_redirects": {
     "_comment": "qeilaser.com.au pages and where they now live on this site. Configure as 301 redirects (Squarespace URL mappings or DNS-level forwarding) at launch; see docs/LAUNCH-CHECKLIST.md.",
     "qeilaser.com.au": {
       "/": "/qei-laser/",
-      "/about-qei-laser": "/qei-laser/",
-      "/overview-of-treatments": "/qei-laser/treatments/",
-      "/for-patients": "/qei-laser/for-patients/",
-      "/automatic-health-fund-rebates": "/qei-laser/health-fund-rebates/",
+      "/about-qei-laser": "/qei-laser/therapeutic/",
+      "/overview-of-treatments": "/qei-laser/therapeutic/",
+      "/for-patients": "/qei-laser/therapeutic/for-patients/",
+      "/automatic-health-fund-rebates": "/qei-laser/therapeutic/health-fund-rebates/",
       "/contact-us": "/contact/",
       "/dr-brendan-cronin-1": "/ophthalmologists/dr-brendan-cronin/",
       "/dr-david-gunn": "/ophthalmologists/dr-david-gunn/",
-      "/cairs-eye-surgery": "/qei-laser/treatments/cairs-eye-surgery/",
-      "/corneal-scarring": "/qei-laser/treatments/corneal-scarring/",
-      "/post-corneal-transplant": "/qei-laser/treatments/post-corneal-transplant/",
-      "/recurrent-erosion-syndrome": "/qei-laser/treatments/recurrent-erosion-syndrome/",
-      "/irregular-astigmatism": "/qei-laser/treatments/irregular-astigmatism/",
-      "/corneal-dystrophies": "/qei-laser/treatments/corneal-dystrophies/",
-      "/keratoconus-corneal-cross-linking": "/qei-laser/treatments/keratoconus-athens-protocol/",
+      "/cairs-eye-surgery": "/qei-laser/therapeutic/cairs-eye-surgery/",
+      "/corneal-scarring": "/qei-laser/therapeutic/corneal-scarring/",
+      "/post-corneal-transplant": "/qei-laser/therapeutic/post-corneal-transplant/",
+      "/recurrent-erosion-syndrome": "/qei-laser/therapeutic/recurrent-erosion-syndrome/",
+      "/irregular-astigmatism": "/qei-laser/therapeutic/irregular-astigmatism/",
+      "/corneal-dystrophies": "/qei-laser/therapeutic/corneal-dystrophies/",
+      "/keratoconus-corneal-cross-linking": "/qei-laser/therapeutic/keratoconus-corneal-cross-linking/",
       "/home": "/qei-laser/",
       "/dr-geoffrey-ryan": "/ophthalmologists/dr-geoffrey-ryan/",
       "/dr-lee-holland": "/ophthalmologists/dr-lee-holland/",

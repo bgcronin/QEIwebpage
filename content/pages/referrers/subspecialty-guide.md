@@ -17,7 +17,7 @@ Age-related cataract, complex cataract, refractive lens exchange, premium intrao
 
 ## Cornea, keratoconus and ocular surface
 
-Keratoconus (cross-linking, topography-guided laser, [CAIRS](/qei-laser/treatments/cairs-eye-surgery/)), corneal transplantation including DMEK and DALK, corneal scarring and dystrophies, pterygium, recurrent erosion, severe ocular surface disease. Laser treatment of these conditions is provided through [QEI Laser](/qei-laser/).
+Keratoconus (cross-linking, topography-guided laser, [CAIRS](/qei-laser/therapeutic/cairs-eye-surgery/)), corneal transplantation including DMEK and DALK, corneal scarring and dystrophies, pterygium, recurrent erosion, severe ocular surface disease. Laser treatment of these conditions is provided through [QEI Laser](/qei-laser/).
 **Specialists:** [Dr Brendan Cronin](/ophthalmologists/dr-brendan-cronin/), [Dr David Gunn](/ophthalmologists/dr-david-gunn/), [Dr Lee Holland](/ophthalmologists/dr-lee-holland/), [Dr Geoffrey Ryan](/ophthalmologists/dr-geoffrey-ryan/).
 Dry eye disease, meibomian gland dysfunction, blepharitis and Demodex: refer directly to the [Dry Eye Clinic](/dry-eye-clinic/) (optometrist-led, no referral required for patients).
 
@@ -45,7 +45,7 @@ Eyelid malposition (ptosis, entropion, ectropion), eyelid lesions and cancers, w
 
 ## Laser and refractive surgery
 
-LASIK, surface laser, implantable collamer lenses, refractive lens exchange.
+Ray Tracing LASIK, CLEAR lenticule extraction (Ziemer Z8), TransPRK and PRK, the EVO implantable collamer lens and refractive lens exchange through [QEI Laser Refractive](/qei-laser/refractive/); therapeutic excimer laser, cross-linking and CAIRS through [QEI Laser Therapeutic](/qei-laser/therapeutic/). See the [procedure comparison](/qei-laser/refractive/compare-procedures/) and [suitability criteria](/qei-laser/refractive/am-i-suitable/).
 **Specialists:** [Dr David Gunn](/ophthalmologists/dr-david-gunn/), [Dr Brendan Cronin](/ophthalmologists/dr-brendan-cronin/), [Dr Lee Holland](/ophthalmologists/dr-lee-holland/), [Dr Geoffrey Ryan](/ophthalmologists/dr-geoffrey-ryan/). Therapeutic excimer laser (topography-guided PTK, PTK for scars, dystrophies and recurrent erosions, the Athens protocol) and PRK/ASA are provided through [QEI Laser](/qei-laser/), located inside South Brisbane Day Hospital; therapeutic procedures attract automatic health fund cover.
 
 ## Uveitis and genetic eye disease

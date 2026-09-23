@@ -1,11 +1,11 @@
 ---
 title: "Information for laser patients"
 short_title: "For patients"
-url: /qei-laser/for-patients/
+url: /qei-laser/therapeutic/for-patients/
 template: page
-section: "QEI Laser"
-parent: /qei-laser/
-eyebrow: "QEI Laser"
+section: "QEI Laser Therapeutic"
+parent: /qei-laser/therapeutic/
+eyebrow: "QEI Laser Therapeutic"
 summary: "Our rigorous assessment process is vital to ensure your safety, and it can take time. Here is what to expect before, during and after excimer laser treatment at QEI Laser, and how to look after your eyes while they heal."
 hero_image: content/media/qei-laser/dr-david-gunn-consult.jpg
 hero_alt: "Dr David Gunn examining a patient at the Queensland Eye Institute"
@@ -49,7 +49,7 @@ What to bring to your appointment:
 ## Before your treatment
 
 - **Contact lenses.** If you wear soft contact lenses, remove them one week before your assessment. If you wear hard lenses because you cannot wear soft ones, keep wearing them until your appointment and your surgeon will advise.
-- **Consent and costs.** You will receive written information about your procedure, its risks and benefits, and a written estimate of costs. Therapeutic procedures attract automatic health fund cover; see [health fund rebates](/qei-laser/health-fund-rebates/).
+- **Consent and costs.** You will receive written information about your procedure, its risks and benefits, and a written estimate of costs. Therapeutic procedures attract automatic health fund cover; see [health fund rebates](/qei-laser/therapeutic/health-fund-rebates/).
 - **Medicines.** Continue your usual medicines unless told otherwise. Tell your surgeon about any autoimmune condition, pregnancy or medicines that affect healing.
 - **On the day.** Do not wear eye make-up or perfume. Bring your drops, sunglasses and a driver. You can eat normally unless sedation is planned.
 

@@ -66,6 +66,26 @@
   </div>
 </section>
 
+{% if doc.laser %}
+<section class="section section--tint">
+  <div class="container feature-block feature-block--flip">
+    <div class="feature-block__media">{{ m.img(doc.laser.image, doc.laser.image_alt, 'card') }}</div>
+    <div>
+      <span class="badge">{{ doc.laser.badge }}</span>
+      <h2 style="margin-top:.75rem">{{ doc.laser.title }}</h2>
+      <p class="lead">{{ doc.laser.text }}</p>
+      <ul class="icon-list">
+        {% for p in doc.laser.points %}<li>{{ m.icon('check-circle') }}<span>{{ p }}</span></li>{% endfor %}
+      </ul>
+      <div class="cluster">
+        <a class="btn btn--primary" href="{{ rel(doc.laser.url) }}">{{ doc.laser.cta }}</a>
+        <a class="btn btn--secondary" href="{{ rel(doc.laser.secondary_url) }}">{{ doc.laser.secondary_cta }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="section section--alt">
   <div class="container">
     <div class="section-head">

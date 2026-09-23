@@ -1,11 +1,11 @@
 ---
 title: "Recurrent erosion syndrome"
 short_title: "Recurrent erosion syndrome"
-url: /qei-laser/treatments/recurrent-erosion-syndrome/
+url: /qei-laser/therapeutic/recurrent-erosion-syndrome/
 template: treatment
-group: laser
-section: "QEI Laser"
-parent: /qei-laser/treatments/
+group: therapeutic
+section: "QEI Laser Therapeutic"
+parent: /qei-laser/therapeutic/
 order: 6
 badge: "Therapeutic laser"
 hero_image: content/media/qei-laser/recurrent-erosion.jpg
@@ -45,4 +45,4 @@ When erosions keep recurring, **phototherapeutic keratectomy** offers a definiti
 
 ## What to expect
 
-The treatment is performed under anaesthetic drops as a day procedure. A bandage contact lens is worn while the surface heals over three to five days, during which the eye is sore and light-sensitive, much like an erosion itself. Lubricants and ointment are continued for some months afterwards to protect the healing surface. See [information for patients](/qei-laser/for-patients/).
+The treatment is performed under anaesthetic drops as a day procedure. A bandage contact lens is worn while the surface heals over three to five days, during which the eye is sore and light-sensitive, much like an erosion itself. Lubricants and ointment are continued for some months afterwards to protect the healing surface. See [information for patients](/qei-laser/therapeutic/for-patients/).

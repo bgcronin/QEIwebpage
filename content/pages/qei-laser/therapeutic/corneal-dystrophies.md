@@ -1,11 +1,11 @@
 ---
 title: "Corneal dystrophies"
 short_title: "Corneal dystrophies"
-url: /qei-laser/treatments/corneal-dystrophies/
+url: /qei-laser/therapeutic/corneal-dystrophies/
 template: treatment
-group: laser
-section: "QEI Laser"
-parent: /qei-laser/treatments/
+group: therapeutic
+section: "QEI Laser Therapeutic"
+parent: /qei-laser/therapeutic/
 order: 7
 badge: "Therapeutic laser"
 hero_image: content/media/qei-laser/corneal-dystrophy.jpg
@@ -43,4 +43,4 @@ For dystrophies that extend deep into the stroma, or when the cornea has become 
 
 ## What to expect
 
-The procedure and recovery follow the same pattern as other surface laser treatments: anaesthetic drops, a few minutes of laser, a bandage contact lens for several days and progressively clearer vision over the following weeks. See [information for patients](/qei-laser/for-patients/).
+The procedure and recovery follow the same pattern as other surface laser treatments: anaesthetic drops, a few minutes of laser, a bandage contact lens for several days and progressively clearer vision over the following weeks. See [information for patients](/qei-laser/therapeutic/for-patients/).

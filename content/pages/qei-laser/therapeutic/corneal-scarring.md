@@ -1,11 +1,11 @@
 ---
 title: "Corneal scarring"
 short_title: "Corneal scarring"
-url: /qei-laser/treatments/corneal-scarring/
+url: /qei-laser/therapeutic/corneal-scarring/
 template: treatment
-group: laser
-section: "QEI Laser"
-parent: /qei-laser/treatments/
+group: therapeutic
+section: "QEI Laser Therapeutic"
+parent: /qei-laser/therapeutic/
 order: 4
 badge: "Therapeutic laser"
 hero_image: content/media/qei-laser/corneal-scarring.jpg
@@ -39,8 +39,8 @@ Phototherapeutic keratectomy removes the scarred tissue layer by layer with the 
 
 ## What to expect
 
-The procedure takes a few minutes under anaesthetic drops. A bandage contact lens is worn for several days while the surface heals, during which the eye is uncomfortable and light-sensitive. Vision is hazy at first and clears progressively over weeks; the final result is judged at about three months, when a new glasses or contact lens prescription can be provided if needed. See [information for patients](/qei-laser/for-patients/).
+The procedure takes a few minutes under anaesthetic drops. A bandage contact lens is worn for several days while the surface heals, during which the eye is uncomfortable and light-sensitive. Vision is hazy at first and clears progressively over weeks; the final result is judged at about three months, when a new glasses or contact lens prescription can be provided if needed. See [information for patients](/qei-laser/therapeutic/for-patients/).
 
 ## When a transplant is needed instead
 
-If the scar extends into the deeper stroma, laser cannot remove it without dangerously thinning the cornea. In these cases your surgeon may recommend a deep anterior lamellar keratoplasty (DALK) or a penetrating keratoplasty, and laser may later be used to refine the surface of the graft. See [post corneal transplant laser](/qei-laser/treatments/post-corneal-transplant/).
+If the scar extends into the deeper stroma, laser cannot remove it without dangerously thinning the cornea. In these cases your surgeon may recommend a deep anterior lamellar keratoplasty (DALK) or a penetrating keratoplasty, and laser may later be used to refine the surface of the graft. See [post corneal transplant laser](/qei-laser/therapeutic/post-corneal-transplant/).

@@ -1,11 +1,11 @@
 ---
 title: "Keratoconus and corneal cross-linking"
 short_title: "Keratoconus and cross-linking"
-url: /qei-laser/treatments/keratoconus-athens-protocol/
+url: /qei-laser/therapeutic/keratoconus-corneal-cross-linking/
 template: treatment
-group: laser
-section: "QEI Laser"
-parent: /qei-laser/treatments/
+group: therapeutic
+section: "QEI Laser Therapeutic"
+parent: /qei-laser/therapeutic/
 order: 2
 badge: "Therapeutic laser"
 hero_image: content/media/qei-laser/topography-keratoconus.jpg
@@ -47,7 +47,7 @@ Corneal collagen cross-linking is a procedure used to strengthen corneas that ar
 
 QEI Laser offers customised topography-guided cross-linking on Australia's most advanced pupil-tracking topography-guided cross-linking machine. If you do not have private health insurance, our doctors have a dedicated outpatient major procedure room so that you can minimise your cost and maximise your Medicare safety net benefit.
 
-Dr Brendan Cronin and Dr David Gunn have particular expertise in these techniques and in newer keratoconus treatments such as [CAIRS](/qei-laser/treatments/cairs-eye-surgery/), and QEI's corneal research group studies ways to refine cross-linking, including artificial intelligence to create customised treatment profiles.
+Dr Brendan Cronin and Dr David Gunn have particular expertise in these techniques and in newer keratoconus treatments such as [CAIRS](/qei-laser/therapeutic/cairs-eye-surgery/), and QEI's corneal research group studies ways to refine cross-linking, including artificial intelligence to create customised treatment profiles.
 
 ## Results
 
@@ -55,4 +55,4 @@ The main goal is to stop keratoconus progressing; most treated eyes stabilise. M
 
 ## Risks
 
-Temporary discomfort, light sensitivity and blurred vision are expected. Uncommon risks include infection, delayed surface healing, corneal haze, and progression despite treatment. Your surgeon will explain these in detail during informed consent. See [information for patients](/qei-laser/for-patients/) for preparation and aftercare.
+Temporary discomfort, light sensitivity and blurred vision are expected. Uncommon risks include infection, delayed surface healing, corneal haze, and progression despite treatment. Your surgeon will explain these in detail during informed consent. See [information for patients](/qei-laser/therapeutic/for-patients/) for preparation and aftercare.
