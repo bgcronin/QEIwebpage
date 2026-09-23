@@ -193,9 +193,11 @@ class FullBuildTests(unittest.TestCase):
             self.assertNotIn("Guide price", html, page)
         for page in list((self.out / "qei-laser").rglob("index.html")) + list((self.out / "ophthalmologists").rglob("index.html")) + [self.out / "index.html"]:
             html = page.read_text(encoding="utf-8")
+            self.assertNotIn("Ray Tracing", html, page)
+            if "dr-brendan-cronin" in str(page):
+                continue  # the practice keeps the one original sentence on Dr Cronin's profile
             self.assertNotIn("Focus Vision", html, page)
             self.assertNotIn("focusvision", html, page)
-            self.assertNotIn("Ray Tracing", html, page)
 
     def test_old_laser_urls_redirect_to_new_sections(self):
         stub = (self.out / "qei-laser/treatments/cairs-eye-surgery/index.html").read_text(encoding="utf-8")
