@@ -47,7 +47,7 @@ reviewed_on: ""
 ---
 ## What is refractive lens exchange?
 
-Inside every eye is a natural lens that fine-tunes focus. From our mid-40s it stiffens and loses the ability to change focus (presbyopia), which is why reading glasses appear; later it clouds, which is cataract. Refractive lens exchange removes the natural lens before it has become a cataract and replaces it with an artificial intraocular lens (IOL) chosen to give you the vision you want. It is the same operation as cataract surgery, performed through a 2 millimetre incision under local anaesthetic and sedation, and it takes about 15 to 20 minutes per eye.
+Inside every eye is a natural lens that fine-tunes focus. From our mid-40s it stiffens and loses the ability to change focus (presbyopia), which is why reading glasses appear; later it clouds, which is cataract. Refractive lens exchange removes the natural lens before it has become a cataract and replaces it with an artificial intraocular lens (IOL) chosen to give you the vision you want. It is the same operation as cataract surgery, performed through a 2 millimetre incision under local anaesthetic and sedation, and it takes about 15 to 20 minutes per eye. Our ophthalmologists have performed more than 120,000 cataract procedures, so it is the operation they know best.
 
 Because the new lens is selected and calculated for your eye, lens exchange can correct large amounts of long-sightedness, short-sightedness and astigmatism in a single step. And because the natural lens is gone, the result is permanent and a cataract can never develop.
 

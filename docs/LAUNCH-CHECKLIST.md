@@ -12,6 +12,7 @@ The redesigned site in `web/` is a review build. Complete these steps before it 
 - [ ] Review imported news, patient stories and events; retire anything out of date. Set `hero_alt` text for imported images.
 - [ ] Check the affiliate logos on `/research/affiliates/` and replace generic alt text with organisation names.
 - [ ] Confirm consent for all photographs of patients, staff and supporters.
+- [ ] The "more than 120,000 cataract procedures" figure was supplied by the practice on 23 September 2026 and appears on the home page (hero and statistics band), the cataracts page, the ophthalmologists page, the about page and the lens exchange page (search the content for "120,000"). Review it annually alongside the 16,000 patients a year figure.
 
 ## qeilaser.com.au
 

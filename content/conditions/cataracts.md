@@ -6,6 +6,7 @@ icon: wp-content/uploads/2019/04/QEI014-Website-Icon-Cataracts3.svg
 doctors: [dr-brendan-cronin, dr-david-gunn, dr-lee-holland, associate-professor-anthony-kwan, dr-jonathan-lai, dr-alexander-newman, dr-anthony-pane, dr-angela-richards, dr-geoffrey-ryan]
 keywords: [cataract surgery Brisbane, cataract symptoms, phacoemulsification, intraocular lens, multifocal lens, day surgery]
 at_a_glance:
+  - "Our ophthalmologists have performed more than 120,000 cataract procedures."
   - "A cataract is a clouding of the eye's natural lens, usually due to age."
   - "Symptoms develop gradually: blur, glare, halos and poor night vision."
   - "Surgery is a day procedure under local anaesthetic, performed at South Brisbane Day Hospital."
@@ -54,6 +55,8 @@ The exact mechanism is not fully understood, but the factors most strongly assoc
 A cataract is diagnosed with a slit-lamp examination of the eye. Before surgery, precise measurements of the eye (biometry) are taken to calculate the power of the artificial lens, and the retina is examined to make sure no other condition is affecting your vision.
 
 ## Treatment at QEI
+
+**Experience you can rely on.** Together, QEI's ophthalmologists have performed more than 120,000 cataract procedures. It is the operation our surgeons perform most often, at South Brisbane Day Hospital in the same building as the clinic.
 
 A change of glasses from your optometrist may help early on, but as the cataract progresses the only way to restore vision is surgery. Cataract surgery removes the cloudy lens and replaces it with a clear acrylic lens implant. Modern surgery uses very small sutureless incisions, a specialised phacoemulsification machine to dissolve the cataract, and lenses that unfold inside the eye.
 

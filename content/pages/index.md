@@ -10,12 +10,18 @@ hero:
   title: "Saving sight every day"
   text: "Fellowship-trained ophthalmologists, an optometrist-led Dry Eye Clinic and Queensland's largest independent eye research institute, working together in Brisbane so you receive the best care available."
   proof:
+    - "Over 120,000 cataract procedures performed by our surgeons"
     - "Over 16,000 patients cared for each year"
     - "11 subspecialist ophthalmologists"
     - "Clinics in Woolloongabba and Clayfield"
     - "Research and education institute since 1965"
   image: wp-content/uploads/2026/03/20240717_QEI-BrendanCronin_Reception-1_Web.jpg
   image_alt: "Dr Brendan Cronin greeting a patient at the Queensland Eye Institute reception"
+stats:
+  - {value: "120,000+", label: "cataract procedures performed by our ophthalmologists"}
+  - {value: "16,000+", label: "patients cared for every year"}
+  - {value: "11", label: "subspecialist ophthalmologists under one roof"}
+  - {value: "60+", label: "years of research and education, since 1965"}
 quick_links:
   - {label: "Book an appointment", url: /patient-info/book-an-appointment/, icon: calendar}
   - {label: "Dry Eye Clinic", url: /dry-eye-clinic/, icon: droplet}
@@ -47,7 +53,7 @@ laser:
   secondary_url: /qei-laser/refractive/am-i-suitable/
   secondary_cta: "Am I suitable?"
 subspecialties:
-  - {label: "Cataract", url: "/ophthalmologists/#cataract", icon: eye, text: "Small-incision surgery with premium lens options."}
+  - {label: "Cataract", url: "/ophthalmologists/#cataract", icon: eye, text: "Over 120,000 procedures performed by our surgeons, with premium lens options."}
   - {label: "Cornea and keratoconus", url: "/ophthalmologists/#cornea", icon: layers, text: "Transplants, cross-linking, CAIRS and pterygium surgery."}
   - {label: "Retina and macula", url: "/ophthalmologists/#retina", icon: activity, text: "Macular degeneration, diabetic eye disease and retinal surgery."}
   - {label: "Glaucoma", url: "/ophthalmologists/#glaucoma", icon: shield, text: "Laser, medical and minimally invasive glaucoma surgery."}

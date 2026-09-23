@@ -35,7 +35,7 @@ Our values serve as a compass for our actions and describe how we behave in the 
 
 ## One institute, three pillars
 
-- **Clinical care.** The QEI Clinic at Woolloongabba and Clayfield treats more than 16,000 patients a year. Our ophthalmologists are all Fellows of the Royal Australian and New Zealand College of Ophthalmologists with subspecialty fellowship training, supported by an [optometrist-led Dry Eye Clinic](/dry-eye-clinic/), the [South Brisbane Day Hospital](/services/southbank-day-hospital/) and the Queensland Electro-Diagnostic and Imaging Centre.
+- **Clinical care.** The QEI Clinic at Woolloongabba and Clayfield treats more than 16,000 patients a year, and our ophthalmologists have together performed more than 120,000 cataract procedures. Our ophthalmologists are all Fellows of the Royal Australian and New Zealand College of Ophthalmologists with subspecialty fellowship training, supported by an [optometrist-led Dry Eye Clinic](/dry-eye-clinic/), the [South Brisbane Day Hospital](/services/southbank-day-hospital/) and the Queensland Electro-Diagnostic and Imaging Centre.
 - **Research.** The QEI Foundation operates Queensland's largest independent academic research institute devoted to eye-related health and diseases, with laboratories, a clinical trials unit and collaborations across Australia and the world. [Explore our research](/research/).
 - **Education.** We are a clinical school of the University of Queensland Medical School and train registrars, fellows, optometry and medical students, optometrists and practice staff. [See our education programmes](/education/).
 

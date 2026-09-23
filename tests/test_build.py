@@ -199,6 +199,13 @@ class FullBuildTests(unittest.TestCase):
             self.assertNotIn("Focus Vision", html, page)
             self.assertNotIn("focusvision", html, page)
 
+    def test_cataract_experience_figure_is_prominent(self):
+        home = (self.out / "index.html").read_text(encoding="utf-8")
+        self.assertIn("120,000", home)
+        self.assertIn('class="stats stats--home"', home)
+        for url in ("eye-conditions/cataracts", "ophthalmologists", "about"):
+            self.assertIn("120,000", (self.out / url / "index.html").read_text(encoding="utf-8"), url)
+
     def test_old_laser_urls_redirect_to_new_sections(self):
         stub = (self.out / "qei-laser/treatments/cairs-eye-surgery/index.html").read_text(encoding="utf-8")
         self.assertIn("qei-laser/therapeutic/cairs-eye-surgery/", stub)

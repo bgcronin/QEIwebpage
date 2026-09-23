@@ -27,6 +27,15 @@
   </div>
 </section>
 
+{% if doc.stats %}
+<section class="section" style="padding-top:0" aria-labelledby="stats-heading">
+  <div class="container">
+    <h2 id="stats-heading" class="visually-hidden">Queensland Eye Institute at a glance</h2>
+    <ul class="stats stats--home">{% for s in doc.stats %}<li><strong>{{ s.value }}</strong><span>{{ s.label }}</span></li>{% endfor %}</ul>
+  </div>
+</section>
+{% endif %}
+
 <section class="section section--tint">
   <div class="container feature-block">
     <div class="feature-block__media">{{ m.img(doc.dryeye.image, doc.dryeye.image_alt, 'card') }}</div>
