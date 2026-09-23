@@ -16,7 +16,6 @@ facts:
   "Procedure time": "About 5 minutes per eye; both eyes in one visit"
   "Recovery": "Surface heals in about 3 to 4 days under a bandage contact lens; driving usually within 1 to 2 weeks; final vision by 1 to 3 months"
   "Best for": "Thinner corneas, contact sports and occupations with a risk of eye injury, dry-eye-prone eyes, and anyone who prefers a flap-free procedure"
-  "Guide price (2026)": "From $3,500 per eye, all-inclusive, with interest-free payment plans"
 procedure:
   name: "TransPRK (transepithelial photorefractive keratectomy)"
   alternate: ["transepithelial PRK", "no-touch PRK", "single-step surface ablation"]

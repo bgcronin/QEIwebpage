@@ -36,7 +36,6 @@
   "external_sites": {
     "qei_laser": "https://www.qeilaser.com.au/",
     "sbdh": "https://sbdh.com.au/",
-    "focus_vision": "http://www.focusvision.com.au/",
     "cairsplan": "https://cairsplan.com/",
     "last_seen": "https://lastseen.com.au/"
   },
@@ -172,7 +171,7 @@
           "url": "/qei-laser/refractive/"
         },
         {
-          "label": "LASIK and Ray Tracing LASIK",
+          "label": "LASIK",
           "url": "/qei-laser/refractive/lasik/"
         },
         {

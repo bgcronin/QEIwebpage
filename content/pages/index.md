@@ -37,9 +37,9 @@ laser:
   title: "Laser vision correction, done the safe way"
   text: "Every modern procedure under one roof, performed by corneal subspecialists inside a fully accredited private hospital, so the recommendation you receive is the right one for your eyes."
   points:
-    - "Ray Tracing LASIK, first in Queensland, and CLEAR lenticule extraction on the low-energy Ziemer Z8"
+    - "LASIK, and CLEAR lenticule extraction on the low-energy Ziemer Z8"
     - "TransPRK, PRK, the EVO ICL for high prescriptions and refractive lens exchange for reading vision"
-    - "No referral needed, all-inclusive pricing and interest-free payment plans"
+    - "No referral needed, and a written quote after your assessment"
   image: wp-content/uploads/2026/08/20260710_David-Gunn-heads-up-surgery.jpg
   image_alt: "Dr David Gunn performing laser eye surgery using a heads-up 3D display"
   url: /qei-laser/refractive/
@@ -53,7 +53,7 @@ subspecialties:
   - {label: "Glaucoma", url: "/ophthalmologists/#glaucoma", icon: shield, text: "Laser, medical and minimally invasive glaucoma surgery."}
   - {label: "Neuro-ophthalmology", url: "/ophthalmologists/#neuro-ophthalmology", icon: zap, text: "Optic nerve disease, double vision and unexplained vision loss."}
   - {label: "Oculoplastics", url: "/ophthalmologists/#oculoplastics", icon: smile, text: "Eyelid, tear duct and orbital surgery, thyroid eye disease."}
-  - {label: "Laser vision correction", url: "/qei-laser/refractive/", icon: sun, text: "Ray Tracing LASIK, CLEAR, TransPRK, EVO ICL and lens exchange. No referral needed."}
+  - {label: "Laser vision correction", url: "/qei-laser/refractive/", icon: sun, text: "LASIK, CLEAR, TransPRK, EVO ICL and lens exchange. No referral needed."}
   - {label: "Dry eye", url: "/dry-eye-clinic/", icon: droplet, text: "Optometrist-led clinic. No referral needed."}
 pillars:
   - {label: "Research", url: /research/, icon: microscope, text: "Inherited, age-related and restorative eye disease research translated into better treatments.", cta: "Explore our research"}

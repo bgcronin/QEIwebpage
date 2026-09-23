@@ -13,7 +13,7 @@ cards:
   - {title: "Queensland Electro-Diagnostic & Imaging Centre", url: /services/qei-electro-diagnostic-and-imaging-centre/, text: "Objective electrodiagnostic tests of retinal and optic nerve function for patients of all ages.", cta: "About QEDIC"}
   - {title: "Dry Eye Clinic", url: /dry-eye-clinic/, text: "Optometrist-led clinic with advanced treatments and no referral needed.", badge: "No referral needed", cta: "About the clinic"}
   - {title: "QEI Laser Therapeutic", url: /qei-laser/therapeutic/, text: "Excimer laser, cross-linking and CAIRS for diseases of the cornea inside an accredited private hospital, with automatic health fund cover.", badge: "Health fund covered", cta: "About QEI Laser Therapeutic"}
-  - {title: "QEI Laser Refractive", url: /qei-laser/refractive/, text: "Laser vision correction: Ray Tracing LASIK, CLEAR on the Ziemer Z8, TransPRK, PRK, the EVO ICL and refractive lens exchange.", badge: "No referral needed", cta: "About QEI Laser Refractive"}
+  - {title: "QEI Laser Refractive", url: /qei-laser/refractive/, text: "Laser vision correction: LASIK, CLEAR on the Ziemer Z8, TransPRK, PRK, the EVO ICL and refractive lens exchange.", badge: "No referral needed", cta: "About QEI Laser Refractive"}
 sidebar: [book, contact]
 ---
 ## Integrated care in one place

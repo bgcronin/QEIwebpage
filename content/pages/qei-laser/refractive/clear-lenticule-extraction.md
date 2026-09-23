@@ -8,7 +8,7 @@ section: "QEI Laser Refractive"
 parent: /qei-laser/refractive/
 order: 4
 badge: "Flap-free keyhole"
-summary: "CLEAR (Corneal Lenticule Extraction for Advanced Refractive correction) is keyhole, flap-free laser vision correction for short-sightedness and astigmatism. A femtosecond laser shapes a thin disc of tissue, called a lenticule, inside the cornea, and the surgeon removes it through an opening only a few millimetres wide. At QEI Laser Refractive, CLEAR is performed on the Ziemer FEMTO LDV Z8, the lowest-energy femtosecond laser available, which means a gentler treatment and a smoother, faster recovery."
+summary: "CLEAR (Corneal Lenticule Extraction for Advanced Refractive correction) is keyhole, flap-free laser vision correction for short-sightedness and astigmatism. A femtosecond laser shapes a thin disc of tissue, called a lenticule, inside the cornea, and the surgeon removes it through an opening only a few millimetres wide. At QEI Laser Refractive, CLEAR is performed on the Ziemer FEMTO LDV Z8, a low-energy femtosecond laser, which means a gentler treatment and a smoother, faster recovery."
 keywords: [CLEAR lenticule extraction, lenticule extraction Brisbane, SMILE Brisbane, SMILE alternative, keyhole laser eye surgery, KLEx, keratorefractive lenticule extraction, Ziemer Z8, flap-free laser eye surgery, LASIK alternative Brisbane]
 hero_image: wp-content/uploads/2026/03/20260317_QEI_FemtoZ8Cronin1.jpg
 hero_alt: "Dr Brendan Cronin with the Ziemer FEMTO LDV Z8 femtosecond laser at the Queensland Eye Institute"
@@ -18,7 +18,6 @@ facts:
   "Procedure time": "About 10 to 15 minutes per eye; the laser itself takes well under a minute. Both eyes are treated in one visit"
   "Recovery": "Comfortable within hours; good vision within 1 to 3 days, sharpening over the following weeks; most people drive and work within a few days"
   "Best for": "Short-sighted adults who want a flap-free procedure: contact sports and physical occupations, eyes prone to dryness, and anyone who values keeping the cornea as strong as possible"
-  "Guide price (2026)": "From $4,250 per eye, all-inclusive, with interest-free payment plans"
 procedure:
   name: "CLEAR lenticule extraction (keratorefractive lenticule extraction, KLEx)"
   alternate: ["CLEAR", "lenticule extraction", "keyhole laser eye surgery", "KLEx", "SMILE alternative"]
@@ -41,7 +40,7 @@ faq:
       Vision is misty for the first day, usually good enough to move around the house by the evening, and most people are legal to drive within two to four days. Because the lenticule is removed through a small opening, the tissue planes take a few days to settle, so the crispness you get overnight with LASIK arrives over the first one to two weeks with CLEAR. Final vision is reached at about three months.
   - q: "What happens if I need a touch-up?"
     a: |
-      Enhancements after CLEAR are uncommon (in the order of 2 to 4 per cent of eyes). When they are needed, the Z8 allows a second, flapless lenticule treatment in suitable eyes, or a small surface laser treatment (TransPRK) can be applied over the cap. Enhancements in the first year are included in our aftercare.
+      Enhancements after CLEAR are uncommon (in the order of 2 to 4 per cent of eyes). When they are needed, the Z8 allows a second, flapless lenticule treatment in suitable eyes, or a small surface laser treatment (TransPRK) can be applied over the cap. Your surgeon will explain the options if a touch-up is ever needed.
 reviewed_by: ""
 reviewed_on: ""
 ---
@@ -95,7 +94,7 @@ The eyes feel gritty and watery for a few hours and vision is misty on the first
 
 In the published one-year study of CLEAR on the Z8, 95.6 per cent of eyes were within 0.50 D of the intended correction and 100 per cent within 1.00 D, results equivalent to modern LASIK. Risks are low and are discussed in full at your consultation:
 
-- **Under- or over-correction** needing an enhancement in a small percentage of eyes; enhancements within the first year are included.
+- **Under- or over-correction** needing an enhancement in a small percentage of eyes.
 - **Slower early recovery** than LASIK, with misty vision for the first days.
 - **Interface haze or inflammation**, usually mild and treated with drops.
 - **Difficulty removing the lenticule** or a small tear at the edge of the cap, rare in experienced hands and usually without effect on the result.
@@ -105,7 +104,7 @@ In the published one-year study of CLEAR on the Z8, 95.6 per cent of eyes were w
 
 ## Why choose QEI Laser Refractive for CLEAR
 
-- The Ziemer FEMTO LDV Z8, the lowest-energy femtosecond laser available, with built-in OCT.
+- The Ziemer FEMTO LDV Z8, a low-energy femtosecond laser with built-in OCT, which our surgeons also use every week for CAIRS keratoconus surgery.
 - Corneal subspecialist surgeons who perform the full range of lamellar corneal surgery, not only refractive procedures, and who will recommend LASIK, TransPRK or the ICL instead when your eye is better suited to it.
 - Surgery inside a fully accredited private hospital with an anaesthetist available.
-- One all-inclusive price covering assessment, surgery and 12 months of aftercare including enhancement if needed. See [costs and payment](/qei-laser/refractive/costs-and-payment/).
+- A written quote after your assessment that sets out exactly what your treatment includes. See [costs and payment](/qei-laser/refractive/costs-and-payment/).

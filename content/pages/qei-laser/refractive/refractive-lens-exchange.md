@@ -18,7 +18,7 @@ facts:
   "Procedure time": "About 15 to 20 minutes per eye, usually one eye at a time about a week apart, with sedation from our anaesthetist"
   "Recovery": "Vision improves within a day or two; drops for four weeks; the brain adapts to multifocal optics over weeks to months"
   "Best for": "People from their mid-40s onwards who want to reduce their dependence on reading and distance glasses, especially those with long-sightedness or early lens changes"
-  "Guide price (2026)": "From $6,000 per eye, all-inclusive. When a cataract is present, the operation is cataract surgery and Medicare and health funds contribute"
+  "Medicare": "No rebate while the natural lens is clear. If a cataract is present the operation is cataract surgery, and Medicare and health funds contribute"
 procedure:
   name: "Refractive lens exchange (clear lens extraction with premium intraocular lens)"
   alternate: ["lens replacement surgery", "clear lens extraction", "presbyopic lens exchange", "PRELEX"]
@@ -99,4 +99,4 @@ Modern lens surgery is safe and highly predictable. Serious complications are ra
 
 ## Medicare, health funds and cost
 
-When there is no cataract, lens exchange is an elective procedure and is not covered by Medicare. Our guide price is from $6,000 per eye, all-inclusive of surgeon, hospital, anaesthetist, premium lens and 12 months of aftercare. If your assessment shows an early cataract, the operation becomes cataract surgery: Medicare and, if you have hospital cover, your health fund contribute to the surgery and hospital costs, and you pay only the gap and any premium lens component. See [costs and payment](/qei-laser/refractive/costs-and-payment/).
+When there is no cataract, lens exchange is an elective procedure and is not covered by Medicare. After your assessment you receive a written quote that sets out the surgeon, hospital, anaesthetist and lens costs and the follow-up included. If your assessment shows an early cataract, the operation becomes cataract surgery: Medicare and, if you have hospital cover, your health fund contribute to the surgery and hospital costs, and you pay the gap and any premium lens component. See [costs and payment](/qei-laser/refractive/costs-and-payment/).

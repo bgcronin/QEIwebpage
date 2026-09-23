@@ -18,7 +18,6 @@ facts:
   "Procedure time": "About 15 to 20 minutes per eye, with sedation from our anaesthetist. Both eyes are usually treated on the same day"
   "Recovery": "Clear vision often within 24 hours; drops for about four weeks; back to work within two to three days"
   "Best for": "High prescriptions, thin or borderline corneas, dry eyes, and anyone who prefers a reversible option that leaves the cornea untouched"
-  "Guide price (2026)": "From $7,000 per eye, including the hospital and anaesthetist, with interest-free payment plans"
 procedure:
   name: "EVO ICL implantation (phakic intraocular lens surgery)"
   alternate: ["implantable contact lens", "implantable collamer lens", "EVO Visian ICL", "phakic IOL"]
@@ -94,4 +93,4 @@ The ICL produces some of the best visual outcomes of any refractive procedure, p
 - Surgery in a fully accredited private hospital with a specialist anaesthetist for every ICL patient.
 - Corneal and cataract subspecialists who perform intraocular surgery every week and who also offer every laser alternative, so the ICL is recommended because it is right for your eye, not by default.
 - A dedicated [Dry Eye Clinic](/dry-eye-clinic/) to optimise the ocular surface before and after surgery.
-- Lifetime yearly review of your ICL. See [costs and payment](/qei-laser/refractive/costs-and-payment/) for what is included.
+- Yearly review of your ICL for life. See [costs and payment](/qei-laser/refractive/costs-and-payment/) for how quotes work.

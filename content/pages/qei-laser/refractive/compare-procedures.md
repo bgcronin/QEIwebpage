@@ -12,7 +12,7 @@ sidebar: []
 wide: true
 cta:
   title: "Book a laser vision assessment"
-  text: "No referral needed. Your assessment is with the surgeon who would perform your treatment, and the fee is credited against your procedure."
+  text: "No referral needed. Your assessment is with the surgeon who would perform your treatment."
   primary: {label: "Call 07 3239 5000", url: "tel:+61732395000"}
   secondary: {label: "Am I suitable?", url: /qei-laser/refractive/am-i-suitable/}
 actions:
@@ -44,9 +44,8 @@ faq:
 | **Dry eye afterwards** | Common early, usually settles by 3 to 6 months | Less than LASIK | Less than LASIK | Less than LASIK | Minimal | Minimal |
 | **Reversible** | No | No | No | No | Yes (lens can be removed) | No |
 | **Typical age** | 18 to 45 | 18 to 45 | 18 to 45 | 18 to 45 | 21 to 45 | Mid-40s and over |
-| **Guide price per eye (2026)** | From $4,250 | From $4,250 | From $3,500 | From $3,500 | From $7,000 | From $6,000 |
 
-Prices are all-inclusive guide prices and are confirmed in writing after your assessment. See [costs and payment](/qei-laser/refractive/costs-and-payment/).
+Every patient receives a written quote after their assessment. See [costs and payment](/qei-laser/refractive/costs-and-payment/) for how quotes work and what Medicare and health funds contribute.
 
 ## Corneal or lens-based?
 

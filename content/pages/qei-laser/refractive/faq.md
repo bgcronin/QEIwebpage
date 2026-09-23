@@ -42,7 +42,7 @@ faq:
       If you are under 40, laser or the ICL corrects your distance vision and your natural reading focus is preserved until presbyopia arrives in the mid-40s. If you are already presbyopic, the options are monovision (one eye set slightly nearer, which we trial with contact lenses first) or refractive lens exchange with a trifocal or extended-depth-of-focus implant, which restores reading vision for most people.
   - q: "What about night vision, glare and halos?"
     a: |
-      Halos and glare around lights at night are common in the first weeks after any procedure and fade as the eye heals. Modern large treatment zones, ray-traced planning and careful pupil measurement have made persistent night-vision problems uncommon after laser; in the large PROWL studies visual symptoms were more often improved than worsened by LASIK. Multifocal lens implants cause halos that most people adapt to within months.
+      Halos and glare around lights at night are common in the first weeks after any procedure and fade as the eye heals. Modern large treatment zones, customised planning and careful pupil measurement have made persistent night-vision problems uncommon after laser; in the large PROWL studies visual symptoms were more often improved than worsened by LASIK. Multifocal lens implants cause halos that most people adapt to within months.
   - q: "Will laser eye surgery give me dry eyes?"
     a: |
       Temporary dryness is the most common side effect of LASIK, because the flap cuts the corneal nerves that drive tear production, and it usually settles by three to six months. CLEAR and surface laser cut fewer nerves and cause less dryness; the ICL and lens exchange cause very little. If you already have dry eye, we treat it first through our optometrist-led Dry Eye Clinic, and we may recommend a procedure other than LASIK.
@@ -63,7 +63,7 @@ faq:
       Keratoconus rules out conventional laser, but cross-linking, CAIRS and topography-guided treatment through QEI Laser Therapeutic can improve vision, and the ICL may be an option in stable eyes. Well-controlled glaucoma and diabetes without eye disease do not exclude you, although the ICL is avoided in glaucoma and we ask for stable diabetic control.
   - q: "Do I need a referral, and is the assessment free?"
     a: |
-      No referral is needed. The assessment carries a fee, because it is a complete examination with a specialist surgeon, and that fee is credited against your procedure. A referral from your optometrist or GP allows Medicare to contribute to the consultation.
+      No referral is needed. The assessment carries a consultation fee, because it is a complete examination with a specialist surgeon. A referral from your optometrist or GP allows Medicare to contribute to it.
   - q: "Who will do my surgery?"
     a: |
       One of our four laser surgeons, Dr David Gunn, Dr Brendan Cronin, Dr Lee Holland and Dr Geoffrey Ryan, all Fellows of the Royal Australian and New Zealand College of Ophthalmologists with fellowship training in corneal, cataract and refractive surgery. The surgeon who assesses you performs your procedure and sees you at your reviews.

@@ -16,7 +16,6 @@ facts:
   "Procedure time": "About 5 to 10 minutes per eye"
   "Recovery": "Surface heals in about 4 to 5 days under a bandage contact lens; driving usually within 1 to 2 weeks; final vision by 1 to 3 months"
   "Best for": "Thinner corneas, eyes with surface irregularity, treatments combined with therapeutic laser, and people who prefer a flap-free procedure"
-  "Guide price (2026)": "From $3,500 per eye, all-inclusive, with interest-free payment plans"
 procedure:
   name: "PRK (photorefractive keratectomy)"
   alternate: ["advanced surface ablation", "ASA", "surface laser"]
@@ -33,7 +32,7 @@ faq:
       No. Long-term studies show the same visual results from PRK and LASIK. The difference is the recovery: PRK is slower and less comfortable in the first week, but it leaves a stronger cornea and has a lower risk of dry eye and no flap-related risks.
   - q: "Can PRK be repeated?"
     a: |
-      Yes. A small residual prescription can be treated with a further surface treatment once the eye has stabilised, usually after three to six months. Enhancements within the first year are included in our aftercare.
+      Yes. A small residual prescription can be treated with a further surface treatment once the eye has stabilised, usually after three to six months. Your surgeon will discuss whether an enhancement is appropriate for you and what it involves.
 reviewed_by: ""
 reviewed_on: ""
 ---

@@ -53,7 +53,7 @@ None of these on its own rules you out; they simply tell us which options to con
 
 | Your situation | Usually best suited to | Read more |
 | --- | --- | --- |
-| Under 45, short-sighted up to about −8 D, healthy cornea of normal thickness, want the fastest recovery | LASIK (Ray Tracing LASIK) | [LASIK](/qei-laser/refractive/lasik/) |
+| Under 45, short-sighted up to about −8 D, healthy cornea of normal thickness, want the fastest recovery | LASIK | [LASIK](/qei-laser/refractive/lasik/) |
 | Under 45, short-sighted, want no flap with a quick recovery; contact sports, physical work, dry-eye-prone | CLEAR lenticule extraction | [CLEAR](/qei-laser/refractive/clear-lenticule-extraction/) |
 | Thinner cornea, low prescription, surface irregularity, or a preference for no cut at all | TransPRK or PRK | [TransPRK](/qei-laser/refractive/trans-prk/), [PRK](/qei-laser/refractive/prk/) |
 | Short-sighted beyond about −8 to −10 D, or cornea too thin for laser, or significant dry eye | EVO ICL | [EVO ICL](/qei-laser/refractive/icl/) |
@@ -68,7 +68,7 @@ A laser vision assessment at QEI Laser Refractive takes up to two hours and is p
 
 - **Refraction**, with and without dilating drops, to establish your true prescription.
 - **Corneal tomography** (Pentacam or equivalent), which maps the shape and thickness of the front and back of the cornea and is the single most important test for excluding keratoconus and confirming that enough tissue remains after laser. We look for at least 250 to 300 micrometres of untouched cornea after treatment and avoid altering more than about 40 per cent of the corneal thickness.
-- **Ray-traced optical modelling** of the whole eye (InnovEyes Sightmap) for Ray Tracing LASIK planning.
+- **Wavefront analysis** of the optics of the whole eye for customised laser planning.
 - **Epithelial mapping** with OCT to detect subtle surface irregularity.
 - **Tear film assessment**, including tear break-up time and meibomian gland imaging, because an unhealthy tear film blurs the measurements and slows recovery. Our [Dry Eye Clinic](/dry-eye-clinic/) can treat it before surgery.
 - **Pupil size** in dim light, which influences the size of the treatment zone and the risk of night glare.

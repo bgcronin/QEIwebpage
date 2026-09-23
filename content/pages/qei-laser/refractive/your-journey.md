@@ -50,7 +50,7 @@ At the end of the visit your surgeon will tell you which procedures your eyes ar
 
 ## 4. Decide in your own time
 
-There is no pressure to book on the day. Read the consent information, ask questions by phone or email, and involve your optometrist if you wish. Once you decide, our team schedules your surgery, arranges any payment plan and, for the ICL or lens exchange, orders your lenses.
+There is no pressure to book on the day. Read the consent information, ask questions by phone or email, and involve your optometrist if you wish. Once you decide, our team schedules your surgery, explains payment arrangements and, for the ICL or lens exchange, orders your lenses.
 
 ## 5. The week before
 
@@ -78,4 +78,4 @@ Vision continues to sharpen and any night-time halos fade. Drops taper off over 
 
 ## 10. Your first year and beyond
 
-A 12-month review completes your treatment package, and we write to your optometrist and GP. After laser you need no special follow-up beyond routine eye examinations every two years. ICL patients have a yearly check of eye pressure, lens position and corneal health. Lens exchange patients are seen if a membrane behind the implant needs a brief laser polish. Your eyes will continue to age like everyone else's, and when reading glasses arrive in the mid-40s, or a cataract much later, we will be here to help.
+A 12-month review completes your first year of care, and we write to your optometrist and GP. After laser you need no special follow-up beyond routine eye examinations every two years. ICL patients have a yearly check of eye pressure, lens position and corneal health. Lens exchange patients are seen if a membrane behind the implant needs a brief laser polish. Your eyes will continue to age like everyone else's, and when reading glasses arrive in the mid-40s, or a cataract much later, we will be here to help.
