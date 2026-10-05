@@ -199,6 +199,16 @@ class FullBuildTests(unittest.TestCase):
             self.assertNotIn("Focus Vision", html, page)
             self.assertNotIn("focusvision", html, page)
 
+    def test_portable_links_rewrite_folder_links_only(self):
+        html = '<a href="../qei-laser/refractive/">x</a> <a href="./">home</a> <a href="../ophthalmologists/#cataract">y</a> <link href="../assets/css/site.css"> <a href="https://qei.org.au/">live</a> <a href="../search/?q=eye">s</a>'
+        out = build.portable_links(html)
+        self.assertIn('href="../qei-laser/refractive/index.html"', out)
+        self.assertIn('href="./index.html"', out)
+        self.assertIn('href="../ophthalmologists/index.html#cataract"', out)
+        self.assertIn('href="../search/index.html?q=eye"', out)
+        self.assertIn('href="../assets/css/site.css"', out)
+        self.assertIn('href="https://qei.org.au/"', out)
+
     def test_cataract_experience_figure_is_prominent(self):
         home = (self.out / "index.html").read_text(encoding="utf-8")
         self.assertIn("80,000", home)

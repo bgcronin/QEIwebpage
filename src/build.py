@@ -73,6 +73,15 @@ def rel(url: str) -> str:
     return prefix + target
 
 
+_PORTABLE_LINK = re.compile(r'(\b(?:href|src|action|content)=")(\.{1,2}/(?:[^"#?]*?/)?)((?:[?#][^"]*)?")')
+
+
+def portable_links(html: str) -> str:
+    """Append index.html to folder-style relative links so the built site also works when opened from a
+    folder on a computer (file://) without a web server. Hosted builds do not need this."""
+    return _PORTABLE_LINK.sub(lambda m: m.group(1) + m.group(2) + "index.html" + m.group(3), html)
+
+
 def read_json(path: Path):
     with path.open(encoding="utf-8") as fh:
         return json.load(fh)
@@ -263,6 +272,7 @@ class Site:
         self.env.globals.update(rel=rel, site=self.config, media=self.media_url, media_info=self.media_info, now=dt.date.today(),
                                 slugify=slugify, category_slug=self.category_slug, fmt_date=self.fmt_date)
         self.base_path = "/"
+        self.portable = False
         self.env.tests["contains"] = lambda seq, value: value in (seq or [])
         global _media_hook
         _media_hook = self.media.process
@@ -746,6 +756,8 @@ class Site:
             ctx.update(page.context)
             tpl = self.env.get_template(page.template)
             html_out = tpl.render(**ctx)
+            if self.portable:
+                html_out = portable_links(html_out)
             dest = self.out / page.url.lstrip("/") / "index.html"
             dest.parent.mkdir(parents=True, exist_ok=True)
             dest.write_text(html_out, encoding="utf-8")
@@ -768,7 +780,8 @@ class Site:
             if dest.exists():
                 continue
             dest.parent.mkdir(parents=True, exist_ok=True)
-            dest.write_text(self.env.get_template("redirect.html").render(target=r["to"], canonical=self.abs_url(r["to"])), encoding="utf-8")
+            stub = self.env.get_template("redirect.html").render(target=r["to"], canonical=self.abs_url(r["to"]))
+            dest.write_text(portable_links(stub) if self.portable else stub, encoding="utf-8")
 
     def write_support_files(self) -> None:
         cfg = self.config
@@ -866,12 +879,13 @@ def main() -> int:
     ap.add_argument("--out", default=str(ROOT / "web"))
     ap.add_argument("--check", action="store_true", help="build into a temporary directory only")
     ap.add_argument("--base-path", default="/", help="hosting path prefix used only by 404.html (for example /QEIwebpage/)")
+    ap.add_argument("--portable", action="store_true", help="append index.html to folder links so the site can be opened from a folder without a web server")
     args = ap.parse_args()
     if args.check:
         with tempfile.TemporaryDirectory() as tmp:
             s = Site(Path(tmp)); s.base_path = args.base_path; s.build(clean=False)
         return 0
-    s = Site(Path(args.out)); s.base_path = args.base_path; s.build()
+    s = Site(Path(args.out)); s.base_path = args.base_path; s.portable = args.portable; s.build()
     return 0
 
 

@@ -47,6 +47,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python -m unittest discover -s tests -v   # tests (includes a full build)
 python src/build.py                       # writes web/
+python src/build.py --portable --out /path/to/folder   # copy that opens from a folder, no web server needed
 python src/check_links.py --strict        # verifies every internal link, image and anchor
 python -m http.server --directory web 8080
 ```
