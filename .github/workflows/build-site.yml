@@ -66,3 +66,19 @@ jobs:
           name: qei-website-${{ github.run_number }}
           path: web
           retention-days: 14
+
+      - name: Build a review copy that opens from a folder
+        # Reviewers without a web server: download this artifact, unzip it and double-click index.html.
+        run: |
+          python src/build.py --portable --out review-copy/QEI-website-preview
+          printf '%s\n' "QEI website preview (redesign, not the live site)" "" \
+            "1. Double-click index.html to open the home page in your browser." \
+            "2. Every page, menu and link works from this folder; only the site search box needs a web server." \
+            "3. Forms and bookings point to the live qei.org.au services." > review-copy/QEI-website-preview/READ-ME-FIRST.txt
+
+      - name: Upload the review copy
+        uses: actions/upload-artifact@v4
+        with:
+          name: QEI-website-preview-open-from-folder
+          path: review-copy
+          retention-days: 30
