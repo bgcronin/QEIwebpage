@@ -28705,9 +28705,9 @@
     ".0": 10,
     ".1": 4,
     ".14": 2,
-    ".2": 18,
+    ".2": 22,
     ".3": 2,
-    ".5": 20,
+    ".5": 16,
     ".css": 634,
     ".eot": 20,
     ".eot@": 4,
@@ -28739,7 +28739,7 @@
     ".woff@o6rzdt": 2
   },
   "file_count": 4653,
-  "generated_at": "2026-09-28T10:51:09.854826+00:00",
+  "generated_at": "2026-10-05T11:29:51.561299+00:00",
   "html_file_count": 595,
   "oversized_files": [],
   "safety": {
@@ -28750,5 +28750,5 @@
     "missing_safety_guard": [],
     "tracking_references": []
   },
-  "total_bytes": 1526853986
+  "total_bytes": 1526828502
 }

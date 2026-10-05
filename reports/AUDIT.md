@@ -1,10 +1,10 @@
 # Static mirror audit
 
-Generated: 2026-09-28T10:51:09.854826+00:00
+Generated: 2026-10-05T11:29:51.561299+00:00
 
 - Files: 4,653
 - HTML pages: 595
-- Total size: 1456.12 MiB
+- Total size: 1456.10 MiB
 - Active or incompletely disabled forms: 0
 - Pages missing the browser safety guard: 0
 - Pages missing noindex: 0
