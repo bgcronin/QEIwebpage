@@ -1,0 +1,14 @@
+autodiscover.qei.org.au	excluded host label: autodiscover
+cloud.qei.org.au	DNS resolution failed: [Errno -2] Name or service not known
+dr.qei.org.au	DNS resolution failed: [Errno -2] Name or service not known
+intranet.qei.org.au	excluded host label: intranet
+mail.qei.org.au	excluded host label: mail
+owa.qei.org.au	DNS resolution failed: [Errno -2] Name or service not known
+remote.qei.org.au	excluded host label: remote
+servicedesk.qei.org.au	DNS resolution failed: [Errno -2] Name or service not known
+vpn.qei.org.au	excluded host label: vpn
+webmail.qei.org.au	excluded host label: webmail
+www.intranet.qei.org.au	excluded host label: intranet
+www.mail.qei.org.au	excluded host label: mail
+www.owa.qei.org.au	DNS resolution failed: [Errno -2] Name or service not known
+www.remote.qei.org.au	excluded host label: remote
