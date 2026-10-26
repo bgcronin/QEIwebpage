@@ -28702,13 +28702,13 @@
     }
   ],
   "extensions": {
-    ".0": 18,
+    ".0": 28,
     ".1": 4,
     ".14": 2,
-    ".3": 28,
+    ".3": 14,
     ".4": 4,
-    ".5": 8,
-    ".css": 656,
+    ".5": 4,
+    ".css": 642,
     ".eot": 20,
     ".eot@": 4,
     ".eot@8i2g28": 2,
@@ -28717,17 +28717,14 @@
     ".jpeg": 126,
     ".jpg": 2430,
     ".js": 4,
-    ".js@ver=0c901cb641ce64b99c20ea1a4d208cc9": 2,
     ".js@ver=1787231434": 2,
     ".js@ver=1dfe7db3940c23ea9216": 2,
     ".js@ver=20151215": 4,
-    ".js@ver=301fdc9aa6144168f3b854c4c2c8f6d3": 2,
     ".js@ver=31c6cec5a4ff7aff483d": 2,
-    ".js@ver=373fcf115e257ba62fdd1a205717b981": 2,
-    ".js@ver=3f278756f0a3032bed328ff6a9f6c01d": 2,
     ".js@ver=3fe927cab37bf38d6a23": 2,
-    ".js@ver=7c651d0ba638ce98b9c65141edddd567": 2,
+    ".js@ver=97219a00e44efe96fe680a9fde3911cf": 2,
     ".js@ver=d7e103405223e60d2719f4c330fd11cf": 2,
+    ".js@ver=ddae8d403393f0e5eaeedeb511ce46e0": 2,
     ".js@ver=f0f188028580e8dc1255": 2,
     ".mp4": 2,
     ".png": 584,
@@ -28747,8 +28744,8 @@
     ".woff@8i2g28": 2,
     ".woff@o6rzdt": 2
   },
-  "file_count": 4707,
-  "generated_at": "2026-10-19T09:57:38.399099+00:00",
+  "file_count": 4679,
+  "generated_at": "2026-10-26T09:56:46.082327+00:00",
   "html_file_count": 597,
   "oversized_files": [],
   "safety": {
@@ -28759,5 +28756,5 @@
     "missing_safety_guard": [],
     "tracking_references": []
   },
-  "total_bytes": 1530338232
+  "total_bytes": 1530538103
 }
