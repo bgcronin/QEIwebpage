@@ -1,10 +1,10 @@
 # Static mirror audit
 
-Generated: 2026-10-26T09:56:46.082327+00:00
+Generated: 2026-11-02T12:08:42.560658+00:00
 
-- Files: 4,679
+- Files: 4,671
 - HTML pages: 597
-- Total size: 1459.63 MiB
+- Total size: 1459.82 MiB
 - Active or incompletely disabled forms: 0
 - Pages missing the browser safety guard: 0
 - Pages missing noindex: 0
@@ -30,27 +30,26 @@ PASS
 - `index.html` → `wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
 - `index.html` → `wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
 - `index.html` → `about:blank`
-- `clinical-trials-old/index.html` → `../feed`
-- `clinical-trials-old/index.html` → `../comments/feed`
-- `clinical-trials-old/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fclinical-trials-old%2F`
-- `clinical-trials-old/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fclinical-trials-old%2F&format=xml`
-- `clinical-trials-old/index.html` → `../wp-json`
-- `clinical-trials-old/index.html` → `../wp-json/wp/v2/pages/2016`
-- `clinical-trials-old/index.html` → `../xmlrpc.php?rsd`
-- `clinical-trials-old/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
-- `clinical-trials-old/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
-- `clinical-trials-old/index.html` → `../clinical-trials/information-for-interested-participant/thyroid-eye-disease`
-- `clinical-trials-old/index.html` → `about:blank`
-- `share-your-story/index.html` → `../feed`
-- `share-your-story/index.html` → `../comments/feed`
-- `share-your-story/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fshare-your-story%2F`
-- `share-your-story/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fshare-your-story%2F&format=xml`
-- `share-your-story/index.html` → `../wp-json`
-- `share-your-story/index.html` → `../wp-json/wp/v2/pages/1387`
-- `share-your-story/index.html` → `../xmlrpc.php?rsd`
-- `share-your-story/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
-- `share-your-story/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
-- `share-your-story/index.html` → `about:blank`
+- `our-vision/index.html` → `../feed`
+- `our-vision/index.html` → `../comments/feed`
+- `our-vision/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Four-vision%2F`
+- `our-vision/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Four-vision%2F&format=xml`
+- `our-vision/index.html` → `../wp-json`
+- `our-vision/index.html` → `../wp-json/wp/v2/pages/477`
+- `our-vision/index.html` → `../xmlrpc.php?rsd`
+- `our-vision/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `our-vision/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `our-vision/index.html` → `about:blank`
+- `eye-conditions/index.html` → `../feed`
+- `eye-conditions/index.html` → `../comments/feed`
+- `eye-conditions/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Feye-conditions%2F`
+- `eye-conditions/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Feye-conditions%2F&format=xml`
+- `eye-conditions/index.html` → `../wp-json`
+- `eye-conditions/index.html` → `../wp-json/wp/v2/pages/87`
+- `eye-conditions/index.html` → `../xmlrpc.php?rsd`
+- `eye-conditions/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `eye-conditions/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `eye-conditions/index.html` → `about:blank`
 - `contact/index.html` → `../feed`
 - `contact/index.html` → `../comments/feed`
 - `contact/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fcontact%2F`
@@ -61,26 +60,6 @@ PASS
 - `contact/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
 - `contact/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
 - `contact/index.html` → `about:blank`
-- `qei-clinics/index.html` → `../feed`
-- `qei-clinics/index.html` → `../comments/feed`
-- `qei-clinics/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fqei-clinics%2F`
-- `qei-clinics/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fqei-clinics%2F&format=xml`
-- `qei-clinics/index.html` → `../wp-json`
-- `qei-clinics/index.html` → `../wp-json/wp/v2/pages/1484`
-- `qei-clinics/index.html` → `../xmlrpc.php?rsd`
-- `qei-clinics/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
-- `qei-clinics/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
-- `qei-clinics/index.html` → `about:blank`
-- `qei-foundation/index.html` → `../feed`
-- `qei-foundation/index.html` → `../comments/feed`
-- `qei-foundation/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fqei-foundation%2F`
-- `qei-foundation/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fqei-foundation%2F&format=xml`
-- `qei-foundation/index.html` → `../wp-json`
-- `qei-foundation/index.html` → `../wp-json/wp/v2/pages/1492`
-- `qei-foundation/index.html` → `../xmlrpc.php?rsd`
-- `qei-foundation/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
-- `qei-foundation/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
-- `qei-foundation/index.html` → `about:blank`
 - `privacy-policy/index.html` → `../feed`
 - `privacy-policy/index.html` → `../comments/feed`
 - `privacy-policy/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fprivacy-policy%2F`
@@ -92,6 +71,26 @@ PASS
 - `privacy-policy/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
 - `privacy-policy/index.html` → `../wp-content/uploads/2020/03/QEIF-Whistleblowing-and-Protection-Policy-02-March-2020.pdf`
 - `privacy-policy/index.html` → `about:blank`
+- `services/index.html` → `../feed`
+- `services/index.html` → `../comments/feed`
+- `services/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fservices%2F`
+- `services/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fservices%2F&format=xml`
+- `services/index.html` → `../wp-json`
+- `services/index.html` → `../wp-json/wp/v2/pages/1514`
+- `services/index.html` → `../xmlrpc.php?rsd`
+- `services/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `services/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `services/index.html` → `about:blank`
+- `comment-on-your-care/index.html` → `../feed`
+- `comment-on-your-care/index.html` → `../comments/feed`
+- `comment-on-your-care/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fcomment-on-your-care%2F`
+- `comment-on-your-care/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fcomment-on-your-care%2F&format=xml`
+- `comment-on-your-care/index.html` → `../wp-json`
+- `comment-on-your-care/index.html` → `../wp-json/wp/v2/pages/6354`
+- `comment-on-your-care/index.html` → `../xmlrpc.php?rsd`
+- `comment-on-your-care/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `comment-on-your-care/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `comment-on-your-care/index.html` → `about:blank`
 - `education/index.html` → `../feed`
 - `education/index.html` → `../comments/feed`
 - `education/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Feducation%2F`
@@ -102,21 +101,22 @@ PASS
 - `education/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
 - `education/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
 - `education/index.html` → `about:blank`
-- `thank-you-for-donating/index.html` → `../feed`
-- `thank-you-for-donating/index.html` → `../comments/feed`
-- `thank-you-for-donating/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fthank-you-for-donating%2F`
-- `thank-you-for-donating/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fthank-you-for-donating%2F&format=xml`
-- `thank-you-for-donating/index.html` → `../wp-json`
-- `thank-you-for-donating/index.html` → `../wp-json/wp/v2/pages/3468`
-- `thank-you-for-donating/index.html` → `../xmlrpc.php?rsd`
-- `thank-you-for-donating/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
-- `thank-you-for-donating/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
-- `thank-you-for-donating/index.html` → `about:blank`
-- `services/index.html` → `../feed`
-- `services/index.html` → `../comments/feed`
-- `services/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fservices%2F`
-- `services/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fservices%2F&format=xml`
-- `services/index.html` → `../wp-json`
-- `services/index.html` → `../wp-json/wp/v2/pages/1514`
-- `services/index.html` → `../xmlrpc.php?rsd`
-- `services/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `donation-entries/index.html` → `../feed`
+- `donation-entries/index.html` → `../comments/feed`
+- `donation-entries/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fdonation-entries%2F`
+- `donation-entries/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fdonation-entries%2F&format=xml`
+- `donation-entries/index.html` → `../wp-json`
+- `donation-entries/index.html` → `../wp-json/wp/v2/pages/2863`
+- `donation-entries/index.html` → `../xmlrpc.php?rsd`
+- `donation-entries/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `donation-entries/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
+- `donation-entries/index.html` → `<?php echo site_url(); ?>`
+- `donation-entries/index.html` → `about:blank`
+- `qei-foundation/index.html` → `../feed`
+- `qei-foundation/index.html` → `../comments/feed`
+- `qei-foundation/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fqei-foundation%2F`
+- `qei-foundation/index.html` → `../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fqei-foundation%2F&format=xml`
+- `qei-foundation/index.html` → `../wp-json`
+- `qei-foundation/index.html` → `../wp-json/wp/v2/pages/1492`
+- `qei-foundation/index.html` → `../xmlrpc.php?rsd`
+- `qei-foundation/index.html` → `../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf`
