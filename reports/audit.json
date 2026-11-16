@@ -6727,6 +6727,51 @@
     },
     {
       "attribute": "href",
+      "file": "news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../feed"
+    },
+    {
+      "attribute": "href",
+      "file": "news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../comments/feed"
+    },
+    {
+      "attribute": "href",
+      "file": "news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fchristmas-wish-list-for-restoring-sight%2F"
+    },
+    {
+      "attribute": "href",
+      "file": "news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fchristmas-wish-list-for-restoring-sight%2F&format=xml"
+    },
+    {
+      "attribute": "href",
+      "file": "news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../wp-json"
+    },
+    {
+      "attribute": "href",
+      "file": "news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../xmlrpc.php?rsd"
+    },
+    {
+      "attribute": "href",
+      "file": "news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "href",
+      "file": "news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "src",
+      "file": "news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "about:blank"
+    },
+    {
+      "attribute": "href",
       "file": "news/noels-legacy/index.html",
       "target": "../../feed"
     },
@@ -10818,6 +10863,51 @@
     {
       "attribute": "src",
       "file": "news/last-seen-performance/index.html",
+      "target": "about:blank"
+    },
+    {
+      "attribute": "href",
+      "file": "news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../feed"
+    },
+    {
+      "attribute": "href",
+      "file": "news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../comments/feed"
+    },
+    {
+      "attribute": "href",
+      "file": "news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fresearch-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity%2F"
+    },
+    {
+      "attribute": "href",
+      "file": "news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fresearch-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity%2F&format=xml"
+    },
+    {
+      "attribute": "href",
+      "file": "news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../wp-json"
+    },
+    {
+      "attribute": "href",
+      "file": "news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../xmlrpc.php?rsd"
+    },
+    {
+      "attribute": "href",
+      "file": "news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "href",
+      "file": "news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "src",
+      "file": "news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
       "target": "about:blank"
     },
     {
@@ -17867,6 +17957,51 @@
     },
     {
       "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../../../feed"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../../../comments/feed"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fchristmas-wish-list-for-restoring-sight%2F"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fchristmas-wish-list-for-restoring-sight%2F&format=xml"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../../../wp-json"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../../../xmlrpc.php?rsd"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "src",
+      "file": "_subdomains/qei.org.au/news/christmas-wish-list-for-restoring-sight/index.html",
+      "target": "about:blank"
+    },
+    {
+      "attribute": "href",
       "file": "_subdomains/qei.org.au/news/noels-legacy/index.html",
       "target": "../../../../feed"
     },
@@ -21958,6 +22093,51 @@
     {
       "attribute": "src",
       "file": "_subdomains/qei.org.au/news/last-seen-performance/index.html",
+      "target": "about:blank"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../../../feed"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../../../comments/feed"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fresearch-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity%2F"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../../../wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqei.org.au%2Fnews%2Fresearch-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity%2F&format=xml"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../../../wp-json"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../../../xmlrpc.php?rsd"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "href",
+      "file": "_subdomains/qei.org.au/news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
+      "target": "../../../../wp-content/uploads/2025/08/Patient-Registration-Form-v3-2025.pdf"
+    },
+    {
+      "attribute": "src",
+      "file": "_subdomains/qei.org.au/news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/index.html",
       "target": "about:blank"
     },
     {
@@ -28702,20 +28882,20 @@
     }
   ],
   "extensions": {
-    ".0": 14,
-    ".1": 8,
+    ".0": 10,
+    ".1": 12,
     ".14": 2,
     ".2": 10,
     ".4": 14,
     ".5": 4,
-    ".css": 634,
+    ".css": 640,
     ".eot": 20,
     ".eot@": 4,
     ".eot@8i2g28": 2,
     ".eot@99ac726223c749443b642ce33df8b800": 2,
-    ".html": 597,
+    ".html": 601,
     ".jpeg": 126,
-    ".jpg": 2430,
+    ".jpg": 2470,
     ".js": 4,
     ".js@ver=1787231434": 2,
     ".js@ver=1dfe7db3940c23ea9216": 2,
@@ -28744,9 +28924,9 @@
     ".woff@8i2g28": 2,
     ".woff@o6rzdt": 2
   },
-  "file_count": 4667,
-  "generated_at": "2026-11-09T12:24:41.346527+00:00",
-  "html_file_count": 597,
+  "file_count": 4717,
+  "generated_at": "2026-11-16T12:13:44.638280+00:00",
+  "html_file_count": 601,
   "oversized_files": [],
   "safety": {
     "active_or_incompletely_disabled_forms": [],
@@ -28756,5 +28936,5 @@
     "missing_safety_guard": [],
     "tracking_references": []
   },
-  "total_bytes": 1530133659
+  "total_bytes": 1537931369
 }

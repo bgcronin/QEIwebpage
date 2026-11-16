@@ -62,6 +62,7 @@ https://qei.org.au/news/building-eye-health-expertise-in-the-pacific/
 https://qei.org.au/news/cataract-awareness-month/
 https://qei.org.au/news/choosing-hope-this-christmas/
 https://qei.org.au/news/christmas-appeal/
+https://qei.org.au/news/christmas-wish-list-for-restoring-sight/
 https://qei.org.au/news/clinical-trial-for-new-macular-degeneration-treatment/
 https://qei.org.au/news/clinical-trials-for-eye-disease-everything-you-need-to-know/
 https://qei.org.au/news/commercialising-our-research/
@@ -148,6 +149,7 @@ https://qei.org.au/news/queensland-first-glaucoma-treatment-device/
 https://qei.org.au/news/queenslanders-urged-to-not-neglect-vital-eye-appointments-out-of-covid-19-fears/
 https://qei.org.au/news/repairing-damaged-eye-tissue-in-amd-steps-towards-the-holy-grail/
 https://qei.org.au/news/research-on-treating-blindness-caused-by-dermal-fillers/
+https://qei.org.au/news/research-updates-on-a-safer-less-invasive-treatment-for-eyelid-laxity/
 https://qei.org.au/news/retinal-eye-disease-first-for-qei-clinic/
 https://qei.org.au/news/revolutionizing-treatment-for-keratoconus/
 https://qei.org.au/news/run-for-eye-health/
@@ -625,6 +627,9 @@ https://qei.org.au/wp-content/uploads/2026/08/Dr-Geoff-Ryan.jpg
 https://qei.org.au/wp-content/uploads/2026/08/eyePlate200s-03-2-1.png
 https://qei.org.au/wp-content/uploads/2026/09/20260810_QEI-Research-student-Thien-Nguyen-2_Web-e1788416146886.jpg
 https://qei.org.au/wp-content/uploads/2026/09/20260810_QEI-Research-student-Thien-Nguyen-5_Web.jpg
+https://qei.org.au/wp-content/uploads/2026/11/20260617_QEI-student-research-1_Web.jpg
+https://qei.org.au/wp-content/uploads/2026/11/20260617_QEI-student-research-5_Web.jpg
+https://qei.org.au/wp-content/uploads/2026/11/QEI099-QEIF-2026-Christmas-Appeal-Blog-Image.jpg
 https://qei.org.au/wpa-stats-type/android/
 https://qei.org.au/wpa-stats-type/chrome/
 https://qei.org.au/wpa-stats-type/event/

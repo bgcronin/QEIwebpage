@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T11:32:02.863031+00:00",
+  "generated_at": "2026-11-16T11:17:55.918467+00:00",
   "hosts": {
     "qei.org.au": {
       "candidate_sitemaps": [
@@ -21,7 +21,7 @@
     }
   },
   "maximum": 25000,
-  "seed_url_count": 642,
+  "seed_url_count": 647,
   "sitemaps": [
     {
       "final_url": "https://qei.org.au/sitemap_index.xml",
@@ -72,7 +72,7 @@
     },
     {
       "final_url": "https://qei.org.au/news-sitemap.xml",
-      "locations": 408,
+      "locations": 414,
       "status": "ok",
       "type": "urlset",
       "url": "https://qei.org.au/news-sitemap.xml"

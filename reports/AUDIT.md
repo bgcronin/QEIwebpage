@@ -1,17 +1,17 @@
 # Static mirror audit
 
-Generated: 2026-11-09T12:24:41.346527+00:00
+Generated: 2026-11-16T12:13:44.638280+00:00
 
-- Files: 4,667
-- HTML pages: 597
-- Total size: 1459.25 MiB
+- Files: 4,717
+- HTML pages: 601
+- Total size: 1466.69 MiB
 - Active or incompletely disabled forms: 0
 - Pages missing the browser safety guard: 0
 - Pages missing noindex: 0
 - Missing robots.txt site-wide block: 0
 - Tracking references remaining: 0
 - External transaction links not disabled: 0
-- Broken internal references detected: 5740
+- Broken internal references detected: 5776
 - Files at or above GitHub's practical 95 MiB guardrail: 0
 
 ## Safety result

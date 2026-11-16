@@ -1,10 +1,10 @@
 {
-  "css_files": 634,
+  "css_files": 640,
   "css_urls_rewritten": 14,
-  "form_controls_disabled": 13022,
-  "forms_disabled": 1825,
-  "html_files": 597,
-  "links_rewritten": 7216,
+  "form_controls_disabled": 13102,
+  "forms_disabled": 1837,
+  "html_files": 601,
+  "links_rewritten": 7260,
   "robots_txt_written": 1,
   "tracking_nodes_removed": 5830,
   "transactions_disabled": 12
